@@ -1,0 +1,235 @@
+{
+  "id": "dots-trending-2026-10-07",
+  "revision": 1,
+  "date": "2026-10-07",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending · 2026-10-07",
+  "summary": "当日 12 条动态，保留摘要、数据口径与原始出处。",
+  "topics": [
+    "开源",
+    "AI",
+    "技术动态"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "DOTS TRENDING / 2026.10.07 · 北京时间 · 12条"
+    },
+    {
+      "type": "heading",
+      "text": "📡 每日 Trending 速览"
+    },
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[mattpocock/skills：把工程基本功写成可组合技能](https://github.com/mattpocock/skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+889 · Shell · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把需求追问、领域术语、测试驱动开发和代码审查拆成可组合的代理技能，先对齐要做什么，再用反馈检验实现。适合把日常工程流程交给编码助手；这些是可改写的工作方法，仍需真实测试和人工判断。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[DeepGEMM：让专家层通信与计算重叠](https://github.com/deepseek-ai/DeepGEMM)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+199 · Cuda · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把低精度矩阵乘和专家层计算放进 CUDA 内核，让显卡间通信与计算重叠，减少大模型运行时的等待。接口与测试示例适合研究算子优化；主仓库要求 NVIDIA SM90/SM100 显卡及 CUDA 12.9 以上。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[EmbeddingGemma 2：在本地跨文字、图片与音视频检索](https://huggingface.co/google/embeddinggemma-2)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 2026-10-07 00:00发布（北京时间）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把文字、代码、图像、音视频映射到同一向量空间，用文字就能检索本地图片或录音。总参数7.4亿，可按需加载视觉和音频编码器；压缩向量可省存储，但128维会明显影响多模态效果，推理应使用BF16或FP32。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[FBTriton：按热点行拆任务，加速推荐系统嵌入查表](https://pytorch.org/blog/modernizing-table-batched-embeddings-with-fbtriton/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-07 06:57 · 北京时间 · PyTorch"
+    },
+    {
+      "type": "paragraph",
+      "text": "推荐系统常要同时查很多张嵌入表。本文用Triton重写前后向内核，按行访问次数拆任务，缓解负载不均和寄存器压力。作者在GB200的307组分片配置中测得前向加速中位数1.28倍，部分形状仍慢于CUDA。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[把地点压成向量，补上公共卫生预测的数据缺口](https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-06 23:05 · 北京时间 · Google Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "公共卫生模型常受数据滞后和地区边界限制。PDFM将搜索趋势、人口流动和环境信号压成地点向量，直接补入现有预测流程。五项案例显示增益依任务而异，例如霍乱预测的改善主要出现在提前四至八周，短期并不显著。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[FA4 解码优化：从注意力公式读到双缓冲内核](https://research.colfax-intl.com/optimization-diaries-s-p-ping-pong-for-flashattention-4-decode/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 原文2026-09-07 · Colfax"
+    },
+    {
+      "type": "paragraph",
+      "text": "从注意力公式与在线 softmax 讲起，解释双张量内存槽如何消除解码时的不必要串行。随后给出同步代码、内核轨迹和 B200 测试；最高约16%提升限于指定配置，适合循着原理读到实现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[原地修改张量后，PyTorch怎样维护反向图？](https://blog.ezyang.com/2026/03/autograd-and-mutation/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-03-28 · Edward Z. Yang"
+    },
+    {
+      "type": "paragraph",
+      "text": "从几行 PyTorch 代码出发，沿反向图解释原地修改、共享存储的视图，以及多个别名如何延迟更新。作者用 CopySlices 和版本计数把实现串起来，适合排查自动求导问题；涉及的内部字段不宜当作稳定接口。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Mistral Large 4：万亿参数模型先开放 API 预览](https://mistral.ai/news/mistral-large-4/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-06"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mistral Large 4开放API预览，采用1万亿总参数、490亿活跃参数的多模态架构，权重计划月底发布。官方介绍了编程、图像理解与长程工具调用能力，并披露大规模异步强化学习流程；各项领先结论仍是发布方的评测口径。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[OpenAI公开数学成果，让证明与计算过程接受核查](https://openai.com/index/sharing-ai-progress-in-mathematics/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-06"
+    },
+    {
+      "type": "paragraph",
+      "text": "OpenAI把内部模型产出的数学结果放入公开仓库，并为部分证明提供可由电脑检查的Lean形式化。它还披露推理摘要、尝试数量与计算开销，为数学界复核提供入口；具体结论仍需逐项检查，不能只凭发布公告判断。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Gleam 1.19：跳过 Erlang 源码，让编译与定位更直接](https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-05"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gleam 1.19把Erlang源码生成改为直接输出带位置信息的中间表示，省去分词和解析步骤，也让报错行号对应原始Gleam代码。文章解释了为何仍借用Erlang编译器的优化，而不自行维护随虚拟机变化的BEAM字节码后端。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[生物未必依靠量子效应，网络却能借用量子数学](https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-09-23 · Quanta"
+    },
+    {
+      "type": "paragraph",
+      "text": "振荡器网络能形成与量子态相似的数学结构，用来模拟叠加与干涉。文章追踪研究者如何从光合作用的量子猜想转向这种思路，并解释模拟所需的资源代价与局限。这类数学相似性，还不能证明生物体在利用真正的量子相干。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[研究总在“反转”？先看整批证据怎样拼起来](https://aeon.co/essays/the-life-saving-scientific-knowledge-hiding-in-plain-sight)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-06 · Aeon · Helen Pearson"
+    },
+    {
+      "type": "paragraph",
+      "text": "系统综述按规则搜集并评估相关研究，元分析再把可比较的结果合并，帮助避免被单篇论文带偏。作者沿证据综合的历史讨论持续更新的综述与 AI 辅助整理，也提醒读者审查研究质量、偏差和遗漏。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "mattpocock/skills：把工程基本功写成可组合技能",
+      "url": "https://github.com/mattpocock/skills"
+    },
+    {
+      "title": "DeepGEMM：让专家层通信与计算重叠",
+      "url": "https://github.com/deepseek-ai/DeepGEMM"
+    },
+    {
+      "title": "EmbeddingGemma 2：在本地跨文字、图片与音视频检索",
+      "url": "https://huggingface.co/google/embeddinggemma-2"
+    },
+    {
+      "title": "FBTriton：按热点行拆任务，加速推荐系统嵌入查表",
+      "url": "https://pytorch.org/blog/modernizing-table-batched-embeddings-with-fbtriton/"
+    },
+    {
+      "title": "把地点压成向量，补上公共卫生预测的数据缺口",
+      "url": "https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health/"
+    },
+    {
+      "title": "FA4 解码优化：从注意力公式读到双缓冲内核",
+      "url": "https://research.colfax-intl.com/optimization-diaries-s-p-ping-pong-for-flashattention-4-decode/"
+    },
+    {
+      "title": "原地修改张量后，PyTorch怎样维护反向图？",
+      "url": "https://blog.ezyang.com/2026/03/autograd-and-mutation/"
+    },
+    {
+      "title": "Mistral Large 4：万亿参数模型先开放 API 预览",
+      "url": "https://mistral.ai/news/mistral-large-4/"
+    },
+    {
+      "title": "OpenAI公开数学成果，让证明与计算过程接受核查",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/"
+    },
+    {
+      "title": "Gleam 1.19：跳过 Erlang 源码，让编译与定位更直接",
+      "url": "https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/"
+    },
+    {
+      "title": "生物未必依靠量子效应，网络却能借用量子数学",
+      "url": "https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/"
+    },
+    {
+      "title": "研究总在“反转”？先看整批证据怎样拼起来",
+      "url": "https://aeon.co/essays/the-life-saving-scientific-knowledge-hiding-in-plain-sight"
+    }
+  ],
+  "public_reviewed": true
+}

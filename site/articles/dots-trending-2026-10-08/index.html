@@ -1,0 +1,58 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · 2026-10-08 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-08">2026-10-08</time> / 修订 1</p><h1>Dots Trending · 2026-10-08</h1><p class="lead">当日 13 条动态，保留摘要、数据口径与原始出处。</p></header><div class="prose"><p>DOTS TRENDING   /   2026.10.08 · 北京时间 · 13条</p>
+<h2>📡 每日 Trending 速览</h2>
+<h2>🔧 开源热榜</h2>
+<p><a href="https://github.com/morluto/rea" rel="noreferrer">REA：让代理沿证据读懂应用与二进制</a></p>
+<p>⭐+4,655 · TypeScript · GitHub Today</p>
+<p>把二进制、JavaScript和应用运行行为分析接到同一套代理工具，结论附带证据与未解问题，便于追查功能实现。</p>
+<p>静态JavaScript分析无需启动目标程序；原生分析仍需另配Hopper、Ghidra或IDA，反编译结果不等于原始源码。</p>
+<p><a href="https://github.com/EpicGames/raddebugger" rel="noreferrer">RAD Debugger：面向大型原生项目的调试工具链</a></p>
+<p>⭐+90 · C · GitHub Today</p>
+<p>提供多进程图形调试，并把PDB转换为自有RDI调试信息格式；配套链接器面向体积很大的可执行文件。</p>
+<p>适合研究大型项目的编译调试循环；目前仍处Alpha阶段，调试器仅支持本机Windows x64与PDB。</p>
+<p><a href="https://github.com/cloudflare/security-audit-skill" rel="noreferrer">Cloudflare security-audit-skill：把漏洞发现与独立复核分开</a></p>
+<p>⭐+576 · JavaScript · GitHub Today</p>
+<p>将代码审计拆成覆盖面梳理、候选发现、独立验证和结构化报告，用记录追踪哪些边界真正检查过。</p>
+<p>另一组代理专门尝试推翻候选结论，证据不足保留待验证；运行目标代码仍要求隔离网络、权限和资源的系统沙箱。</p>
+<h2>🧠 AI/模型</h2>
+<p><a href="https://huggingface.co/autotrust/JEV-27B-VL" rel="noreferrer">JEV-27B-VL：用历史封面与候选封面做零样本排序</a></p>
+<p>HF 当前热榜 · 非今日首发</p>
+<p>给模型最近看过的五张视频封面和一张候选封面，决策头一次前向计算观看概率，用于探索新内容冷启动。</p>
+<p>模型卡附MicroLens实验与代码，但仅评估200名用户、每人20个候选；作者离线结果不能直接外推线上排序收益。</p>
+<p><a href="https://aimslab.stanford.edu/textbook/" rel="noreferrer">AI Measurement Science：从榜单分数追问测量是否成立</a> <a href="https://news.ycombinator.com/item?id=49994142" rel="noreferrer">讨论</a></p>
+<p>深度精选 · 发布日期未核实 · Stanford AIMS</p>
+<p>系统讲解评测是否测到目标能力、题目难度怎样影响分数，以及如何估计误差、节省评测样本。</p>
+<p>从概率模型与数学推导走到Python交互例子，适合设计或审查模型评测；需统计、线性代数与机器学习基础。</p>
+<p><a href="https://research.google/blog/does-better-work-always-mean-better-workers/" rel="noreferrer">AI提升了工作质量，使用者也学会了吗？</a></p>
+<p>2026-10-08 04:19 · 北京时间 · Google Research</p>
+<p>研究让133名专利律师随机获得AI工具，再分别评估有AI辅助的写作和撤去AI后的修改能力。</p>
+<p>三个月后，写作质量提高，但独立判断的平均增益集中在资深律师；初级律师未见平均提升。结论限于这项短期、特定职业试验。</p>
+<p><a href="https://lilianweng.github.io/posts/2026-06-24-scaling-laws/" rel="noreferrer">Scaling Laws：从算力分配推导到拟合误差</a></p>
+<p>深度精选 · 2026-06-24 · Lilian Weng</p>
+<p>围绕固定算力下怎样分配模型参数与训练数据，串起Kaplan、Chinchilla和数据受限时的缩放规律。</p>
+<p>文章给出优化推导与交互模拟，展示参数计数、损失精度和拟合区间如何影响外推，适合设计小规模实验；经验公式仍需按具体任务验证。</p>
+<p><a href="https://pytorch.org/blog/pytorch-hardware-enablement-updates-from-the-acceleration-integration-working-group/" rel="noreferrer">新加速器接入 PyTorch：沿参考实现打通训练栈</a></p>
+<p>2026-10-05 · PyTorch</p>
+<p>OpenReg用最小CPU后端演示设备注册、算子分发、性能分析与编译接入，再用OCCL展示分布式通信接口。</p>
+<p>文章串起参考代码、测试和跨仓库CI，适合梳理框架怎样支持新硬件；这些实现用于教学和验证，不追求生产性能。</p>
+<p><a href="https://distill.pub/2018/feature-wise-transformations/" rel="noreferrer">FiLM：让一组输入决定另一组特征怎样缩放与平移</a></p>
+<p>深度精选 · 2018-07-09 · Distill</p>
+<p>从拼接、加偏置和乘门控出发，逐步解释如何用条件信息生成各特征的缩放与平移系数。</p>
+<p>文章用公式、交互图和实验串起视觉问答、风格迁移与多任务学习，并链接代码，适合比较低成本特征融合方案。</p>
+<h2>🔥 热议话题</h2>
+<p><a href="https://developer.chrome.com/blog/jpeg-xl-in-chrome" rel="noreferrer">Chrome引入JPEG XL：用Rust重写解码器并保留向量化性能</a> <a href="https://news.ycombinator.com/item?id=49991227" rel="noreferrer">讨论</a></p>
+<p>HN · 过去24小时提交 · 原文2026-10-06</p>
+<p>Chrome宣布从155版支持JPEG XL解码，面向高保真、无损与渐进式图片加载。</p>
+<p>原文沿Rust重写、跨平台向量指令封装和性能测试解释实现取舍，适合研究处理不可信媒体数据时的安全与速度。</p>
+<p><a href="https://github.com/docker/docker-agent" rel="noreferrer">Docker Agent：用YAML描述可共享的多代理配置</a> <a href="https://news.ycombinator.com/item?id=49996259" rel="noreferrer">讨论</a></p>
+<p>HN · 过去24小时提交 · 原始首发日期未核实</p>
+<p>把模型、工具和分工写入可版本管理的YAML，支持不同模型服务、MCP工具及检索增强流程。</p>
+<p>代理配置可打包到容器镜像兼容的OCI仓库，便于团队复用；实际运行仍需配置模型与工具访问权限。</p>
+<h2>🔬 科学/人文</h2>
+<p><a href="https://www.quantamagazine.org/as-ai-closed-in-on-unique-games-proof-researchers-raced-to-beat-the-machines-20261007/" rel="noreferrer">放宽图着色要求，为何依然计算困难？</a></p>
+<p>2026-10-07 · Quanta · 论文原发2026-09-14</p>
+<p>三种颜色足够的图，即使允许使用更多种固定数量的颜色，寻找相邻节点不同色的方案仍可能是NP难问题。</p>
+<p>报道拆解Fei、Minzer和Wang的4-to-1博弈成果，介绍纠错码如何连接这些难题，也记录AI竞赛压力怎样改变论文发布节奏。</p>
+<p><a href="https://aeon.co/essays/a-good-sceptic-has-more-than-doubt-and-less-than-certainty" rel="noreferrer">保留怀疑，也能作出有把握的判断</a></p>
+<p>往期佳作·2026-09-21 · Aeon</p>
+<p>作者借西塞罗的哲学说明：依据观点经受检验的程度分配信心，证据变化时再调整判断。</p>
+<p>文章把它落到区分价值与事实、预先说明什么会使自己改观等做法；这里的“可信”是哲学判断，不能直接等同于统计概率。</p><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/morluto/rea" rel="noreferrer">REA：让代理沿证据读懂应用与二进制</a></li><li><a href="https://github.com/EpicGames/raddebugger" rel="noreferrer">RAD Debugger：面向大型原生项目的调试工具链</a></li><li><a href="https://github.com/cloudflare/security-audit-skill" rel="noreferrer">Cloudflare security-audit-skill：把漏洞发现与独立复核分开</a></li><li><a href="https://huggingface.co/autotrust/JEV-27B-VL" rel="noreferrer">JEV-27B-VL：用历史封面与候选封面做零样本排序</a></li><li><a href="https://aimslab.stanford.edu/textbook/" rel="noreferrer">AI Measurement Science：从榜单分数追问测量是否成立</a></li><li><a href="https://news.ycombinator.com/item?id=49994142" rel="noreferrer">讨论</a></li><li><a href="https://research.google/blog/does-better-work-always-mean-better-workers/" rel="noreferrer">AI提升了工作质量，使用者也学会了吗？</a></li><li><a href="https://lilianweng.github.io/posts/2026-06-24-scaling-laws/" rel="noreferrer">Scaling Laws：从算力分配推导到拟合误差</a></li><li><a href="https://pytorch.org/blog/pytorch-hardware-enablement-updates-from-the-acceleration-integration-working-group/" rel="noreferrer">新加速器接入 PyTorch：沿参考实现打通训练栈</a></li><li><a href="https://distill.pub/2018/feature-wise-transformations/" rel="noreferrer">FiLM：让一组输入决定另一组特征怎样缩放与平移</a></li><li><a href="https://developer.chrome.com/blog/jpeg-xl-in-chrome" rel="noreferrer">Chrome引入JPEG XL：用Rust重写解码器并保留向量化性能</a></li><li><a href="https://news.ycombinator.com/item?id=49991227" rel="noreferrer">讨论</a></li><li><a href="https://github.com/docker/docker-agent" rel="noreferrer">Docker Agent：用YAML描述可共享的多代理配置</a></li><li><a href="https://news.ycombinator.com/item?id=49996259" rel="noreferrer">讨论</a></li><li><a href="https://www.quantamagazine.org/as-ai-closed-in-on-unique-games-proof-researchers-raced-to-beat-the-machines-20261007/" rel="noreferrer">放宽图着色要求，为何依然计算困难？</a></li><li><a href="https://aeon.co/essays/a-good-sceptic-has-more-than-doubt-and-less-than-certainty" rel="noreferrer">保留怀疑，也能作出有把握的判断</a></li></ol></section></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-05—11 试点 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。周日仅有 Trending。</p></footer></body></html>

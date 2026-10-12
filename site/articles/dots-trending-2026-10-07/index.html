@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · 2026-10-07 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-07">2026-10-07</time> / 修订 1</p><h1>Dots Trending · 2026-10-07</h1><p class="lead">当日 12 条动态，保留摘要、数据口径与原始出处。</p></header><div class="prose"><p>DOTS TRENDING / 2026.10.07 · 北京时间 · 12条</p>
+<h2>📡 每日 Trending 速览</h2>
+<h2>🔧 开源热榜</h2>
+<p><a href="https://github.com/mattpocock/skills" rel="noreferrer">mattpocock/skills：把工程基本功写成可组合技能</a></p>
+<p>⭐+889 · Shell · GitHub Today</p>
+<p>把需求追问、领域术语、测试驱动开发和代码审查拆成可组合的代理技能，先对齐要做什么，再用反馈检验实现。适合把日常工程流程交给编码助手；这些是可改写的工作方法，仍需真实测试和人工判断。</p>
+<p><a href="https://github.com/deepseek-ai/DeepGEMM" rel="noreferrer">DeepGEMM：让专家层通信与计算重叠</a></p>
+<p>⭐+199 · Cuda · GitHub Today</p>
+<p>把低精度矩阵乘和专家层计算放进 CUDA 内核，让显卡间通信与计算重叠，减少大模型运行时的等待。接口与测试示例适合研究算子优化；主仓库要求 NVIDIA SM90/SM100 显卡及 CUDA 12.9 以上。</p>
+<h2>🧠 AI/模型</h2>
+<p><a href="https://huggingface.co/google/embeddinggemma-2" rel="noreferrer">EmbeddingGemma 2：在本地跨文字、图片与音视频检索</a></p>
+<p>HF 当前热榜 · 2026-10-07 00:00发布（北京时间）</p>
+<p>把文字、代码、图像、音视频映射到同一向量空间，用文字就能检索本地图片或录音。总参数7.4亿，可按需加载视觉和音频编码器；压缩向量可省存储，但128维会明显影响多模态效果，推理应使用BF16或FP32。</p>
+<p><a href="https://pytorch.org/blog/modernizing-table-batched-embeddings-with-fbtriton/" rel="noreferrer">FBTriton：按热点行拆任务，加速推荐系统嵌入查表</a></p>
+<p>2026-10-07 06:57 · 北京时间 · PyTorch</p>
+<p>推荐系统常要同时查很多张嵌入表。本文用Triton重写前后向内核，按行访问次数拆任务，缓解负载不均和寄存器压力。作者在GB200的307组分片配置中测得前向加速中位数1.28倍，部分形状仍慢于CUDA。</p>
+<p><a href="https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health/" rel="noreferrer">把地点压成向量，补上公共卫生预测的数据缺口</a></p>
+<p>2026-10-06 23:05 · 北京时间 · Google Research</p>
+<p>公共卫生模型常受数据滞后和地区边界限制。PDFM将搜索趋势、人口流动和环境信号压成地点向量，直接补入现有预测流程。五项案例显示增益依任务而异，例如霍乱预测的改善主要出现在提前四至八周，短期并不显著。</p>
+<p><a href="https://research.colfax-intl.com/optimization-diaries-s-p-ping-pong-for-flashattention-4-decode/" rel="noreferrer">FA4 解码优化：从注意力公式读到双缓冲内核</a></p>
+<p>深度精选 · 原文2026-09-07 · Colfax</p>
+<p>从注意力公式与在线 softmax 讲起，解释双张量内存槽如何消除解码时的不必要串行。随后给出同步代码、内核轨迹和 B200 测试；最高约16%提升限于指定配置，适合循着原理读到实现。</p>
+<p><a href="https://blog.ezyang.com/2026/03/autograd-and-mutation/" rel="noreferrer">原地修改张量后，PyTorch怎样维护反向图？</a></p>
+<p>深度精选 · 2026-03-28 · Edward Z. Yang</p>
+<p>从几行 PyTorch 代码出发，沿反向图解释原地修改、共享存储的视图，以及多个别名如何延迟更新。作者用 CopySlices 和版本计数把实现串起来，适合排查自动求导问题；涉及的内部字段不宜当作稳定接口。</p>
+<h2>🔥 热议话题</h2>
+<p><a href="https://mistral.ai/news/mistral-large-4/" rel="noreferrer">Mistral Large 4：万亿参数模型先开放 API 预览</a></p>
+<p>HN · 过去24小时提交 · 原文2026-10-06</p>
+<p>Mistral Large 4开放API预览，采用1万亿总参数、490亿活跃参数的多模态架构，权重计划月底发布。官方介绍了编程、图像理解与长程工具调用能力，并披露大规模异步强化学习流程；各项领先结论仍是发布方的评测口径。</p>
+<p><a href="https://openai.com/index/sharing-ai-progress-in-mathematics/" rel="noreferrer">OpenAI公开数学成果，让证明与计算过程接受核查</a></p>
+<p>HN · 过去24小时提交 · 原文2026-10-06</p>
+<p>OpenAI把内部模型产出的数学结果放入公开仓库，并为部分证明提供可由电脑检查的Lean形式化。它还披露推理摘要、尝试数量与计算开销，为数学界复核提供入口；具体结论仍需逐项检查，不能只凭发布公告判断。</p>
+<p><a href="https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/" rel="noreferrer">Gleam 1.19：跳过 Erlang 源码，让编译与定位更直接</a></p>
+<p>HN · 过去24小时提交 · 原文2026-10-05</p>
+<p>Gleam 1.19把Erlang源码生成改为直接输出带位置信息的中间表示，省去分词和解析步骤，也让报错行号对应原始Gleam代码。文章解释了为何仍借用Erlang编译器的优化，而不自行维护随虚拟机变化的BEAM字节码后端。</p>
+<h2>🔬 科学/人文</h2>
+<p><a href="https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/" rel="noreferrer">生物未必依靠量子效应，网络却能借用量子数学</a></p>
+<p>往期佳作·2026-09-23 · Quanta</p>
+<p>振荡器网络能形成与量子态相似的数学结构，用来模拟叠加与干涉。文章追踪研究者如何从光合作用的量子猜想转向这种思路，并解释模拟所需的资源代价与局限。这类数学相似性，还不能证明生物体在利用真正的量子相干。</p>
+<p><a href="https://aeon.co/essays/the-life-saving-scientific-knowledge-hiding-in-plain-sight" rel="noreferrer">研究总在“反转”？先看整批证据怎样拼起来</a></p>
+<p>2026-10-06 · Aeon · Helen Pearson</p>
+<p>系统综述按规则搜集并评估相关研究，元分析再把可比较的结果合并，帮助避免被单篇论文带偏。作者沿证据综合的历史讨论持续更新的综述与 AI 辅助整理，也提醒读者审查研究质量、偏差和遗漏。</p><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/mattpocock/skills" rel="noreferrer">mattpocock/skills：把工程基本功写成可组合技能</a></li><li><a href="https://github.com/deepseek-ai/DeepGEMM" rel="noreferrer">DeepGEMM：让专家层通信与计算重叠</a></li><li><a href="https://huggingface.co/google/embeddinggemma-2" rel="noreferrer">EmbeddingGemma 2：在本地跨文字、图片与音视频检索</a></li><li><a href="https://pytorch.org/blog/modernizing-table-batched-embeddings-with-fbtriton/" rel="noreferrer">FBTriton：按热点行拆任务，加速推荐系统嵌入查表</a></li><li><a href="https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health/" rel="noreferrer">把地点压成向量，补上公共卫生预测的数据缺口</a></li><li><a href="https://research.colfax-intl.com/optimization-diaries-s-p-ping-pong-for-flashattention-4-decode/" rel="noreferrer">FA4 解码优化：从注意力公式读到双缓冲内核</a></li><li><a href="https://blog.ezyang.com/2026/03/autograd-and-mutation/" rel="noreferrer">原地修改张量后，PyTorch怎样维护反向图？</a></li><li><a href="https://mistral.ai/news/mistral-large-4/" rel="noreferrer">Mistral Large 4：万亿参数模型先开放 API 预览</a></li><li><a href="https://openai.com/index/sharing-ai-progress-in-mathematics/" rel="noreferrer">OpenAI公开数学成果，让证明与计算过程接受核查</a></li><li><a href="https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/" rel="noreferrer">Gleam 1.19：跳过 Erlang 源码，让编译与定位更直接</a></li><li><a href="https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/" rel="noreferrer">生物未必依靠量子效应，网络却能借用量子数学</a></li><li><a href="https://aeon.co/essays/the-life-saving-scientific-knowledge-hiding-in-plain-sight" rel="noreferrer">研究总在“反转”？先看整批证据怎样拼起来</a></li></ol></section></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-05—11 试点 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。周日仅有 Trending。</p></footer></body></html>

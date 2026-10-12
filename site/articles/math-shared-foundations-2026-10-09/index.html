@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>合并独立估计，为什么按逆方差加权？ · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">数学共性小课 / <time datetime="2026-10-09">2026-10-09</time> / 修订 1</p><h1>合并独立估计，为什么按逆方差加权？</h1><p class="lead">两支温度计同时测同一杯水，一支读数波动较小，另一支较大。若都没有系统性偏差，该怎样合并读数？本期从这一个问题推导权重，再看它怎样出现在研究结果合并和卡尔曼滤波中。</p></header><div class="prose"><p>每周探索 · 数学共性小课 · 2026-10-09 · 主线约 7–8 分钟</p>
+<h2>合并独立估计，为什么按逆方差加权？</h2>
+<p>两支温度计同时测同一杯水，一支读数波动较小，另一支较大。若都没有系统性偏差，该怎样合并读数？本期从这一个问题推导权重，再看它怎样出现在研究结果合并和卡尔曼滤波中。</p>
+<p>本期增量：此前 baseline 课调整单个梯度估计的噪声，Softmax 课分配选择概率；这里合并多个对同一真值的估计，推出逆方差权重。无需先读往期。</p>
+<h2>先说清：什么固定，什么可以选</h2>
+<p>把水温记作 θ，它是固定但未知的真值。X₁、X₂ 是重复测量时会变化的两路读数；ε₁、ε₂ 是对应误差。假设误差相互独立、长期平均为零，而且方差 v₁、v₂ 已知。方差描述读数围绕真值的波动，温度用 ℃，方差就用 ℃²。</p>
+<figure><img src="../../assets/math_shared_foundations_2026-10-09/model.png" alt="两次读数等于同一真值加各自误差；误差期望为零，方差分别为 v1、v2。" loading="lazy"><figcaption></figcaption></figure>
+<p>我们只能选择第一路的权重 w，第二路随之为 1−w；先限制在 0 到 1。权重根据仪器误差模型预先确定，不看这一次读数来临时挑。要求两路权重相加为 1，是为了让没有偏差的读数合并后仍没有偏差：</p>
+<figure><img src="../../assets/math_shared_foundations_2026-10-09/estimator.png" alt="合并读数为 w 乘 X1 加一减 w 乘 X2。因为权重和为一，合并估计的期望仍等于真值。" loading="lazy"><figcaption></figcaption></figure>
+<p>希望改善的是<strong>重复测量时的平均平方误差</strong>：每次用合并读数减去真值、平方，再对测量噪声取平均。它惩罚估计离真值较远的情况。由于刚才保证了无偏，这个目标也就是合并估计的方差。并非每一次读数都一定更接近真值。</p>
+<h2>从误差写出目标，再解出权重</h2>
+<p>先把两路读数都换成“真值＋误差”。真值项因权重和为 1 而抵消，剩下的合并误差如下：</p>
+<figure><img src="../../assets/math_shared_foundations_2026-10-09/variance.png" alt="合并误差是两项加权误差之和；独立且零均值使交叉项为零，均方误差等于 w平方乘v1 加一减w的平方乘v2。" loading="lazy"><figcaption></figcaption></figure>
+<p>最后一行从哪来？平方展开后，有两项平方和一个交叉项。第一项的平均是 w²v₁，第二项是 (1−w)²v₂；交叉项含 E[ε₁ε₂]。独立使它等于 E[ε₁]E[ε₂]，两个平均误差都是零，因此交叉项消失。<strong>权重在这里要平方</strong>，因为误差先乘权重，再被平方。</p>
+<p>现在 v₁、v₂ 固定，只剩 w 可调。导数 V′(w) 描述 w 小幅增加时，目标上升还是下降；在最低点，它等于零。对目标 V(w) 求导：第一项给出 2wv₁；第二项还要乘上 1−w 的导数 −1，因此得到负号。令导数为零，找出曲线斜率变为零的位置：</p>
+<figure><img src="../../assets/math_shared_foundations_2026-10-09/derivative.png" alt="求导得到 2wv1 减 2(1减w)v2；令导数为零，得到 w(v1加v2)=v2，所以第一路权重为 v2 除以 v1加v2，也等于第一路逆方差占总逆方差的比例。" loading="lazy"><figcaption></figcaption></figure>
+<p>倒数第二步只是把右边的 −wv₂ 移到左边。从左往右的最后一个等号，则把分子分母同除以 v₁v₂：这就看出<strong>第一路权重正比于第一路自己的逆方差</strong>。虽然另一种写法的分子是 v₂，两种表达完全相同。</p>
+<p>展开 V(w) 后，w² 的系数是正数 v₁＋v₂，因此它是一条开口向上的抛物线，刚才找到的是唯一最低点；两方差为正也保证最优权重落在 0 与 1 之间。不需要正态分布才能得到这个结论。</p>
+<h2>为什么能累积“精度”</h2>
+<p>把最优权重及第二路权重 v₁/(v₁＋v₂) 放回 V(w)：分子得到 v₂²v₁＋v₁²v₂，提出 v₁v₂(v₁＋v₂) 后，约掉一个分母因子，便有：</p>
+<figure><img src="../../assets/math_shared_foundations_2026-10-09/precision.png" alt="最小方差等于 v1v2 除以 v1加v2；它的倒数等于 1/v1 加 1/v2。" loading="lazy"><figcaption></figcaption></figure>
+<p>将方差的倒数叫作<strong>精度</strong>。这里说的是统计意义上的精度，不是仪器刻度有几位小数。合并后，独立信息的精度相加。两路同样稳定时各占一半；某一路方差很大时，其权重接近零；再加入一路有限方差的独立无偏读数，最小方差会进一步下降。</p>
+<p>如果有第三路，就先把前两路压成“合并值＋合并方差”，再与第三路应用同一个二路公式。前两路的合并值仍无偏，且与独立的第三路无关；把它的逆方差换成前两路精度之和，便得到下面的多路形式。重复这一步即可继续合并：</p>
+<figure><img src="../../assets/math_shared_foundations_2026-10-09/many.png" alt="多路估计按各自逆方差加权后除以总逆方差；合并方差为总逆方差的倒数。" loading="lazy"><figcaption></figcaption></figure>
+<p>上式 i 遍历各路读数。它不要求保留每次合并的树形顺序，只需保留精度之和与“读数×精度”之和。[1]</p>
+<h2>同一运算，放回两个实际问题</h2>
+<p><strong>合并多项研究的估计。</strong> Xᵢ 换成第 i 项研究估计的效应，vᵢ 换成该估计标准误的平方；标准误描述估计值的不确定性，并非原始样本的标准差。若研究独立且估计同一效应，精度高的研究获得更大权重，这就是共同效应模型下的逆方差合并。若各研究的真实效应本来不同，便需另建异质性模型，不能直接把差异都归为测量噪声。[2]</p>
+<p><strong>用新传感器读数修正预测。</strong> 卡尔曼滤波的一个标量更新中，m 是对当前状态的预测，P 是预测误差方差；z 是同单位的新读数，R 是测量噪声方差。预测误差与新测量噪声不相关、均值为零时，把第一路对应到 m，第二路对应到 z，刚才的权重给出：</p>
+<figure><img src="../../assets/math_shared_foundations_2026-10-09/kalman.png" alt="新估计等于旧预测 m 加 K 乘新读数与旧预测的差；K=P/(P加R)，新误差方差为 PR/(P加R)。" loading="lazy"><figcaption></figcaption></figure>
+<p>第二行只是把第一行拆成 m 加一个修正量。K 是新读数的权重，称为卡尔曼增益；预测越不确定，K 越大，越愿意向新读数移动。P⁺ 是这次更新后的误差方差。完整滤波还需先把上一时刻状态预测到当前时刻，并计入过程噪声，不能拿过时的位置直接与当前读数平均。[3]</p>
+<h2>使用前，检查三个条件</h2>
+<p>先确认它们估计的是同一个量、误差是否有系统偏差、方差与误差相关性是否可信。比如把同一读数复制两份，噪声完全相同；平均后还是原读数，不能按独立公式宣称方差减半。两个模型共享训练数据，也不能自动视为独立估计。</p>
+<p>逆方差加权的最优性针对已知方差下、固定权重的线性无偏合并。现实中方差通常要估计，权重也会带入估计误差；较低方差不能替系统性偏差背书。</p>
+<h2>小练习</h2>
+<p>两路读数满足本课条件。第二路的<strong>标准差</strong>是第一路的两倍。第一路应占多少权重？合并方差是第一路方差的几倍？只改变标准差这个条件，不需要知道这次实际读数。</p>
+<p>可以先停在这里，自己算两步。</p>
+<details><summary>答案｜想过再看</summary><p>标准差平方才是方差，因此 v₂＝4v₁。第一路权重为 4/5，第二路为 1/5；合并方差为 4v₁/5。第一路更稳定，但第二路仍提供独立信息，所以合并后的方差比只用第一路低 20%。这是理想条件下的代数结论，并非真实仪器实验。</p>
+<p><strong>可复用的做法：</strong>先把每份信息写成“估计什么＋误差如何”，再决定能否按逆方差合并。权重来自误差模型和明确目标，不来自读数大小。</p></details>
+<h2>来源与选读</h2>
+<p>[1] <a href="https://www.nist.gov/system/files/documents/2017/05/09/combine-1.pdf#page=27" rel="noreferrer">NIST：Combining Information</a>，逆方差最优加权与方差估计的限制。<br>[2] <a href="https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-10#section-10-3" rel="noreferrer">Cochrane Handbook §10.3</a>，共同效应与随机效应的区分。<br>[3] <a href="https://sites.stat.columbia.edu/liam/teaching/neurostat-spr12/papers/hmm/KF-welling-notes.pdf#page=2" rel="noreferrer">Max Welling：The Kalman Filter，§2</a>，标量预测与测量更新。</p><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://www.nist.gov/system/files/documents/2017/05/09/combine-1.pdf#page=27" rel="noreferrer">NIST：Combining Information</a></li><li><a href="https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-10#section-10-3" rel="noreferrer">Cochrane Handbook §10.3</a></li><li><a href="https://sites.stat.columbia.edu/liam/teaching/neurostat-spr12/papers/hmm/KF-welling-notes.pdf#page=2" rel="noreferrer">Max Welling：The Kalman Filter，§2</a></li></ol></section></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-05—11 试点 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。周日仅有 Trending。</p></footer></body></html>

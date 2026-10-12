@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · 2026-10-06 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-06">2026-10-06</time> / 修订 1</p><h1>Dots Trending · 2026-10-06</h1><p class="lead">当日 12 条动态，保留摘要、数据口径与原始出处。</p></header><div class="prose"><p>DOTS TRENDING   /   2026.10.06 · 北京时间 · 12条</p>
+<h2>📡 每日 Trending 速览</h2>
+<h2>🔧 开源热榜</h2>
+<p><a href="https://github.com/caddyserver/caddy" rel="noreferrer">Caddy：把 HTTPS 和动态配置装进 Web 服务器</a></p>
+<p>⭐+515 · Go · GitHub Today</p>
+<p>Caddy 把证书申请、续期和 HTTPS 配置纳入服务器本身，同时支持 HTTP/1.1、2 和 3。<br>既能用简洁的 Caddyfile 起步，也能经 JSON API 动态改配置，方便部署站点或接入自动化配置流程。</p>
+<p><a href="https://github.com/M-Abozaid/esp32-c3-adblock" rel="noreferrer">esp32-c3-adblock：用闪存里的域名哈希省内存</a></p>
+<p>⭐+196 · C++ · GitHub Today</p>
+<p>把域名压成 40 位哈希，排好序存在闪存里，再用二分查找省下内存，让没有外接内存的 ESP32-C3 也能做 DNS 域名过滤。<br>名单容量与在线固件升级空间需要取舍，管理接口仍用明文 HTTP。</p>
+<h2>🧠 AI/模型</h2>
+<p><a href="https://huggingface.co/autotrust/GEV-26B-Decide" rel="noreferrer">GEV-26B-Decide：低置信度时再推理</a></p>
+<p>HF 当前热榜 · 非今日首发</p>
+<p>把分类、打分和选项选择做成概率输出；不够确信时，再让同一底模推理，并混合两路概率。<br>模型卡附有实验代码与结果，也坦承复杂推理会慢到数十秒，且可能自信答错，适合研究速度与可靠性的取舍。</p>
+<p><a href="https://research.google/blog/open-and-emergent-problems-in-agentic-privacy-and-security-a-contextual-angle/" rel="noreferrer">代理该把信息交给谁？让权限判断带上具体情境</a></p>
+<p>2026-10-05 · Google Research</p>
+<p>替用户订机票时，哪些信息可以交给航空公司，又有哪些不该发给会议组织者？<br>这份研究议程用具体情境界定数据流与行动权限，讨论动态策略、沙箱和多代理评测；它列出待解问题，尚非验证完毕的安全方案。</p>
+<p><a href="https://pytorch.org/blog/evolution-of-the-pytorch-media-processing-landscape/" rel="noreferrer">PyTorch 媒体处理重新分工：解码迁到 TorchCodec</a></p>
+<p>2026-10-05 · PyTorch</p>
+<p>图片、音频和视频的编解码统一交给 TorchCodec，TorchVision 与 TorchAudio 则专注张量变换。<br>原文用视频裁剪和音频频谱代码说明如何衔接，也解释旧接口迁移与跨版本二进制兼容的变化，适合检查现有数据管线。</p>
+<p><a href="https://www.aleksagordic.com/blog/vllm" rel="noreferrer">拆开 vLLM：一个请求怎样走过整套推理系统</a></p>
+<p>深度精选·2025-08-29 · Aleksa Gordić</p>
+<p>从最小推理调用出发，追踪调度器、保存注意力键值的 KV 缓存、连续批处理，再走到多卡与分布式服务。<br>图示与代码串起整套系统；文章以 2025 年固定版本为例，适合建立架构理解，复现时需核对当前接口。</p>
+<p><a href="https://tridao.me/blog/2026/sonicmoe-blackwell/" rel="noreferrer">SonicMoE：把省显存的推导落到 GPU 内核</a></p>
+<p>深度精选·2026-04-22 · Tri Dao</p>
+<p>混合专家（MoE）模型为何会随专家细分更吃显存？<br>文章从张量大小与反向传播的运算顺序推导改写，再落到融合内核、异步流水线和性能剖析。<br>当前重点是单卡 MoE 层，适合学习算法怎样适应硬件约束。</p>
+<h2>🔥 热议话题</h2>
+<p><a href="https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/" rel="noreferrer">Cloudflare Web Search：给代理统一的实时搜索入口</a></p>
+<p>HN · 过去24小时提交 · 原文2026-10-02</p>
+<p>通过同一接口调用 Ceramic、Exa 或 Linkup，把检索结果接进代理回答，并在 AI Gateway 中查看请求与费用。<br>目前处于测试版；供应商承诺零数据保留，但网关日志仍需单独管理。</p>
+<p><a href="https://github.com/rui314/mold/releases/tag/v3.0.0" rel="noreferrer">mold 3.0：Rust 重写后的链接器如何保持兼容</a></p>
+<p>HN · 过去24小时提交 · 2026-10-05</p>
+<p>链接器把编译后的目标文件合成程序。mold 3.0 以 Rust 重写，保留原命令行与目标架构，并修复多项兼容问题；官方称链接性能与上一版相当。<br>自行构建需从 CMake 转到 Cargo，升级时要一并调整构建脚本。</p>
+<p><a href="https://qlabs.sh/research/dust" rel="noreferrer">Dust：靠激活扰动训练 Transformer</a></p>
+<p>HN · 过去24小时提交 · 原文2026-10（具体日未核实）</p>
+<p>在每个词元的中间表示里加噪声，再按损失变化给扰动打分，由此估计参数该往哪边更新。<br>作者用它完成小型 Transformer 预训练；接近反向传播的结果依赖大量计算，目前还不是实用的等成本替代。</p>
+<h2>🔬 科学/人文</h2>
+<p><a href="https://www.quantamagazine.org/is-ai-the-end-of-math-as-we-know-it-20261005/" rel="noreferrer">AI证明潮，怎样改变数学研究的价值？</a></p>
+<p>2026-10-05 · Quanta · 评论</p>
+<p>这篇评论区分“得到可验证的证明”与“真正理解数学”，追问AI如何冲击以证明定理为中心的学术激励。<br>它讨论解释证明、提出好问题和培养学生的价值，也呈现数学家对未来分工的不同看法。</p>
+<p><a href="https://aeon.co/essays/what-i-have-learned-from-posting-episodes-of-my-life-on-facebook" rel="noreferrer">把回忆写成连载，读者怎样纠正我们的自我理解？</a></p>
+<p>2026-10-05 · Aeon · 随笔</p>
+<p>一位科学史家把回忆录拆成短篇，边发布边接受熟人和读者的纠正。<br>文章用亲身例子展示，自传怎样被事实核对和不同解释改写，也提醒我们别为了一个好故事，把人生的矛盾与断裂都抹平。</p><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/caddyserver/caddy" rel="noreferrer">Caddy：把 HTTPS 和动态配置装进 Web 服务器</a></li><li><a href="https://github.com/M-Abozaid/esp32-c3-adblock" rel="noreferrer">esp32-c3-adblock：用闪存里的域名哈希省内存</a></li><li><a href="https://huggingface.co/autotrust/GEV-26B-Decide" rel="noreferrer">GEV-26B-Decide：低置信度时再推理</a></li><li><a href="https://research.google/blog/open-and-emergent-problems-in-agentic-privacy-and-security-a-contextual-angle/" rel="noreferrer">代理该把信息交给谁？让权限判断带上具体情境</a></li><li><a href="https://pytorch.org/blog/evolution-of-the-pytorch-media-processing-landscape/" rel="noreferrer">PyTorch 媒体处理重新分工：解码迁到 TorchCodec</a></li><li><a href="https://www.aleksagordic.com/blog/vllm" rel="noreferrer">拆开 vLLM：一个请求怎样走过整套推理系统</a></li><li><a href="https://tridao.me/blog/2026/sonicmoe-blackwell/" rel="noreferrer">SonicMoE：把省显存的推导落到 GPU 内核</a></li><li><a href="https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/" rel="noreferrer">Cloudflare Web Search：给代理统一的实时搜索入口</a></li><li><a href="https://github.com/rui314/mold/releases/tag/v3.0.0" rel="noreferrer">mold 3.0：Rust 重写后的链接器如何保持兼容</a></li><li><a href="https://qlabs.sh/research/dust" rel="noreferrer">Dust：靠激活扰动训练 Transformer</a></li><li><a href="https://www.quantamagazine.org/is-ai-the-end-of-math-as-we-know-it-20261005/" rel="noreferrer">AI证明潮，怎样改变数学研究的价值？</a></li><li><a href="https://aeon.co/essays/what-i-have-learned-from-posting-episodes-of-my-life-on-facebook" rel="noreferrer">把回忆写成连载，读者怎样纠正我们的自我理解？</a></li></ol></section></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-05—11 试点 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。周日仅有 Trending。</p></footer></body></html>

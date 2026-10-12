@@ -1,0 +1,307 @@
+{
+  "id": "dots-trending-2026-10-10",
+  "revision": 1,
+  "date": "2026-10-10",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending · 2026-10-10",
+  "summary": "当日 13 条动态，保留摘要、数据口径与原始出处。",
+  "topics": [
+    "开源",
+    "AI",
+    "技术动态"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "DOTS TRENDING   /   2026.10.10 · 北京时间 · 13条"
+    },
+    {
+      "type": "heading",
+      "text": "📡 每日 Trending 速览"
+    },
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[alibaba/open-code-review](https://github.com/alibaba/open-code-review)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+326 · Go · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把文件筛选、关联文件分组和评论定位交给确定性程序，再让模型检索上下文、判断潜在缺陷。"
+    },
+    {
+      "type": "paragraph",
+      "text": "支持差异审查与整库扫描，适合研究可复核的代码审查流程；作者明确选择较高精确率，代价是可能漏掉更多问题。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[BerriAI/litellm](https://github.com/BerriAI/litellm)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+95 · Python · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "用同一接口接入多家模型服务，可作为 Python 库使用，也可部署为团队共用的模型网关。"
+    },
+    {
+      "type": "paragraph",
+      "text": "网关集中处理密钥、预算、负载分配和调用记录，适合多模型实验与服务治理；部署时仍需审查日志中的敏感数据和各模型服务权限。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Robbyant/lingbot-map](https://github.com/Robbyant/lingbot-map)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+110 · Python · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "逐帧接收视频并重建三维场景，用锚点、近期位姿窗口与轨迹记忆维持坐标一致，减少长程漂移。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配有评测脚本和长视频示例，可研究流式记忆的取舍；长序列需稀疏保留关键帧或重置窗口，不能把演示长度理解成无限上下文。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Laya：从英文分类器到多语言路由与任务微调](https://huggingface.co/convaiinnovations/laya)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 后续阅读 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "10月1日介绍过英文版；本次看模型卡中的多语言分流和专用微调：一次前向计算各选项分数，无需生成回答文本。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合低成本分类与路由实验，但基础模型在其决策测试中低于多数类基线；较好成绩来自专项微调，概率也需按自己的数据重新校准。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Spyre 接入 PyTorch：把张量驻留与任务调度接到真实硬件](https://pytorch.org/blog/building-spyre-as-a-native-pytorch-device/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-08 · PyTorch"
+    },
+    {
+      "type": "paragraph",
+      "text": "沿张量存储、执行队列和事件依赖，拆解 IBM 数据流加速器如何接入 PyTorch，并减少重复搬运与启动开销。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合理解新硬件后端；当前公开事件接口仍未完成，算子覆盖也需后端逐项支持。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[用语音开发 Django 功能：从口述需求到代码审查](https://simonwillison.net/2026/Oct/9/built-using-my-voice/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-09 · Simon Willison"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者边做饭边口述需求，配合本地预览完成邮件归档页、数据导入和搜索集成，再转回键盘审查代码、修改导入方式。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章附对话与提交记录，适合观察语音协作的边界；细节修正和上线前复核仍占了半小时。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[动量为何能加速：把优化拆成不同方向的误差](https://distill.pub/2017/momentum/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2017-04-04 · Distill"
+    },
+    {
+      "type": "paragraph",
+      "text": "从凸二次函数出发，把误差拆到各个特征方向，再用交互图推导步长、动量与收敛速度的关系。"
+    },
+    {
+      "type": "paragraph",
+      "text": "多项式拟合和图上着色让推导落到具体问题；最后加入随机梯度噪声，说明加速与误差积累的取舍。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Rust 类型设计：让校验过的条件跟着数据走](https://eli.thegreenplace.net/2026/rusty-thoughts-on-parse-dont-validate/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-09-26 · Eli Bendersky"
+    },
+    {
+      "type": "paragraph",
+      "text": "列表已经检查非空，后续代码为何还要处理空值？"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章用非空列表、绝对路径和非零整数演示：把检查结果编码进类型，后续调用便可依赖这些条件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配有 Rust 标准库与真实项目例子，适合设计少重复校验的接口。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Deno 团队加入 Cloudflare：运行时与托管服务的后续安排](https://deno.com/blog/cloudflare)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-09"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方宣布团队加入 Cloudflare，后续开发重心转向基于 Workers 与 Durable Objects 的共享平台，把持久状态纳入服务编程模型。"
+    },
+    {
+      "type": "paragraph",
+      "text": "Deno 运行时还将维护一年，Deploy 六个月后关闭，JSR 继续运行。现有使用者需要据此核对依赖与迁移安排；这是一份路线变更公告。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Python 3.15：显式延迟导入与新的性能分析工具](https://www.python.org/downloads/release/python-3150/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-09"
+    },
+    {
+      "type": "paragraph",
+      "text": "稳定版加入显式延迟导入、不可变字典和专门的性能分析包；延后加载暂未使用的模块，可减少部分程序的启动工作。"
+    },
+    {
+      "type": "paragraph",
+      "text": "实验性即时编译器继续改进，适合在真实脚本上检查收益；默认 UTF-8 等行为变化也需要兼容性测试，不能把官方基准涨幅套到所有应用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Microsoft MXC：用统一策略描述跨平台执行沙箱](https://github.com/microsoft/mxc)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原始首发日期未核实"
+    },
+    {
+      "type": "paragraph",
+      "text": "为运行模型输出、插件等不可信代码提供统一接口，把文件、网络和界面访问约束交给各平台的隔离后端。"
+    },
+    {
+      "type": "paragraph",
+      "text": "支持进程沙箱到虚拟机等不同强度的方案，适合嵌入代理执行系统；各后端能力不同，审计模式会关闭隔离，不能用来运行不可信代码。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[细胞怎样决定去向？把分化画成一张动态地形图](https://www.quantamagazine.org/how-does-life-unfold-a-landscape-metaphor-comes-into-its-own-20261009/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-10-09"
+    },
+    {
+      "type": "paragraph",
+      "text": "把干细胞想成滚入不同山谷的小球，稳定的谷底对应不同细胞类型。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章从单细胞测序讲到吸引子，解释基因调控与细胞间反馈如何不断改写地形，也提醒读者：降维后的图像并不等于真实的发育路径。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[同一颗地球上，繁荣、公平与环境怎样一起考虑？](https://aeon.co/essays/why-we-should-heed-barbara-wards-vision-of-planetary-justice)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-10-09"
+    },
+    {
+      "type": "paragraph",
+      "text": "历史学者重访 Barbara Ward 的“地球飞船”观念：贫困、经济发展和生态损耗彼此牵连，单个国家难以独自解决。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章也追问她的盲点，展示一种追求全球平等的理想，怎样仍夹带西方中心主义，又怎样逐步修正。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review"
+    },
+    {
+      "title": "BerriAI/litellm",
+      "url": "https://github.com/BerriAI/litellm"
+    },
+    {
+      "title": "Robbyant/lingbot-map",
+      "url": "https://github.com/Robbyant/lingbot-map"
+    },
+    {
+      "title": "Laya：从英文分类器到多语言路由与任务微调",
+      "url": "https://huggingface.co/convaiinnovations/laya"
+    },
+    {
+      "title": "Spyre 接入 PyTorch：把张量驻留与任务调度接到真实硬件",
+      "url": "https://pytorch.org/blog/building-spyre-as-a-native-pytorch-device/"
+    },
+    {
+      "title": "用语音开发 Django 功能：从口述需求到代码审查",
+      "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/"
+    },
+    {
+      "title": "动量为何能加速：把优化拆成不同方向的误差",
+      "url": "https://distill.pub/2017/momentum/"
+    },
+    {
+      "title": "Rust 类型设计：让校验过的条件跟着数据走",
+      "url": "https://eli.thegreenplace.net/2026/rusty-thoughts-on-parse-dont-validate/"
+    },
+    {
+      "title": "Deno 团队加入 Cloudflare：运行时与托管服务的后续安排",
+      "url": "https://deno.com/blog/cloudflare"
+    },
+    {
+      "title": "Python 3.15：显式延迟导入与新的性能分析工具",
+      "url": "https://www.python.org/downloads/release/python-3150/"
+    },
+    {
+      "title": "Microsoft MXC：用统一策略描述跨平台执行沙箱",
+      "url": "https://github.com/microsoft/mxc"
+    },
+    {
+      "title": "细胞怎样决定去向？把分化画成一张动态地形图",
+      "url": "https://www.quantamagazine.org/how-does-life-unfold-a-landscape-metaphor-comes-into-its-own-20261009/"
+    },
+    {
+      "title": "同一颗地球上，繁荣、公平与环境怎样一起考虑？",
+      "url": "https://aeon.co/essays/why-we-should-heed-barbara-wards-vision-of-planetary-justice"
+    }
+  ],
+  "public_reviewed": true
+}

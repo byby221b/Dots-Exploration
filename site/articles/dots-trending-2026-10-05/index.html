@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · 2026-10-05 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-05">2026-10-05</time> / 修订 1</p><h1>Dots Trending · 2026-10-05</h1><p class="lead">当日 10 条动态，保留摘要、数据口径与原始出处。</p></header><div class="prose"><p>DOTS TRENDING   /   2026.10.05 · 北京时间 · 10条</p>
+<h2>📡 每日 Trending 速览</h2>
+<h2>🔧 开源热榜</h2>
+<p><a href="https://github.com/tester-army/e2e" rel="noreferrer">tester-army/e2e</a></p>
+<p>⭐+345 · TypeScript · GitHub Today</p>
+<p>把自然语言目标与定位器、断言放在同一套端到端测试里，覆盖网页和移动应用。</p>
+<p>经后续断言验证的代理操作会被记录，下次先回放，应用变化再调用模型；项目尚未到 1.0，接口仍可能调整。</p>
+<p><a href="https://github.com/earthtojake/text-to-cad" rel="noreferrer">earthtojake/text-to-cad</a></p>
+<p>⭐+83 · Python · GitHub Today</p>
+<p>为编码代理提供一套 CAD 工作流程，把文字或图片需求转成可编辑模型，并接上零件检索、工程图与加工检查。</p>
+<p>主要输出 STEP，也可导出 STL；依赖本地建模工具链，尺寸与制造约束仍需复核。</p>
+<h2>🧠 AI/模型</h2>
+<p><a href="https://huggingface.co/Aleph-Alpha/Kolibri-1" rel="noreferrer">Aleph-Alpha/Kolibri-1</a></p>
+<p>HF 当前热榜 · 发布 2026-10-03</p>
+<p>面向德英双语的混合专家模型，将局部与全局注意力结合，用较少激活参数处理长文档和工具调用。</p>
+<p>总参数 780 亿、每词元激活 34.6 亿，但 FP8 权重仍约 78GB；官方建议复杂任务的上下文不超过 262K 词元。</p>
+<p><a href="https://eli.thegreenplace.net/2026/notes-on-discrete-time-fourier-series-and-transform/" rel="noreferrer">从12个采样点，推到离散时间傅里叶变换</a></p>
+<p>深度精选 · 2026-09-19 · Eli Bendersky</p>
+<p>从12个采样点的三角波出发，用复指数的正交性算出离散傅里叶级数，再把周期拉长推到DTFT。</p>
+<p>逐步推导说明：时间离散为何仍有连续频谱、频谱为何周期重复，以及各系数怎样重建信号。</p>
+<p><a href="https://sander.ai/2024/09/02/spectral-autoregression.html" rel="noreferrer">图像扩散为何从轮廓走向细节？从频谱推到代码</a></p>
+<p>深度精选 · 2024-09-02 · Sander Dieleman</p>
+<p>从自然图像的频谱出发，推导高斯噪声为何先淹没高频细节，并用配套 Python notebook 把去噪解释成近似的频域自回归。</p>
+<p>作者也用音频反例划清边界：这是依赖图像统计规律的近似，不是所有扩散模型的恒等式。</p>
+<h2>🔥 热议话题</h2>
+<p><a href="https://github.com/Niko1221/Strata" rel="noreferrer">Strata：把大模型专家分到显卡、内存与 CPU</a></p>
+<p>HN · 过去24小时提交 · 原始首发日期未核实</p>
+<p>把常用专家放在显存，其余权重驻留内存、由 CPU 计算，再结合推测解码减少等待。</p>
+<p>作者用 RTX 5070、64GB 内存测试量化后的 Qwen3.8；速度依赖量化、上下文和硬件，尚未独立复测。</p>
+<p><a href="https://automatictransmission.khoury.northeastern.edu/" rel="noreferrer">车与手机 App，分别把数据发给了谁？</a></p>
+<p>HN · 过去24小时提交 · 原始首发日期未核实</p>
+<p>研究团队测试21辆美国市场汽车及30款配套 App，比较可观测的车载 Wi-Fi 流量与手机端数据共享。</p>
+<p>7款 App 向广告、追踪或分析服务发送身份信息；测量发生于2024—2025年，不能外推到所有车型。</p>
+<p><a href="https://github.com/PowderworksCode/headstart" rel="noreferrer">Headstart：让 Rust 依赖还没检查完，下游先开工</a></p>
+<p>HN · 过去24小时提交 · 原始首发日期未核实</p>
+<p>Headstart 提前输出类型接口元数据，让下游软件包不必等待依赖的全部函数体检查完成。</p>
+<p>作者在16核环境报告明显加速，但它仍是实验补丁，存在未修复的增量编译崩溃，内存占用也可能上升。</p>
+<h2>🔬 科学/人文</h2>
+<p><a href="https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/" rel="noreferrer">全息原理究竟说了什么，又没说什么？</a></p>
+<p>往期佳作·2026-09-25 · Quanta</p>
+<p>黑洞熵随表面积增长，为“用边界描述内部”提供了线索。</p>
+<p>文章解释某些时空中的引力如何对应到低一维边界上的量子理论，再讨论其适用范围；这些对应还不能证明我们所处的宇宙就是“全息图”。</p>
+<p><a href="https://aeon.co/essays/when-a-man-becomes-a-father-and-a-poetic-revolution-follows" rel="noreferrer">照顾孩子，也可能改变诗人怎样写作</a></p>
+<p>往期佳作·2026-09-28 · Aeon</p>
+<p>作者沿着柯勒律治与洛威尔的书信、诗作和育儿经历，追踪日常照料怎样进入文学形式。</p>
+<p>文章把这些变化与父亲大脑的研究并置，挑战创作必须远离家务的想象，同时承认神经科学尚不能证明二者有因果关系。</p><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/tester-army/e2e" rel="noreferrer">tester-army/e2e</a></li><li><a href="https://github.com/earthtojake/text-to-cad" rel="noreferrer">earthtojake/text-to-cad</a></li><li><a href="https://huggingface.co/Aleph-Alpha/Kolibri-1" rel="noreferrer">Aleph-Alpha/Kolibri-1</a></li><li><a href="https://eli.thegreenplace.net/2026/notes-on-discrete-time-fourier-series-and-transform/" rel="noreferrer">从12个采样点，推到离散时间傅里叶变换</a></li><li><a href="https://sander.ai/2024/09/02/spectral-autoregression.html" rel="noreferrer">图像扩散为何从轮廓走向细节？从频谱推到代码</a></li><li><a href="https://github.com/Niko1221/Strata" rel="noreferrer">Strata：把大模型专家分到显卡、内存与 CPU</a></li><li><a href="https://automatictransmission.khoury.northeastern.edu/" rel="noreferrer">车与手机 App，分别把数据发给了谁？</a></li><li><a href="https://github.com/PowderworksCode/headstart" rel="noreferrer">Headstart：让 Rust 依赖还没检查完，下游先开工</a></li><li><a href="https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/" rel="noreferrer">全息原理究竟说了什么，又没说什么？</a></li><li><a href="https://aeon.co/essays/when-a-man-becomes-a-father-and-a-poetic-revolution-follows" rel="noreferrer">照顾孩子，也可能改变诗人怎样写作</a></li></ol></section></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-05—11 试点 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。周日仅有 Trending。</p></footer></body></html>

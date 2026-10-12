@@ -1,0 +1,303 @@
+{
+  "id": "dots-trending-2026-10-09",
+  "revision": 1,
+  "date": "2026-10-09",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending · 2026-10-09",
+  "summary": "当日 13 条动态，保留摘要、数据口径与原始出处。",
+  "topics": [
+    "开源",
+    "AI",
+    "技术动态"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "DOTS TRENDING   /   2026.10.09 · 北京时间 · 13条"
+    },
+    {
+      "type": "heading",
+      "text": "📡 每日 Trending 速览"
+    },
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[diagram-design：先选关系，再画技术示意图](https://github.com/cathrynlavery/diagram-design)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1,160 · HTML · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "为编码代理提供架构图、状态机、数据流等绘图模板，将关系语义与布局分开，输出可独立打开的 HTML 和 SVG。"
+    },
+    {
+      "type": "paragraph",
+      "text": "支持重绘 Mermaid、draw.io 等现有图稿；静态版本无需构建或外部图片，适合把技术解释整理成清楚的配图。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Claude-Mem：让跨会话记忆按需返回](https://github.com/thedotmack/claude-mem)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+670 · TypeScript · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "记录工具使用中的观察，再生成语义摘要，供后续会话分层检索，减少反复交代项目背景。"
+    },
+    {
+      "type": "paragraph",
+      "text": "提供搜索与记忆查看界面，也可排除敏感内容；接入前需确认所选本地或托管记忆方案的数据去向。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[ArtCraft：把构图和机位变成可编辑输入](https://github.com/storytold/artcraft)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+2,103 · Rust · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "用二维图层、三维物件和角色姿势先搭场景，再接图像或视频模型生成，便于控制构图、物件位置与机位。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合草图到画面、分镜等需要反复调整的工作；不同模型的可用性各异，不能把公开代码等同于所有生成服务免费。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[humanizer：把改写质量与事实保真分开检查](https://huggingface.co/jialinyyzz/humanizer)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "这款120亿参数模型支持中英文草稿改写，用示范学习、偏好优化和强化学习约束事实变化与机械照抄，并公开训练资料。"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型卡自报204次中文改写中，149次未被模型评审发现事实问题；其余仍需人工核对，尤其是数字、限定词和格式。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[NVIDIA Dynamo：按会话管理代理推理的缓存](https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-08"
+    },
+    {
+      "type": "paragraph",
+      "text": "代理调用工具时，上下文缓存仍占内存。Dynamo 用统一会话标识连接多轮请求，在工具间隙调节并发，减少驱逐后重新计算。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章给出请求回放、调度状态与多级缓存设计，适合研究推理服务瓶颈；共享缓存索引仍属实验功能，部分缓存提示接口尚在提案阶段。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[蒙特卡洛模拟：从投点估面积到复杂事件概率](https://eli.thegreenplace.net/2026/monte-carlo-simulations/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-07 · 原站日期"
+    },
+    {
+      "type": "paragraph",
+      "text": "从随机投点估算圆面积出发，再用 SET 纸牌说明：当穷举组合太贵时，可以怎样设计抽样实验估计概率。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配有交互示例和代码，并解释独立试验误差通常随样本数平方根下降；适合判断模拟需要多少算力，以及结果该保留多大不确定性。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[集体通信：沿数据移动看懂多卡训练的代价](https://www.aleksagordic.com/blog/collective-operations)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-07-14"
+    },
+    {
+      "type": "paragraph",
+      "text": "从 TPU/GPU 的连接拓扑讲起，逐图追踪汇聚、归约与全交换中的数据移动，再推导通信量和延迟的近似成本。"
+    },
+    {
+      "type": "paragraph",
+      "text": "把环形、树形和分层算法接到数据并行、张量并行与专家并行，适合定位多卡扩展瓶颈；重点是图解与成本模型，需要基本并行计算概念。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[GPU 火焰图：把卡顿追到 CPU 与 GPU 的交接处](https://www.brendangregg.com/blog/2025-05-01/doom-gpu-flame-graphs.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2025-05-01"
+    },
+    {
+      "type": "paragraph",
+      "text": "以 GZDoom 为可追踪案例，并排查看 CPU/GPU 的采样热图，再缩小时间区间，用火焰图定位着色器编译和执行停顿。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章附可交互图、工具与复现线索，适合学习跨处理器性能排查；演示基于 Linux 和 Intel GPU，不能直接套成任意显卡的性能结论。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Whistle：16.9 MB 的端侧语音识别模型](https://cactuscompute.com/blog/whistle)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-02"
+    },
+    {
+      "type": "paragraph",
+      "text": "在 CPU 上处理最长30秒的语音，提供转写、词级时间戳和语音向量；与 Needle 共用引擎，可接成本地语音到工具调用流程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者公开了结构与测试设置，适合研究小设备部署；当前支持七种欧洲语言，不含中文，速度数据来自 Apple M4 Pro，不能视作所有设备表现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[OpenAI 数学项目：三篇撤回及依赖修订](https://github.com/openai/math/blob/main/history.md)"
+    },
+    {
+      "type": "paragraph",
+      "text": "重大后续 · 官方记录2026-10-07 · HN过去24小时提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "继此前公开数学成果后，官方说明一处符号错误使关键论证及两篇依赖论文的构造失效，共撤回三篇稿件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "另有14篇修复或澄清、13篇更新依赖引用。值得沿撤回说明核对证明之间的依赖；这些变更也提醒读者区分公开稿件与完成验证的结论。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[LittleBit：通过低秩因子把权重压到不足1比特](https://github.com/SamsungLabs/LittleBit)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 既有研究重新热议"
+    },
+    {
+      "type": "paragraph",
+      "text": "先把权重矩阵分成低秩因子，再将因子二值化并学习缩放；第二版在训练前调整潜在空间方向，使因子更适合二值表示。"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方实现提供量化感知训练与评测入口，适合研究压缩率和质量的取舍；需要再训练，且采用非商业许可，不能把压缩倍数直接当成推理加速倍数。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[会“跳”的基因，怎样变成演化的原料？](https://www.quantamagazine.org/how-virus-like-jumping-genes-became-our-partners-in-evolution-20260921/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-09-21"
+    },
+    {
+      "type": "paragraph",
+      "text": "转座子是能在基因组中移动或复制的 DNA 片段。文章从玉米颜色追到桦尺蛾，解释它们怎样打断旧功能，也为新性状提供材料。"
+    },
+    {
+      "type": "paragraph",
+      "text": "再看宿主如何抑制、利用这些片段：多数有害插入会被筛除，少数在环境变化后保留下来，把“基因组稳定传承”的直觉补充完整。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[威尼斯隔离区：临时决定怎样变成长期制度](https://aeon.co/essays/the-making-of-the-ghetto-on-a-venetian-island-in-1516)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-08"
+    },
+    {
+      "type": "paragraph",
+      "text": "历史学者 Alexander Lee 追溯1516年威尼斯犹太隔离区的形成：排斥、战争与城市对信贷的依赖，怎样共同塑造了政策。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章沿多次迁居、驱逐和妥协展开，说明这项制度由一连串可争议的小决定累积而成，也保留了隔离之下持续往来的复杂现实。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "diagram-design：先选关系，再画技术示意图",
+      "url": "https://github.com/cathrynlavery/diagram-design"
+    },
+    {
+      "title": "Claude-Mem：让跨会话记忆按需返回",
+      "url": "https://github.com/thedotmack/claude-mem"
+    },
+    {
+      "title": "ArtCraft：把构图和机位变成可编辑输入",
+      "url": "https://github.com/storytold/artcraft"
+    },
+    {
+      "title": "humanizer：把改写质量与事实保真分开检查",
+      "url": "https://huggingface.co/jialinyyzz/humanizer"
+    },
+    {
+      "title": "NVIDIA Dynamo：按会话管理代理推理的缓存",
+      "url": "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/"
+    },
+    {
+      "title": "蒙特卡洛模拟：从投点估面积到复杂事件概率",
+      "url": "https://eli.thegreenplace.net/2026/monte-carlo-simulations/"
+    },
+    {
+      "title": "集体通信：沿数据移动看懂多卡训练的代价",
+      "url": "https://www.aleksagordic.com/blog/collective-operations"
+    },
+    {
+      "title": "GPU 火焰图：把卡顿追到 CPU 与 GPU 的交接处",
+      "url": "https://www.brendangregg.com/blog/2025-05-01/doom-gpu-flame-graphs.html"
+    },
+    {
+      "title": "Whistle：16.9 MB 的端侧语音识别模型",
+      "url": "https://cactuscompute.com/blog/whistle"
+    },
+    {
+      "title": "OpenAI 数学项目：三篇撤回及依赖修订",
+      "url": "https://github.com/openai/math/blob/main/history.md"
+    },
+    {
+      "title": "LittleBit：通过低秩因子把权重压到不足1比特",
+      "url": "https://github.com/SamsungLabs/LittleBit"
+    },
+    {
+      "title": "会“跳”的基因，怎样变成演化的原料？",
+      "url": "https://www.quantamagazine.org/how-virus-like-jumping-genes-became-our-partners-in-evolution-20260921/"
+    },
+    {
+      "title": "威尼斯隔离区：临时决定怎样变成长期制度",
+      "url": "https://aeon.co/essays/the-making-of-the-ghetto-on-a-venetian-island-in-1516"
+    }
+  ],
+  "public_reviewed": true
+}

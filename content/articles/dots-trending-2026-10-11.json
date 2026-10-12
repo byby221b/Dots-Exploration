@@ -1,0 +1,263 @@
+{
+  "id": "dots-trending-2026-10-11",
+  "revision": 1,
+  "date": "2026-10-11",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending · 2026-10-11",
+  "summary": "当日 11 条动态，保留摘要、数据口径与原始出处。",
+  "topics": [
+    "开源",
+    "AI",
+    "技术动态"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "2026.10.11 · 北京时间 · 11条"
+    },
+    {
+      "type": "heading",
+      "text": "📡 每日 Trending 速览"
+    },
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[hugohe3/ppt-master](https://github.com/hugohe3/ppt-master)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+461 · Python · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把文档整理成可编辑的 PowerPoint，支持原生形状、图表、公式和现有模板，便于继续修改而非只拿到整页图片。"
+    },
+    {
+      "type": "paragraph",
+      "text": "流程在本机运行，但材料仍可能发送给所选模型服务；适合研究报告制作，生成后仍需核对事实、版式和模板保真。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+625 · Python · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把技能说明、工具连接与快捷命令按岗位打包，可参考其中的数据分析、工程和企业检索流程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文件以 Markdown 和 JSON 组织，适合学习如何把团队术语与工作步骤交给代理；接入自己的数据前仍需单独审查连接权限。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[mksglu/context-mode](https://github.com/mksglu/context-mode)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+178 · TypeScript · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "将大块工具输出留在执行环境中，只检索相关片段返回模型，并用事件索引帮助会话压缩后继续工作。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合工具调用密集的编码任务；不同客户端的自动路由支持不同，且采用 Elastic License 2.0，托管服务用途须核对许可。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Qwen-Image-2.1-Turbo：用固定八步完成生成与编辑](https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "沿用70亿参数视觉生成架构，以保存好的八步去噪调度生成或编辑图片，并复用文本与参考图的上下文缓存。"
+    },
+    {
+      "type": "paragraph",
+      "text": "可研究迭代步数和延迟的取舍；需支持该调度的 Diffusers 版本，单改步数参数不会覆盖默认调度，使用受 Qwen Research 许可约束。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[可微记忆与自适应计算：沿注意力追踪增强型循环网络](https://distill.pub/2016/augmented-rnns/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2016-09-08 · Distill"
+    },
+    {
+      "type": "paragraph",
+      "text": "用逐步图解串起外部记忆读写、输入注意力和可变计算步数：把离散选择改成加权操作，让梯度能传回选择机制。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合理解记忆网络与动态计算的早期设计；同时检查软选择为何要遍历候选、带来额外开销。这是机制导读，不是现代系统性能比较。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[TinyTorch：从张量、自动求导写到 Transformer](https://pytorch.org/blog/tinytorch-dont-just-import-pytorch-build-it/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-09-21 · PyTorch"
+    },
+    {
+      "type": "paragraph",
+      "text": "沿渐进式练习实现张量、自动求导、注意力与训练循环，再用性能分析、量化和缓存实验理解资源开销。"
+    },
+    {
+      "type": "paragraph",
+      "text": "基础路径以 Python 为主、无需 GPU，适合把框架接口连回代码机制；官网仍标预览版，扩展硬件练习另有要求，不等同于生产框架。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从选项打分到概率校准：自己构建决策模型](https://nishtahir.com/build-your-own-decision-model/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-10 · HN过去24小时提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "用 Qwen3-1.7B 只给固定选项打分，再对比微调前后的分类结果和置信度分桶，配有数据构建、评测与校准代码。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章清楚区分“只能选合法答案”和“答案正确”：温度缩放可调整概率形状，不能增加知识；校准效果仍需独立数据复核。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[DuckDB 2.0 alpha：让下载与解码同时工作](https://motherduck.com/blog/why-duckdb-20-is-faster/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN过去24小时提交 · 原文2026-09-10"
+    },
+    {
+      "type": "paragraph",
+      "text": "通过独立下载池预取数据，让网络等待与处理器解码重叠；递归查询复用索引，半结构化字段则拆成便于扫描的子列。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章给出 SQL 和笔记本实测，适合定位数据管线瓶颈；测试针对 alpha 版本，微小文件和列表转换并不都有同样收益。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从芯片照片还原开关电容滤波器](https://www.righto.com/2026/10/ML10-switched-capacitor-filter.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN过去24小时提交 · Ken Shirriff"
+    },
+    {
+      "type": "paragraph",
+      "text": "电容按时钟搬运电荷，可以在特定电路里替代大电阻；改变时钟频率，就能调整滤波器的频率特性。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者沿显微照片还原积分器、开关和不重叠时钟，解释为何电容比例比绝对值更可靠，适合从物理结构学习模拟电路。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[细胞如何用电信号协调组织中的“去留”](https://www.quantamagazine.org/cells-use-bioelectricity-to-coordinate-and-make-group-decisions-20260112/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-01-12 · Quanta"
+    },
+    {
+      "type": "paragraph",
+      "text": "组织拥挤会挤开细胞膜上的离子通道；健康细胞消耗能量维持电压，部分虚弱细胞则失去平衡、排水缩小并被挤出。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章追踪这条实验线索，再介绍微生物和胚胎中的电信号，展示神经之外的协调机制；相关疾病解释仍有待验证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[斯多葛主义：把注意力放回能选择的行动](https://aeon.co/essays/why-stoicism-is-one-of-the-best-mind-hacks-ever-devised)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2014-12-24 · Aeon"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从爱比克泰德及后世实践者出发，讨论怎样区分自己的选择与外部遭遇，给喜悦、悲伤和感激留出位置。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这篇哲学随笔把日常态度与逆境经验联系起来，适合思考注意力如何分配；人物经历是论述材料，并非心理疗效实验。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "hugohe3/ppt-master",
+      "url": "https://github.com/hugohe3/ppt-master"
+    },
+    {
+      "title": "anthropics/knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins"
+    },
+    {
+      "title": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode"
+    },
+    {
+      "title": "Qwen-Image-2.1-Turbo：用固定八步完成生成与编辑",
+      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo"
+    },
+    {
+      "title": "可微记忆与自适应计算：沿注意力追踪增强型循环网络",
+      "url": "https://distill.pub/2016/augmented-rnns/"
+    },
+    {
+      "title": "TinyTorch：从张量、自动求导写到 Transformer",
+      "url": "https://pytorch.org/blog/tinytorch-dont-just-import-pytorch-build-it/"
+    },
+    {
+      "title": "从选项打分到概率校准：自己构建决策模型",
+      "url": "https://nishtahir.com/build-your-own-decision-model/"
+    },
+    {
+      "title": "DuckDB 2.0 alpha：让下载与解码同时工作",
+      "url": "https://motherduck.com/blog/why-duckdb-20-is-faster/"
+    },
+    {
+      "title": "从芯片照片还原开关电容滤波器",
+      "url": "https://www.righto.com/2026/10/ML10-switched-capacitor-filter.html"
+    },
+    {
+      "title": "细胞如何用电信号协调组织中的“去留”",
+      "url": "https://www.quantamagazine.org/cells-use-bioelectricity-to-coordinate-and-make-group-decisions-20260112/"
+    },
+    {
+      "title": "斯多葛主义：把注意力放回能选择的行动",
+      "url": "https://aeon.co/essays/why-stoicism-is-one-of-the-best-mind-hacks-ever-devised"
+    }
+  ],
+  "public_reviewed": true
+}
