@@ -78,3 +78,15 @@ Trending link-only title paragraphs are rendered as linked card headings with se
 A secondary link belonging to one Trending item stays in its description paragraph, separated by a newline, rather than becoming another link-only title. Source link order remains unchanged. For example, the NVFP4 continuation is part of the same item. New historical articles begin at revision 1; existing article JSON and image bytes remain unchanged.
 
 `python3 tests/pilot_browser_qa.py --output /absolute/evidence-directory` tests the current real catalog at desktop/tablet/mobile widths, including no-JavaScript reading. When importing an approved batch, provide `--baseline /path/to/previous/catalog.json --expect-added-articles 12 --expect-added-images 20 --expect-added-trending 5 --expect-added-exploration 7` to assert the precise increment in addition to the data-derived totals. This command validates the catalog change; the numbers must come from the approved batch, never be adjusted to hide missing content.
+
+## Daily publication guard
+
+Follow [the daily publication procedure](docs/daily-publication.md) in every fresh environment.
+Configure the repository-local verified GitHub noreply identity, then run
+`python3 scripts/prepublish.py --base <reviewed-main-sha> --article-id <changed-id>`
+(add `--asset assets/...` per new image) **after committing and immediately before normal push**.
+The gate checks the real commit author/committer, exact base and scope, clean worktree,
+revision rules and generated output. Current Git configuration alone is insufficient.
+Email `sent` and site `published` states live separately in private Library; a failed
+publication must never cause a duplicate email. No new service, credentials or schedule
+is introduced by this repository-side guard.
