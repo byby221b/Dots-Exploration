@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Baseline如何在不改变期望梯度的前提下降低方差？ · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">数学共性小课 / <time datetime="2026-10-01">2026-10-01</time> / 修订 1</p><h1>Baseline如何在不改变期望梯度的前提下降低方差？</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-4">1　先看清我们想减少的噪声</a></li><li><a href="#section-16">2　为什么 baseline 能保留期望？</a></li><li><a href="#section-24">3　选一个合适的 baseline，噪声怎样缩小？</a></li><li><a href="#section-31">4　0.2 是怎么选出来的？</a></li><li><a href="#section-38">5　同一个数学结构，落在哪些实际问题里？</a></li><li><a href="#section-50">一小段使用边界</a></li></ol></nav><div class="prose"><div class="article-content"><p class="source-title">数学共性小课 001｜Baseline如何在不改变期望梯度的前提下降低方差？</p>
+<p>阅读约 6–8 分钟｜2026 年 10 月 1 日</p>
+<p>抽样算梯度时，我们希望有限的样本给出尽量稳定的更新方向。Baseline 做的事情很具体：<strong>减去一个合适的参照值，减小梯度估计的整体波动，同时保持它的期望不变。</strong></p>
+<p>这期用一枚可调的硬币，从头算清这件事，再把同一个结构放回策略梯度、离散潜变量和特征选择中。</p>
+<h2 id="section-4">1　先看清我们想减少的噪声</h2>
+<p>设随机开关 a 只有 0、1 两种结果，取 1 的概率为 p。抽到 1 得 1 分，抽到 0 得 0 分，奖励记为 R。我们要提高平均奖励 J。</p>
+<p>模型调整的是参数 θ：它是概率 p 的 logit，也就是对赔率取对数；σ 是把 θ 变回概率的 sigmoid 函数。取 p 为 0.8，这个小问题的真实梯度可以直接算出来：</p>
+<figure><a class="image-link" href="../../assets/math_shared_foundations_2026-10-01_positive_formula_revision/target.png" aria-label="查看原图：动作一的概率 p 为 0.8。奖励等于动作值 a，平均奖励等于 p。平均奖励对 theta 的导数为 p 乘以一减 p，等于 0.16。"><img src="../../assets/math_shared_foundations_2026-10-01_positive_formula_revision/target.png" alt="动作一的概率 p 为 0.8。奖励等于动作值 a，平均奖励等于 p。平均奖励对 theta 的导数为 p 乘以一减 p，等于 0.16。" loading="lazy"></a><figcaption><span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<p>答案是 0.16。复杂问题通常没法直接求出这个答案，才需要抽样估计；这个能手算的例子，正好用来观察估计的噪声。</p>
+<p>把结果 a 的概率记为 qθ(a)，再定义 score，记作 u：它是对数概率对 θ 的导数，衡量调整参数会怎样改变这一结果的概率。对这枚硬币，score 就是 a 减 p。</p>
+<p>先看奖励不直接依赖 θ 的情况。把平均奖励的有限求和展开求导，可得到下面的 score-function 估计：一次抽样给出的梯度 g₀，就是奖励乘以 score。</p>
+<figure><a class="image-link" href="../../assets/math_shared_foundations_2026-10-01_positive_formula_revision/raw_estimator.png" aria-label="查看原图：score 是动作对数概率对 theta 的导数，等于 a 减 p。平均奖励的梯度等于奖励乘以 score 的期望。原始单次估计是奖励乘以 score，其期望为 0.16，方差为 0.0064。"><img src="../../assets/math_shared_foundations_2026-10-01_positive_formula_revision/raw_estimator.png" alt="score 是动作对数概率对 theta 的导数，等于 a 减 p。平均奖励的梯度等于奖励乘以 score 的期望。原始单次估计是奖励乘以 score，其期望为 0.16，方差为 0.0064。" loading="lazy"></a><figcaption><span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<p>具体到两种抽样结果：</p>
+<ul><li>抽到 1，score 为 0.2，奖励为 1，因此梯度估计为 0.2；这种情况占 80%</li><li>抽到 0，score 为 −0.8，奖励为 0，因此梯度估计为 0；这种情况占 20%</li></ul>
+<p>两者按概率加权，平均是 0.16，等于真梯度。这叫<strong>无偏</strong>。</p>
+<p>但每次得到的仍是 0.2 或 0，围绕 0.16 摆动。方差是这些偏离的平方按概率取平均，本例为 0.0064。我们想做的，就是在不改变平均值的前提下，把这些摆动缩小。</p>
+<h2 id="section-16">2　为什么 baseline 能保留期望？</h2>
+<p>引入一个抽样前固定的参照值 b，叫 baseline。把原来的“奖励乘 score”，改成“奖励减 b，再乘 score”。这样相当于从每个梯度样本里减去 b 乘 score。</p>
+<p>关键是：<strong>score 的期望为零。</strong> 因此，被减掉的这一项平均也为零。</p>
+<p>先用硬币检查：score 为 0.2 的概率是 0.8，为 −0.8 的概率是 0.2；加权之后恰好抵消。这个性质来自概率总和恒为 1。对固定的有限取值集合，且各概率为正、可微，可以一步步写成：</p>
+<figure><a class="image-link" href="../../assets/math_shared_foundations_2026-10-01_positive_formula_revision/zero_mean_mechanism.png" aria-label="查看原图：score 的期望等于各动作概率乘以其对数概率导数的总和。约去概率后，得到各动作概率导数的总和，也就是概率总和的导数。概率总和恒为一，因此导数为零。减去固定 baseline 后，估计器的期望等于原期望减去 baseline 乘以 score 的期望，所以原期望保持不变。"><img src="../../assets/math_shared_foundations_2026-10-01_positive_formula_revision/zero_mean_mechanism.png" alt="score 的期望等于各动作概率乘以其对数概率导数的总和。约去概率后，得到各动作概率导数的总和，也就是概率总和的导数。概率总和恒为一，因此导数为零。减去固定 baseline 后，估计器的期望等于原期望减去 baseline 乘以 score 的期望，所以原期望保持不变。" loading="lazy"></a><figcaption><span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<p>读这几行时，只需要抓住三个动作：</p>
+<p>1. 期望展开成“概率乘数值”的求和<br>2. 对数求导里的分母，与外面的概率相消<br>3. 所有概率的和是常数 1，对参数求导就是 0</p>
+<p>最后两行说明：减掉 baseline 后，梯度估计的期望保持不变。<strong>我们保留了要学的方向，只改变各次抽样怎样贡献这个方向。</strong></p>
+<h2 id="section-24">3　选一个合适的 baseline，噪声怎样缩小？</h2>
+<p>回到同一枚硬币，把 b 取为 0.2：</p>
+<figure><a class="image-link" href="../../assets/math_shared_foundations_2026-10-01_positive_formula_revision/positive_example.png" aria-label="查看原图：取 baseline 为 0.2。抽到动作一时，估计值是一减 0.2 再乘以 0.2，等于 0.16。抽到动作零时，估计值是零减 0.2 再乘以负 0.8，也等于 0.16。因此两种抽样结果都给出真实梯度，期望仍为 0.16，方差降为零。"><img src="../../assets/math_shared_foundations_2026-10-01_positive_formula_revision/positive_example.png" alt="取 baseline 为 0.2。抽到动作一时，估计值是一减 0.2 再乘以 0.2，等于 0.16。抽到动作零时，估计值是零减 0.2 再乘以负 0.8，也等于 0.16。因此两种抽样结果都给出真实梯度，期望仍为 0.16，方差降为零。" loading="lazy"></a><figcaption><span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<p>抽到 1 时，奖励差是 0.8，乘上 score 0.2，得到 0.16。</p>
+<p>抽到 0 时，奖励差是 −0.2，score 是 −0.8，两个负数相乘，也得到 0.16。</p>
+<p>现在，无论抽到哪一种结果，梯度估计都是真实值。期望仍是 0.16，方差从 0.0064 降到了 0。</p>
+<p>可以这样理解 baseline 的作用：原来“抽到 1”承担了全部正向更新，“抽到 0”没有贡献；减去参照后，两类样本都能提供有用的正向信息。它们合起来的平均没有变化，但单次结果更稳定了。</p>
+<h2 id="section-31">4　0.2 是怎么选出来的？</h2>
+<p>对本课这个单参数估计器，我们希望“奖励差乘 score”尽量稳定。因为所有固定 baseline 下的期望相同，最小化方差就等于最小化这个乘积的平方均值。</p>
+<p>把它看成关于 b 的二次函数，求导并令导数为零，就得到最优常数 baseline。这里假设相应二阶矩有限，且 score 的平方均值大于零：</p>
+<figure><a class="image-link" href="../../assets/math_shared_foundations_2026-10-01_positive_formula_revision/optimal_baseline.png" aria-label="查看原图：最优常数 baseline 使奖励减去 baseline 的平方乘以 score 平方的期望最小。对 baseline 求导并令导数为零，得到最优值等于奖励乘以 score 平方的期望，除以 score 平方的期望。本例为 0.032 除以 0.16，等于 0.2。"><img src="../../assets/math_shared_foundations_2026-10-01_positive_formula_revision/optimal_baseline.png" alt="最优常数 baseline 使奖励减去 baseline 的平方乘以 score 平方的期望最小。对 baseline 求导并令导数为零，得到最优值等于奖励乘以 score 平方的期望，除以 score 平方的期望。本例为 0.032 除以 0.16，等于 0.2。" loading="lazy"></a><figcaption><span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<p>它的含义很好记：<strong>用 score 的平方，给奖励做加权平均。</strong> 某种抽样结果会引起更大的梯度波动，选参照值时就应更重视它。</p>
+<p>本例把两种结果代进去，分子为 0.032，分母为 0.16，所以得到刚才的 0.2。<a href="https://www.jmlr.org/papers/v5/greensmith04a.html" rel="noreferrer">Greensmith 等对 baseline 与方差的研究</a></p>
+<p>真实任务里，这些期望往往也未知。常见做法是用历史数据的滑动统计，或学习一个依赖当前输入的 baseline，让它预测评价信号中可预期的部分。训练时再检查梯度估计的波动是否下降，就能判断这个参照是否有帮助。</p>
+<h2 id="section-38">5　同一个数学结构，落在哪些实际问题里？</h2>
+<p>下面三个场景都可以按同一顺序理解：<strong>抽一个选择，得到评价，减去参照，再乘这个选择的 score。</strong></p>
+<h3 id="section-40">策略梯度：让动作和当前处境比较</h3>
+<ul><li>抽什么：在当前状态下，按策略抽一个动作</li><li>评价是什么：从这一步开始得到的采样回报</li><li>参照是什么：当前状态下通常能得到多少回报，常用状态价值网络来预测</li></ul>
+<p>减掉这部分预期水平后，更新更集中于这次动作表现得怎样。固定状态后，baseline 是同一个数，上面的零均值证明仍然适用。<a href="https://papers.neurips.cc/paper_files/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf#page=5" rel="noreferrer">策略梯度原论文，第 3 节</a></p>
+<h3 id="section-43">离散潜变量：稳定编码器的学习信号</h3>
+<p>NVIL 中，编码器给定观测后抽出离散隐藏变量。评价信号是“生成模型的联合对数概率，减去编码器的对数概率”；baseline 则根据观测预测这个信号的通常水平。</p>
+<p>于是，编码器也能用“评价减参照”乘 score 来更新。这里评价信号中的负对数编码器概率还显式依赖编码器参数，但它的直接导数期望恰好为零，因此仍得到这个形式。<a href="https://proceedings.mlr.press/v32/mnih14.pdf#page=3" rel="noreferrer">NVIL，式 (4)、(8)、(9)</a></p>
+<h3 id="section-46">随机特征选择：评价一组特征门的表现</h3>
+<p>INVASE 为每个输入抽取一组 0/1 特征门，决定这次保留哪些特征。评价是“只用这些特征的预测损失，加上特征数量惩罚”；baseline 是另一个使用全部特征的模型的预测损失。</p>
+<p>给定样本和预测器后，baseline 不随这次抽到的特征门改变。选择器把两者之差乘上门的 score，按降低损失的方向更新。<a href="https://vanderschaar-lab.com/papers/JinsungYoon_PhD_Thesis.pdf#page=85" rel="noreferrer">INVASE，作者论文中的方法与推导</a></p>
+<p>这三个应用的共同点不是名字相似，而是都在利用同一条性质：<strong>score 的零均值，让我们能够减掉可预测的背景信号，改善梯度估计。</strong></p>
+<h2 id="section-50">一小段使用边界</h2>
+<p>本课采用的无偏充分条件是：给定上下文后，baseline 不依赖当前抽样结果；用自动微分实现时，奖励差应当作常数权重，使用 stop_gradient。合适的 baseline 才能降低方差，普通奖励均值未必最优；本例方差降至零，也依赖两种结果、确定奖励的特殊结构。若评价信号直接依赖参数，还需计算相应的直接求导项。</p>
+<p><strong>本期带走一句话：用零均值的 score 保住期望，用合适的 baseline 缩小梯度样本的波动。</strong></p>
+<p>数值核验：本课的硬币例子、梯度与方差、最优 baseline，已用 Python 对全部可能结果精确枚举复核。</p></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://www.jmlr.org/papers/v5/greensmith04a.html" rel="noreferrer">Greensmith 等对 baseline 与方差的研究</a></li><li><a href="https://papers.neurips.cc/paper_files/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf#page=5" rel="noreferrer">策略梯度原论文，第 3 节</a></li><li><a href="https://proceedings.mlr.press/v32/mnih14.pdf#page=3" rel="noreferrer">NVIL，式 (4)、(8)、(9)</a></li><li><a href="https://vanderschaar-lab.com/papers/JinsungYoon_PhD_Thesis.pdf#page=85" rel="noreferrer">INVASE，作者论文中的方法与推导</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-12 · 25 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

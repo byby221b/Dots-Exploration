@@ -1,0 +1,90 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · 2026-10-02 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-02">2026-10-02</time> / 修订 1</p><h1>Dots Trending · 2026-10-02</h1><p class="lead">当日 14 条发现：开源、AI、技术深读与科学人文；保留原始来源及适用边界。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-2">🔧 开源热榜</a></li><li><a href="#section-15">🧠 AI/模型</a></li><li><a href="#section-40">🔥 热议话题</a></li><li><a href="#section-53">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><p>DOTS TRENDING   /   2026.10.02 · 北京时间 · 14条</p>
+<p class="source-title">📡 每日 Trending 速览</p>
+<h2 id="section-2">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/tile-ai/tilelang" rel="noreferrer">tile-ai/tilelang</a></h3>
+<p class="item-meta">⭐+163 · Python · GitHub Today</p>
+<p>用类 Python 语法编写矩阵乘法、注意力等高性能算子，底层编译器处理布局和流水线。</p>
+<p>9月30日新增昇腾950原生后端；适合沿示例把算法落到硬件，也可对照各后端的支持边界。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/mksglu/context-mode" rel="noreferrer">mksglu/context-mode</a></h3>
+<p class="item-meta">⭐+362 · TypeScript · GitHub Today</p>
+<p>把工具返回的原始数据留在子进程里，只把筛选结果送入上下文；再用 SQLite 全文检索找回会话事件。</p>
+<p>适合排查长任务为何很快“失忆”，但其执行工具仍继承进程权限，不能当作完整的系统安全沙箱。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/Friedrich-M/UniMate" rel="noreferrer">Friedrich-M/UniMate</a></h3>
+<p class="item-meta">⭐+217 · Python · GitHub Today</p>
+<p>用统一模型根据文字生成不同骨架的动作，无须为每种骨架重新训练。</p>
+<p>训练代码和预览权重已公开；作者也直说不少骨架仍会失败，全新骨架的预处理管线尚待补齐，适合研究而非直接当成品使用。</p>
+</article>
+<h2 id="section-15">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/XingChen-AGI/TeleOCR" rel="noreferrer">XingChen-AGI/TeleOCR</a></h3>
+<p class="item-meta">HF 当前热榜 · 非今日首发</p>
+<p>约12亿参数的文档视觉模型，把电子文档与手机拍摄的弯曲页面放进同一套解析流程。</p>
+<p>几何建模配合表格、公式的内容结构解耦，是比单看跑分更值得读的部分；模型卡提供代码与多组自报评测。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/Contrastive-LM/CLM-v0.1-8B" rel="noreferrer">Contrastive-LM/CLM-v0.1-8B</a></h3>
+<p class="item-meta">HF 当前热榜 · 非今日首发</p>
+<p>冻结 Qwen3-8B，分别把当前状态与候选动作映射成向量，用对比学习训练打分，并复用候选向量。</p>
+<p>适合研究工具选择和候选排序：它只评估给定选项，不生成答案，输出概率也取决于候选集合。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://pytorch.org/blog/optimizing-jagged-flash-attention-with-tlx-the-road-toward-sota-fa4-on-blackwell/" rel="noreferrer">TLX 优化变长 Flash Attention：从瓶颈定位到 Blackwell 内核</a></h3>
+<p class="item-meta">2026-10-01</p>
+<p>把变长注意力的负载不均、归约争用与寄存器溢出逐项落到 TLX 代码和性能验证，提供可跟做的优化过程。</p>
+<p>作者在 B200、bf16 的 GEM 形状上报告前向约快 13%、反向约快 50%，对比限于今年5月版 FA4。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://iclr-blogposts.github.io/2026/blog/2026/unigramlm-manual/" rel="noreferrer">UnigramLM：把分词的概率模型一直推到 SentencePiece</a></h3>
+<p class="item-meta">深度精选 · 2026-04-27</p>
+<p>从一个字符串有哪些合法切分讲起，逐步推导分词格、前向后向与 EM 更新，再把词表剪枝接到 SentencePiece 实现。</p>
+<p>尤其值得看数学模型与工程近似在哪些地方分岔，适合补齐 BPE 之外的分词直觉。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://research.colfax-intl.com/cutlass-tutorial-nvfp4-blockscaled-gemm-on-nvidia-rtx-pro-blackwell-gpus-sm12x/" rel="noreferrer">NVFP4 GEMM 两篇连读：从布局推导到逐级优化</a></h3>
+<p class="item-meta">深度精选 · 2026-06-20、2026-08-09</p>
+<p>先比较两类 Blackwell 的指令与内存模型，再推导缩放因子的线程布局，把 BF16 内核改成 NVFP4。</p>
+<p>续篇逐级处理调度、流水线和缓存问题，附源码与基准，也诚实保留无效优化，适合沿着推导动手复现。<br><a href="https://research.colfax-intl.com/optimizing-an-nvfp4-blockscaled-gemm-on-rtx-pro-6000-blackwell-gpu-sm120/" rel="noreferrer">续篇：逐级优化与性能测试</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://francisbach.com/spectral_log_density_estimation/" rel="noreferrer">从最小二乘理解密度比与 KL 估计</a></h3>
+<p class="item-meta">深度精选 · 2026-09-25</p>
+<p>从指数均值的方差为何失控出发，把密度比与 KL 估计改写为一族最小二乘问题，再用广义特征分解求解。</p>
+<p>推导后接高维分析和模拟实验，说明何时降低方差值得引入偏差，也交代计算成本与适用边界。</p>
+</article>
+<h2 id="section-40">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://earendil.com/posts/pi-1-0/" rel="noreferrer">Pi 1.0：可扩展编码代理进入稳定版</a></h3>
+<p class="item-meta">HN · 过去24小时提交</p>
+<p>在保持小型核心的基础上加入按需加载工具、虚拟模型扩展和原生 Codemode，方便把不同模型与工具接到同一工作流。</p>
+<p>同时推出面向长任务的实验性 Pi Durable；适合研究代理编排，而非只比较单次代码生成。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://blog.cloudflare.com/clef-decision-models/" rel="noreferrer">Clef：把受约束的决策交给专用模型</a></h3>
+<p class="item-meta">HN · 过去24小时提交</p>
+<p>输入上下文与候选答案，模型直接并行给候选打分，无需逐词生成中间文字；适合分类、工单路由和工具选择。</p>
+<p>Cloudflare 开放 Clef 权重，并推出人工协助的强化学习微调服务，自助平台仍在规划中。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://turbopuffer.com/blog/rip-vector-database" rel="noreferrer">turbopuffer：为何要让向量索引退居次级索引</a></h3>
+<p class="item-meta">HN · 过去24小时提交</p>
+<p>把文档主键绑定到向量聚类，向量重排就会牵动属性和全文索引，也限制聚合扫描的数据块大小。</p>
+<p>这篇架构复盘解释存储、写入与计算上的代价，以及 v3 如何解耦文档布局；性能优化和生产部署仍在推进。</p>
+</article>
+<h2 id="section-53">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/what-does-the-fourth-dimension-actually-look-like-20261001/" rel="noreferrer">第四个空间维度，到底该怎么想象？</a></h3>
+<p class="item-meta">2026-10-01 · 播客文字实录</p>
+<p>三维里解不开的绳结，到了四维却能松开；二维曲面又会形成新的结。</p>
+<p>拓扑学家 Maggie Miller 用一帧帧三维画面解释四维空间，也说明为什么图像直觉必须配合严格规则，才能成为可靠证明。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/why-real-intelligence-is-something-more-than-optimisation" rel="noreferrer">理性不只是把目标优化得更好</a></h3>
+<p class="item-meta">2026-10-01</p>
+<p>如果智能只等于优化，人类还剩下什么？作者借休谟与康德的分歧，区分达成目标与审视目标，主张理性还包括判断什么值得追求。</p>
+<p>值得读的是她把 AI 对齐问题延伸为一个反问：人的目标本身由谁塑造？</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/tile-ai/tilelang" rel="noreferrer">tile-ai/tilelang</a></li><li><a href="https://github.com/mksglu/context-mode" rel="noreferrer">mksglu/context-mode</a></li><li><a href="https://github.com/Friedrich-M/UniMate" rel="noreferrer">Friedrich-M/UniMate</a></li><li><a href="https://huggingface.co/XingChen-AGI/TeleOCR" rel="noreferrer">XingChen-AGI/TeleOCR</a></li><li><a href="https://huggingface.co/Contrastive-LM/CLM-v0.1-8B" rel="noreferrer">Contrastive-LM/CLM-v0.1-8B</a></li><li><a href="https://pytorch.org/blog/optimizing-jagged-flash-attention-with-tlx-the-road-toward-sota-fa4-on-blackwell/" rel="noreferrer">TLX 优化变长 Flash Attention：从瓶颈定位到 Blackwell 内核</a></li><li><a href="https://iclr-blogposts.github.io/2026/blog/2026/unigramlm-manual/" rel="noreferrer">UnigramLM：把分词的概率模型一直推到 SentencePiece</a></li><li><a href="https://research.colfax-intl.com/cutlass-tutorial-nvfp4-blockscaled-gemm-on-nvidia-rtx-pro-blackwell-gpus-sm12x/" rel="noreferrer">NVFP4 GEMM 两篇连读：从布局推导到逐级优化</a></li><li><a href="https://research.colfax-intl.com/optimizing-an-nvfp4-blockscaled-gemm-on-rtx-pro-6000-blackwell-gpu-sm120/" rel="noreferrer">续篇：逐级优化与性能测试</a></li><li><a href="https://francisbach.com/spectral_log_density_estimation/" rel="noreferrer">从最小二乘理解密度比与 KL 估计</a></li><li><a href="https://earendil.com/posts/pi-1-0/" rel="noreferrer">Pi 1.0：可扩展编码代理进入稳定版</a></li><li><a href="https://blog.cloudflare.com/clef-decision-models/" rel="noreferrer">Clef：把受约束的决策交给专用模型</a></li><li><a href="https://turbopuffer.com/blog/rip-vector-database" rel="noreferrer">turbopuffer：为何要让向量索引退居次级索引</a></li><li><a href="https://www.quantamagazine.org/what-does-the-fourth-dimension-actually-look-like-20261001/" rel="noreferrer">第四个空间维度，到底该怎么想象？</a></li><li><a href="https://aeon.co/essays/why-real-intelligence-is-something-more-than-optimisation" rel="noreferrer">理性不只是把目标优化得更好</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-12 · 25 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

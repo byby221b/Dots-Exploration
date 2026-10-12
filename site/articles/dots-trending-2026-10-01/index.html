@@ -1,0 +1,96 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · 2026-10-01 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-01">2026-10-01</time> / 修订 1</p><h1>Dots Trending · 2026-10-01</h1><p class="lead">当日 15 条发现：开源、AI、技术深读与科学人文；保留原始来源及适用边界。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-2">🔧 开源热榜</a></li><li><a href="#section-15">🧠 AI/模型</a></li><li><a href="#section-48">🔥 热议话题</a></li><li><a href="#section-57">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><p>DOTS TRENDING / 2026.10.01 · 更新版</p>
+<p class="source-title">📡 每日 Trending 速览</p>
+<h2 id="section-2">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/NVIDIA/OpenShell" rel="noreferrer">NVIDIA/OpenShell</a></h3>
+<p class="item-meta">⭐+1,281 · Rust</p>
+<p>为自主智能体提供可控运行环境，对文件访问、系统调用与网络实施隔离，并限制凭证的使用范围。</p>
+<p>适合需要运行代理代码又希望约束权限的场景；仍需配置容器或虚拟化，并审查安全策略。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/debpalash/VoiceStudio" rel="noreferrer">debpalash/VoiceStudio</a></h3>
+<p class="item-meta">⭐+3,483 · Python</p>
+<p>把声音克隆、视频配音、转写与有声书制作整合到本地桌面，提供本地 API 和 MCP 接口。</p>
+<p>适合搭建私有语音工作流；硬件需求取决于所选引擎，项目与模型许可需分别检查，克隆声音应取得授权。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/mvschwarz/openrig" rel="noreferrer">mvschwarz/openrig</a></h3>
+<p class="item-meta">⭐+624 · TypeScript</p>
+<p>用 YAML 编排 Claude Code 与 Codex 协作团队，通过 tmux 提供消息通信、拓扑查看和快照恢复。</p>
+<p>适合探索持续运行的编码代理；启动会涉及工作区信任与可执行钩子，采用前应审查配置，原生 Windows 尚不支持。</p>
+</article>
+<h2 id="section-15">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/Edge0/Audio8-ASR-Infinite" rel="noreferrer">Edge0/Audio8-ASR-Infinite</a></h3>
+<p class="item-meta">流式语音识别 · 预览版</p>
+<p>面向中英实时转写，以可选音频节拍和滚动 KV 缓存处理持续音频，重点是长时流式运行。</p>
+<p>模型卡给出最低可配置转写延迟 240 毫秒；这不是端到端保证，长时运行还需适配版 vLLM，英文测试也未全面领先。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://spaces.ac.cn/archives/11917" rel="noreferrer">慢即是快：1. Shampoo的尽头是Muon？</a></h3>
+<p class="item-meta">2026-09-28 · 苏剑林</p>
+<p>从凸优化收敛上界提出“正交最慢下降”，推导复杂预条件可能主要是在均衡梯度奇异值谱，思路接近 Muon。</p>
+<p>值得读的是推导路线及假设边界：作者依赖多项近似作启发式分析，并未证明 Shampoo 在实际训练中必然更差。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://magazine.sebastianraschka.com/p/classifier-history-and-jev" rel="noreferrer">Language Models for Text Classification: From Bag-of-Words to Jev</a></h3>
+<p class="item-meta">2026-09-29 · Sebastian Raschka</p>
+<p>从词袋、循环网络梳理到 Transformer，通过影评分类实验比较专用分类器与通用决策模型的成本和效果。</p>
+<p>适合关注分类、路由和概率校准的读者；Jev 的架构与训练细节尚未公开，文章中的实测与机制猜测需区分。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://research.google/blog/how-diffusion-controller-unifies-and-simplifies-ai-image-generation/" rel="noreferrer">How Diffusion Controller unifies and simplifies AI image generation</a></h3>
+<p class="item-meta">2026-09-29 · Google Research</p>
+<p>把扩散去噪重写为连续控制问题，用轻量旁路网络调节生成轨迹，在冻结主模型时权衡提示匹配与图像质量。</p>
+<p>适合学习控制思想如何进入生成模型；实验基于 Stable Diffusion 1.4，灰盒方案仍需读取中间去噪信息。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://jax-ml.github.io/scaling-book/" rel="noreferrer">How to Scale Your Model</a></h3>
+<p class="item-meta">深度精选 · 首发 2025-02-04</p>
+<p>从 Roofline、矩阵分片和 Transformer 算量，系统串到训练与推理并行、JAX 编程和性能剖析，配有习题与实算案例。</p>
+<p>适合已有 Transformer 基础、想把模型设计与算力预算连起来的人；实践主线偏 TPU/JAX，另有 GPU 专章。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://tridao.me/blog/2026/gram-newton-schulz/" rel="noreferrer">Gram Newton–Schulz: A Fast, Hardware-Aware Algorithm for Muon</a></h3>
+<p class="item-meta">深度精选 · 2026-03-30 · Tri Dao</p>
+<p>从极分解与 Newton–Schulz 迭代推到 Gram 矩阵、半精度稳定化，再落到 CuTeDSL 内核与训练实验。</p>
+<p>适合有矩阵分析、优化和 GPU 基础的人；收益依赖矩阵形状与硬件，优化器本身提速不等于整段训练同比提速。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://cs336.stanford.edu/" rel="noreferrer">Stanford CS336: Language Modeling from Scratch</a></h3>
+<p class="item-meta">深度精选 · 2026 春季课程</p>
+<p>通过五组实现作业，把分词器、Transformer、优化器、数据处理、扩展律和后训练连成完整学习路线。</p>
+<p>系统作业覆盖 Triton FlashAttention 与分布式训练；需要 Python、PyTorch、线代和概率基础，代码与算力投入较高。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://iclr-blogposts.github.io/2026/blog/2026/useful-calibrated-uncertainties/" rel="noreferrer">What (and What Not) are Calibrated Probabilities Actually Useful for?</a></h3>
+<p class="item-meta">深度精选 · 2026-04-27 · Guoxuan Xia</p>
+<p>用概率推导、反例和交互式收益实验，厘清校准如何帮助估计平均损失，以及为何不保证逐样本排序或决策更好。</p>
+<p>适合做 CTR/CVR 预估时梳理评估目标；文章主要分析二元事件，没有广告线上实验证据，也不能简化成“校准不重要”。</p>
+</article>
+<h2 id="section-48">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" rel="noreferrer">Gemini 4 Argon</a></h3>
+<p class="item-meta">HN · 1,112 分 · 743 评论</p>
+<p>Google 将其定位于长程编程、企业知识工作与网络防御，公布了更长任务执行能力和高达百万 token 的输出上限。</p>
+<p>当前仅向可信防御团队及测试者分阶段开放，尚未全面可用；性能结论主要来自官方评测与内部案例。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://earendil.com/posts/you-said-no-mcp/" rel="noreferrer">You said no MCP</a></h3>
+<p class="item-meta">HN · 619 分 · 348 评论</p>
+<p>Pi 将 MCP 纳入核心，通过 JavaScript 沙盒组合工具调用，并用延迟加载与结构化数据减少上下文堆积。</p>
+<p>适合研究代理工具架构：价值在可组合工作流；许多服务仍只返回文本，实际收益也取决于工具接口适配。</p>
+</article>
+<h2 id="section-57">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/" rel="noreferrer">Surprisingly Complex Waves Reveal the Brain’s Inner Workings</a></h3>
+<p class="item-meta">2026-09-30 · Quanta</p>
+<p>颅内记录发现清醒人脑存在同心波和旋转螺旋波，空间记忆任务更常伴随旋转波，提供了理解脑活动的新视角。</p>
+<p>这些模式可能帮助大脑切换信息处理方式，但究竟主动参与认知还是反映神经元活动，仍有争议。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/we-need-a-better-way-to-describe-what-is-often-called-cancer" rel="noreferrer">Don’t use the ‘C-word’</a></h3>
+<p class="item-meta">2026-09-29 · Aeon · 作者观点</p>
+<p>泌尿科医生讨论疾病命名如何影响风险感知：将部分低风险病变统称为“癌症”，可能放大恐惧并推动过度治疗。</p>
+<p>文章主张让名称更贴近风险，对适合的患者持续监测；重新命名不等于无需照护，是一篇医学沟通与决策讨论。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/NVIDIA/OpenShell" rel="noreferrer">NVIDIA/OpenShell</a></li><li><a href="https://github.com/debpalash/VoiceStudio" rel="noreferrer">debpalash/VoiceStudio</a></li><li><a href="https://github.com/mvschwarz/openrig" rel="noreferrer">mvschwarz/openrig</a></li><li><a href="https://huggingface.co/Edge0/Audio8-ASR-Infinite" rel="noreferrer">Edge0/Audio8-ASR-Infinite</a></li><li><a href="https://spaces.ac.cn/archives/11917" rel="noreferrer">慢即是快：1. Shampoo的尽头是Muon？</a></li><li><a href="https://magazine.sebastianraschka.com/p/classifier-history-and-jev" rel="noreferrer">Language Models for Text Classification: From Bag-of-Words to Jev</a></li><li><a href="https://research.google/blog/how-diffusion-controller-unifies-and-simplifies-ai-image-generation/" rel="noreferrer">How Diffusion Controller unifies and simplifies AI image generation</a></li><li><a href="https://jax-ml.github.io/scaling-book/" rel="noreferrer">How to Scale Your Model</a></li><li><a href="https://tridao.me/blog/2026/gram-newton-schulz/" rel="noreferrer">Gram Newton–Schulz: A Fast, Hardware-Aware Algorithm for Muon</a></li><li><a href="https://cs336.stanford.edu/" rel="noreferrer">Stanford CS336: Language Modeling from Scratch</a></li><li><a href="https://iclr-blogposts.github.io/2026/blog/2026/useful-calibrated-uncertainties/" rel="noreferrer">What (and What Not) are Calibrated Probabilities Actually Useful for?</a></li><li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" rel="noreferrer">Gemini 4 Argon</a></li><li><a href="https://earendil.com/posts/you-said-no-mcp/" rel="noreferrer">You said no MCP</a></li><li><a href="https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/" rel="noreferrer">Surprisingly Complex Waves Reveal the Brain’s Inner Workings</a></li><li><a href="https://aeon.co/essays/we-need-a-better-way-to-describe-what-is-often-called-cancer" rel="noreferrer">Don’t use the ‘C-word’</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-12 · 25 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

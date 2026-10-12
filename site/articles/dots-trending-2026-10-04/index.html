@@ -1,0 +1,85 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · 2026-10-04 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-04">2026-10-04</time> / 修订 1</p><h1>Dots Trending · 2026-10-04</h1><p class="lead">当日 13 条发现：开源、AI、技术深读与科学人文；保留原始来源及适用边界。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-2">🔧 开源热榜</a></li><li><a href="#section-15">🧠 AI/模型</a></li><li><a href="#section-32">🔥 热议话题</a></li><li><a href="#section-50">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><p>DOTS TRENDING   /   2026.10.04 · 北京时间 · 13条</p>
+<p class="source-title">📡 每日 Trending 速览</p>
+<h2 id="section-2">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/jamwithai/production-agentic-rag-course" rel="noreferrer">jamwithai/production-agentic-rag-course</a></h3>
+<p class="item-meta">⭐+193 · Python · GitHub Today</p>
+<p>以论文问答为贯穿项目，先做关键词检索，再加入向量检索和生成，让回答有可查的文献依据。</p>
+<p>分周代码与笔记本继续覆盖监控、缓存和检索代理，适合练习完整系统；需具备 Python 和 Docker 基础。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/meituan-longcat/LongCat-Video" rel="noreferrer">meituan-longcat/LongCat-Video</a></h3>
+<p class="item-meta">⭐+44 · Python · GitHub Today</p>
+<p>用同一模型处理文生视频、图生视频和视频续写，附长视频与音频驱动角色的演示代码。</p>
+<p>在时间和空间上先粗后细生成，并用分块稀疏注意力减少计算；适合研究视频生成流程，运行需配置 CUDA 环境。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/cloudflare/cloudflare-os" rel="noreferrer">cloudflare/cloudflare-os</a></h3>
+<p class="item-meta">⭐+85 · TypeScript · GitHub Today</p>
+<p>把企业内的代理对话和小应用放进同一工作区，每个应用独立运行在沙盒中。</p>
+<p>外部访问经 Gatekeepers 权限层限制到具体资源，支持先模拟写操作、再审批；适合研究代理权限设计，目前仍是早期版本。</p>
+</article>
+<h2 id="section-15">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/Qwen/Qwen-Image-2.1" rel="noreferrer">Qwen/Qwen-Image-2.1</a></h3>
+<p class="item-meta">HF 当前热榜 · 非今日首发</p>
+<p>把文生图、图片编辑和透明图层生成放进同一模型，可用参考图、涂画标注或遮罩指定修改位置。</p>
+<p>适合试验带透明背景的素材制作和多图编辑；采用研究许可，仅限非商业研究或评估，商用需单独授权。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noreferrer">Qwen/Qwen3.8-27B</a></h3>
+<p class="item-meta">HF 当前热榜 · 非今日首发</p>
+<p>语言主干含 270 亿参数，另带视觉编码器，可接收文字、图像和视频，模型卡给出了对应调用示例。</p>
+<p>支持按请求开关思考、调节推理深度和保留历史推理内容，适合比较多模态代理的部署与控制方式；实际效果仍需按任务验证。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://distill.pub/2021/gnn-intro/" rel="noreferrer">图神经网络入门：让节点逐层汇总邻居信息</a></h3>
+<p class="item-meta">深度精选·2021-09-02</p>
+<p>从节点、边与整图三类预测出发，逐步搭出图神经网络：每个节点汇总邻居信息，再更新自己的表示。</p>
+<p>交互示例可对比聚合方式与网络层数，适合建立推荐关系、分子图等任务的建模直觉；重点在机制，非部署教程。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://dlsyscourse.org/" rel="noreferrer">CMU Deep Learning Systems：从计算图写到硬件后端</a></h3>
+<p class="item-meta">深度精选·发布日期未核实（2026 秋季课程）</p>
+<p>从记录运算关系的计算图出发，逐步实现自动求导、神经网络模块与优化器，再延伸到 CPU/CUDA 数组后端。</p>
+<p>讲义配代码笔记与作业，适合补齐框架内部机制；需 Python/C++、线代与基础机器学习。秋季课仍在进行，部分后续作业未开放。</p>
+</article>
+<h2 id="section-32">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/" rel="noreferrer">代理调用付费服务，预算上限该如何生效？</a></h3>
+<p class="item-meta">2026-10-04 07:34 · 北京时间 · Simon Willison</p>
+<p>代理调用付费 API 或云资源时，告警邮件发出后仍可能继续计费。</p>
+<p>Simon 主张默认设置到额即停的硬上限，把费用控制写进服务行为；适合部署个人代理前检查预算边界，也要接受触顶后请求失败的取舍。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/" rel="noreferrer">Cloudflare OHTTP：把请求内容与来源地址分开</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · 原文2026-10-02 · <a href="https://news.ycombinator.com/item?id=49941091" rel="noreferrer">讨论</a></p>
+<p>OHTTP 让独立中继只见来源地址、网关只见请求内容，减少服务端追踪用户的线索。</p>
+<p>文章拆解加密、密钥管理与分块传输；Cloudflare 的新网关仍在封闭测试。</p>
+<p>隐私依赖两方不串通，请求正文也不能自行带上邮箱等身份信息。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://blog.kagi.com/update-orion-linux-windows" rel="noreferrer">Orion 停止 Linux 与 Windows 开发，计划开放源码</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · 原文2026-10-02 · <a href="https://news.ycombinator.com/item?id=49941447" rel="noreferrer">讨论</a></p>
+<p>Kagi 将浏览器团队集中到 macOS 与 iOS，计划在30天内公布 Linux、Windows 源码开放细节，并寻求社区接手。</p>
+<p>Linux 测试版自10月2日起停止接收 Kagi 更新，官方不建议作为主浏览器；开源计划尚不等于后续维护已有着落。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://ftl-os.org/" rel="noreferrer">FTL：让容器各自带上一套用户态操作系统</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · v0.1.0于2026-10-03发布 · <a href="https://news.ycombinator.com/item?id=49944912" rel="noreferrer">讨论</a></p>
+<p>它把 Linux 进程、网络等功能移入每个容器的共享库，小内核负责 CPU、内存等资源，便于单独调试和替换系统组件。</p>
+<p>新版本补上线程、epoll 等兼容层，可运行多线程 Tokio 程序；适合研究库式操作系统，仍处于早期开发阶段。</p>
+</article>
+<h2 id="section-50">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/mathematicians-harness-randomness-to-crack-a-55-year-old-conjecture-20260928/" rel="noreferrer">随机打乱，再修补：怎样让部分和不再重复？</a></h3>
+<p class="item-meta">往期佳作·2026-09-28 · Quanta</p>
+<p>在按质数循环计数的“钟面”上，能否重排一组互不相同的非零数，让每步累计结果都不同？文章借 Graham 重排猜想解释这道题。</p>
+<p>证明先随机排列，再修补冲突，并估计修补失败的概率；目前结论要求模数足够大，并未覆盖所有质数。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/habermass-theory-of-truth-meant-he-changed-his-mind" rel="noreferrer">共同推理：哈贝马斯怎样在批评中修改理论</a></h3>
+<p class="item-meta">往期佳作·2026-09-25 · Aeon</p>
+<p>作者从课堂与学术争论写起，追踪哈贝马斯如何修正公共领域与真理观：一项主张即使获充分辩护，仍可能是错的。</p>
+<p>文章区分专家判断事实、公众讨论价值的职责，也追问社交平台造成的分裂如何削弱共同讨论的条件。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/jamwithai/production-agentic-rag-course" rel="noreferrer">jamwithai/production-agentic-rag-course</a></li><li><a href="https://github.com/meituan-longcat/LongCat-Video" rel="noreferrer">meituan-longcat/LongCat-Video</a></li><li><a href="https://github.com/cloudflare/cloudflare-os" rel="noreferrer">cloudflare/cloudflare-os</a></li><li><a href="https://huggingface.co/Qwen/Qwen-Image-2.1" rel="noreferrer">Qwen/Qwen-Image-2.1</a></li><li><a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noreferrer">Qwen/Qwen3.8-27B</a></li><li><a href="https://distill.pub/2021/gnn-intro/" rel="noreferrer">图神经网络入门：让节点逐层汇总邻居信息</a></li><li><a href="https://dlsyscourse.org/" rel="noreferrer">CMU Deep Learning Systems：从计算图写到硬件后端</a></li><li><a href="https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/" rel="noreferrer">代理调用付费服务，预算上限该如何生效？</a></li><li><a href="https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/" rel="noreferrer">Cloudflare OHTTP：把请求内容与来源地址分开</a></li><li><a href="https://news.ycombinator.com/item?id=49941091" rel="noreferrer">讨论</a></li><li><a href="https://blog.kagi.com/update-orion-linux-windows" rel="noreferrer">Orion 停止 Linux 与 Windows 开发，计划开放源码</a></li><li><a href="https://news.ycombinator.com/item?id=49941447" rel="noreferrer">讨论</a></li><li><a href="https://ftl-os.org/" rel="noreferrer">FTL：让容器各自带上一套用户态操作系统</a></li><li><a href="https://news.ycombinator.com/item?id=49944912" rel="noreferrer">讨论</a></li><li><a href="https://www.quantamagazine.org/mathematicians-harness-randomness-to-crack-a-55-year-old-conjecture-20260928/" rel="noreferrer">随机打乱，再修补：怎样让部分和不再重复？</a></li><li><a href="https://aeon.co/essays/habermass-theory-of-truth-meant-he-changed-his-mind" rel="noreferrer">共同推理：哈贝马斯怎样在批评中修改理论</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-12 · 25 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

@@ -1,0 +1,304 @@
+{
+  "articles": [
+    {
+      "channel": "exploration",
+      "date": "2026-10-12",
+      "disclosures": 0,
+      "id": "research-stress-test-2026-10-12",
+      "images": [],
+      "revision": 1,
+      "series": "研究想法压力测试",
+      "trending_items": 0
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-12",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-12",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 11
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-11",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-11",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 11
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-10",
+      "disclosures": 2,
+      "id": "interview-challenge-2026-10-10",
+      "images": [
+        "assets/interview_challenge_2026-10-10/bound.png",
+        "assets/interview_challenge_2026-10-10/four.png",
+        "assets/interview_challenge_2026-10-10/geometry_four.png",
+        "assets/interview_challenge_2026-10-10/geometry_five.png",
+        "assets/interview_challenge_2026-10-10/dependence.png",
+        "assets/interview_challenge_2026-10-10/contradiction.png"
+      ],
+      "revision": 1,
+      "series": "每周面试挑战",
+      "trending_items": 0
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-10",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-10",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 13
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-09",
+      "disclosures": 1,
+      "id": "math-shared-foundations-2026-10-09",
+      "images": [
+        "assets/math_shared_foundations_2026-10-09/model.png",
+        "assets/math_shared_foundations_2026-10-09/estimator.png",
+        "assets/math_shared_foundations_2026-10-09/variance.png",
+        "assets/math_shared_foundations_2026-10-09/derivative.png",
+        "assets/math_shared_foundations_2026-10-09/precision.png",
+        "assets/math_shared_foundations_2026-10-09/many.png",
+        "assets/math_shared_foundations_2026-10-09/kalman.png"
+      ],
+      "revision": 1,
+      "series": "数学共性小课",
+      "trending_items": 0
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-09",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-09",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 13
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-08",
+      "disclosures": 1,
+      "id": "japanese-daily-life-2026-10-08",
+      "images": [],
+      "revision": 1,
+      "series": "日语生活碎片",
+      "trending_items": 0
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-08",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-08",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 13
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-07",
+      "disclosures": 0,
+      "id": "interdisciplinary-2026-10-07",
+      "images": [],
+      "revision": 1,
+      "series": "跨学科偷师",
+      "trending_items": 0
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-07",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-07",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 12
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-06",
+      "disclosures": 0,
+      "id": "tech-archaeology-2026-10-06",
+      "images": [],
+      "revision": 1,
+      "series": "技术考古",
+      "trending_items": 0
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-06",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-06",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 12
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-05",
+      "disclosures": 0,
+      "id": "research-stress-test-2026-10-05",
+      "images": [
+        "assets/research_stress_test_2026-10-05/mechanism.png"
+      ],
+      "revision": 1,
+      "series": "研究想法压力测试",
+      "trending_items": 0
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-05",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-05",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 10
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-04",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-04",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 13
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-03",
+      "disclosures": 4,
+      "id": "interview-challenge-2026-10-03",
+      "images": [
+        "assets/interview_challenge_2026-10-03/budget_tree.png",
+        "assets/interview_challenge_2026-10-03/capacity.png",
+        "assets/interview_challenge_2026-10-03/capacity_totals.png",
+        "assets/interview_challenge_2026-10-03/first_floor.png"
+      ],
+      "revision": 1,
+      "series": "每周面试挑战",
+      "trending_items": 0
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-03",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-03",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 14
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-02",
+      "disclosures": 1,
+      "id": "math-shared-foundations-2026-10-02-clarity-revision",
+      "images": [
+        "assets/math_shared_foundations_2026-10-02_clarity_revision/entropy.png",
+        "assets/math_shared_foundations_2026-10-02_clarity_revision/derivative.png",
+        "assets/math_shared_foundations_2026-10-02_clarity_revision/transfer.png",
+        "assets/math_shared_foundations_2026-10-02_clarity_revision/solve.png",
+        "assets/math_shared_foundations_2026-10-02_clarity_revision/normalize.png",
+        "assets/math_shared_foundations_2026-10-02_clarity_revision/odds.png",
+        "assets/math_shared_foundations_2026-10-02_clarity_revision/curvature.png"
+      ],
+      "revision": 1,
+      "series": "数学共性小课",
+      "trending_items": 0
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-02",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-02",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 14
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-01",
+      "disclosures": 0,
+      "id": "math-shared-foundations-2026-10-01-positive-formula-revision",
+      "images": [
+        "assets/math_shared_foundations_2026-10-01_positive_formula_revision/target.png",
+        "assets/math_shared_foundations_2026-10-01_positive_formula_revision/raw_estimator.png",
+        "assets/math_shared_foundations_2026-10-01_positive_formula_revision/zero_mean_mechanism.png",
+        "assets/math_shared_foundations_2026-10-01_positive_formula_revision/positive_example.png",
+        "assets/math_shared_foundations_2026-10-01_positive_formula_revision/optimal_baseline.png"
+      ],
+      "revision": 1,
+      "series": "数学共性小课",
+      "trending_items": 0
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-01",
+      "disclosures": 1,
+      "id": "japanese-2026-10-01",
+      "images": [],
+      "revision": 1,
+      "series": "日语生活碎片",
+      "trending_items": 0
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-01",
+      "disclosures": 4,
+      "id": "interview-challenge-2026-10-01",
+      "images": [
+        "assets/interview_challenge_2026-10-01/hht_equations.png",
+        "assets/interview_challenge_2026-10-01/hth_equations.png",
+        "assets/interview_challenge_2026-10-01/race_equations.png",
+        "assets/interview_challenge_2026-10-01/race_solution.png"
+      ],
+      "revision": 1,
+      "series": "每周面试挑战",
+      "trending_items": 0
+    },
+    {
+      "channel": "exploration",
+      "date": "2026-10-01",
+      "disclosures": 0,
+      "id": "interdisciplinary-2026-10-01",
+      "images": [],
+      "revision": 1,
+      "series": "跨学科偷师",
+      "trending_items": 0
+    },
+    {
+      "channel": "trending",
+      "date": "2026-10-01",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-01",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 15
+    }
+  ],
+  "articles_count": 25,
+  "channels": {
+    "exploration": 13,
+    "trending": 12
+  },
+  "end": "2026-10-12",
+  "images_count": 34,
+  "start": "2026-10-01",
+  "trending_items": 151
+}

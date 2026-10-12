@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>DNA“小纸条”丢了几张，为什么还能还原文件？ · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">跨学科偷师 / <time datetime="2026-10-01">2026-10-01</time> / 修订 1</p><h1>DNA“小纸条”丢了几张，为什么还能还原文件？</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-3">1　问题：小纸条会丢，也会抄错</a></li><li><a href="#section-14">3　搬进 DNA 后，还有一个特别实用的好处</a></li><li><a href="#section-18">4　边界：收到够多张，不一定就够用</a></li><li><a href="#section-24">可跳过的延伸阅读</a></li></ol></nav><div class="prose"><div class="article-content"><p class="source-title">跨学科偷师 001｜DNA“小纸条”丢了几张，为什么还能还原文件？</p>
+<p>核心阅读约 4 分钟｜2026 年 10 月 1 日</p>
+<p>这期先只理解一个办法：把同一份信息写成多条可互相补足的线索，这样，丢掉某些线索也不一定丢掉原来的信息。</p>
+<h2 id="section-3">1　问题：小纸条会丢，也会抄错</h2>
+<p>DNA 是由四种基本“字母”组成的分子。研究者可以用这些字母表示计算机里的数据，合成许多短链保存，再用设备读出。这里用的是人工合成的分子，不需要把文件放进人的身体。</p>
+<p>把一条短链想成一张小纸条就好。麻烦是：纸条混在一起，没有固定顺序；某些纸条读了很多遍，另一些始终没读到；还可能抄错其中的字母。</p>
+<p>假设原文件只有三个数：A＝2，B＝5，C＝7。最直接的存法，是三张纸条各写一个数。若写着 B 的那张没有读到，A、C 各读一百遍，也补不出 B。多存副本当然有帮助，但仍可能一直缺某个指定内容。</p>
+<h2 id="section-7">2　办法：不只存答案，也存能解回答案的线索</h2>
+<p>通信领域早就遇到过类似问题：发出的数据包有些会丢。喷泉码是一类编码办法，它能不断生成不同的混合线索，让接收方有机会用收到的一部分线索恢复原文件。</p>
+<p>仍用刚才三个数。为了看清关系，我们先用加法写五张纸条：</p>
+<ul><li>甲：A＝2</li><li>乙：A＋B＝7</li><li>丙：B＋C＝12</li><li>丁：A＋C＝9</li><li>戊：C＝7</li></ul>
+<p>即使丁、戊都丢了，只收到甲、乙、丙，也能恢复：甲直接给出 A＝2；乙减去 A，得到 B＝5；丙减去 B，得到 C＝7。</p>
+<p>原来必须等“写着 B 的那张”，现在可以用别的关系解出 B。这就是今天要抓住的核心。</p>
+<p>这个算术例子是为解释而构造的。DNA Fountain 的实际混合运算与这里的加法不同，也会精心安排每条线索混合哪些原始片段；并非随便生成几道加法题就行。<a href="https://pages.cs.wisc.edu/~suman/courses/740/papers/luby02lt.pdf" rel="noreferrer">LT 码原论文</a></p>
+<h2 id="section-14">3　搬进 DNA 后，还有一个特别实用的好处</h2>
+<p>有些 DNA 字母排列不适合合成或读取。比如同一个字母连续出现太多次，会带来麻烦。</p>
+<p>如果只能照着原文件直译，碰到这种排列就很棘手。现在，编码器可以先生成一张候选纸条，检查它对应的 DNA 排列；不合适就不合成，换另一张混合线索。只要最后留下的线索足够支持恢复，就不必执着于那张被舍弃的纸条。</p>
+<p>2017 年的 DNA Fountain 正是把这套通信方法用于 DNA 存储，实际保存并恢复了约 2.14 MB 文件。跨学科迁移发生在这里：通信中应付丢包的编码自由度，也帮助存储系统避开一部分不好写的序列。<a href="https://classpages.cselabs.umn.edu/Spring-2020/csci5980/papers/DNA-Storage/DNA%20Efficient%20Storage%20Architecture.pdf" rel="noreferrer">DNA Fountain 原论文</a></p>
+<h2 id="section-18">4　边界：收到够多张，不一定就够用</h2>
+<p>还是那五张纸条。如果只收到甲、丁、戊呢？它们全在说 A 和 C，B 一次都没出现。虽然同样收到三张，却解不出三个数。</p>
+<p>所以要紧的是有没有足够的有效关系，不能只数纸条数量。反复读到同一张，也不会增加新关系。</p>
+<p>另一个危险是抄错。若乙被误读为 A＋B＝8，我们会算出错误的 B＝6，并继续算错 C。系统因此还需要“校验”：给纸条附上检查信息，尽量识别不可信的读数。原始演示会丢弃检测到错误的读段，再尝试用其他线索恢复；漏过检查的错误仍是风险。<a href="https://github.com/TeamErlich/dna-fountain" rel="noreferrer">作者公开实现</a></p>
+<p>今天记住这句话就够：喷泉码让恢复信息不必依赖每一张指定纸条，但仍需要足够有用、足够可信的线索。</p>
+<p>一个小自测：甲、丁、戊各读了一千遍，能补出 B 吗？不能。更多重复读取，没有增加关于 B 的信息。</p>
+<h2 id="section-24">可跳过的延伸阅读</h2>
+<p>想进一步看真实系统，可以从下面两个问题进入，无需先补完整编码理论。</p>
+<p><strong>检查越严格越好吗？</strong> 不一定。丢弃所有可疑读段，也会浪费一些能修复的信息。2021 年一项后续研究在自己的合成与测序实验中，通过协同处理读段和纠错，让成功恢复所需的读取量减少了 6.5%～8.9%。这是该实验的结果，不是所有系统都能获得的固定收益。<a href="https://academic.oup.com/bioinformatics/article/37/19/3136/6255306" rel="noreferrer">后续实验，摘要与方法</a></p>
+<p><strong>筛掉不好写的纸条，会不会顺便丢掉关键关系？</strong> 有可能，因此应检查留下来的线索，而非只检查生成规则。2024 年研究专门讨论了面向 DNA 的编码布局和混合比例优化，说明这项迁移还需要针对介质调整。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11570749/" rel="noreferrer">后续编码研究</a></p>
+<p><strong>一个最小练习，尚未执行：</strong> 把上面的五张纸条写下来，每次拿走两张，看看剩下的能否解出 A、B、C；再故意改错其中一个数，观察错误怎样传下去。这只能帮助理解缺片和错读的区别，不是 DNA 实验，也不能测出真实系统的可靠性。</p></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://pages.cs.wisc.edu/~suman/courses/740/papers/luby02lt.pdf" rel="noreferrer">LT 码原论文</a></li><li><a href="https://classpages.cselabs.umn.edu/Spring-2020/csci5980/papers/DNA-Storage/DNA%20Efficient%20Storage%20Architecture.pdf" rel="noreferrer">DNA Fountain 原论文</a></li><li><a href="https://github.com/TeamErlich/dna-fountain" rel="noreferrer">作者公开实现</a></li><li><a href="https://academic.oup.com/bioinformatics/article/37/19/3136/6255306" rel="noreferrer">后续实验，摘要与方法</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11570749/" rel="noreferrer">后续编码研究</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-12 · 25 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

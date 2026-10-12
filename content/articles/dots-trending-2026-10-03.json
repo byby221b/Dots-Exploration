@@ -1,0 +1,323 @@
+{
+  "id": "dots-trending-2026-10-03",
+  "revision": 1,
+  "date": "2026-10-03",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending · 2026-10-03",
+  "summary": "当日 14 条发现：开源、AI、技术深读与科学人文；保留原始来源及适用边界。",
+  "topics": [
+    "开源",
+    "AI",
+    "深度阅读"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "DOTS TRENDING   /   2026.10.03 · 北京时间 · 14条"
+    },
+    {
+      "type": "heading",
+      "text": "📡 每日 Trending 速览"
+    },
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[heygen-com/hyperframes](https://github.com/heygen-com/hyperframes)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+580 · TypeScript · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "用 HTML、CSS 和可定位到指定时刻的动画描述视频，再由无头 Chrome 逐帧渲染、FFmpeg 编码。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它把前端布局接到可重复的视频生产流程，适合程序化演示和动效；关键是让动画能准确跳转到任意帧。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+98 · C · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "提前把代码中的符号、调用与依赖建成图，文件变化时增量更新，让代理按关系找源码和影响范围。"
+    },
+    {
+      "type": "paragraph",
+      "text": "README 也披露了权衡：减少检索调用，却可能让更多返回结果长期留在上下文，长会话仍要控制返回量。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Effect-TS/effect](https://github.com/Effect-TS/effect)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+80 · TypeScript · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把错误、依赖和并发任务纳入统一的 TypeScript 类型模型，方便组合较复杂的应用逻辑。"
+    },
+    {
+      "type": "paragraph",
+      "text": "当前 4.x 已标为长期支持版，仓库列出版本迁移与各运行时要求，适合评估逐步引入的成本。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[PSRben/VisionHOPE：处理图像时更新内部记忆](https://huggingface.co/PSRben/VisionHOPE)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 权重公开 2026-09-29"
+    },
+    {
+      "type": "paragraph",
+      "text": "沿图像的行列扫描时，让内容、读写表示和更新速率等记忆共同演化，再融合四个方向的特征。"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型卡与代码提供分类、检测和分割权重；可从独立算子入手，研究这种单张图像内的自适应计算。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[SupersonicLabs/Julia-1：可在 CPU 上运行的小型决策模型](https://huggingface.co/SupersonicLabs/Julia-1)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "约1.44亿参数，把上下文、问题和候选答案一起编码，用于分类、路由和等级评分，可在 CPU 上推理。"
+    },
+    {
+      "type": "paragraph",
+      "text": "单次原生调用接收2至20个选项；模型卡公开复现实验，也明确长标签列表和陌生领域仍可能失准。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Helion × vLLM：把矩阵乘变体纳入自动调参](https://pytorch.org/blog/building-a-high-performance-and-portable-vllm-linear-backend-with-helion/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-02 · PyTorch"
+    },
+    {
+      "type": "paragraph",
+      "text": "把矩阵乘拆分计算、调整输入排列等策略放进同一套自动调参内核，再按输入大小选择实现，降低推理开销。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章交代了 H100 实测、调参成本和当前仍在独立分支的限制，适合理解优化方案怎样接入 vLLM。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[ReplaySSM：从状态递推推到可回滚的高效解码](https://tridao.me/blog/2026/replayssm/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-06-15"
+    },
+    {
+      "type": "paragraph",
+      "text": "状态空间模型需要不断读写一块表示历史的状态。"
+    },
+    {
+      "type": "paragraph",
+      "text": "ReplaySSM 周期性保存快照，其间缓存输入、按需重建，减少显存写入；文章把等价推导接到可回滚解码、伪代码与实测，适合顺着数学理解实现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[CUDA 矩阵乘优化实录：从朴素内核到逐级分块](https://siboehm.com/articles/22/CUDA-MMM)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2022-12-31"
+    },
+    {
+      "type": "paragraph",
+      "text": "从朴素矩阵乘开始，让相邻线程连续读内存，再逐步加入共享内存、寄存器和线程组分块，用性能分析工具解释每步收益。"
+    },
+    {
+      "type": "paragraph",
+      "text": "附完整源码，适合跟着复现；结果针对较早的 FP32 与 CUDA 核心场景。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[联邦学习搬到服务器后，隐私如何接受外部核验？](https://research.google/blog/toward-provably-private-learning-from-federated-data/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google Research · 2026-10-02"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google 让设备上传加密样本，将训练移入服务器上由硬件隔离的可信执行环境，并公开允许访问数据的计算策略。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章结合 Gboard 部署说明外部审计、隐私保护与效率的取舍，也保留硬件和侧信道的限制。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[DeepSeek Harness：桌面代理也能按插件重组](https://www.deepseek.com/en/harness/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "DeepSeek 开源代理框架提供 macOS、Windows 桌面入口，把工具、界面和后台任务都放进可组合的插件体系。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合观察代理应用怎样从聊天框走向工作环境；目前仍是预览版，接口可能发生不兼容变化。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Zig 0.17：增量编译更实用，升级也有兼容代价](https://ziglang.org/download/0.17.0/release-notes.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "新版重做构建系统并增强 ELF 链接器，让多数 x86_64 Linux 项目能够使用增量编译。"
+    },
+    {
+      "type": "paragraph",
+      "text": "值得连同迁移说明一起读：构建协议变化暂时影响 ZLS，部分位转换语义也可能改变旧代码行为。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[让 Linux 跑上 M4：追踪会“失忆”的 CPU](https://yuka.dev/blog-2026-10-02-linux-m4.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者沿着串口输出、页表和中断逐步定位 M4 启动故障，最后发现等待中断指令会丢失寄存器状态。"
+    },
+    {
+      "type": "paragraph",
+      "text": "修复已进入 Linux 与 m1n1，上游可启动多核终端；图形与外设仍需继续逆向，不能等同完整桌面支持。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[卤虫换个方向游，湍流的能量传递就会倒转？](https://www.quantamagazine.org/sea-monkeys-show-scientists-how-to-rewrite-a-rule-of-turbulence-20261002/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-10-02"
+    },
+    {
+      "type": "paragraph",
+      "text": "在薄层盐水实验中，卤虫相对水流拉伸方向的角度，能改变能量在大小尺度间的传递方向。"
+    },
+    {
+      "type": "paragraph",
+      "text": "研究者用小杆和数值模拟复现了现象；是否适用于自然界强烈的三维湍流，仍待验证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[暴力教会人的反应，能重新学过吗？](https://aeon.co/essays/early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-10-02"
+    },
+    {
+      "type": "paragraph",
+      "text": "研究者访谈了99名生活在暴力环境中的男性，梳理出误判威胁、反应选择变窄和把暴力当成自我身份的习惯。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章写到，就业支持与反复练习如何帮人重新理解冲突；改变需要安全和陪伴，不能只靠意志。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes"
+    },
+    {
+      "title": "colbymchenry/codegraph",
+      "url": "https://github.com/colbymchenry/codegraph"
+    },
+    {
+      "title": "Effect-TS/effect",
+      "url": "https://github.com/Effect-TS/effect"
+    },
+    {
+      "title": "PSRben/VisionHOPE：处理图像时更新内部记忆",
+      "url": "https://huggingface.co/PSRben/VisionHOPE"
+    },
+    {
+      "title": "SupersonicLabs/Julia-1：可在 CPU 上运行的小型决策模型",
+      "url": "https://huggingface.co/SupersonicLabs/Julia-1"
+    },
+    {
+      "title": "Helion × vLLM：把矩阵乘变体纳入自动调参",
+      "url": "https://pytorch.org/blog/building-a-high-performance-and-portable-vllm-linear-backend-with-helion/"
+    },
+    {
+      "title": "ReplaySSM：从状态递推推到可回滚的高效解码",
+      "url": "https://tridao.me/blog/2026/replayssm/"
+    },
+    {
+      "title": "CUDA 矩阵乘优化实录：从朴素内核到逐级分块",
+      "url": "https://siboehm.com/articles/22/CUDA-MMM"
+    },
+    {
+      "title": "联邦学习搬到服务器后，隐私如何接受外部核验？",
+      "url": "https://research.google/blog/toward-provably-private-learning-from-federated-data/"
+    },
+    {
+      "title": "DeepSeek Harness：桌面代理也能按插件重组",
+      "url": "https://www.deepseek.com/en/harness/"
+    },
+    {
+      "title": "Zig 0.17：增量编译更实用，升级也有兼容代价",
+      "url": "https://ziglang.org/download/0.17.0/release-notes.html"
+    },
+    {
+      "title": "让 Linux 跑上 M4：追踪会“失忆”的 CPU",
+      "url": "https://yuka.dev/blog-2026-10-02-linux-m4.html"
+    },
+    {
+      "title": "卤虫换个方向游，湍流的能量传递就会倒转？",
+      "url": "https://www.quantamagazine.org/sea-monkeys-show-scientists-how-to-rewrite-a-rule-of-turbulence-20261002/"
+    },
+    {
+      "title": "暴力教会人的反应，能重新学过吗？",
+      "url": "https://aeon.co/essays/early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew"
+    }
+  ],
+  "public_reviewed": true
+}

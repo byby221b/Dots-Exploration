@@ -1,0 +1,109 @@
+{
+  "id": "japanese-2026-10-01",
+  "revision": 1,
+  "date": "2026-10-01",
+  "channel": "exploration",
+  "series": "日语生活碎片",
+  "title": "从“音乐”听起，说一句“我喜欢爱缪”",
+  "summary": "今天只练三个小目标和一句话。假名认不稳也可以看罗马字；不需要先背五十音，也不需要听懂整段对话。这里的五分钟包括反复听和开口，不是五分钟的新知识。",
+  "topics": [
+    "日语",
+    "生活会话"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "日语五分钟 001｜从“音乐”听起，说一句“我喜欢爱缪”"
+    },
+    {
+      "type": "paragraph",
+      "text": "今天只练三个小目标和一句话。假名认不稳也可以看罗马字；不需要先背五十音，也不需要听懂整段对话。这里的五分钟包括反复听和开口，不是五分钟的新知识。"
+    },
+    {
+      "type": "heading",
+      "text": "1｜带一个小问题去听"
+    },
+    {
+      "type": "paragraph",
+      "text": "先记住这个声音：おんがく / ongaku / 音乐。它在下面的对话里出现了几次？每听到一次，就伸出一根手指，先不看末尾答案。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[播放官方音频 11-06，约 15 秒](https://www.irodori.jpf.go.jp/assets/data/starter/audio/11/X_%5B11-06%5D_kiku6%20.mp3)"
+    },
+    {
+      "type": "paragraph",
+      "text": "来自日本国际交流基金 IRODORI 入门第 11 课，只播放这一条。直链打不开，就到[官方播放页](https://www.irodori.jpf.go.jp/en/starter/audio/lesson11.html)，找编号 11-06 的第六个播放器。听一遍没找到，就看着关键词再听一遍；其他声音先放过。"
+    },
+    {
+      "type": "heading",
+      "text": "2｜只认这三个小目标"
+    },
+    {
+      "type": "list",
+      "items": [
+        "おんがく / ongaku / 音乐",
+        "すき / suki / 喜欢",
+        "あいみょん / Aimyon / 爱缪，歌手的名字"
+      ],
+      "ordered": false
+    },
+    {
+      "type": "paragraph",
+      "text": "先把声音、假名和中文意思放在一起看，不要求默写。第三个是歌手的名字，用来练习今天的句子。"
+    },
+    {
+      "type": "heading",
+      "text": "3｜开口说这一句"
+    },
+    {
+      "type": "paragraph",
+      "text": "あいみょんが すきです。"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aimyon ga suki desu."
+    },
+    {
+      "type": "paragraph",
+      "text": "我喜欢爱缪。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是原创练习句，不是歌词，也不是爱缪的原话。前面放喜欢的人，后面接固定的一小段：が すきです / ga suki desu / 喜欢……。今天把它当成一个整体用，不用先学语法术语。"
+    },
+    {
+      "type": "paragraph",
+      "text": "先看着罗马字慢慢读一遍，再看假名读一遍；卡住就继续看罗马字。能说出这一句就够了，不需要追上音频的速度。"
+    },
+    {
+      "type": "details",
+      "summary": "4｜最后再看答案",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "答案：おんがく / ongaku / 音乐，出现两次。按官方脚本，一次在回答自己的喜好时，一次在另一人接话时。回放一遍，找这两个位置；今天就到这里。"
+        },
+        {
+          "type": "paragraph",
+          "text": "来源核对：播放页、音轨文件和[官方脚本第 15 页（L11-15），第⑥段](https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L11.pdf#page=15)已核实；本次未逐声试听，辨认答案依据官方脚本。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "播放官方音频 11-06，约 15 秒",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/audio/11/X_%5B11-06%5D_kiku6%20.mp3"
+    },
+    {
+      "title": "官方播放页",
+      "url": "https://www.irodori.jpf.go.jp/en/starter/audio/lesson11.html"
+    },
+    {
+      "title": "官方脚本第 15 页（L11-15），第⑥段",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L11.pdf#page=15"
+    }
+  ],
+  "public_reviewed": true
+}

@@ -1,32 +1,32 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>学新任务时，怎样保护旧技能：从突触稳定到 EWC · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">跨学科偷师 / <time datetime="2026-10-07">2026-10-07</time> / 修订 1</p><h1>学新任务时，怎样保护旧技能：从突触稳定到 EWC</h1><p class="lead">核心理解：同一套参数要继续学新东西，就给容易伤及旧技能的改动更强的约束，给其他改动留出空间。</p></header><div class="prose"><h2>学新任务时，怎样保护旧技能：从突触稳定到 EWC</h2>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>学新任务时，怎样保护旧技能：从突触稳定到 EWC · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">跨学科偷师 / <time datetime="2026-10-07">2026-10-07</time> / 修订 1</p><h1>学新任务时，怎样保护旧技能：从突触稳定到 EWC</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-3">1　先明确要保住什么</a></li><li><a href="#section-6">2　神经科学提供的线索：连接可以有不同的稳定程度</a></li><li><a href="#section-11">3　同样学会新任务，尽量少碰重要的旋钮</a></li><li><a href="#section-18">4　这个办法成立需要什么</a></li><li><a href="#section-22">可选深入：怎样把“重要”变成能检查的东西</a></li><li><a href="#section-28">一手来源（按需打开）</a></li></ol></nav><div class="prose"><div class="article-content"><p class="source-title">学新任务时，怎样保护旧技能：从突触稳定到 EWC</p>
 <p>跨学科偷师 002 · 2026 年 10 月 7 日<br>主文约 4 分钟；后半为可选深入</p>
-<p>核心理解：同一套参数要继续学新东西，就给容易伤及旧技能的改动更强的约束，给其他改动留出空间。</p>
-<h2>1　先明确要保住什么</h2>
+<p class="reading-note">核心理解：同一套参数要继续学新东西，就给容易伤及旧技能的改动更强的约束，给其他改动留出空间。</p>
+<h2 id="section-3">1　先明确要保住什么</h2>
 <p>一个模型先学会任务 A，再学习任务 B。训练 B 时，暂时不能重用 A 的训练样本，但我们仍希望它会做 A。麻烦在于：两个任务会改动同一套参数，也就是模型内部可调的数值。只顾 B 的错误下降，可能把 A 依赖的参数改坏。</p>
 <p>把全部参数锁住，当然能保住原来的模型，却也关掉了学习 B 的空间。我们需要更细的选择：哪些参数应当少动，哪些仍可以调整？</p>
-<h2>2　神经科学提供的线索：连接可以有不同的稳定程度</h2>
+<h2 id="section-6">2　神经科学提供的线索：连接可以有不同的稳定程度</h2>
 <p>神经元之间传递信号的接点叫突触。Xu 等人在 2009 年追踪小鼠学习抓取食物时的神经连接，观察到学习会促成新连接，其中一部分在后续练习中更容易稳定下来，并长期保留。这是特定运动学习实验中的观察，不是对所有记忆的完整解释。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2844762/" rel="noreferrer">[1]</a></p>
 <p>可借来的原则很具体：学习系统继续变化时，可以选择性地稳定一部分连接。把它搬到模型里，需要自己定义“保护谁、怎样保护”，不能把生物观察直接当成算法。</p>
 <p>2017 年，Kirkpatrick 等人提出弹性权重巩固，简称 EWC：先记下旧参数，再估计各参数对旧任务的重要程度；学习新任务时，越重要的参数，偏离旧值的代价越大。<a href="https://arxiv.org/html/1612.00796v2" rel="noreferrer">[2]</a></p>
 <p>在这个类比中：神经连接对应模型参数；连接的稳定程度对应改动的惩罚强度；继续形成新技能对应在这些约束下优化新任务。这里借用了选择性稳定这个操作，具体的重要性计算是机器学习设计。</p>
-<h2>3　同样学会新任务，尽量少碰重要的旋钮</h2>
+<h2 id="section-11">3　同样学会新任务，尽量少碰重要的旋钮</h2>
 <p>把模型缩成两个旋钮，甲和乙。以下数字是教学自设：学完 A 后，甲在 2、乙在 0；我们估计甲的重要程度是 10，乙是 1。</p>
 <p>设任务 B 希望两只旋钮的数值相加等于 3。现在总和是 2，需要增加 1。至少有两种可行改法：</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">改法</th><th scope="col">甲的新值</th><th scope="col">乙的新值</th><th scope="col">对旧参数的改动代价</th></tr></thead><tbody><tr><td>只动甲</td><td>3</td><td>0</td><td>10</td></tr><tr><td>只动乙</td><td>2</td><td>1</td><td>1</td></tr></tbody></table></div>
 <p>这笔代价的算法是：每个旋钮的“重要程度 × 移动距离的平方”，再相加。两种改法都让 B 的总和变成 3，也都只移动一个单位；第二种碰的是较不重要的乙，因此代价更小。</p>
 <p>EWC 把这笔代价加到 B 原来的训练错误上，一起最小化。这样，学好 B 仍有动力，但会更偏向少伤旧任务的调整。只比较这两个候选改法，第二种的总目标更小。实际优化通常会同时改动多个参数，并不只在这两个方案中二选一。</p>
 <p>“弹性”也在这里：参数像被不同硬度的弹簧拉回旧位置，仍能移动。代价是必须多存旧参数和重要性信息，还要选择保护多强；保护过强，新任务也可能学不好。</p>
-<h2>4　这个办法成立需要什么</h2>
-<p>关键前提是：重要性估计大致可信，而且旧技能附近还有学会新技能的空间。若 B 非要大改 A 最依赖的参数，几根弹簧无法消除冲突。原论文已在顺序学习数字识别和 Atari 游戏中检验了 EWC 的作用，但这不是所有持续学习场景的保证。<a href="https://arxiv.org/html/1612.00796v2" rel="noreferrer">[2]</a></p>
+<h2 id="section-18">4　这个办法成立需要什么</h2>
+<p class="reading-note">关键前提是：重要性估计大致可信，而且旧技能附近还有学会新技能的空间。若 B 非要大改 A 最依赖的参数，几根弹簧无法消除冲突。原论文已在顺序学习数字识别和 Atari 游戏中检验了 EWC 的作用，但这不是所有持续学习场景的保证。<a href="https://arxiv.org/html/1612.00796v2" rel="noreferrer">[2]</a></p>
 <p>今天可以带走的操作是：先估计改动会伤到哪里，再决定把哪些地方保护得更紧。</p>
 <p>小自测：若甲、乙的重要程度都变成 10，上面两条路谁更便宜？答案：一样，代价都是 10；这条规则已经没有理由偏向乙。</p>
-<h2>可选深入：怎样把“重要”变成能检查的东西</h2>
+<h2 id="section-22">可选深入：怎样把“重要”变成能检查的东西</h2>
 <p>已有方法。EWC 用 Fisher 信息的对角近似估计各参数的重要性。直觉上，它衡量旧模型的输出概率对各参数小幅变化有多敏感；这不是按参数的绝对大小排队，也不是大脑已经被证实在做的计算。它是旧参数附近的局部近似，会忽略参数之间协同变化的影响。<a href="https://arxiv.org/html/1612.00796v2" rel="noreferrer">[2]</a></p>
 <p>最可能失效的地方。旧任务的重要性可能估错，或者新旧任务确实争用同一批参数。此外，测试协议会改变问题：2022 年的一项比较在 Split MNIST 与 Split CIFAR-100 上发现，测试时告知当前任务的设置中，EWC 表现较好；要求在全部逐批出现的类别中统一辨认时，它的表现接近普通顺序训练。保护旧参数不等于自动学会区分从未一起出现的新旧类别。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9771807/" rel="noreferrer">[3]</a></p>
 <p>一个可检验的设想，尚未验证。我会先问：在每层的重要性分数分布相同时，把分数对应到原来的参数，是否比随机对应更能保住 A？这不是新算法，也不宣称首次提出；下面是为检验这个问题设计的最小原型。</p>
 <ul><li>用一个小型数字分类网络，先训练 A，再训练 B。沿用原论文的简洁设定：A、B 都识别 0–9，但 B 的输入像素采用另一种固定排列；B 训练时不重放 A 样本</li><li>三组从训练好 A 的同一检查点开始，比较：普通顺序训练、正常 EWC、把同一份重要性分数在各层内部随机打乱后再使用的 EWC。打乱组保留每层分数的集合，只破坏“分数与参数位置”的对应</li><li>给三组相同的新任务训练步数，并给需要调保护强度的两组相同搜索预算。先规定可接受的 B 验证集准确率范围，再在这个范围内比较 A 的保留程度；超参数选择规则预先固定，旧任务测试集只用于最终报告</li><li>条件性预测：若估计真的找到了值得保护的位置，正常 EWC 应在相近 B 表现下，更好地保留 A。若打乱后仍一样好，只说明当前测试未检出对应关系的收益。同时记录各层参数实际改动幅度；这组对照不能单独排除整体更新幅度的影响。用多个随机种子检查，不把单次胜出当结论</li></ul>
-<p>这只是实验方案，本期没有运行模型或使用私人数据。它也不把参数保护和旧样本重放说成互斥路线；允许保存旧样本时，可以另做结合实验。</p>
-<h2>一手来源（按需打开）</h2>
+<p class="reading-note">这只是实验方案，本期没有运行模型或使用私人数据。它也不把参数保护和旧样本重放说成互斥路线；允许保存旧样本时，可以另做结合实验。</p>
+<h2 id="section-28">一手来源（按需打开）</h2>
 <p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2844762/" rel="noreferrer">[1] Xu 等，Nature 2009，Rapid formation and selective stabilization of synapses for enduring motor memories。看摘要与图 3：学习相关新连接的选择性稳定</a></p>
 <p><a href="https://arxiv.org/html/1612.00796v2" rel="noreferrer">[2] Kirkpatrick 等，PNAS 2017，Overcoming catastrophic forgetting in neural networks。可读作者稿 v2，§2、式 3 与实验；DOI 10.1073/pnas.1611835114</a></p>
-<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9771807/" rel="noreferrer">[3] van de Ven 等，Nature Machine Intelligence 2022，Three types of incremental learning。看三种测试设置及表 2、表 3；这些结论有明确的基准范围</a></p><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2844762/" rel="noreferrer">[1]</a></li><li><a href="https://arxiv.org/html/1612.00796v2" rel="noreferrer">[2]</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9771807/" rel="noreferrer">[3]</a></li></ol></section></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-05—11 试点 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。周日仅有 Trending。</p></footer></body></html>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9771807/" rel="noreferrer">[3] van de Ven 等，Nature Machine Intelligence 2022，Three types of incremental learning。看三种测试设置及表 2、表 3；这些结论有明确的基准范围</a></p></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2844762/" rel="noreferrer">[1]</a></li><li><a href="https://arxiv.org/html/1612.00796v2" rel="noreferrer">[2]</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9771807/" rel="noreferrer">[3]</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-12 · 25 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

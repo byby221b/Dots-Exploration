@@ -2,7 +2,7 @@
 
 A quiet, mobile-friendly reading archive for 每日 Trending and 每周探索. Warm white, deep purple, and amber; static HTML, CSS, and local JavaScript, without accounts, analytics, remote fonts, or third-party scripts.
 
-**Pilot: 2026-10-05–2026-10-11. Seven Trending editions (84 items), six complete exploration articles, and 14 original PNGs. Sunday has Trending only.**
+**Current coverage and counts are generated from the canonical articles in [site/catalog.json](site/catalog.json).**
 
 Public site: https://byby221b.github.io/Dots-Exploration/
 
@@ -21,7 +21,7 @@ python3 scripts/verify.py
 node --check web/app.js
 ```
 
-For an empty local framework preview only, omit `--public`. Public mode rejects empty or unreviewed content. The optional browser suite uses the installed Python Playwright package and Chromium: `python3 tests/browser_qa.py` (synthetic regression), and `python3 tests/pilot_browser_qa.py`. It creates explicitly synthetic fixtures under a temporary directory, never in the public source, and checks desktop/tablet/mobile layouts, search, date/series filtering, reset, URL state, answer disclosure, image load, local navigation, and no-JavaScript reading.
+For an empty local framework preview only, omit `--public`. Public mode rejects empty or unreviewed content. The optional browser suite uses the installed Python Playwright package and Chromium: `python3 tests/browser_qa.py` (synthetic regression), and `python3 tests/pilot_browser_qa.py`. The first suite creates synthetic fixtures only in temporary directories. The real-content suite derives counts from the catalog and canonical articles, and checks desktop/tablet/mobile layouts, search, date/series filtering, reset, URL state, answer disclosure, image load, local navigation, and no-JavaScript reading.
 
 ## Public package contract
 
@@ -44,13 +44,13 @@ Every article has exactly these fields:
 
 Supported blocks (all fields listed; unknown fields are rejected):
 
-- `paragraph`, `heading`, `quote`, `code`: `type`, `text`.
+- `paragraph`, `heading`, `quote`, `code`: `type`, `text`. Headings optionally specify `level` (2 or 3) to preserve source subsections.
 - `list`: `type`, `items` (text array), optional `ordered` boolean.
 - `image`: `type`, `src` (`assets/...png/jpg/jpeg/webp/gif`), `alt`, optional `caption`. Formula images stay local; alt text should include the equation or its meaning.
 - `details`: `type`, `summary`, `blocks`. Use this for interview prompts and folded answers.
 - `table`: `type`, `headers` (text array), `rows` (arrays matching header width).
 
-Text supports a small safe subset: `**bold**`, inline backticks, and `[label](https://public-source)`. Raw HTML is displayed as text. Use structured blocks for article layout. Preserve complete source wording, caveats, numbered items, and references during conversion. A parser must not silently discard unsupported source markup.
+Text supports a small safe subset: `**bold**`, inline backticks, `[label](https://public-source)`, `~{i}` for subscripts and `^{x}` for superscripts. Subscript/superscript contents accept only ASCII letters, digits, plus and minus. Raw HTML is displayed as text. Use structured blocks for article layout. Preserve complete source wording, caveats, numbered items, and references during conversion. A parser must not silently discard unsupported source markup.
 
 ## Import and revision behavior
 
@@ -62,10 +62,19 @@ The build is deterministic and includes a SHA-256 manifest. `--check` compares e
 
 Do not import mailbox addresses, message/thread IDs, sending history, private feedback, user research plans, private rating algorithms, credentials, automation instruction text, or signed/private links. Automated validation detects several common signatures, rejects unknown metadata fields, and disallows remote images and executable markup. This is a supporting check, not a replacement for reviewing the complete text and actual image pixels. Inspect image metadata too; re-encode public raster copies when needed to remove metadata, then record new hashes. Never modify factual source limitations to imply experiments, verification, or listening that did not happen.
 
-For the initial pilot, accept only actual sent content dated **2026-10-05 through 2026-10-11** in Beijing time. Expected editorial coverage is seven Trending editions (84 items total) and six exploration articles; no Sunday exploration article is expected. Preserve this gap rather than inventing content. Do not backfill history until the pilot is accepted.
+Only import the explicitly approved public batch. Preserve actual publication dates and gaps; never invent an article to fill a day. Catalog dates, counts, channel coverage, image references and disclosure counts are generated from the content, not a fixed date window.
 
 ## GitHub Pages release
 
-Target: `byby221b/Dots-Exploration`, subject to confirming ownership and name availability. Use a new public repository; do not modify Awesome-CTR-Scaling. Configure GitHub Pages to use GitHub Actions. The workflow validates the exact committed generated output and uploads only `site/`; pull requests never deploy. Actions are pinned to immutable commits. The deployment job alone receives `pages:write` and `id-token:write`.
+Target: existing public repository `byby221b/Dots-Exploration`. Pages is configured to use GitHub Actions. The workflow validates the exact committed generated output and uploads only `site/`; pull requests never deploy. Actions are pinned to immutable commits. The deployment job alone receives `pages:write` and `id-token:write`.
 
 Before pushing, review the entire tracked file list and public content. Use an ordinary Git commit and fast-forward push to `main`; no force push and no empty test commit. For updates, fetch and reconcile current upstream history before pushing. After pushing, record the commit SHA, confirm the matching Actions run and Pages deployment succeeded, then verify the live page and assets at the deployment URL. Do not claim a successful release based only on a push. Existing scheduled tasks are outside this repository and must not be changed automatically.
+
+
+## Reading presentation and verification
+
+Trending link-only title paragraphs are rendered as linked card headings with separate metadata and descriptions. Exploration headings have a reading-width measure and a local table of contents. Headings inside collapsed hints/solutions never enter that table of contents. Selected factual limitations retain their original wording in amber callouts. Images link to their original bytes for closer viewing; wide tables scroll within their own region. These presentation changes do not modify canonical article JSON or revisions.
+
+A secondary link belonging to one Trending item stays in its description paragraph, separated by a newline, rather than becoming another link-only title. Source link order remains unchanged. For example, the NVFP4 continuation is part of the same item. New historical articles begin at revision 1; existing article JSON and image bytes remain unchanged.
+
+`python3 tests/pilot_browser_qa.py --output /absolute/evidence-directory` tests the current real catalog at desktop/tablet/mobile widths, including no-JavaScript reading. When importing an approved batch, provide `--baseline /path/to/previous/catalog.json --expect-added-articles 12 --expect-added-images 20 --expect-added-trending 5 --expect-added-exploration 7` to assert the precise increment in addition to the data-derived totals. This command validates the catalog change; the numbers must come from the approved batch, never be adjusted to hide missing content.

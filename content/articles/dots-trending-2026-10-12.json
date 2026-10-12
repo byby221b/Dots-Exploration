@@ -1,0 +1,263 @@
+{
+  "id": "dots-trending-2026-10-12",
+  "revision": 1,
+  "date": "2026-10-12",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending · 2026-10-12",
+  "summary": "当日 11 条发现：开源、AI、技术深读与科学人文；保留原始来源及适用边界。",
+  "topics": [
+    "开源",
+    "AI",
+    "深度阅读"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "DOTS TRENDING   /   2026.10.12 · 北京时间 · 11 条"
+    },
+    {
+      "type": "heading",
+      "text": "📡 每日 Trending 速览"
+    },
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[lyogavin/airllm](https://github.com/lyogavin/airllm)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+548 · Jupyter Notebook · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "每次只将一层权重搬入显存，用磁盘与主机内存换取大模型在小显存设备上运行的机会，也提供冻结底座、训练适配器的路径。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究存储与计算的取舍；瓶颈可能转到权重加载，需留足磁盘空间，显存占用低并不等于生成速度快。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+886 · JavaScript · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把航班、船舶、卫星、天气等公开信号放进同一个三维地球，各数据层独立组织，并支持语音查询与场景编排。"
+    },
+    {
+      "type": "paragraph",
+      "text": "可参考多源地理数据的整合方式；交通层含模拟数据，部分信号有延迟或估计误差，不能用于导航或应急决策。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[chrislgarry/Apollo-11](https://github.com/chrislgarry/Apollo-11)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+466 · Assembly · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "保存阿波罗11号指令舱与登月舱制导计算机的汇编源码，数字化文本可与原始扫描件交叉核对。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合做一次历史软件阅读：沿模块、注释和接口观察早期航天程序如何组织；编译与仿真需配合另行链接的 Virtual AGC 工具。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[EMA Lightning：小模型怎样完成流式语音合成](https://huggingface.co/canberkkkkkk/ema-lightning)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "用字母时长预测对齐文本与语音，再经四步生成和分窗解码输出音频；声学模型加声码器共860万参数，支持多请求合批。"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型卡公开结构、评测设置和限制，适合研究小模型语音部署；仅支持土耳其语与单一音色，不提供声音克隆，速度数据依赖测试硬件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Clef：把多个结构化问题放在一次前向计算里](https://huggingface.co/Cloudflare/clef)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "在270亿参数多模态底座上增加联合打分头，让文本、图片或视频中的证据分别流向多个问题，一次输出各允许选项的概率。"
+    },
+    {
+      "type": "paragraph",
+      "text": "可研究分类、工具路由和结构化决策，省去自由文本解析；模型卡示例在单张 H200 上测试，输出合法选项仍不保证判断正确。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[word2vec 学到了什么？沿训练过程追踪词向量的方向](https://dkarkada.xyz/posts/qwem/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2025-06-28 · 作者原文"
+    },
+    {
+      "type": "paragraph",
+      "text": "从词频与共现概率构造目标矩阵，解释词向量怎样在训练中逐步增加有效维度，并用图示对照理论与实验。"
+    },
+    {
+      "type": "paragraph",
+      "text": "解析结果依赖小初始化、目标近似等条件，适合学习表示形成的机制；不能直接把全部词向量训练等同于主成分分析。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Blackwell 动态调度：让空闲计算单元接手剩余矩阵块](https://research.colfax-intl.com/dynamic-persistent-tile-scheduling-with-cluster-launch-control-clc-on-nvidia-blackwell-gpus/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-05-09 · Colfax Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "先用分组矩阵乘解释负载不均，再逐段读 CuTe DSL 代码：已启动的线程块集群接手尚未启动的工作，减少等待。"
+    },
+    {
+      "type": "paragraph",
+      "text": "附 B200 实测与调度时间线，适合学习内核负载均衡；CLC 依赖 Blackwell，均匀任务下并不总胜过静态调度。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[让陌生人照着 README 安装：找出作者看不见的缺步骤](https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN过去24小时提交 · 原文2026-10-11"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者邀请用户共享屏幕、边安装边说出困惑，每次测试后修改说明，再交给下一位继续尝试。"
+    },
+    {
+      "type": "paragraph",
+      "text": "错链接、隐藏文件改名和权限差异由此暴露。文章提供一种可复用的文档测试方法；这是项目实践记录，没有把少量参与者的反馈当作普遍效果证明。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Valen 借用检查：让编译器记住引用指向哪里](https://verdagon.dev/blog/valen-group-borrowing)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN过去24小时提交 · 原文2026-10-11"
+    },
+    {
+      "type": "paragraph",
+      "text": "用对象路径描述引用的指向，并在容器被修改后标记可能失效的内部引用，从而在编译时阻止继续使用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者用小段代码解释如何允许更灵活的共享修改，适合理解内存安全设计；部分语法简化与类型稳定性例外尚未实现，性能展望仍待实测验证。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[基因怎样起作用？把 DNA 序列放回三维细胞环境](https://www.quantamagazine.org/why-the-human-genomes-tangled-physicality-may-confound-ai-20260618/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-06-18 · Quanta"
+    },
+    {
+      "type": "paragraph",
+      "text": "远处的调控片段可借 DNA 折叠接近基因，多种蛋白和细胞环境再共同影响它是否被读取。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章串起三维结构、化学标记与 RNA 调控，帮助理解仅凭序列预测功能的难处；这不等于证明 AI 无法学习这些关系。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从田边的一条草带，理解土地伦理怎样落地](https://aeon.co/essays/a-prairie-enthusiast-in-search-of-a-farming-land-ethic)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-09-24 · Aeon"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从农田留草防蚀、粪肥回归土壤讲起，把土地保护连到农户的成本、经验和邻里关系。"
+    },
+    {
+      "type": "paragraph",
+      "text": "再以野牛吃草后为野花腾出空间为例，讨论为何产量之外还要考虑生态多样性；这是生态随笔，不是通用农业处方。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "lyogavin/airllm",
+      "url": "https://github.com/lyogavin/airllm"
+    },
+    {
+      "title": "bilawalsidhu/gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view"
+    },
+    {
+      "title": "chrislgarry/Apollo-11",
+      "url": "https://github.com/chrislgarry/Apollo-11"
+    },
+    {
+      "title": "EMA Lightning：小模型怎样完成流式语音合成",
+      "url": "https://huggingface.co/canberkkkkkk/ema-lightning"
+    },
+    {
+      "title": "Clef：把多个结构化问题放在一次前向计算里",
+      "url": "https://huggingface.co/Cloudflare/clef"
+    },
+    {
+      "title": "word2vec 学到了什么？沿训练过程追踪词向量的方向",
+      "url": "https://dkarkada.xyz/posts/qwem/"
+    },
+    {
+      "title": "Blackwell 动态调度：让空闲计算单元接手剩余矩阵块",
+      "url": "https://research.colfax-intl.com/dynamic-persistent-tile-scheduling-with-cluster-launch-control-clc-on-nvidia-blackwell-gpus/"
+    },
+    {
+      "title": "让陌生人照着 README 安装：找出作者看不见的缺步骤",
+      "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/"
+    },
+    {
+      "title": "Valen 借用检查：让编译器记住引用指向哪里",
+      "url": "https://verdagon.dev/blog/valen-group-borrowing"
+    },
+    {
+      "title": "基因怎样起作用？把 DNA 序列放回三维细胞环境",
+      "url": "https://www.quantamagazine.org/why-the-human-genomes-tangled-physicality-may-confound-ai-20260618/"
+    },
+    {
+      "title": "从田边的一条草带，理解土地伦理怎样落地",
+      "url": "https://aeon.co/essays/a-prairie-enthusiast-in-search-of-a-farming-land-ethic"
+    }
+  ],
+  "public_reviewed": true
+}

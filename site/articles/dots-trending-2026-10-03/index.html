@@ -1,0 +1,90 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · 2026-10-03 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-03">2026-10-03</time> / 修订 1</p><h1>Dots Trending · 2026-10-03</h1><p class="lead">当日 14 条发现：开源、AI、技术深读与科学人文；保留原始来源及适用边界。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-2">🔧 开源热榜</a></li><li><a href="#section-15">🧠 AI/模型</a></li><li><a href="#section-40">🔥 热议话题</a></li><li><a href="#section-53">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><p>DOTS TRENDING   /   2026.10.03 · 北京时间 · 14条</p>
+<p class="source-title">📡 每日 Trending 速览</p>
+<h2 id="section-2">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/heygen-com/hyperframes" rel="noreferrer">heygen-com/hyperframes</a></h3>
+<p class="item-meta">⭐+580 · TypeScript · GitHub Today</p>
+<p>用 HTML、CSS 和可定位到指定时刻的动画描述视频，再由无头 Chrome 逐帧渲染、FFmpeg 编码。</p>
+<p>它把前端布局接到可重复的视频生产流程，适合程序化演示和动效；关键是让动画能准确跳转到任意帧。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/colbymchenry/codegraph" rel="noreferrer">colbymchenry/codegraph</a></h3>
+<p class="item-meta">⭐+98 · C · GitHub Today</p>
+<p>提前把代码中的符号、调用与依赖建成图，文件变化时增量更新，让代理按关系找源码和影响范围。</p>
+<p>README 也披露了权衡：减少检索调用，却可能让更多返回结果长期留在上下文，长会话仍要控制返回量。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/Effect-TS/effect" rel="noreferrer">Effect-TS/effect</a></h3>
+<p class="item-meta">⭐+80 · TypeScript · GitHub Today</p>
+<p>把错误、依赖和并发任务纳入统一的 TypeScript 类型模型，方便组合较复杂的应用逻辑。</p>
+<p>当前 4.x 已标为长期支持版，仓库列出版本迁移与各运行时要求，适合评估逐步引入的成本。</p>
+</article>
+<h2 id="section-15">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/PSRben/VisionHOPE" rel="noreferrer">PSRben/VisionHOPE：处理图像时更新内部记忆</a></h3>
+<p class="item-meta">HF 当前热榜 · 权重公开 2026-09-29</p>
+<p>沿图像的行列扫描时，让内容、读写表示和更新速率等记忆共同演化，再融合四个方向的特征。</p>
+<p>模型卡与代码提供分类、检测和分割权重；可从独立算子入手，研究这种单张图像内的自适应计算。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/SupersonicLabs/Julia-1" rel="noreferrer">SupersonicLabs/Julia-1：可在 CPU 上运行的小型决策模型</a></h3>
+<p class="item-meta">HF 当前热榜 · 非今日首发</p>
+<p>约1.44亿参数，把上下文、问题和候选答案一起编码，用于分类、路由和等级评分，可在 CPU 上推理。</p>
+<p>单次原生调用接收2至20个选项；模型卡公开复现实验，也明确长标签列表和陌生领域仍可能失准。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://pytorch.org/blog/building-a-high-performance-and-portable-vllm-linear-backend-with-helion/" rel="noreferrer">Helion × vLLM：把矩阵乘变体纳入自动调参</a></h3>
+<p class="item-meta">2026-10-02 · PyTorch</p>
+<p>把矩阵乘拆分计算、调整输入排列等策略放进同一套自动调参内核，再按输入大小选择实现，降低推理开销。</p>
+<p>文章交代了 H100 实测、调参成本和当前仍在独立分支的限制，适合理解优化方案怎样接入 vLLM。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://tridao.me/blog/2026/replayssm/" rel="noreferrer">ReplaySSM：从状态递推推到可回滚的高效解码</a></h3>
+<p class="item-meta">深度精选 · 2026-06-15</p>
+<p>状态空间模型需要不断读写一块表示历史的状态。</p>
+<p>ReplaySSM 周期性保存快照，其间缓存输入、按需重建，减少显存写入；文章把等价推导接到可回滚解码、伪代码与实测，适合顺着数学理解实现。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://siboehm.com/articles/22/CUDA-MMM" rel="noreferrer">CUDA 矩阵乘优化实录：从朴素内核到逐级分块</a></h3>
+<p class="item-meta">深度精选 · 2022-12-31</p>
+<p>从朴素矩阵乘开始，让相邻线程连续读内存，再逐步加入共享内存、寄存器和线程组分块，用性能分析工具解释每步收益。</p>
+<p>附完整源码，适合跟着复现；结果针对较早的 FP32 与 CUDA 核心场景。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://research.google/blog/toward-provably-private-learning-from-federated-data/" rel="noreferrer">联邦学习搬到服务器后，隐私如何接受外部核验？</a></h3>
+<p class="item-meta">Google Research · 2026-10-02</p>
+<p>Google 让设备上传加密样本，将训练移入服务器上由硬件隔离的可信执行环境，并公开允许访问数据的计算策略。</p>
+<p>文章结合 Gboard 部署说明外部审计、隐私保护与效率的取舍，也保留硬件和侧信道的限制。</p>
+</article>
+<h2 id="section-40">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.deepseek.com/en/harness/" rel="noreferrer">DeepSeek Harness：桌面代理也能按插件重组</a></h3>
+<p class="item-meta">HN · 过去24小时提交</p>
+<p>DeepSeek 开源代理框架提供 macOS、Windows 桌面入口，把工具、界面和后台任务都放进可组合的插件体系。</p>
+<p>适合观察代理应用怎样从聊天框走向工作环境；目前仍是预览版，接口可能发生不兼容变化。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://ziglang.org/download/0.17.0/release-notes.html" rel="noreferrer">Zig 0.17：增量编译更实用，升级也有兼容代价</a></h3>
+<p class="item-meta">HN · 过去24小时提交</p>
+<p>新版重做构建系统并增强 ELF 链接器，让多数 x86_64 Linux 项目能够使用增量编译。</p>
+<p>值得连同迁移说明一起读：构建协议变化暂时影响 ZLS，部分位转换语义也可能改变旧代码行为。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://yuka.dev/blog-2026-10-02-linux-m4.html" rel="noreferrer">让 Linux 跑上 M4：追踪会“失忆”的 CPU</a></h3>
+<p class="item-meta">HN · 过去24小时提交</p>
+<p>作者沿着串口输出、页表和中断逐步定位 M4 启动故障，最后发现等待中断指令会丢失寄存器状态。</p>
+<p>修复已进入 Linux 与 m1n1，上游可启动多核终端；图形与外设仍需继续逆向，不能等同完整桌面支持。</p>
+</article>
+<h2 id="section-53">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/sea-monkeys-show-scientists-how-to-rewrite-a-rule-of-turbulence-20261002/" rel="noreferrer">卤虫换个方向游，湍流的能量传递就会倒转？</a></h3>
+<p class="item-meta">Quanta · 2026-10-02</p>
+<p>在薄层盐水实验中，卤虫相对水流拉伸方向的角度，能改变能量在大小尺度间的传递方向。</p>
+<p>研究者用小杆和数值模拟复现了现象；是否适用于自然界强烈的三维湍流，仍待验证。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew" rel="noreferrer">暴力教会人的反应，能重新学过吗？</a></h3>
+<p class="item-meta">Aeon · 2026-10-02</p>
+<p>研究者访谈了99名生活在暴力环境中的男性，梳理出误判威胁、反应选择变窄和把暴力当成自我身份的习惯。</p>
+<p>文章写到，就业支持与反复练习如何帮人重新理解冲突；改变需要安全和陪伴，不能只靠意志。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/heygen-com/hyperframes" rel="noreferrer">heygen-com/hyperframes</a></li><li><a href="https://github.com/colbymchenry/codegraph" rel="noreferrer">colbymchenry/codegraph</a></li><li><a href="https://github.com/Effect-TS/effect" rel="noreferrer">Effect-TS/effect</a></li><li><a href="https://huggingface.co/PSRben/VisionHOPE" rel="noreferrer">PSRben/VisionHOPE：处理图像时更新内部记忆</a></li><li><a href="https://huggingface.co/SupersonicLabs/Julia-1" rel="noreferrer">SupersonicLabs/Julia-1：可在 CPU 上运行的小型决策模型</a></li><li><a href="https://pytorch.org/blog/building-a-high-performance-and-portable-vllm-linear-backend-with-helion/" rel="noreferrer">Helion × vLLM：把矩阵乘变体纳入自动调参</a></li><li><a href="https://tridao.me/blog/2026/replayssm/" rel="noreferrer">ReplaySSM：从状态递推推到可回滚的高效解码</a></li><li><a href="https://siboehm.com/articles/22/CUDA-MMM" rel="noreferrer">CUDA 矩阵乘优化实录：从朴素内核到逐级分块</a></li><li><a href="https://research.google/blog/toward-provably-private-learning-from-federated-data/" rel="noreferrer">联邦学习搬到服务器后，隐私如何接受外部核验？</a></li><li><a href="https://www.deepseek.com/en/harness/" rel="noreferrer">DeepSeek Harness：桌面代理也能按插件重组</a></li><li><a href="https://ziglang.org/download/0.17.0/release-notes.html" rel="noreferrer">Zig 0.17：增量编译更实用，升级也有兼容代价</a></li><li><a href="https://yuka.dev/blog-2026-10-02-linux-m4.html" rel="noreferrer">让 Linux 跑上 M4：追踪会“失忆”的 CPU</a></li><li><a href="https://www.quantamagazine.org/sea-monkeys-show-scientists-how-to-rewrite-a-rule-of-turbulence-20261002/" rel="noreferrer">卤虫换个方向游，湍流的能量传递就会倒转？</a></li><li><a href="https://aeon.co/essays/early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew" rel="noreferrer">暴力教会人的反应，能重新学过吗？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-12 · 25 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

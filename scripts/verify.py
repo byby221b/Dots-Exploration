@@ -40,4 +40,15 @@ def verify(root=ROOT):
             count+=1
     print(f'Verified {count} local links and asset references')
 
+def check_increment(catalog,baseline,expected):
+ old={a['id']:a for a in baseline['articles']};new={a['id']:a for a in catalog['articles']}
+ assert old.keys()<=new.keys(),'Existing articles removed'
+ added=[a for ident,a in new.items() if ident not in old]
+ actual={'articles':len(added),'images':catalog['images_count']-baseline['images_count'],
+         'trending':sum(a['channel']=='trending' for a in added),
+         'exploration':sum(a['channel']=='exploration' for a in added)}
+ assert actual==expected,(actual,expected)
+ return actual
+
+
 if __name__=='__main__': verify()

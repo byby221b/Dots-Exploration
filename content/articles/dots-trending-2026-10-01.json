@@ -1,0 +1,343 @@
+{
+  "id": "dots-trending-2026-10-01",
+  "revision": 1,
+  "date": "2026-10-01",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending · 2026-10-01",
+  "summary": "当日 15 条发现：开源、AI、技术深读与科学人文；保留原始来源及适用边界。",
+  "topics": [
+    "开源",
+    "AI",
+    "深度阅读"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "DOTS TRENDING / 2026.10.01 · 更新版"
+    },
+    {
+      "type": "heading",
+      "text": "📡 每日 Trending 速览"
+    },
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[NVIDIA/OpenShell](https://github.com/NVIDIA/OpenShell)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1,281 · Rust"
+    },
+    {
+      "type": "paragraph",
+      "text": "为自主智能体提供可控运行环境，对文件访问、系统调用与网络实施隔离，并限制凭证的使用范围。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合需要运行代理代码又希望约束权限的场景；仍需配置容器或虚拟化，并审查安全策略。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+3,483 · Python"
+    },
+    {
+      "type": "paragraph",
+      "text": "把声音克隆、视频配音、转写与有声书制作整合到本地桌面，提供本地 API 和 MCP 接口。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合搭建私有语音工作流；硬件需求取决于所选引擎，项目与模型许可需分别检查，克隆声音应取得授权。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[mvschwarz/openrig](https://github.com/mvschwarz/openrig)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+624 · TypeScript"
+    },
+    {
+      "type": "paragraph",
+      "text": "用 YAML 编排 Claude Code 与 Codex 协作团队，通过 tmux 提供消息通信、拓扑查看和快照恢复。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合探索持续运行的编码代理；启动会涉及工作区信任与可执行钩子，采用前应审查配置，原生 Windows 尚不支持。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Edge0/Audio8-ASR-Infinite](https://huggingface.co/Edge0/Audio8-ASR-Infinite)"
+    },
+    {
+      "type": "paragraph",
+      "text": "流式语音识别 · 预览版"
+    },
+    {
+      "type": "paragraph",
+      "text": "面向中英实时转写，以可选音频节拍和滚动 KV 缓存处理持续音频，重点是长时流式运行。"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型卡给出最低可配置转写延迟 240 毫秒；这不是端到端保证，长时运行还需适配版 vLLM，英文测试也未全面领先。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[慢即是快：1. Shampoo的尽头是Muon？](https://spaces.ac.cn/archives/11917)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-09-28 · 苏剑林"
+    },
+    {
+      "type": "paragraph",
+      "text": "从凸优化收敛上界提出“正交最慢下降”，推导复杂预条件可能主要是在均衡梯度奇异值谱，思路接近 Muon。"
+    },
+    {
+      "type": "paragraph",
+      "text": "值得读的是推导路线及假设边界：作者依赖多项近似作启发式分析，并未证明 Shampoo 在实际训练中必然更差。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Language Models for Text Classification: From Bag-of-Words to Jev](https://magazine.sebastianraschka.com/p/classifier-history-and-jev)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-09-29 · Sebastian Raschka"
+    },
+    {
+      "type": "paragraph",
+      "text": "从词袋、循环网络梳理到 Transformer，通过影评分类实验比较专用分类器与通用决策模型的成本和效果。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合关注分类、路由和概率校准的读者；Jev 的架构与训练细节尚未公开，文章中的实测与机制猜测需区分。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[How Diffusion Controller unifies and simplifies AI image generation](https://research.google/blog/how-diffusion-controller-unifies-and-simplifies-ai-image-generation/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-09-29 · Google Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "把扩散去噪重写为连续控制问题，用轻量旁路网络调节生成轨迹，在冻结主模型时权衡提示匹配与图像质量。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合学习控制思想如何进入生成模型；实验基于 Stable Diffusion 1.4，灰盒方案仍需读取中间去噪信息。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[How to Scale Your Model](https://jax-ml.github.io/scaling-book/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 首发 2025-02-04"
+    },
+    {
+      "type": "paragraph",
+      "text": "从 Roofline、矩阵分片和 Transformer 算量，系统串到训练与推理并行、JAX 编程和性能剖析，配有习题与实算案例。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合已有 Transformer 基础、想把模型设计与算力预算连起来的人；实践主线偏 TPU/JAX，另有 GPU 专章。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Gram Newton–Schulz: A Fast, Hardware-Aware Algorithm for Muon](https://tridao.me/blog/2026/gram-newton-schulz/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-03-30 · Tri Dao"
+    },
+    {
+      "type": "paragraph",
+      "text": "从极分解与 Newton–Schulz 迭代推到 Gram 矩阵、半精度稳定化，再落到 CuTeDSL 内核与训练实验。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合有矩阵分析、优化和 GPU 基础的人；收益依赖矩阵形状与硬件，优化器本身提速不等于整段训练同比提速。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Stanford CS336: Language Modeling from Scratch](https://cs336.stanford.edu/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026 春季课程"
+    },
+    {
+      "type": "paragraph",
+      "text": "通过五组实现作业，把分词器、Transformer、优化器、数据处理、扩展律和后训练连成完整学习路线。"
+    },
+    {
+      "type": "paragraph",
+      "text": "系统作业覆盖 Triton FlashAttention 与分布式训练；需要 Python、PyTorch、线代和概率基础，代码与算力投入较高。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[What (and What Not) are Calibrated Probabilities Actually Useful for?](https://iclr-blogposts.github.io/2026/blog/2026/useful-calibrated-uncertainties/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-04-27 · Guoxuan Xia"
+    },
+    {
+      "type": "paragraph",
+      "text": "用概率推导、反例和交互式收益实验，厘清校准如何帮助估计平均损失，以及为何不保证逐样本排序或决策更好。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合做 CTR/CVR 预估时梳理评估目标；文章主要分析二元事件，没有广告线上实验证据，也不能简化成“校准不重要”。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Gemini 4 Argon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 1,112 分 · 743 评论"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google 将其定位于长程编程、企业知识工作与网络防御，公布了更长任务执行能力和高达百万 token 的输出上限。"
+    },
+    {
+      "type": "paragraph",
+      "text": "当前仅向可信防御团队及测试者分阶段开放，尚未全面可用；性能结论主要来自官方评测与内部案例。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[You said no MCP](https://earendil.com/posts/you-said-no-mcp/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 619 分 · 348 评论"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pi 将 MCP 纳入核心，通过 JavaScript 沙盒组合工具调用，并用延迟加载与结构化数据减少上下文堆积。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究代理工具架构：价值在可组合工作流；许多服务仍只返回文本，实际收益也取决于工具接口适配。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Surprisingly Complex Waves Reveal the Brain’s Inner Workings](https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-09-30 · Quanta"
+    },
+    {
+      "type": "paragraph",
+      "text": "颅内记录发现清醒人脑存在同心波和旋转螺旋波，空间记忆任务更常伴随旋转波，提供了理解脑活动的新视角。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这些模式可能帮助大脑切换信息处理方式，但究竟主动参与认知还是反映神经元活动，仍有争议。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Don’t use the ‘C-word’](https://aeon.co/essays/we-need-a-better-way-to-describe-what-is-often-called-cancer)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-09-29 · Aeon · 作者观点"
+    },
+    {
+      "type": "paragraph",
+      "text": "泌尿科医生讨论疾病命名如何影响风险感知：将部分低风险病变统称为“癌症”，可能放大恐惧并推动过度治疗。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章主张让名称更贴近风险，对适合的患者持续监测；重新命名不等于无需照护，是一篇医学沟通与决策讨论。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NVIDIA/OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell"
+    },
+    {
+      "title": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio"
+    },
+    {
+      "title": "mvschwarz/openrig",
+      "url": "https://github.com/mvschwarz/openrig"
+    },
+    {
+      "title": "Edge0/Audio8-ASR-Infinite",
+      "url": "https://huggingface.co/Edge0/Audio8-ASR-Infinite"
+    },
+    {
+      "title": "慢即是快：1. Shampoo的尽头是Muon？",
+      "url": "https://spaces.ac.cn/archives/11917"
+    },
+    {
+      "title": "Language Models for Text Classification: From Bag-of-Words to Jev",
+      "url": "https://magazine.sebastianraschka.com/p/classifier-history-and-jev"
+    },
+    {
+      "title": "How Diffusion Controller unifies and simplifies AI image generation",
+      "url": "https://research.google/blog/how-diffusion-controller-unifies-and-simplifies-ai-image-generation/"
+    },
+    {
+      "title": "How to Scale Your Model",
+      "url": "https://jax-ml.github.io/scaling-book/"
+    },
+    {
+      "title": "Gram Newton–Schulz: A Fast, Hardware-Aware Algorithm for Muon",
+      "url": "https://tridao.me/blog/2026/gram-newton-schulz/"
+    },
+    {
+      "title": "Stanford CS336: Language Modeling from Scratch",
+      "url": "https://cs336.stanford.edu/"
+    },
+    {
+      "title": "What (and What Not) are Calibrated Probabilities Actually Useful for?",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/useful-calibrated-uncertainties/"
+    },
+    {
+      "title": "Gemini 4 Argon",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    },
+    {
+      "title": "You said no MCP",
+      "url": "https://earendil.com/posts/you-said-no-mcp/"
+    },
+    {
+      "title": "Surprisingly Complex Waves Reveal the Brain’s Inner Workings",
+      "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/"
+    },
+    {
+      "title": "Don’t use the ‘C-word’",
+      "url": "https://aeon.co/essays/we-need-a-better-way-to-describe-what-is-often-called-cancer"
+    }
+  ],
+  "public_reviewed": true
+}
