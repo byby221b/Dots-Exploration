@@ -30,7 +30,11 @@ def expected(blocks):
     texts=[];links=[];images=[]
     for b in blocks:
         k=b['type']
-        if k=='image':images.append((b['src'],b['alt']));continue
+        if k=='image':
+            images.append((b['src'],b['alt']))
+            if b.get('caption'):
+                sig=meaning(inline(b['caption']));texts.append(sig[0]);links.extend(sig[1])
+            continue
         if k=='details':
             sig=meaning(inline(b['summary']));child=expected(b['blocks']);texts.extend([sig[0],child[0]]);links.extend(sig[1]+child[1]);images.extend(child[2]);continue
         values=([b['text']] if k in ('paragraph','heading','quote','code') else b['items'] if k=='list' else b['headers']+[x for row in b['rows'] for x in row])
@@ -41,6 +45,29 @@ def expected(blocks):
     return (re.sub(r'\s+','',''.join(texts)),links,images)
 
 class PresentationTests(unittest.TestCase):
+    def test_image_captions_and_links_are_preserved(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);setup(root)
+            for nested in (False,True):
+                for caption in (None,'图注 **强调** [来源](https://example.org/caption)'):
+                    with self.subTest(nested=nested,caption=caption):
+                        image={'type':'image','src':'assets/qa.png','alt':'测试图'}
+                        if caption is not None:image['caption']=caption
+                        blocks=[image]
+                        if nested:blocks=[{'type':'details','summary':'展开','blocks':blocks}]
+                        markup,_=render_blocks(blocks,root/'content/assets')
+                        signature=(('展开' if nested else '')+('图注强调来源' if caption else ''),
+                                   ['https://example.org/caption'] if caption else [],[('assets/qa.png','测试图')])
+                        self.assertEqual(expected(blocks),signature)
+                        self.assertEqual(meaning(markup),signature)
+                        if caption:
+                            for replacement in ('','改写的图注'):
+                                damaged=markup.replace(inline(caption),replacement,1)
+                                with self.assertRaises(AssertionError):
+                                    self.assertEqual(meaning(damaged),expected(blocks))
+                            changed_link=markup.replace('https://example.org/caption','https://example.org/changed',1)
+                            with self.assertRaises(AssertionError):
+                                self.assertEqual(meaning(changed_link),expected(blocks))
     def test_math_subscripts_and_superscripts_are_safe(self):
         markup=inline('q~{i} r~{A} e^{x} <sub onclick="bad()">i</sub> ~{<img>}')
         self.assertIn('q<sub>i</sub> r<sub>A</sub> e<sup>x</sup>',markup)
