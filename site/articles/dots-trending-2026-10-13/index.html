@@ -1,0 +1,77 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · 2026-10-13 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-13">2026-10-13</time> / 修订 1</p><h1>Dots Trending · 2026-10-13</h1><p class="lead">12条发现：开源工具、模型、系统性技术资料与科学人文；保留原始来源及适用边界。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-1">🔧 开源热榜</a></li><li><a href="#section-10">🧠 AI/模型</a></li><li><a href="#section-31">🔥 热议话题</a></li><li><a href="#section-44">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><p>2026.10.13 · 北京时间 · 12 条</p>
+<h2 id="section-1">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/open-webui/open-webui" rel="noreferrer">open-webui/open-webui</a></h3>
+<p class="item-meta">⭐+157 · Python · GitHub Today</p>
+<p>把本地模型、兼容接口、文档检索与工具调用放进同一个自托管界面，还可通过插件扩展工作流和权限控制。</p>
+<p>适合搭建可比较不同模型的研究入口；连接云端服务时数据仍会离开本机，当前许可证另有品牌保留要求。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/microsoft/BitNet" rel="noreferrer">microsoft/BitNet</a></h3>
+<p class="item-meta">⭐+97 · C++ · GitHub Today</p>
+<p>为三值权重模型提供专用推理内核，结合查表计算、分块和并行执行，在 CPU 与 GPU 上减少低比特运算的开销。</p>
+<p>仓库包含语言与嵌入模型的运行、转换和测试路径，适合研究量化与硬件的配合；不能把普通浮点模型直接视为等价的三值模型。</p>
+</article>
+<h2 id="section-10">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0" rel="noreferrer">Underdog Saluki：压缩权重后，工具调用保留多少？</a></h3>
+<p class="item-meta">HF 当前热榜 · 非今日首发</p>
+<p>把 Qwen3.8-27B 做成混合低比特 GGUF，主权重文件为7.89GB，可在标准 llama.cpp 中运行，视觉能力需要另加文件。</p>
+<p>模型卡列出工具调用、代码与数学测试，也披露并行调用格式失误和数学能力损失；文件大小不等于完整运行内存，跨测试框架的分数不能直接比较。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/LiquidAI/d1-3B" rel="noreferrer">LiquidAI d1-3B：一次读入，回答多个结构化问题</a></h3>
+<p class="item-meta">HF 当前热榜 · 非今日首发</p>
+<p>在约30亿参数视觉语言底座上训练决策能力，一次前向计算输出是非、选项概率或等级分数，不逐字生成回答。</p>
+<p>适合研究分类、路由和重排等短输出任务；它不写自由文本，模型卡延迟是在指定硬件预热后测得，部署仍需核验实际数据上的准确率与校准。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://simonwillison.net/2026/Oct/12/python-3-15/" rel="noreferrer">Python 3.15：从启动性能看到项目最低支持版本</a></h3>
+<p class="item-meta">2026-10-13 02:15 · 北京时间 · Simon Willison</p>
+<p>以命令行插件的启动延迟为例，介绍延迟导入与标准库采样分析器，再展示维护者如何随着旧版本停止支持，调整项目的最低版本。</p>
+<p>文章附代码和迁移实例，适合梳理升级收益；新语法仍受项目需要兼容的最低版本限制。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://lilianweng.github.io/posts/2026-07-04-harness/" rel="noreferrer">代理怎样改进自己的运行系统？从失败记录到受控验证</a></h3>
+<p class="item-meta">深度精选 · 2026-07-04 · Lilian Weng</p>
+<p>把代理运行系统拆成上下文管理、工具、记忆和工作流，再串起自动搜索与修改这些组件的研究。</p>
+<p>重点看失败记录、留出测试和权限边界如何构成改进闭环；适合设计代理实验，文中也说明评测失真与短期分数提升的局限。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://sander.ai/2026/08/24/continuous-dlms.html" rel="noreferrer">连续扩散怎样生成文字：从词向量加噪到少步采样</a></h3>
+<p class="item-meta">深度精选 · 2026-08-24 · Sander Dieleman</p>
+<p>先把词元映射为向量，再依次解释加噪、去噪、损失函数与噪声日程，串起连续扩散文本生成的设计选择。</p>
+<p>作者结合自身研究讨论少步采样与离散方案的取舍，并提醒困惑度指标可能误导比较；适合建立机制框架，尚无统一最优配方。</p>
+</article>
+<h2 id="section-31">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://prophitt.me/writing/a-modern-web-app-in-c" rel="noreferrer">用 C 和 CGI 构建现代网站：让部署保持简单</a></h3>
+<p class="item-meta">HN过去24小时提交 · 作者工程实践</p>
+<p>作者用 OpenBSD、C 和 SQLite 实现商业网站，每次请求启动独立进程，应用与静态资源一起编译成单个可执行文件。</p>
+<p>文章说明少依赖、直接调试和文件式部署的便利，也交代输入解析、验证与转义要自行处理；这是具体项目经验，没有证明它适合所有吞吐需求。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/snuri00/ps2-web-recomp" rel="noreferrer">把 PS2 程序静态重编译到浏览器</a></h3>
+<p class="item-meta">HN过去24小时提交 · 实验性项目</p>
+<p>先把游戏主处理器指令翻成 C++，再编译为 WebAssembly；图形交给 WebGPU，部分硬件与输入输出仍由运行时模拟。</p>
+<p>README 逐项解释指令兼容、纹理缓存和线程调度，适合学习跨平台运行机制；目前只验证两款游戏，不含游戏数据，需自备合法副本并遵守使用限制。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html" rel="noreferrer">Zig 的类型安全 HTML 模板：把错误提前到编译期</a></h3>
+<p class="item-meta">HN过去24小时提交 · 原文2026-10-11</p>
+<p>zt 在构建时把模板转成 Zig 代码，参数类型由编译器检查，渲染时直接写向输出流，并默认转义动态文本和检查危险链接协议。</p>
+<p>文中有组件、布局和错误定位示例，适合观察模板系统怎样借用语言工具链；项目尚不成熟，部分控制流语法仍在讨论，默认防护也不能覆盖所有安全问题。</p>
+</article>
+<h2 id="section-44">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/is-attention-the-essence-of-intelligence-20261012/" rel="noreferrer">“它”指谁？从代词理解注意力机制</a></h3>
+<p class="item-meta">2026-10-12 · Quanta · 评论</p>
+<p>从翻译中“它”究竟指动物还是街道的例子出发，文章解释查询、键和值怎样让词语吸收上下文。</p>
+<p>再追问语言建模与智能的关系：注意力让模型更易扩展，但人类思维和大脑效率仍不能由此一并解释。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/does-the-principle-of-sufficient-reason-make-panpsychism-true" rel="noreferrer">万物都有意识？先追问为什么一切都要有解释</a></h3>
+<p class="item-meta">2026-10-12 · Aeon · 哲学</p>
+<p>作者从“每件事都应有充分理由”出发，梳理泛心论的三条论证：意识来源、物质本性，以及斯宾诺莎的单一实体。</p>
+<p>他也追问这种解释要求是否过强，展示前提怎样推动结论；这些仍是有争议的哲学论证，阅读时可逐层检验其假设。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/open-webui/open-webui" rel="noreferrer">open-webui/open-webui</a></li><li><a href="https://github.com/microsoft/BitNet" rel="noreferrer">microsoft/BitNet</a></li><li><a href="https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0" rel="noreferrer">Underdog Saluki：压缩权重后，工具调用保留多少？</a></li><li><a href="https://huggingface.co/LiquidAI/d1-3B" rel="noreferrer">LiquidAI d1-3B：一次读入，回答多个结构化问题</a></li><li><a href="https://simonwillison.net/2026/Oct/12/python-3-15/" rel="noreferrer">Python 3.15：从启动性能看到项目最低支持版本</a></li><li><a href="https://lilianweng.github.io/posts/2026-07-04-harness/" rel="noreferrer">代理怎样改进自己的运行系统？从失败记录到受控验证</a></li><li><a href="https://sander.ai/2026/08/24/continuous-dlms.html" rel="noreferrer">连续扩散怎样生成文字：从词向量加噪到少步采样</a></li><li><a href="https://prophitt.me/writing/a-modern-web-app-in-c" rel="noreferrer">用 C 和 CGI 构建现代网站：让部署保持简单</a></li><li><a href="https://github.com/snuri00/ps2-web-recomp" rel="noreferrer">把 PS2 程序静态重编译到浏览器</a></li><li><a href="https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html" rel="noreferrer">Zig 的类型安全 HTML 模板：把错误提前到编译期</a></li><li><a href="https://www.quantamagazine.org/is-attention-the-essence-of-intelligence-20261012/" rel="noreferrer">“它”指谁？从代词理解注意力机制</a></li><li><a href="https://aeon.co/essays/does-the-principle-of-sufficient-reason-make-panpsychism-true" rel="noreferrer">万物都有意识？先追问为什么一切都要有解释</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-13 · 26 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
