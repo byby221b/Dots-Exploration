@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>扩容一台服务器，怎样少搬数据？ · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">技术考古 / <time datetime="2026-10-13">2026-10-13</time> / 修订 1</p><h1>扩容一台服务器，怎样少搬数据？</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-2">直觉办法：按机器数量取余</a></li><li><a href="#section-5">让机器插入一圈固定的位置</a></li><li><a href="#section-12">少搬数据之后，还要让负担更均匀</a></li><li><a href="#section-15">历史转折：问题没变，愿意付的成本变了</a></li><li><a href="#section-20">停一下：自己沿环走一次</a></li><li><a href="#section-23">可选深入：三个转折各自留下了什么</a></li><li><a href="#section-28">一手来源与定位</a></li></ol></nav><div class="prose"><div class="article-content"><p>把数据分给多台服务器时，可以让新增机器只接走一部分数据，而让其余数据保持原来的归属。这是本期要抓住的一件事：<strong>扩容时，怎样避免大范围重新分配？</strong></p>
+<p>主文约4分钟。这里的“哈希”是把商品编号稳定地换成一个数字：输入不变，数字就不变。我们用它决定商品记录该去哪台机器；这与用小表判断商品是否存在，是两个不同的问题。</p>
+<h2 id="section-2">直觉办法：按机器数量取余</h2>
+<p>假设三台机器编号为0、1、2。拿商品的哈希值除以3，把余数当机器编号，就能分配数据。现在加一台机器，改成除以4：哈希值5原来余2，现在余1；哈希值7原来余1，现在余3。连两台旧机器之间也会交换数据。</p>
+<p>机器数量进入了每条记录的分配公式。改变这个数，许多记录的归属都会改变。对缓存，这可能意味着重新取回数据；对持久存储，则可能需要真正搬数据。我们希望新机器承担工作，同时尽量保住已经安排好的位置。</p>
+<h2 id="section-5">让机器插入一圈固定的位置</h2>
+<p>把固定的数字范围首尾接起来，像钟面一样围成一圈。商品编号和机器名字都可以变成环上的位置；查一件商品时，从它的位置顺时针走，遇到的第一台机器负责它。这圈数字的范围不随机器数量改变。</p>
+<p>下面是便于手算的教学图：位置只有0到11，A在0、B在4、C在8。绿色方块是四条记录的位置，不是机器；D是稍后加进来的新机器。真实系统的位置范围远大于这个示例，也要处理位置碰撞。</p>
+<figure><a class="image-link" href="../../assets/technical-archaeology-2026-10-13/ring.png" aria-label="查看原图：顺时针环：A在0、B在4、C在8；记录k1、k2、k3、k4分别在2、5、7、10。新增D在6后，仅k2从C转到D；其余归属不变。"><img src="../../assets/technical-archaeology-2026-10-13/ring.png" alt="顺时针环：A在0、B在4、C在8；记录k1、k2、k3、k4分别在2、5、7、10。新增D在6后，仅k2从C转到D；其余归属不变。" loading="lazy"></a><figcaption>圆点是机器，方块是记录；箭头表示顺时针。橙色区间由新增的D接走。原创教学示意，使用Dynamo式顺时针规则，不是1997年论文构造的复刻。<span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">记录的位置</th><th scope="col">加D之前</th><th scope="col">D加入位置6之后</th></tr></thead><tbody><tr><td>k1：2</td><td>B</td><td>B</td></tr><tr><td>k2：5</td><td>C</td><td>D</td></tr><tr><td>k3：7</td><td>C</td><td>C</td></tr><tr><td>k4：10</td><td>A（绕回0）</td><td>A（绕回0）</td></tr></tbody></table></div>
+<p>只看k2：从5出发，原来先遇到8处的C；D插在6以后，先遇到D。k3在7，已经越过D，仍归C。<strong>改变的只有从B之后到D为止的区间的归属；其他区间的第一台机器没有变。</strong></p>
+<p>这类在机器集合变化时尽量少改归属的映射，称为<strong>一致性哈希</strong>。这里的“一致性”说的是映射变化的性质，不是在保证数据库副本随时相同。这个小样本只搬了四条中的一条；不要把它当成每次扩容都恰好搬四分之一的定律。</p>
+<h2 id="section-12">少搬数据之后，还要让负担更均匀</h2>
+<p>每台机器只占一个点，点之间的空隙可能很不均匀。有的机器接到很长一段，有的只接到很短一段。常用办法是让同一台机器在环上拥有多个位置，把几段分散的小区间交给它；这些位置通常叫“虚拟节点”。它们仍指向同一台真实机器，不是额外复制出来的机器。</p>
+<p>可以继续沿刚才的例子想：如果D只接一个很短区间，它承担的记录可能太少；让D在不同地方接几小段，更容易分摊记录，也能把迁移工作分散到几台旧机器。代价是要保存和维护更多位置。记录数量更均衡，也不保证请求量均衡：一个特别热门的商品仍可能压住它所在的机器。</p>
+<h2 id="section-15">历史转折：问题没变，愿意付的成本变了</h2>
+<p>1997年的原论文面向网络缓存：机器会加入、退出，客户端知道的机器名单也可能不同。它提出了映射应随成员变化而平稳改变的目标，而且当时的构造已经让每台缓存机器对应多个位置。不能把“多个位置”的想法算成后来的Dynamo才发明。</p>
+<p>2007年的Dynamo把这类思路用于生产存储，明确引用了早期工作，并采用顺时针环与多位置分配，处理机器能力不同和迁移工作分摊。工程中的转折是：不仅要知道一条记录归谁，还要考虑整批数据怎样移交。它后来也调整了分区策略，初版随机落点并非最终答案。</p>
+<p>2014年的Jump换了一个取舍：如果把数据分成连续编号的组，并只从编号末尾增减组数，就可以按键直接算出归属，不必保存整张环表。它省下映射所需的内存，但不能直接照搬到“任意一台机器退出”的场景。它是同一分配问题的一条分支，不是Dynamo的全面替代。</p>
+<p>今天重新选择时，先问三件事：成员能否任意退出？需要按机器容量分配吗？真正昂贵的是搬数据、保存路由表，还是少数热门记录？这些条件比“哪个算法年代更新”更能决定方案。</p>
+<h2 id="section-20">停一下：自己沿环走一次</h2>
+<p>仍用图中的位置。D已经加入以后，若C退出，而其他位置不变，k3会交给谁？先从7顺时针找下一台机器。</p>
+<details><summary>查看答案</summary><p>交给A。C在8的位置消失后，从7顺时针继续走，绕过11后首先遇到0处的A。k2仍先遇到6处的D，所以不用跟着搬。这里只讨论单一负责机器的归属；副本、故障期间的读写处理并没有包含在图里。</p></details>
+<h2 id="section-23">可选深入：三个转折各自留下了什么</h2>
+<p><strong>原始目标与图的边界。</strong> Karger等人的§4把成员变化、负载和不同客户端视图分开刻画。其具体构造是在区间上找最近位置，并非本图的顺时针后继规则。用Dynamo式小环解释少量迁移，不能因此把两种构造写成逐步相同的算法。</p>
+<p><strong>生产分区不是只调位置数量。</strong> Dynamo §6.2还讨论先切等大小分区、再分给机器；这把分区与机器放置分开，需另行管理分区表和移交。</p>
+<p><strong>Jump省掉的是什么。</strong> 给定键和桶数n，它确定性地重现由该键驱动的伪随机过程，跳过那些归属不变化的桶数。输出在0到n−1之间；理想模型中，从n桶增至n＋1桶时，约1/(n＋1)的键转到新桶，其余保持原桶。工作内存是常数级，计算步数的期望随log n增长。若删掉中间某个桶，须另设稳定逻辑桶/替换或映射层，不能靠把后面机器重编号就声称保持原来的少迁移性质。</p>
+<p><strong>有界负载是另一项约束。</strong> Google介绍的bounded-load方案在环上遇到已满服务器时继续向前，明确控制分配数量上限；允许的余量越紧，迁移工作越多。这回答的是“不能让某台分到过多单位任务”，而非Jump的“省掉环表”。对大小和访问热度不同的记录，数量上限仍不等于CPU或带宽上限。</p>
+<h2 id="section-28">一手来源与定位</h2>
+<p><a href="https://people.csail.mit.edu/karger/Papers/web.pdf" rel="noreferrer">Karger 等，1997：Consistent Hashing and Random Trees（§4）</a></p>
+<p><a href="https://cdn.amazon.science/ac/1d/eb50c4064c538c8ac440ce6a1d91/dynamo-amazons-highly-available-key-value-store.pdf" rel="noreferrer">Dynamo，2007：分区与虚拟节点（§4.2、§6.2）</a></p>
+<p><a href="https://arxiv.org/abs/1406.2294" rel="noreferrer">Lamping 与 Veach，2014：Jump Consistent Hash（原始预印本）</a></p>
+<p><a href="https://research.google/blog/consistent-hashing-with-bounded-loads/" rel="noreferrer">Google Research：Consistent Hashing with Bounded Loads</a></p></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://people.csail.mit.edu/karger/Papers/web.pdf" rel="noreferrer">Karger 等，1997：Consistent Hashing and Random Trees（§4）</a></li><li><a href="https://cdn.amazon.science/ac/1d/eb50c4064c538c8ac440ce6a1d91/dynamo-amazons-highly-available-key-value-store.pdf" rel="noreferrer">Dynamo，2007：分区与虚拟节点（§4.2、§6.2）</a></li><li><a href="https://arxiv.org/abs/1406.2294" rel="noreferrer">Lamping 与 Veach，2014：Jump Consistent Hash（原始预印本）</a></li><li><a href="https://research.google/blog/consistent-hashing-with-bounded-loads/" rel="noreferrer">Google Research：Consistent Hashing with Bounded Loads</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-13 · 27 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

@@ -1,6 +1,18 @@
 {
   "articles": [
     {
+      "channel": "exploration",
+      "date": "2026-10-13",
+      "disclosures": 1,
+      "id": "technical-archaeology-2026-10-13",
+      "images": [
+        "assets/technical-archaeology-2026-10-13/ring.png"
+      ],
+      "revision": 1,
+      "series": "技术考古",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-10-13",
       "disclosures": 0,
@@ -302,13 +314,13 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 26,
+  "articles_count": 27,
   "channels": {
-    "exploration": 13,
+    "exploration": 14,
     "trending": 13
   },
   "end": "2026-10-13",
-  "images_count": 34,
+  "images_count": 35,
   "start": "2026-10-01",
   "trending_items": 163
 }

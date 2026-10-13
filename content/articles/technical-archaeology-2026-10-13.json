@@ -1,0 +1,208 @@
+{
+  "id": "technical-archaeology-2026-10-13",
+  "revision": 1,
+  "date": "2026-10-13",
+  "channel": "exploration",
+  "series": "技术考古",
+  "title": "扩容一台服务器，怎样少搬数据？",
+  "summary": "沿一张小环追踪记录归属，理解一致性哈希如何减少扩容迁移，以及多位置分配和Jump各自付出的代价。",
+  "topics": [
+    "分布式系统",
+    "一致性哈希",
+    "数据分区"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "把数据分给多台服务器时，可以让新增机器只接走一部分数据，而让其余数据保持原来的归属。这是本期要抓住的一件事：**扩容时，怎样避免大范围重新分配？**"
+    },
+    {
+      "type": "paragraph",
+      "text": "主文约4分钟。这里的“哈希”是把商品编号稳定地换成一个数字：输入不变，数字就不变。我们用它决定商品记录该去哪台机器；这与用小表判断商品是否存在，是两个不同的问题。"
+    },
+    {
+      "type": "heading",
+      "text": "直觉办法：按机器数量取余",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "假设三台机器编号为0、1、2。拿商品的哈希值除以3，把余数当机器编号，就能分配数据。现在加一台机器，改成除以4：哈希值5原来余2，现在余1；哈希值7原来余1，现在余3。连两台旧机器之间也会交换数据。"
+    },
+    {
+      "type": "paragraph",
+      "text": "机器数量进入了每条记录的分配公式。改变这个数，许多记录的归属都会改变。对缓存，这可能意味着重新取回数据；对持久存储，则可能需要真正搬数据。我们希望新机器承担工作，同时尽量保住已经安排好的位置。"
+    },
+    {
+      "type": "heading",
+      "text": "让机器插入一圈固定的位置",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "把固定的数字范围首尾接起来，像钟面一样围成一圈。商品编号和机器名字都可以变成环上的位置；查一件商品时，从它的位置顺时针走，遇到的第一台机器负责它。这圈数字的范围不随机器数量改变。"
+    },
+    {
+      "type": "paragraph",
+      "text": "下面是便于手算的教学图：位置只有0到11，A在0、B在4、C在8。绿色方块是四条记录的位置，不是机器；D是稍后加进来的新机器。真实系统的位置范围远大于这个示例，也要处理位置碰撞。"
+    },
+    {
+      "type": "image",
+      "src": "assets/technical-archaeology-2026-10-13/ring.png",
+      "alt": "顺时针环：A在0、B在4、C在8；记录k1、k2、k3、k4分别在2、5、7、10。新增D在6后，仅k2从C转到D；其余归属不变。",
+      "caption": "圆点是机器，方块是记录；箭头表示顺时针。橙色区间由新增的D接走。原创教学示意，使用Dynamo式顺时针规则，不是1997年论文构造的复刻。"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "记录的位置",
+        "加D之前",
+        "D加入位置6之后"
+      ],
+      "rows": [
+        [
+          "k1：2",
+          "B",
+          "B"
+        ],
+        [
+          "k2：5",
+          "C",
+          "D"
+        ],
+        [
+          "k3：7",
+          "C",
+          "C"
+        ],
+        [
+          "k4：10",
+          "A（绕回0）",
+          "A（绕回0）"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "只看k2：从5出发，原来先遇到8处的C；D插在6以后，先遇到D。k3在7，已经越过D，仍归C。**改变的只有从B之后到D为止的区间的归属；其他区间的第一台机器没有变。**"
+    },
+    {
+      "type": "paragraph",
+      "text": "这类在机器集合变化时尽量少改归属的映射，称为**一致性哈希**。这里的“一致性”说的是映射变化的性质，不是在保证数据库副本随时相同。这个小样本只搬了四条中的一条；不要把它当成每次扩容都恰好搬四分之一的定律。"
+    },
+    {
+      "type": "heading",
+      "text": "少搬数据之后，还要让负担更均匀",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "每台机器只占一个点，点之间的空隙可能很不均匀。有的机器接到很长一段，有的只接到很短一段。常用办法是让同一台机器在环上拥有多个位置，把几段分散的小区间交给它；这些位置通常叫“虚拟节点”。它们仍指向同一台真实机器，不是额外复制出来的机器。"
+    },
+    {
+      "type": "paragraph",
+      "text": "可以继续沿刚才的例子想：如果D只接一个很短区间，它承担的记录可能太少；让D在不同地方接几小段，更容易分摊记录，也能把迁移工作分散到几台旧机器。代价是要保存和维护更多位置。记录数量更均衡，也不保证请求量均衡：一个特别热门的商品仍可能压住它所在的机器。"
+    },
+    {
+      "type": "heading",
+      "text": "历史转折：问题没变，愿意付的成本变了",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "1997年的原论文面向网络缓存：机器会加入、退出，客户端知道的机器名单也可能不同。它提出了映射应随成员变化而平稳改变的目标，而且当时的构造已经让每台缓存机器对应多个位置。不能把“多个位置”的想法算成后来的Dynamo才发明。"
+    },
+    {
+      "type": "paragraph",
+      "text": "2007年的Dynamo把这类思路用于生产存储，明确引用了早期工作，并采用顺时针环与多位置分配，处理机器能力不同和迁移工作分摊。工程中的转折是：不仅要知道一条记录归谁，还要考虑整批数据怎样移交。它后来也调整了分区策略，初版随机落点并非最终答案。"
+    },
+    {
+      "type": "paragraph",
+      "text": "2014年的Jump换了一个取舍：如果把数据分成连续编号的组，并只从编号末尾增减组数，就可以按键直接算出归属，不必保存整张环表。它省下映射所需的内存，但不能直接照搬到“任意一台机器退出”的场景。它是同一分配问题的一条分支，不是Dynamo的全面替代。"
+    },
+    {
+      "type": "paragraph",
+      "text": "今天重新选择时，先问三件事：成员能否任意退出？需要按机器容量分配吗？真正昂贵的是搬数据、保存路由表，还是少数热门记录？这些条件比“哪个算法年代更新”更能决定方案。"
+    },
+    {
+      "type": "heading",
+      "text": "停一下：自己沿环走一次",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "仍用图中的位置。D已经加入以后，若C退出，而其他位置不变，k3会交给谁？先从7顺时针找下一台机器。"
+    },
+    {
+      "type": "details",
+      "summary": "查看答案",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "交给A。C在8的位置消失后，从7顺时针继续走，绕过11后首先遇到0处的A。k2仍先遇到6处的D，所以不用跟着搬。这里只讨论单一负责机器的归属；副本、故障期间的读写处理并没有包含在图里。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "可选深入：三个转折各自留下了什么",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "**原始目标与图的边界。** Karger等人的§4把成员变化、负载和不同客户端视图分开刻画。其具体构造是在区间上找最近位置，并非本图的顺时针后继规则。用Dynamo式小环解释少量迁移，不能因此把两种构造写成逐步相同的算法。"
+    },
+    {
+      "type": "paragraph",
+      "text": "**生产分区不是只调位置数量。** Dynamo §6.2还讨论先切等大小分区、再分给机器；这把分区与机器放置分开，需另行管理分区表和移交。"
+    },
+    {
+      "type": "paragraph",
+      "text": "**Jump省掉的是什么。** 给定键和桶数n，它确定性地重现由该键驱动的伪随机过程，跳过那些归属不变化的桶数。输出在0到n−1之间；理想模型中，从n桶增至n＋1桶时，约1/(n＋1)的键转到新桶，其余保持原桶。工作内存是常数级，计算步数的期望随log n增长。若删掉中间某个桶，须另设稳定逻辑桶/替换或映射层，不能靠把后面机器重编号就声称保持原来的少迁移性质。"
+    },
+    {
+      "type": "paragraph",
+      "text": "**有界负载是另一项约束。** Google介绍的bounded-load方案在环上遇到已满服务器时继续向前，明确控制分配数量上限；允许的余量越紧，迁移工作越多。这回答的是“不能让某台分到过多单位任务”，而非Jump的“省掉环表”。对大小和访问热度不同的记录，数量上限仍不等于CPU或带宽上限。"
+    },
+    {
+      "type": "heading",
+      "text": "一手来源与定位",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[Karger 等，1997：Consistent Hashing and Random Trees（§4）](https://people.csail.mit.edu/karger/Papers/web.pdf)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Dynamo，2007：分区与虚拟节点（§4.2、§6.2）](https://cdn.amazon.science/ac/1d/eb50c4064c538c8ac440ce6a1d91/dynamo-amazons-highly-available-key-value-store.pdf)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Lamping 与 Veach，2014：Jump Consistent Hash（原始预印本）](https://arxiv.org/abs/1406.2294)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Google Research：Consistent Hashing with Bounded Loads](https://research.google/blog/consistent-hashing-with-bounded-loads/)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Karger 等，1997：Consistent Hashing and Random Trees（§4）",
+      "url": "https://people.csail.mit.edu/karger/Papers/web.pdf"
+    },
+    {
+      "title": "Dynamo，2007：分区与虚拟节点（§4.2、§6.2）",
+      "url": "https://cdn.amazon.science/ac/1d/eb50c4064c538c8ac440ce6a1d91/dynamo-amazons-highly-available-key-value-store.pdf"
+    },
+    {
+      "title": "Lamping 与 Veach，2014：Jump Consistent Hash（原始预印本）",
+      "url": "https://arxiv.org/abs/1406.2294"
+    },
+    {
+      "title": "Google Research：Consistent Hashing with Bounded Loads",
+      "url": "https://research.google/blog/consistent-hashing-with-bounded-loads/"
+    }
+  ],
+  "public_reviewed": true
+}
