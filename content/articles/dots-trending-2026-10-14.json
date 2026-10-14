@@ -1,0 +1,280 @@
+{
+  "id": "dots-trending-2026-10-14",
+  "revision": 1,
+  "date": "2026-10-14",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending · 2026-10-14",
+  "summary": "开源工具、模型部署、编译器设计与科学人文：12 条经过原文核验的阅读线索。",
+  "topics": [
+    "开源",
+    "AI/模型",
+    "工程",
+    "科学/人文"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "2026.10.14 · 北京时间 · 12 条"
+    },
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[vercel-labs/skills](https://github.com/vercel-labs/skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+190 · TypeScript · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把代理技能的查找、安装、更新与移除统一成命令行操作，也能临时载入一个技能生成提示，不必长期安装。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合管理多种编码助手共用的工作说明；技能仍是外部指令与文件，使用前应检查内容和权限，工具本身不保证来源安全。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[xtool-org/xtool](https://github.com/xtool-org/xtool)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1,198 · Swift · GitHub Today"
+    },
+    {
+      "type": "paragraph",
+      "text": "用 Swift Package Manager 项目构建 iOS 应用，再通过命令行签名、安装和启动，支持 Linux、Windows 的 WSL 与 macOS。"
+    },
+    {
+      "type": "paragraph",
+      "text": "仓库还提供操作设备和开发者服务的库，适合研究跨平台构建流程；仍需配置相应 SDK 和签名身份，不能把它理解为免除苹果平台要求。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[MiniCPM-V 4.7：提前搬入专家权重，减少等待](https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "视觉语言模型结合早期视觉压缩与专家预取：预测下一层可能需要的权重，提前加载，并让计算与剩余加载重叠。"
+    },
+    {
+      "type": "paragraph",
+      "text": "预测只改变调度，漏猜的专家仍按原路由执行。适合研究小内存部署；激活参数少不等于全部权重占用小，设备速度还受量化与采样配置影响。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[LTX-2.5：把多镜头画面和声音一起生成](https://huggingface.co/Lightricks/LTX-2.5)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "支持从文字、图像等输入生成同步音视频，并加入多镜头生成、扩散式视频解码和可选时长预测，提供完整与蒸馏权重。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合试验可微调的视频流程；公开模型卡可读，权重访问需要接受条件，商业使用另有许可限制，画面也不能当作事实或物理规律的验证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Spyre 编译器续篇：算子图怎样落到硬件](https://pytorch.org/blog/extending-inductor-for-the-ibm-spyre-accelerator/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-13 · PyTorch · 设备接入篇的编译器续篇"
+    },
+    {
+      "type": "paragraph",
+      "text": "接着此前的设备接入，这篇解释怎样把算子图转成适合 Spyre 的数据布局、分块与跨核分工，并联合优化片上存储。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究编译器与硬件的配合：复用 Inductor 后，团队维护的编译代码约减至七分之一；文中的提速数据仅对应具体内核，不能推广为端到端收益。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[一次 torch.add 怎样找到该执行的代码？](https://blog.ezyang.com/2020/09/lets-talk-about-the-pytorch-dispatcher/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2020-09-10 · PyTorch dispatcher"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从分发表、优先级与线程局部状态讲起，解释同一算子怎样兼顾 CPU、CUDA 和自动求导，以及如何复用通用处理逻辑。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合补框架设计基础，原文附图和逐步示例；这是 2020 年的架构导读，具体键与接口已有变化，不宜直接当作当前 API 手册。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Rust 生命周期漏洞：类型约束怎样在字段赋值时漏检](https://github.com/rust-lang/rust/issues/164250)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN过去24小时提交 · 2026-10-13 原始问题"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方问题页给出最小示例：字段赋值绕过类型的生命周期要求，清理对象时可能把短期引用当成长久有效的引用使用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合学习编译器安全保证如何接受反例检验。维护者将其列为高优先级，并说明触发内存不安全需刻意设计的清理逻辑，不能据此推断普通程序普遍受影响。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[把多模态嵌入模型接成英文转录器](https://eg2.haku.sh/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN过去24小时提交 · 独立项目"
+    },
+    {
+      "type": "paragraph",
+      "text": "冻结 EmbeddingGemma 2 的音频编码器，只训练一个小型读取模块，把短音频片段映射到文字空间，再匹配单词并补标点。"
+    },
+    {
+      "type": "paragraph",
+      "text": "项目支持 Apple Silicon 本地转录，展示了复用表征的轻量路径；作者同时报告仍有识别误差，跨设备速度表并非公平排名，不能据此断言优于专用语音模型。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Minions：把闲置 Mac GPU 组织成推理资源池](https://machinelearning.apple.com/research/distributed-gpu-cloud)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN过去24小时提交 · Apple Research · 2026-10"
+    },
+    {
+      "type": "paragraph",
+      "text": "研究方案把多台 Apple Silicon 设备的闲置 GPU 汇集起来，分发推理任务，并考虑设备可用性变化和容错。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合了解集中式算力紧缺时的资源复用；官方摘要支持这一系统目标，但未给出可直接套用的吞吐或延迟优势，不应理解为任意模型都能无成本跨机运行。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[波能被困在分形里吗？从频率分解看不确定性](https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-08-12 · Quanta"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章从短促声音含有多种频率讲起，再用反复挖孔的图形解释波为何难以同时在空间与频率上高度集中。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它追踪高维证明如何加入更强的“沿直线也不断遇到孔洞”条件；这是带明确假设的数学结果，不能把所有分形都视为适用对象。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[把任务交给技术后，哪些能力还需要亲自练习？](https://aeon.co/essays/the-more-we-rely-on-tech-the-more-we-deskill-our-bodies)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-13 · Aeon · 作者观点"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从导航和写作出发，讨论工具替人完成步骤后，身体与环境之间的练习和反馈会怎样减少。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章区分辅助练习与长期代做，并用研究和个人观察展开论证；关于智能必须依赖身体的主张仍有争议，不宜把相关研究概括成技术必然损害能力。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Mechanical Watch：发条怎样变成均匀走时？](https://ciechanow.ski/mechanical-watch/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2022-05-04 · Bartosz Ciechanowski"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章用逐步组装的模型串起齿轮、控制能量释放的擒纵机构与往复摆动的摆轮，再延伸到调时、日历和自动上链。"
+    },
+    {
+      "type": "paragraph",
+      "text": "每加入一个零件都先交代要解决的问题，适合练习从机制理解复杂系统；原文有交互模型辅助观察，不需先具备钟表专业知识。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "vercel-labs/skills",
+      "url": "https://github.com/vercel-labs/skills"
+    },
+    {
+      "title": "xtool-org/xtool",
+      "url": "https://github.com/xtool-org/xtool"
+    },
+    {
+      "title": "MiniCPM-V 4.7：提前搬入专家权重，减少等待",
+      "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B"
+    },
+    {
+      "title": "LTX-2.5：把多镜头画面和声音一起生成",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5"
+    },
+    {
+      "title": "Spyre 编译器续篇：算子图怎样落到硬件",
+      "url": "https://pytorch.org/blog/extending-inductor-for-the-ibm-spyre-accelerator/"
+    },
+    {
+      "title": "一次 torch.add 怎样找到该执行的代码？",
+      "url": "https://blog.ezyang.com/2020/09/lets-talk-about-the-pytorch-dispatcher/"
+    },
+    {
+      "title": "Rust 生命周期漏洞：类型约束怎样在字段赋值时漏检",
+      "url": "https://github.com/rust-lang/rust/issues/164250"
+    },
+    {
+      "title": "把多模态嵌入模型接成英文转录器",
+      "url": "https://eg2.haku.sh/"
+    },
+    {
+      "title": "Minions：把闲置 Mac GPU 组织成推理资源池",
+      "url": "https://machinelearning.apple.com/research/distributed-gpu-cloud"
+    },
+    {
+      "title": "波能被困在分形里吗？从频率分解看不确定性",
+      "url": "https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/"
+    },
+    {
+      "title": "把任务交给技术后，哪些能力还需要亲自练习？",
+      "url": "https://aeon.co/essays/the-more-we-rely-on-tech-the-more-we-deskill-our-bodies"
+    },
+    {
+      "title": "Mechanical Watch：发条怎样变成均匀走时？",
+      "url": "https://ciechanow.ski/mechanical-watch/"
+    }
+  ],
+  "public_reviewed": true
+}
