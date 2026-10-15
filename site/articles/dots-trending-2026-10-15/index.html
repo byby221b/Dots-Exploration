@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-15">2026-10-15</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">本期精选10条：研究自动化、后训练推导、数据库向量检索，以及科学与人文阅读。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-7">🧠 AI/模型</a></li><li><a href="#section-17">🔥 热议话题</a></li><li><a href="#section-27">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/nvm-sh/nvm" rel="noreferrer">nvm-sh/nvm</a></h3>
+<p class="item-meta">Shell · GitHub Trending</p>
+<p>在同一台机器上安装并切换多个 Node.js 版本，用项目里的 .nvmrc 约定运行环境，减少不同项目相互干扰。<br>适合维护脚本和前端工具链；它按用户和 shell 生效，Windows 通常需 WSL，不支持原生 Windows shell。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/K-Dense-AI/scientific-agent-skills" rel="noreferrer">K-Dense-AI/scientific-agent-skills</a></h3>
+<p class="item-meta">Python · GitHub Trending</p>
+<p>把文献检索、统计分析、科学计算和论文写作拆成可组合的代理技能，附工具用法、示例与检查步骤。<br>适合搭建和审查研究自动化流程；其中的代码和数据库调用仍需核对依赖、许可及数据去向，自动输出不等于已验证结论。</p>
+</article>
+<h2 id="section-7">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/autotrust/JEV-35B" rel="noreferrer">JEV-35B：一次前向计算完成多选决策</a></h3>
+<p class="item-meta">HF 当前热榜 · 非今日首发</p>
+<p>在 Qwen3.5 的稀疏专家底座上加入决策头，一次前向计算最多256个选项的概率，用于分类、重排和工具选择。<br>它与此前的27B-VL是不同模型，只输出决策、不生成聊天文本；公开评测由作者自行运行，不能直接外推线上排序收益。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://research.google/blog/analyzing-technical-documents-with-deep-review/" rel="noreferrer">Deep Review：分段审查长文档，再核对全局一致性</a></h3>
+<p class="item-meta">Google Research · 2026-10-14</p>
+<p>先把技术文档拆成可重叠的片段，按内容难度分配计算，再让代理并行检查，最后汇总并核对跨章节关系和外部依据。<br>适合借鉴研究自动化的审查流程；会议试点提供的是作者自愿使用的投稿前反馈，与正式评审分离，重要判断仍需人工核验。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://iclr-blogposts.github.io/2026/blog/2026/llm-post-training/" rel="noreferrer">从 REINFORCE 到 Dr. GRPO：统一理解后训练目标</a></h3>
+<p class="item-meta">深度精选 · 发布日期未核实 · ICLR Blogposts</p>
+<p>从策略梯度推导出发，把多种后训练方法放到同一套目标函数下，解释减去奖励基线、按回答长度或组内波动缩放会改变什么。<br>适合想读懂训练损失而非只记算法名的读者；以数学推导为主，需要概率与微积分基础，具体训练稳定性仍取决于实现和任务。</p>
+</article>
+<h2 id="section-17">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://go.dev/blog/http-connection-reuse" rel="noreferrer">Go 1.27：没读完响应，也能尝试复用 HTTP/1 连接</a></h3>
+<p class="item-meta">HN 过去24小时入榜 · 原文 2026-10-14</p>
+<p>HTTP/1 的响应共用连续字节流，正文没读完就关闭，会让后续请求失去复用连接的机会。<br>Go 1.27 在关闭时限时、限量地异步读完剩余正文，减少重复握手；文章用代码解释50毫秒和256KB的边界，HTTP/2不适用这套问题。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/timescale/pg_vectorsearch" rel="noreferrer">pg_vectorsearch：把向量候选逐层缩小，再做精确重排</a></h3>
+<p class="item-meta">HN 过去24小时入榜 · Alpha 测试版</p>
+<p>先用分层聚类找到候选区域，再以带误差界的压缩向量筛选，最后只对留下的候选做全精度重排。<br>这个 PostgreSQL 扩展兼容已有 pgvector 列，适合研究数据库内的向量检索；目前为 Alpha 测试版，升级可能需要重建扩展和索引。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://anoma.ly/notes/opencode-2-0/" rel="noreferrer">OpenCode 2.0：把连续工具调用写成可组合脚本</a></h3>
+<p class="item-meta">HN 过去24小时入榜 · 原文发布日期未核实</p>
+<p>把工具调用组织成 JavaScript 脚本，前一步的结果可直接交给后一步，减少模型逐次往返和大段工具输出。<br>2.0 还加入后台子代理、后台命令与可嵌入 SDK，适合研究多任务编排；插件与工具仍应按实际权限和数据范围配置。</p>
+</article>
+<h2 id="section-27">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/triplet-of-ghostly-galaxies-hints-at-what-dark-matter-is-and-isnt-20261014/" rel="noreferrer">缺少暗物质的星系，为暗物质研究提供了什么线索？</a></h3>
+<p class="item-meta">Quanta · 2026-10-14</p>
+<p>三个暗淡星系的恒星运动显示，它们几乎没有暗物质。文章解释碰撞如何让普通气体停下、暗物质继续前行。<br>这种分离为暗物质是独立物质提供线索，但星系起源仍有争议，也没有直接探测到暗物质粒子。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/ideas/a-belief-in-meritocracy-is-not-only-false-its-bad-for-you" rel="noreferrer">把成功全归于能力，会怎样影响公平判断？</a></h3>
+<p class="item-meta">往期佳作·2019-03-08 · Aeon</p>
+<p>作者从分配奖金和模拟绩效评估实验出发，讨论相信成功完全来自能力，如何让人忽略运气与偏见。<br>值得留意其论证边界：这是反思功绩主义的观点文章，实验中的差异不能直接推广到所有组织与个人。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/nvm-sh/nvm" rel="noreferrer">nvm-sh/nvm</a></li><li><a href="https://github.com/K-Dense-AI/scientific-agent-skills" rel="noreferrer">K-Dense-AI/scientific-agent-skills</a></li><li><a href="https://huggingface.co/autotrust/JEV-35B" rel="noreferrer">JEV-35B：一次前向计算完成多选决策</a></li><li><a href="https://research.google/blog/analyzing-technical-documents-with-deep-review/" rel="noreferrer">Deep Review：分段审查长文档，再核对全局一致性</a></li><li><a href="https://iclr-blogposts.github.io/2026/blog/2026/llm-post-training/" rel="noreferrer">从 REINFORCE 到 Dr. GRPO：统一理解后训练目标</a></li><li><a href="https://go.dev/blog/http-connection-reuse" rel="noreferrer">Go 1.27：没读完响应，也能尝试复用 HTTP/1 连接</a></li><li><a href="https://github.com/timescale/pg_vectorsearch" rel="noreferrer">pg_vectorsearch：把向量候选逐层缩小，再做精确重排</a></li><li><a href="https://anoma.ly/notes/opencode-2-0/" rel="noreferrer">OpenCode 2.0：把连续工具调用写成可组合脚本</a></li><li><a href="https://www.quantamagazine.org/triplet-of-ghostly-galaxies-hints-at-what-dark-matter-is-and-isnt-20261014/" rel="noreferrer">缺少暗物质的星系，为暗物质研究提供了什么线索？</a></li><li><a href="https://aeon.co/ideas/a-belief-in-meritocracy-is-not-only-false-its-bad-for-you" rel="noreferrer">把成功全归于能力，会怎样影响公平判断？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-15 · 30 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

@@ -1,0 +1,200 @@
+{
+  "id": "dots-trending-2026-10-15",
+  "revision": 1,
+  "date": "2026-10-15",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选10条：研究自动化、后训练推导、数据库向量检索，以及科学与人文阅读。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[nvm-sh/nvm](https://github.com/nvm-sh/nvm)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shell · GitHub Trending"
+    },
+    {
+      "type": "paragraph",
+      "text": "在同一台机器上安装并切换多个 Node.js 版本，用项目里的 .nvmrc 约定运行环境，减少不同项目相互干扰。\n适合维护脚本和前端工具链；它按用户和 shell 生效，Windows 通常需 WSL，不支持原生 Windows shell。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Python · GitHub Trending"
+    },
+    {
+      "type": "paragraph",
+      "text": "把文献检索、统计分析、科学计算和论文写作拆成可组合的代理技能，附工具用法、示例与检查步骤。\n适合搭建和审查研究自动化流程；其中的代码和数据库调用仍需核对依赖、许可及数据去向，自动输出不等于已验证结论。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[JEV-35B：一次前向计算完成多选决策](https://huggingface.co/autotrust/JEV-35B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "在 Qwen3.5 的稀疏专家底座上加入决策头，一次前向计算最多256个选项的概率，用于分类、重排和工具选择。\n它与此前的27B-VL是不同模型，只输出决策、不生成聊天文本；公开评测由作者自行运行，不能直接外推线上排序收益。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Deep Review：分段审查长文档，再核对全局一致性](https://research.google/blog/analyzing-technical-documents-with-deep-review/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google Research · 2026-10-14"
+    },
+    {
+      "type": "paragraph",
+      "text": "先把技术文档拆成可重叠的片段，按内容难度分配计算，再让代理并行检查，最后汇总并核对跨章节关系和外部依据。\n适合借鉴研究自动化的审查流程；会议试点提供的是作者自愿使用的投稿前反馈，与正式评审分离，重要判断仍需人工核验。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从 REINFORCE 到 Dr. GRPO：统一理解后训练目标](https://iclr-blogposts.github.io/2026/blog/2026/llm-post-training/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 发布日期未核实 · ICLR Blogposts"
+    },
+    {
+      "type": "paragraph",
+      "text": "从策略梯度推导出发，把多种后训练方法放到同一套目标函数下，解释减去奖励基线、按回答长度或组内波动缩放会改变什么。\n适合想读懂训练损失而非只记算法名的读者；以数学推导为主，需要概率与微积分基础，具体训练稳定性仍取决于实现和任务。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Go 1.27：没读完响应，也能尝试复用 HTTP/1 连接](https://go.dev/blog/http-connection-reuse)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 过去24小时入榜 · 原文 2026-10-14"
+    },
+    {
+      "type": "paragraph",
+      "text": "HTTP/1 的响应共用连续字节流，正文没读完就关闭，会让后续请求失去复用连接的机会。\nGo 1.27 在关闭时限时、限量地异步读完剩余正文，减少重复握手；文章用代码解释50毫秒和256KB的边界，HTTP/2不适用这套问题。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[pg_vectorsearch：把向量候选逐层缩小，再做精确重排](https://github.com/timescale/pg_vectorsearch)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 过去24小时入榜 · Alpha 测试版"
+    },
+    {
+      "type": "paragraph",
+      "text": "先用分层聚类找到候选区域，再以带误差界的压缩向量筛选，最后只对留下的候选做全精度重排。\n这个 PostgreSQL 扩展兼容已有 pgvector 列，适合研究数据库内的向量检索；目前为 Alpha 测试版，升级可能需要重建扩展和索引。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[OpenCode 2.0：把连续工具调用写成可组合脚本](https://anoma.ly/notes/opencode-2-0/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 过去24小时入榜 · 原文发布日期未核实"
+    },
+    {
+      "type": "paragraph",
+      "text": "把工具调用组织成 JavaScript 脚本，前一步的结果可直接交给后一步，减少模型逐次往返和大段工具输出。\n2.0 还加入后台子代理、后台命令与可嵌入 SDK，适合研究多任务编排；插件与工具仍应按实际权限和数据范围配置。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[缺少暗物质的星系，为暗物质研究提供了什么线索？](https://www.quantamagazine.org/triplet-of-ghostly-galaxies-hints-at-what-dark-matter-is-and-isnt-20261014/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-10-14"
+    },
+    {
+      "type": "paragraph",
+      "text": "三个暗淡星系的恒星运动显示，它们几乎没有暗物质。文章解释碰撞如何让普通气体停下、暗物质继续前行。\n这种分离为暗物质是独立物质提供线索，但星系起源仍有争议，也没有直接探测到暗物质粒子。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[把成功全归于能力，会怎样影响公平判断？](https://aeon.co/ideas/a-belief-in-meritocracy-is-not-only-false-its-bad-for-you)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2019-03-08 · Aeon"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从分配奖金和模拟绩效评估实验出发，讨论相信成功完全来自能力，如何让人忽略运气与偏见。\n值得留意其论证边界：这是反思功绩主义的观点文章，实验中的差异不能直接推广到所有组织与个人。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "nvm-sh/nvm",
+      "url": "https://github.com/nvm-sh/nvm"
+    },
+    {
+      "title": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "title": "JEV-35B：一次前向计算完成多选决策",
+      "url": "https://huggingface.co/autotrust/JEV-35B"
+    },
+    {
+      "title": "Deep Review：分段审查长文档，再核对全局一致性",
+      "url": "https://research.google/blog/analyzing-technical-documents-with-deep-review/"
+    },
+    {
+      "title": "从 REINFORCE 到 Dr. GRPO：统一理解后训练目标",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/llm-post-training/"
+    },
+    {
+      "title": "Go 1.27：没读完响应，也能尝试复用 HTTP/1 连接",
+      "url": "https://go.dev/blog/http-connection-reuse"
+    },
+    {
+      "title": "pg_vectorsearch：把向量候选逐层缩小，再做精确重排",
+      "url": "https://github.com/timescale/pg_vectorsearch"
+    },
+    {
+      "title": "OpenCode 2.0：把连续工具调用写成可组合脚本",
+      "url": "https://anoma.ly/notes/opencode-2-0/"
+    },
+    {
+      "title": "缺少暗物质的星系，为暗物质研究提供了什么线索？",
+      "url": "https://www.quantamagazine.org/triplet-of-ghostly-galaxies-hints-at-what-dark-matter-is-and-isnt-20261014/"
+    },
+    {
+      "title": "把成功全归于能力，会怎样影响公平判断？",
+      "url": "https://aeon.co/ideas/a-belief-in-meritocracy-is-not-only-false-its-bad-for-you"
+    }
+  ],
+  "public_reviewed": true
+}
