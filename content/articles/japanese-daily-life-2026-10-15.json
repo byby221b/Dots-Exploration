@@ -1,0 +1,112 @@
+{
+  "id": "japanese-daily-life-2026-10-15",
+  "revision": 1,
+  "date": "2026-10-15",
+  "channel": "exploration",
+  "series": "日语生活碎片",
+  "title": "在餐馆开口提个小请求",
+  "summary": "用一个餐馆场景练习简短请求：先听官方教学音轨，再认三个小目标，把句子拆成两块，最后换一样东西开口说。保留平假名与罗马音辅助，答案单独折叠。",
+  "topics": [
+    "日语",
+    "生活会话"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "在餐馆想请店员拿一样东西，先说什么，句子怎么收尾？今天只学三个小目标和一个请求句。前两期练过表达喜好、询问位置；这次练“请给我……”。不需要先认全假名。"
+    },
+    {
+      "type": "heading",
+      "text": "先听两遍，暂时不看答案"
+    },
+    {
+      "type": "paragraph",
+      "text": "[播放 IRODORI 入门第6课官方音轨06-15，整条约41秒](https://www.irodori.jpf.go.jp/assets/data/starter/audio/06/X_%5B06-15%5D_kaiwa.mp3)\n备用：[官方播放页](https://www.irodori.jpf.go.jp/starter/audio/lesson06.html)，找编号06-15。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这段是教材里的餐馆对话。先不用记菜名，也不必每句都听懂。\n第一遍：点完餐就结束了，还是之后又提出了请求？\n第二遍：只找固定说法「ください／ください／kudasai／请给我……」，它出现一次还是两次？答案在末尾。\n本期核对了官方音轨文件与编号脚本，未逐声试听；下面做文字和语块练习，不分析原音细节。"
+    },
+    {
+      "type": "heading",
+      "text": "三个小目标"
+    },
+    {
+      "type": "paragraph",
+      "text": "常用写法／平假名读音／罗马音／中文意思\nお水／おみず／omizu／水（较礼貌的说法）\nください／ください／kudasai／请给我……（本句用法）\nお茶／おちゃ／ocha／茶"
+    },
+    {
+      "type": "paragraph",
+      "text": "前两项用于官方主句；第三项用来换着说，不要求在音轨里寻找它。四栏中的“平假名”帮助认读，“罗马音”帮助把声音读出来；水、茶是汉字。"
+    },
+    {
+      "type": "heading",
+      "text": "把一句请求拆成两块"
+    },
+    {
+      "type": "paragraph",
+      "text": "主句取自官方脚本后半段：\nお水、ください。\n平假名：おみず、ください。\n罗马音：Omizu, kudasai.\n中文：请给我水。"
+    },
+    {
+      "type": "paragraph",
+      "text": "第一块「お水／おみず／omizu／水」说要什么；第二块「ください／ください／kudasai／请给我……」放在后面，完成请求。餐馆里对象明确，不用另加“我想要”。这里先学“东西＋ください”这一种说法。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这句在餐馆请求东西时可以直接这样说，中间没有助词；不要把这种省略套到所有日语句子。"
+    },
+    {
+      "type": "paragraph",
+      "text": "现在只换第一块：\nお茶、ください。\n平假名：おちゃ、ください。\n罗马音：Ocha, kudasai.\n中文：请给我茶。\n这是原创替换例句，暂无配音，不是这条音轨的逐字原句。"
+    },
+    {
+      "type": "heading",
+      "text": "一个假名对应练习"
+    },
+    {
+      "type": "paragraph",
+      "text": "看「おみず／omizu／水」的最后一个假名：ず／zu。它比す／su多右上角两点。今天只认这一个差别；罗马音帮助入门，不等于精确语音转写。\n把词卡遮住，再看两个假名：す／su、ず／zu。哪一个是刚才“水”的最后一个音？先选，再看末尾。"
+    },
+    {
+      "type": "heading",
+      "text": "重听后，开口用一次"
+    },
+    {
+      "type": "paragraph",
+      "text": "再播一次06-15，留意后半段的主句。想象店员已经看向你，只说一句“请给我茶”。卡住就看罗马音；今天不用追上录音速度。"
+    },
+    {
+      "type": "details",
+      "summary": "听完再看：答案",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "第一遍：点完餐之后，又追加了请求。第二遍：ください／ください／kudasai／请给我……，共出现两次：前面要毛豆时一次，后面要水时一次。只核对这两个位置，不必记新菜名。\n假名题：お水／おみず／omizu／水，最后是ず／zu，带两点。\n口头回应：お茶、ください。／おちゃ、ください。／Ocha, kudasai.／请给我茶。"
+        },
+        {
+          "type": "paragraph",
+          "text": "可选核对：[官方脚本第11页（L6-11），对应06-15](https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L06.pdf#page=11)；[句型说明第17页（L6-17）](https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L06.pdf#page=17)。链接已核验，未验证你所在地区的播放情况。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "IRODORI 入门第6课官方音频页",
+      "url": "https://www.irodori.jpf.go.jp/starter/audio/lesson06.html"
+    },
+    {
+      "title": "官方音轨06-15",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/audio/06/X_%5B06-15%5D_kaiwa.mp3"
+    },
+    {
+      "title": "官方脚本第11页",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L06.pdf#page=11"
+    },
+    {
+      "title": "句型说明第17页",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L06.pdf#page=17"
+    }
+  ],
+  "public_reviewed": true
+}
