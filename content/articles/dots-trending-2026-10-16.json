@@ -1,0 +1,248 @@
+{
+  "id": "dots-trending-2026-10-16",
+  "revision": 1,
+  "date": "2026-10-16",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选13条：推理调度、稀疏模型、优化器推导、贝叶斯优化，以及科学与人文阅读。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[lightseekorg/tokenspeed](https://github.com/lightseekorg/tokenspeed)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+30 · Python · GitHub stars today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把请求调度与模型执行分开：C++ 状态机管理请求和上下文缓存，Python 负责执行，内核通过独立接口接入。\n适合研究代理推理中的调度开销、缓存生命周期与硬件适配；性能仍需按目标模型、显卡和并发量复测。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+307 · Python · GitHub stars today"
+    },
+    {
+      "type": "paragraph",
+      "text": "集中整理 Claude Code 插件，区分官方维护与社区来源，并提供命令、代理、技能和外部工具连接的目录规范。\n适合查找集成方式或编写自己的插件；进入官方目录不代表其中所有第三方服务都安全可靠，使用前仍应审查权限与依赖。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[LFM2.5-24B-A2B：面向本地代理的稀疏推理模型](https://huggingface.co/LiquidAI/LFM2.5-24B-A2B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 不代表今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "用短卷积与分组查询注意力处理上下文，再由稀疏专家分担计算；总参数240亿，每个词元激活约24.5亿，支持工具调用。\n适合评估本地代理与长上下文部署。模型卡建议知识密集任务搭配检索，公开权重采用自定义许可，不能直接视作任意用途均可免费使用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Drama 3：用角色标签组织多说话人语音](https://huggingface.co/fishaudio/drama-3)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 不代表今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "把角色标签和表达方式写进文本，生成多说话人场景；长文本自动分块，可逐块流式输出，也支持以先前音频为上下文修改内容。\n适合研究长篇配音与语音编辑流程；采用研究许可，部署需核对用途限制，声音克隆还需取得相应授权。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[慢即是快：Adam 的更新方向能否接近 Muon？](https://spaces.ac.cn/archives/11964)"
+    },
+    {
+      "type": "paragraph",
+      "text": "科学空间 · 2026-10-15"
+    },
+    {
+      "type": "paragraph",
+      "text": "先旋转梯度的坐标系，再应用 Adam 一类的预条件处理，最后变换回来；文章在驻点条件下推导，更新量保留梯度或动量的左右奇异向量。\n适合深入理解优化器为何受坐标系影响。奇异值进一步趋于均匀仍是启发式猜测，不能解读为已证明 Adam 等价于 Muon。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[ExecuTorch：把 PyTorch 模型直接部署到 Cortex-M](https://pytorch.org/blog/bringing-executorch-to-arm-cortex-m-cpus/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "PyTorch · 2026-10-15"
+    },
+    {
+      "type": "paragraph",
+      "text": "在导出阶段完成 INT8 量化、权重布局转换和内存规划，再用 CMSIS-NN 内核执行，减少微控制器运行时的调度与分配开销。\n文章给出从模型到固件的代码和实测设置，适合学习小设备部署；算子覆盖仍有限，部分 CPU/NPU 混合执行会回退到普通内核。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[贝叶斯优化：下一次昂贵实验应该做在哪里？](https://distill.pub/2020/bayesian-optimization/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2020-05-05 · Distill"
+    },
+    {
+      "type": "paragraph",
+      "text": "从有限次数的钻探找金矿开始，用交互图追踪预测值与不确定性，再比较“可能改善”和“预计改善多少”等选点方法。\n适合建立超参数搜索的直觉，含公式和逐步示例；代理模型的假设会影响选点，文中的一维演示不能直接代表高维搜索效果。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[AMD Lab Notes：从算法到 GPU 性能调优](https://gpuopen.com/learn/amd-lab-notes/amd-lab-notes-readme/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2022-11-14 · 系列入口"
+    },
+    {
+      "type": "paragraph",
+      "text": "把有限差分、矩阵运算和迭代求解器接到 GPU 实现，配套代码，并讲解访存、性能分析和 CPU/GPU 协作。\n适合已有编程基础、想沿真实计算任务学习 AMD GPU 的读者；不少章节面向特定 Instinct 硬件，旧版工具命令需对照当前文档。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[直接研究神经元，能解释多少模型行为？](https://already-clean.goodfire.com/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · Goodfire 研究随笔"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者重新检查视觉与语言模型中的神经元，结合训练轨迹、上下游连接和干预实验，提出不少看似无关的响应可由相近概念的泛化解释。\n这是一项工作假说和初步审查，解释比例受阈值与判定方式影响；值得看其检验步骤，不能据此认定叠加表征已被全面否定。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[C++26 Contracts：把函数要求写在接口上](https://www.cppstories.com/2026/cpp26_contracts/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 技术教程"
+    },
+    {
+      "type": "paragraph",
+      "text": "用数组下标与范围裁剪的小例子，解释调用前应满足什么、正常返回后应保证什么，并演示声明、编译选项与违约处理。\n适合梳理接口约束和错误处理的区别；检查策略可能忽略或只报告违约，不能替代必须执行的外部输入校验。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[用可对照的硬件记录帮助代理修驱动](https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-15"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者让代理比较同一设备在 Windows 与 Linux 下的通信记录，把“不能用”拆成可验证的差异，再生成探测程序与修复建议。\n扫描仪和摄像头案例展示了参考记录的作用；通用工具仍由专用脚本整理而来，结果来自少量真实设备，最终验证仍靠硬件实测。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[把复杂随机网络夹在两层简单图之间](https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-09-18 · Quanta"
+    },
+    {
+      "type": "paragraph",
+      "text": "随机正则图要求每个点连接数相同，边彼此牵制，难以直接分析。文章用逐条加边、删边解释“图三明治”证明。\n以两张较易研究的随机图夹住它，可以迁移合适的单调性质；结论有规模与密度条件，不能套用到任意网络。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[不完备定理之后，知识还能怎样向前走？](https://aeon.co/essays/the-century-long-search-for-the-limits-to-knowledge)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-10-15"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章沿着希尔伯特、哥德尔与达米特的争论，解释固定公理为何无法包揽全部算术，以及扩展推理规则怎样打开新问题。\n作者提出的是关于“真理与理解”的哲学解释，并未推翻不完备定理，也不能据此断言人类最终能知道一切。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "lightseekorg/tokenspeed",
+      "url": "https://github.com/lightseekorg/tokenspeed"
+    },
+    {
+      "title": "anthropics/claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official"
+    },
+    {
+      "title": "LFM2.5-24B-A2B：面向本地代理的稀疏推理模型",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+    },
+    {
+      "title": "Drama 3：用角色标签组织多说话人语音",
+      "url": "https://huggingface.co/fishaudio/drama-3"
+    },
+    {
+      "title": "慢即是快：Adam 的更新方向能否接近 Muon？",
+      "url": "https://spaces.ac.cn/archives/11964"
+    },
+    {
+      "title": "ExecuTorch：把 PyTorch 模型直接部署到 Cortex-M",
+      "url": "https://pytorch.org/blog/bringing-executorch-to-arm-cortex-m-cpus/"
+    },
+    {
+      "title": "贝叶斯优化：下一次昂贵实验应该做在哪里？",
+      "url": "https://distill.pub/2020/bayesian-optimization/"
+    },
+    {
+      "title": "AMD Lab Notes：从算法到 GPU 性能调优",
+      "url": "https://gpuopen.com/learn/amd-lab-notes/amd-lab-notes-readme/"
+    },
+    {
+      "title": "直接研究神经元，能解释多少模型行为？",
+      "url": "https://already-clean.goodfire.com/"
+    },
+    {
+      "title": "C++26 Contracts：把函数要求写在接口上",
+      "url": "https://www.cppstories.com/2026/cpp26_contracts/"
+    },
+    {
+      "title": "用可对照的硬件记录帮助代理修驱动",
+      "url": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/"
+    },
+    {
+      "title": "把复杂随机网络夹在两层简单图之间",
+      "url": "https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/"
+    },
+    {
+      "title": "不完备定理之后，知识还能怎样向前走？",
+      "url": "https://aeon.co/essays/the-century-long-search-for-the-limits-to-knowledge"
+    }
+  ],
+  "public_reviewed": true
+}
