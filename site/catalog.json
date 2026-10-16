@@ -1,6 +1,23 @@
 {
   "articles": [
     {
+      "channel": "exploration",
+      "date": "2026-10-16",
+      "disclosures": 1,
+      "id": "math-shared-foundations-2026-10-16",
+      "images": [
+        "assets/math_shared_foundations_2026-10-16/objective.png",
+        "assets/math_shared_foundations_2026-10-16/center.png",
+        "assets/math_shared_foundations_2026-10-16/expand.png",
+        "assets/math_shared_foundations_2026-10-16/result.png",
+        "assets/math_shared_foundations_2026-10-16/global.png",
+        "assets/math_shared_foundations_2026-10-16/binary.png"
+      ],
+      "revision": 1,
+      "series": "数学共性小课",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-10-16",
       "disclosures": 0,
@@ -364,13 +381,13 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 32,
+  "articles_count": 33,
   "channels": {
-    "exploration": 16,
+    "exploration": 17,
     "trending": 16
   },
   "end": "2026-10-16",
-  "images_count": 35,
+  "images_count": 41,
   "start": "2026-10-01",
   "trending_items": 198
 }
