@@ -1,6 +1,23 @@
 {
   "articles": [
     {
+      "channel": "exploration",
+      "date": "2026-10-17",
+      "disclosures": 2,
+      "id": "interview-challenge-2026-10-17",
+      "images": [
+        "assets/interview_challenge_2026-10-17/lengths.png",
+        "assets/interview_challenge_2026-10-17/regions.png",
+        "assets/interview_challenge_2026-10-17/areas.png",
+        "assets/interview_challenge_2026-10-17/tail.png",
+        "assets/interview_challenge_2026-10-17/mean.png",
+        "assets/interview_challenge_2026-10-17/conditional.png"
+      ],
+      "revision": 1,
+      "series": "每周面试挑战",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-10-17",
       "disclosures": 0,
@@ -391,13 +408,13 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 34,
+  "articles_count": 35,
   "channels": {
-    "exploration": 17,
+    "exploration": 18,
     "trending": 17
   },
   "end": "2026-10-17",
-  "images_count": 41,
+  "images_count": 47,
   "start": "2026-10-01",
   "trending_items": 210
 }
