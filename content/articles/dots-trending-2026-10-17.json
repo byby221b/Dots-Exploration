@@ -1,0 +1,224 @@
+{
+  "id": "dots-trending-2026-10-17",
+  "revision": 1,
+  "date": "2026-10-17",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选11条：软件代理接口、多模态模型、训练数据与负载调度、代码审查，以及科学与人文阅读。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+281 · Python · GitHub stars today"
+    },
+    {
+      "type": "paragraph",
+      "text": "分析软件源码，把界面操作整理成命令、状态模型和结构化输出，再为生成的命令行接口补充测试与文档。\n适合研究让代理调用现有软件的方法；覆盖范围取决于具体适配器，仍需安装相应软件并验证真实输出。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[android/skills](https://github.com/android/skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+36 · Kotlin · GitHub stars today"
+    },
+    {
+      "type": "paragraph",
+      "text": "将 Android 官方开发指导组织成可按任务调用的技能，覆盖构建升级、性能分析、身份验证和设备功能等具体工作。\n重点补足评测中模型表现欠佳的流程，适合检查代理开发 Android 应用时遗漏了哪些步骤；生成结果仍需复核。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[xerj-org/xerj](https://github.com/xerj-org/xerj)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1,648 · Rust · GitHub stars today"
+    },
+    {
+      "type": "paragraph",
+      "text": "给本地代码、文档和日志建立索引，让代理按相关片段及文件位置检索，减少逐个文件读取，并提供 Elasticsearch 兼容接口。\n适合探索代码检索与参考实现复用；性能宣传需另行复测，关闭认证的本地模式不应直接暴露到不可信网络。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Muse Spark Open：多模态稀疏模型的公开权重](https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 模型卡发布日期2026-10-15"
+    },
+    {
+      "type": "paragraph",
+      "text": "用混合专家分担计算，支持文本、图像、音频和视频输入及文本输出；模型卡列出总参数8160亿、每个词元激活约420亿。\n适合研究多模态代理和大模型部署；稀疏激活不等于小内存占用，量化版仍需很大显存，下载和使用须遵循访问与许可要求。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Zephon：换一组 GPU，训练数据顺序仍能一致](https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "PyTorch · 2026-10-16"
+    },
+    {
+      "type": "paragraph",
+      "text": "把有状态的数据决策与并行处理分开，再用固定逻辑通道组织样本，使在线分词、打包和混合在改变 GPU 数量后仍生成相同全局批次。\n适合检查数据消融是否混入资源分配的影响；恢复时须保持数据配方和全局批量等设置，数据一致也不保证浮点计算逐位相同。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[负载均衡：把请求分给谁，队列会怎样变化？](https://samwho.dev/load-balancing/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2023-04-10 · Sam Rose"
+    },
+    {
+      "type": "paragraph",
+      "text": "用可调动画追踪请求怎样进入队列，逐步比较轮询、最少连接与结合延迟的分配办法，呈现吞吐、尾延迟和丢请求的取舍。\n适合建立服务调度直觉；演示省略网络延迟等真实条件，算法优劣仍需用自己的负载验证。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[追溯 ECDSA 曲线参数：从数值模式到可复现生成过程](https://www.anthropic.com/research/ecdsa-curve-origins)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-16"
+    },
+    {
+      "type": "paragraph",
+      "text": "Anthropic 报告，模型从公开种子的数值模式识别出旧式伪随机数生成器，再回溯时间戳，并公开复现代码。\n这解释了多条标准曲线参数的来源，并非破解签名算法；部分基点和候选筛选条件仍未解释，适合看如何将猜想变成可检验结果。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Claude Code 团队怎样安排分层代码审查](https://claude.dev/blog/solving-code-review-at-anthropic/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-15"
+    },
+    {
+      "type": "paragraph",
+      "text": "把测试、代理复核、安全检查和按风险分级的人工批准串起来，再用真实事故与误报持续评估审查器，限制反复修改的轮次。\n值得借鉴的是可运行证据与明确责任；文中成效来自该团队自身流程，敏感路径仍需人工，不能直接推成所有项目都可减少审查。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从“记住键值对”理解线性层、MLP 与注意力](https://alexwang.ai/posts/associative-memory/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 推导与交互演示"
+    },
+    {
+      "type": "paragraph",
+      "text": "沿着同一个按相似度取回记忆的例子，用公式与交互图展示其他记忆如何干扰查询，以及非线性和注意力怎样改变权重。\n适合补齐记忆视角下的模型结构直觉；容量估计依赖随机键值等简化假设，不应当作训练后语言模型的实测记忆上限。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[AI 榜单：高分之外，怎样比较得更可信？](https://www.quantamagazine.org/he-wants-ai-benchmarking-to-be-a-science-not-a-dark-art-20261016/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-10-16"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hardt 在访谈中讨论，LLM 榜单名次如何混入各家针对评测的训练投入，为什么不能直接当成通用能力尺。\n他提出统一测试前的适配流程，让比较更公平；但不能保证排名在所有任务上都可靠。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[延伸阅读：作者教材（2026）](https://mlbenchmarks.org/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[西塞罗的“男子气概”，如何在公共生活中塑造？](https://aeon.co/essays/the-politics-of-masculinity-at-the-end-of-the-roman-republic)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-10-16"
+    },
+    {
+      "type": "paragraph",
+      "text": "从演说、服饰到流亡后的书信，古典学者 Edwards 追踪罗马精英怎样展示勇气、自制与公共责任，以及这些要求如何变化。\n文章也保留其中的性别等级与政治攻击，帮助理解一种历史观念如何被实践，而非把古罗马直接当作现代生活范本。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything"
+    },
+    {
+      "title": "android/skills",
+      "url": "https://github.com/android/skills"
+    },
+    {
+      "title": "xerj-org/xerj",
+      "url": "https://github.com/xerj-org/xerj"
+    },
+    {
+      "title": "Muse Spark Open：多模态稀疏模型的公开权重",
+      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
+    },
+    {
+      "title": "Zephon：换一组 GPU，训练数据顺序仍能一致",
+      "url": "https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon/"
+    },
+    {
+      "title": "负载均衡：把请求分给谁，队列会怎样变化？",
+      "url": "https://samwho.dev/load-balancing/"
+    },
+    {
+      "title": "追溯 ECDSA 曲线参数：从数值模式到可复现生成过程",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins"
+    },
+    {
+      "title": "Claude Code 团队怎样安排分层代码审查",
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/"
+    },
+    {
+      "title": "从“记住键值对”理解线性层、MLP 与注意力",
+      "url": "https://alexwang.ai/posts/associative-memory/"
+    },
+    {
+      "title": "AI 榜单：高分之外，怎样比较得更可信？",
+      "url": "https://www.quantamagazine.org/he-wants-ai-benchmarking-to-be-a-science-not-a-dark-art-20261016/"
+    },
+    {
+      "title": "延伸阅读：作者教材（2026）",
+      "url": "https://mlbenchmarks.org/"
+    },
+    {
+      "title": "西塞罗的“男子气概”，如何在公共生活中塑造？",
+      "url": "https://aeon.co/essays/the-politics-of-masculinity-at-the-end-of-the-roman-republic"
+    }
+  ],
+  "public_reviewed": true
+}
