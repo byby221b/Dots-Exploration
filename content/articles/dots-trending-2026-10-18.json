@@ -1,0 +1,188 @@
+{
+  "id": "dots-trending-2026-10-18",
+  "revision": 1,
+  "date": "2026-10-18",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选9条：代理工作记录、项目开发、实验自动化、GPT教学、固件模拟、基础设施，以及科学与人文阅读。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+178 · Rust · GitHub stars today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把不同编码代理的工作记录整理成可编辑的 Markdown 记忆，再用检索与明确的交接记录恢复未完成任务。\n适合研究跨工具的上下文延续；默认检索和交接不需模型调用，接入团队服务器前仍应审查自动采集范围与共享权限。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[stablyai/orca](https://github.com/stablyai/orca)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+830 · TypeScript · GitHub stars today"
+    },
+    {
+      "type": "paragraph",
+      "text": "在同一工作台并行运行多个编码代理，各自使用独立工作树，并集中查看终端、差异和任务状态。\n适合比较不同方案、安排远端开发与人工复核；工作树隔离代码修改，不能替代对代理命令、账号和外部服务权限的审查。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[DeepSeek-V4.1-Flash-1017：面向完整项目开发的更新](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 官方发布2026-10-17"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方介绍通过带自反馈的强化学习改善完整项目开发，并报告多项推理、代码和代理任务评测提升；模型与权重采用 MIT 许可。\n模型卡提供提示编码与本地推理参考，未附 Jinja 聊天模板；接入现有框架须核对协议，榜单结果也依赖所用代理框架。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[实验代理怎样把计划接到真实实验台？](https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google Research · 2026-10-16"
+    },
+    {
+      "type": "paragraph",
+      "text": "用持续更新的实验台数字模型追踪位置、液量和耗材，先模拟、检查指令，再把操作与观测记录用于下一轮调整。\n值得借鉴的是让反馈暴露实验伪影，而非只追逐更高读数；文章展示的是受控原型，序列、实验方案和机器人运行仍有人工授权与监督。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从词元到下一词预测：用 NumPy 拆开 GPT](https://jaykmody.com/blog/gpt-from-scratch/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2023-01-30 · Jay Mody"
+    },
+    {
+      "type": "paragraph",
+      "text": "沿张量形状逐步写出嵌入、因果注意力和前馈层，再载入 GPT-2 权重完成自回归生成，附完整教学代码。\n适合把 Transformer 公式对应到实际数组操作；需要 Python、NumPy 与神经网络基础，核心代码实现推理，训练与性能优化留作扩展方向。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[esp32sim：在浏览器里运行 ESP32 固件](https://github.com/mikroverk/esp32sim)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · Rust / WebAssembly"
+    },
+    {
+      "type": "paragraph",
+      "text": "模拟处理器指令与片上外设，让真实 ROM、引导程序和未修改的应用固件在桌面或浏览器中运行，便于脱离开发板检查程序行为。\n项目同时给出硬件差分测试及覆盖边界；不同芯片支持程度不一，浏览器版没有原生网络套接字，模拟也不等于逐周期硬件一致。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从控制循环理解 Kubernetes 的工作方式](https://blog.davidv.dev/posts/first-contact-with-k8s/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2024-07-13"
+    },
+    {
+      "type": "paragraph",
+      "text": "把“希望有几个实例”和“现在实际有几个”放在一起看，再沿控制器、Service 和持久存储解释工作负载如何被维护。\n适合从传统运维经验进入 Kubernetes；这是作者的概念学习记录，尚未基于实际集群运维，具体网络与存储行为应对照当前实现。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[菌根真菌怎样经营地下交换网络？](https://www.quantamagazine.org/how-do-fungi-keep-the-planet-healthy-20261015/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-10-15 · 访谈与完整文字稿"
+    },
+    {
+      "type": "paragraph",
+      "text": "菌根真菌把磷、氮交给植物，换取糖和脂肪；受访者介绍如何用荧光标记追踪资源流动，以及真菌怎样响应不同交换回报。\n访谈帮助理解没有大脑的生物如何协调资源，也保留实验边界：实验室系统经过简化，不能把其中的行为直接等同于自然生态。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[往期佳作·2018-04-09｜为什么补充事实，仍可能走不出回音室？](https://aeon.co/essays/why-its-as-hard-to-escape-an-echo-chamber-as-it-is-to-flee-a-cult)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · C Thi Nguyen · 哲学论述"
+    },
+    {
+      "type": "paragraph",
+      "text": "没接触异见，与听到异见却预先认定对方不可信，是两种不同的信息困境；作者分别称为“信息泡泡”和“回音室”。\n前者可通过补充视角改善，后者往往还涉及对外界信任的修复。这篇文章提供分析框架，不是关于所有群体的新心理学实验结论。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory"
+    },
+    {
+      "title": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca"
+    },
+    {
+      "title": "DeepSeek-V4.1-Flash-1017：面向完整项目开发的更新",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    },
+    {
+      "title": "实验代理怎样把计划接到真实实验台？",
+      "url": "https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/"
+    },
+    {
+      "title": "从词元到下一词预测：用 NumPy 拆开 GPT",
+      "url": "https://jaykmody.com/blog/gpt-from-scratch/"
+    },
+    {
+      "title": "esp32sim：在浏览器里运行 ESP32 固件",
+      "url": "https://github.com/mikroverk/esp32sim"
+    },
+    {
+      "title": "从控制循环理解 Kubernetes 的工作方式",
+      "url": "https://blog.davidv.dev/posts/first-contact-with-k8s/"
+    },
+    {
+      "title": "菌根真菌怎样经营地下交换网络？",
+      "url": "https://www.quantamagazine.org/how-do-fungi-keep-the-planet-healthy-20261015/"
+    },
+    {
+      "title": "往期佳作·2018-04-09｜为什么补充事实，仍可能走不出回音室？",
+      "url": "https://aeon.co/essays/why-its-as-hard-to-escape-an-echo-chamber-as-it-is-to-flee-a-cult"
+    },
+    {
+      "title": "DeepSeek 官方发布说明",
+      "url": "https://api-docs.deepseek.com/news/news261017/"
+    }
+  ],
+  "public_reviewed": true
+}
