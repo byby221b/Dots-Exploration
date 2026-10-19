@@ -1,0 +1,201 @@
+{
+  "id": "dots-trending-2026-10-19",
+  "revision": 1,
+  "date": "2026-10-19",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "10条精选：开源项目、图像模型、数学与系统教程，以及科学和人文阅读。",
+  "topics": [
+    "开源",
+    "人工智能",
+    "系统工程",
+    "数学",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+2,232 · Python · GitHub stars today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把岗位匹配、简历与求职信草拟、二次审阅和面试准备串成可追踪流程，适合研究代理如何复用个人资料。\n招聘站支持偏丹麦市场；个人资料会写入受 Git 追踪的文件，实际使用宜建私有仓库，且仍需外部模型服务。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[cursor/plugins](https://github.com/cursor/plugins)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+350 · TypeScript · GitHub stars today"
+    },
+    {
+      "type": "paragraph",
+      "text": "把技能、规则、MCP 配置和说明按插件目录打包，以统一清单组织代码审查、CLI 设计及常见服务集成。\n可参考它怎样把代理工作流做成可安装模块；接入具体服务前，仍需核对插件内容、认证方式和操作权限。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[FLUX 3 Image Klein：把多图编辑接入 ComfyUI](https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 公开模型卡 · 受限许可"
+    },
+    {
+      "type": "paragraph",
+      "text": "把文生图、最多十张参考图的编辑和组合放进同一模型，ComfyUI 包提供基础版、蒸馏版与量化格式。\n短指令需先扩写成完整场景描述，框选不等于硬遮罩；下载须同意条款并共享联系信息，商用受专门许可约束。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[复数单位根：从圆周旋转走到傅里叶基](https://eli.thegreenplace.net/2026/notes-on-the-complex-roots-of-unity/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-18 09:18 · 北京时间 · Eli Bendersky"
+    },
+    {
+      "type": "paragraph",
+      "text": "从“哪些复数乘方后等于1”出发，用单位圆上的旋转推导循环群，再把单位根的求和变成正交性的证明。\n可调图示把几何直觉与代数证明连起来，补齐离散傅里叶变换的数学基础；本文停在傅里叶矩阵，尚未展开 FFT 算法。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[CTC：没有逐帧标注，怎样训练语音识别？](https://distill.pub/2017/ctc/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2017-11-27 · Distill"
+    },
+    {
+      "type": "paragraph",
+      "text": "从“音频与文字没有逐帧对应”出发，引入空白符和合并规则，再用动态规划汇总所有有效对齐，并推到束搜索解码。\n图解与 Python 参考实现把训练目标和解码过程连起来；单调对齐与条件独立假设，也限定了这套方法的适用范围。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[DeepSeek Search / Fetch：给代理提供搜索与网页正文](https://api-docs.deepseek.com/guides/search/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "分别提供网页搜索和正文抓取的 JSON 接口：搜索支持站点、语言与日期筛选，抓取则按 URL 返回 Markdown 正文。\n文档列明成功请求计费与每账号限流；能否抓到正文仍受目标站访问规则约束，搜索摘要也需回到原文核对。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[解析器组合子：把小函数接成完整的文本解析器](https://t3.at/blog/parser-combinators/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-17"
+    },
+    {
+      "type": "paragraph",
+      "text": "先让每个函数返回“读到的值与剩余文本”，再组合顺序、映射和重复操作，逐步把 ping 输出变成结构化对象。\n交互示例把抽象概念落到 TypeScript 代码，适合从复杂正则转向可拆解的解析逻辑；回溯等进阶能力只点到为止。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Intel 8087：一次浮点加减法如何落到微码和电路](https://www.righto.com/2026/10/8087-addition-subtraction-microcode.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文日期未核实"
+    },
+    {
+      "type": "paragraph",
+      "text": "从对齐指数、整数加减到结果归一化，作者沿芯片照片、微码和流程图解释浮点运算怎样真正执行。\n零、无穷与 NaN 的分支显示，数值规则会直接塑造硬件复杂度；这是 8087 的逆向分析，不能把全部历史行为套到现代浮点实现。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[往期佳作·2026-09-17｜为什么量子世界的干涉，在日常尺度上消失了？](https://www.quantamagazine.org/where-does-the-quantum-world-end-and-ours-begin-20260917/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-09-17 · Quanta · 播客文字实录"
+    },
+    {
+      "type": "paragraph",
+      "text": "访谈从双缝实验与布朗运动解释退相干：系统与环境相互作用后，原本可见的干涉会减弱，宏观行为因而近似经典。\n这一机制无需人的意识参与；量子测量问题是否得到完整解释，仍有不同看法。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[往期佳作·2018-05-14｜“我有权相信”，是否也意味着有责任修正信念？](https://aeon.co/ideas/you-dont-have-a-right-to-believe-whatever-you-want-to)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2018-05-14 · Aeon"
+    },
+    {
+      "type": "paragraph",
+      "text": "“我有权相信”能否终止对证据的追问？作者区分信念的形成与主动维持，讨论人如何依赖可靠证言并承担修正责任。\n文章强调信念会影响共同体，属于信念伦理的哲学论证；可以沿着证据、选择与责任之间的关系逐层检验。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "MadsLorentzen/ai-job-search",
+      "url": "https://github.com/MadsLorentzen/ai-job-search"
+    },
+    {
+      "title": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins"
+    },
+    {
+      "title": "FLUX 3 Image Klein：把多图编辑接入 ComfyUI",
+      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy"
+    },
+    {
+      "title": "复数单位根：从圆周旋转走到傅里叶基",
+      "url": "https://eli.thegreenplace.net/2026/notes-on-the-complex-roots-of-unity/"
+    },
+    {
+      "title": "CTC：没有逐帧标注，怎样训练语音识别？",
+      "url": "https://distill.pub/2017/ctc/"
+    },
+    {
+      "title": "DeepSeek Search / Fetch：给代理提供搜索与网页正文",
+      "url": "https://api-docs.deepseek.com/guides/search/"
+    },
+    {
+      "title": "解析器组合子：把小函数接成完整的文本解析器",
+      "url": "https://t3.at/blog/parser-combinators/"
+    },
+    {
+      "title": "Intel 8087：一次浮点加减法如何落到微码和电路",
+      "url": "https://www.righto.com/2026/10/8087-addition-subtraction-microcode.html"
+    },
+    {
+      "title": "往期佳作·2026-09-17｜为什么量子世界的干涉，在日常尺度上消失了？",
+      "url": "https://www.quantamagazine.org/where-does-the-quantum-world-end-and-ours-begin-20260917/"
+    },
+    {
+      "title": "往期佳作·2018-05-14｜“我有权相信”，是否也意味着有责任修正信念？",
+      "url": "https://aeon.co/ideas/you-dont-have-a-right-to-believe-whatever-you-want-to"
+    }
+  ],
+  "public_reviewed": true
+}
