@@ -28,7 +28,7 @@ with tempfile.TemporaryDirectory() as temp:
     results=[]
     try:
         with sync_playwright() as p:
-            browser=p.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox'])
+            browser=p.chromium.launch(headless=True,executable_path=shutil.which('chromium'),chromium_sandbox=True)
             for width in [1440,768,375,320]:
                 page=browser.new_page(viewport={'width':width,'height':1000},device_scale_factor=1)
                 errors=[]; remote=[]

@@ -83,6 +83,22 @@ Inspect representative desktop and narrow-screen screenshots, tables, formulas a
 folded answers. The suite covers the whole catalog at 1440/768/375/320px and no-JavaScript
 reading. For presentation-code changes, run `python3 tests/browser_qa.py` as well.
 
+Use normal browser sandboxing and TLS verification. If the local secure browser cannot
+start, or a separate managed browser cannot reach this environment's localhost, record
+the exact environment failure and defer only real-browser acceptance to the deployed
+public URL. Do not disable sandboxing, bypass certificate/proxy/access controls, or
+create an unapproved preview deployment. Privacy review, schema/revision validation,
+deterministic generation, unit tests, local-link checks, JavaScript checks, reviewed
+scope, commit identity and the mandatory prepublish gate still run before push.
+An unavailable browser is not a waiver for a known content, static-test or UI defect.
+If a browser does run and finds a defect, fix it before publishing. Synthetic browser
+regressions for presentation changes still require a secure environment; this fallback
+is not permission to skip those regressions.
+
+After all pre-push gates pass, an ordinary authorized push may proceed with browser
+acceptance pending. Keep the release `verification_pending` until exact-SHA deployment,
+live-file verification and desktop/narrow-screen browser acceptance all succeed.
+
 ## One commit, then the mandatory publication gate
 
 Review `git diff --stat`, the complete changed-file list and `git diff --check`. Stage
@@ -140,6 +156,38 @@ catalog, affected full articles and images against the listed hashes. A successf
 alone is not a successful publication. Do not bypass proxy, permissions or TLS checks.
 If the environment cannot read the live site, record `verification_pending` and provide
 the exact commit/manifest/CI evidence for independent verification.
+
+For deferred browser acceptance, use a secure browser environment with a clean checkout
+of `release_sha`, after confirming the Actions run and Pages deployment for that SHA.
+Do not substitute the latest checkout or an unrelated deployment. Keep evidence outside
+the checkout. Run the same real-content suite against the authorized Pages root:
+
+```bash
+python3 scripts/generate.py --public --check
+python3 tests/pilot_browser_qa.py \
+  --base-url https://byby221b.github.io/Dots-Exploration/ \
+  --commit "$release_sha" \
+  --output /absolute/path/outside/repo/deployed-reading-qa \
+  --baseline /absolute/path/outside/repo/baseline-catalog.json \
+  --expect-added-articles "$added_articles" --expect-added-images "$added_images" \
+  --expect-added-trending "$added_trending" --expect-added-exploration "$added_exploration"
+```
+
+The remote mode requires the exact clean local commit and compares the live manifest
+and every listed file (catalog, full articles, images, scripts and styles) with that
+checkout, both before and after browser checks. It rejects redirects, HTTP errors and
+byte mismatches, using normal TLS checks. It runs the same 1440/768/375/320px and
+no-JavaScript assertions as local mode. Inspect screenshots as well as the report.
+Matching bytes alone cannot identify a code-only maintenance commit; the exact-SHA
+Actions and Pages deployment evidence remains mandatory. If another deployment races
+verification, stop and reconcile the SHA rather than accepting unrelated results.
+
+If the public URL or secure browser is still unavailable, retain `verification_pending`
+and report the failed step; a push or green deployment alone is not `published`.
+If deployed acceptance finds a defect, record it and prepare a reviewed ordinary new
+fix commit from current main, re-running all applicable gates and deployed acceptance.
+Never amend published history or force push. Keep code maintenance and content fixes
+in separate releases as required by the gate; do not resend email.
 
 Maintain `sent` and `published` independently in **private Library** using stable edition
 ID/revision plus a public-content digest as the idempotency key. Keep delivery receipts,
