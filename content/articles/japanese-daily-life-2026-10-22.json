@@ -1,6 +1,6 @@
 {
   "id": "japanese-daily-life-2026-10-22",
-  "revision": 1,
+  "revision": 2,
   "date": "2026-10-22",
   "channel": "exploration",
   "series": "日语生活碎片",
@@ -57,7 +57,7 @@
     },
     {
       "type": "paragraph",
-      "text": "① これ／これ／kore／这个：先指出你要问的商品。\n② いくら／いくら／ikura／多少钱：接着问金额。\n③ ですか／ですか／desu ka／礼貌的问句结尾：放在最后，让对方知道你在提问。"
+      "text": "1. これ／これ／kore／这个：先指出你要问的商品。\n2. いくら／いくら／ikura／多少钱：接着问金额。\n3. ですか／ですか／desu ka／礼貌的问句结尾：放在最后，让对方知道你在提问。"
     },
     {
       "type": "paragraph",
