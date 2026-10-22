@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "channel": "exploration",
+      "date": "2026-10-22",
+      "disclosures": 1,
+      "id": "japanese-daily-life-2026-10-22",
+      "images": [],
+      "revision": 1,
+      "series": "日语生活碎片",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-10-22",
       "disclosures": 0,
@@ -438,9 +448,9 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 38,
+  "articles_count": 39,
   "channels": {
-    "exploration": 18,
+    "exploration": 19,
     "trending": 20
   },
   "end": "2026-10-22",

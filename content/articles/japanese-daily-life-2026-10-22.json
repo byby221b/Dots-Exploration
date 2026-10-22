@@ -1,0 +1,120 @@
+{
+  "id": "japanese-daily-life-2026-10-22",
+  "revision": 1,
+  "date": "2026-10-22",
+  "channel": "exploration",
+  "series": "日语生活碎片",
+  "title": "在小摊前问一句价格",
+  "summary": "从一段简短的官方教学对话开始，练三个词、一个问价句和同结构替换。保留平假名与罗马音辅助，听辨问题的答案单独收在末尾。",
+  "topics": [
+    "日语",
+    "生活会话"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "站在小摊前，看中一样东西，却不知道价格。今天练一句问价的话：先指清东西，再把问题说完。此前练过喜好、问位置和请求物品；这次只问价格，不要求听懂或说出日元数字。"
+    },
+    {
+      "type": "heading",
+      "text": "先听两遍，暂时不看答案"
+    },
+    {
+      "type": "paragraph",
+      "text": "[播放 IRODORI 官方音轨16-07，整段约11秒](https://www.irodori.jpf.go.jp/assets/data/starter/audio/16/X_%5B16-07%5D_kiku1.mp3)\n定位：入门第16课，编号16-07，整条音轨。备用：[官方播放页](https://www.irodori.jpf.go.jp/starter/audio/lesson16.html)，找到同一编号。"
+    },
+    {
+      "type": "paragraph",
+      "text": "第一遍：顾客开口后，店员有没有作答？\n第二遍：只找「いくら／いくら／ikura／多少钱」，它出现一次，还是两次？先猜，再学下面的短句；答案放在末尾。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是官方教学对话。本期已核对音轨文件和对应脚本，未实际试听；下面练声音与文字、意思的对应，不分析录音中的连读或弱化。"
+    },
+    {
+      "type": "heading",
+      "text": "三个词，先不用背字形"
+    },
+    {
+      "type": "paragraph",
+      "text": "每组依次是常用写法／平假名读音／罗马音／中文意思。罗马音不是汉语拼音，只用来辅助认读。"
+    },
+    {
+      "type": "paragraph",
+      "text": "これ／これ／kore／这个，指靠近自己手边的东西。\nそれ／それ／sore／那个，本例指靠近店员手边的东西。\nいくら／いくら／ikura／多少钱。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这三个词通常就用平假名写，所以前两项看起来相同；不是漏掉了汉字，也不需要再背一套片假名。"
+    },
+    {
+      "type": "heading",
+      "text": "一句问价，拆成三块"
+    },
+    {
+      "type": "paragraph",
+      "text": "主句取自官方脚本，省去开头引起注意的招呼：\n常用写法：これ、いくらですか？\n平假名：これ、いくらですか？\n罗马音：Kore, ikura desu ka?\n中文：这个多少钱？"
+    },
+    {
+      "type": "paragraph",
+      "text": "① これ／これ／kore／这个：先指出你要问的商品。\n② いくら／いくら／ikura／多少钱：接着问金额。\n③ ですか／ですか／desu ka／礼貌的问句结尾：放在最后，让对方知道你在提问。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这句里，指着商品就能说清“这个”是什么，不必另加“我想知道”。指着商品时，教材用了这样的简短说法；今天按这三块说即可，不把省略套到所有句子。末尾的「か／か／ka／问句标记」跟在礼貌结尾后面；这里不把整段结尾逐字翻成“是吗”。"
+    },
+    {
+      "type": "paragraph",
+      "text": "现在只换指向：东西放在店员手边，就把第一块换掉，后两块不动。\n常用写法：それ、いくらですか？\n平假名：それ、いくらですか？\n罗马音：Sore, ikura desu ka?\n中文：那个多少钱？\n这是原创替换例句，暂无配音，不是16-07中的原句。"
+    },
+    {
+      "type": "heading",
+      "text": "只认一个差别：开头的假名"
+    },
+    {
+      "type": "paragraph",
+      "text": "看词卡的开头：こ／こ／ko／“这个”的首个假名；そ／そ／so／“那个”的首个假名。它们字形不同，后面的部分相同。\n遮住词卡：想说“那个”时，开头选こ／こ／ko，还是そ／そ／so？这里练的是假名和读音的对应，不要求模仿细微口音。"
+    },
+    {
+      "type": "heading",
+      "text": "重听一次，再开口问"
+    },
+    {
+      "type": "paragraph",
+      "text": "回到16-07再听一遍，找刚才学的问价词。然后想象商品放在店员手边，开口问“那个多少钱？”可以看罗马音，不用追录音速度，也不用学会回答价格。"
+    },
+    {
+      "type": "details",
+      "summary": "听完再看：答案",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "按对应脚本核对，第一遍：有，店员回答了价格。第二遍：いくら／いくら／ikura／多少钱，在16-07里出现一次，由顾客说出。\n假名题：そ／そ／so／“那个”的首个假名。它组成的词是それ／それ／sore／那个。"
+        },
+        {
+          "type": "paragraph",
+          "text": "口头回应：\n常用写法：それ、いくらですか？\n平假名：それ、いくらですか？\n罗马音：Sore, ikura desu ka?\n中文：那个多少钱？"
+        },
+        {
+          "type": "paragraph",
+          "text": "可选核对：[官方脚本第19页，印刷页L16-19，对应16-07](https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L16.pdf#page=19)。本期只引用问价短句，音频请在官方页面播放；未验证你所在地区的播放情况。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "IRODORI 入门第16课官方音频页",
+      "url": "https://www.irodori.jpf.go.jp/starter/audio/lesson16.html"
+    },
+    {
+      "title": "官方音轨16-07",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/audio/16/X_%5B16-07%5D_kiku1.mp3"
+    },
+    {
+      "title": "官方脚本第19页",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L16.pdf#page=19"
+    }
+  ],
+  "public_reviewed": true
+}
