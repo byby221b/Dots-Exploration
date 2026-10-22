@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-22">2026-10-22</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">12条精选：开源数据管线、训练系统与反馈循环教程、运行时安全，以及科学和人文阅读。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-10">🧠 AI/模型</a></li><li><a href="#section-23">🔥 热议话题</a></li><li><a href="#section-33">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/DietrichGebert/ponytail" rel="noreferrer">DietrichGebert/ponytail</a></h3>
+<p class="item-meta">⭐+2079 · JavaScript · GitHub today（非北京时间自然日）</p>
+<p>给编码助手加一套先读现有实现、再选择最小改动的工作规则，减少重复造轮子。<br>审查覆盖测试、安全和真实负载；适合研究自动化的开发流程，效果仍需在自己的任务上验证。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/supabase/supabase" rel="noreferrer">supabase/supabase</a></h3>
+<p class="item-meta">⭐+504 · TypeScript · GitHub today（非北京时间自然日）</p>
+<p>把 Postgres、身份验证、对象存储和实时通知组合成可自托管后端，减少应用原型的基础设施拼装。<br>源码展示数据库变更如何转成通知、表如何暴露为 API，适合学习数据服务的模块化设计。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/strelov1/freehire" rel="noreferrer">strelov1/freehire</a></h3>
+<p class="item-meta">⭐+360 · Go · GitHub today（非北京时间自然日）</p>
+<p>将不同招聘来源统一成一种记录，按稳定键去重，再接入全文搜索与语义检索。<br>采集、补全、嵌入和索引由独立任务处理；更值得借鉴的是这条可自托管的数据管线，而非未经验证的职位覆盖率。</p>
+</article>
+<h2 id="section-10">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl/" rel="noreferrer">TorchTitan Update: New SOTA Models, Performance at Scale, TitanRL</a></h3>
+<p class="item-meta">2026-10-21 · 训练系统</p>
+<p>TorchTitan 把新模型接入、通信计算重叠和细粒度重计算整合进同一套训练框架；TitanRL 还让训练与生成共享模型实现。<br>适合研究大规模 MoE 训练和数值一致性；部分融合内核要求 NVIDIA SM100 及更新硬件，不能直接外推到现有集群。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://iclr-blogposts.github.io/2026/blog/2026/performative-prediction/" rel="noreferrer">Performative Prediction made practical</a></h3>
+<p class="item-meta">深度精选·2026-04-27</p>
+<p>模型上线会改变后来收到的数据，这篇教程用定价例子和可视化，把“反复重训后稳定”与“闭环表现最优”区分开。<br>文中给出公式、实验和 PerformativeGym 实现，适合梳理推荐反馈循环；真实环境如何响应模型仍难估计，教程没有消除这一限制。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://research.colfax-intl.com/optimization-diaries-improving-flashattention-4-backward-for-head-dimension-64/" rel="noreferrer">Optimization diaries: Improving FlashAttention-4 backward pass kernel design for head dimension 64</a></h3>
+<p class="item-meta">深度精选·2026-09-06</p>
+<p>这份优化日记从时间线和内存布局解释：给中间张量分配独立空间，怎样减少同步等待，让矩阵乘法与 softmax 重叠。<br>附代码和 B200 基准，适合已有 CUDA 基础的读者学习内核诊断；结论针对头维度 64 的 FA4 反向计算，不是通用推理加速。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/" rel="noreferrer">Empowering frontline maternal care with AI-assisted ultrasound</a></h3>
+<p class="item-meta">2026-10-21 · 跨场景验证</p>
+<p>Google 介绍用标准化“盲扫”超声视频估计孕周的前瞻性研究，让未接受专门超声训练的操作人员采集数据。<br>值得关注的是验证设计：只用芝加哥少量数据适配设备，再到未参与微调的内罗毕测试；这仍是特定任务的研究结果，不等于替代完整产检。</p>
+</article>
+<h2 id="section-23">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/" rel="noreferrer">PHP 安全更新：异常处理为何会影响请求隔离</a> <a href="https://news.ycombinator.com/item?id=50180873" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 965分 · 532条评论（采集时） · 过去24小时提交</p>
+<p>PHP 官方说明两处严重漏洞：内存耗尽或致命错误可能留下不完整、过期的内部状态，影响后续执行。<br>文章还复盘了兼容性取舍和修复决策；适合从运行时隔离与开源维护流程理解这次更新。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/" rel="noreferrer">证书格式正确，密钥却只剩一个字节</a> <a href="https://news.ycombinator.com/item?id=50177916" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 840分 · 401条评论（采集时） · 过去24小时提交</p>
+<p>安全研究者复核了 eMudhra 的弱密钥事件：证书格式检查通过，并不代表私钥具有足够随机性。<br>文章区分浏览器与其他 TLS 客户端的信任更新机制，提醒开发者别把浏览器已拦截等同于所有程序都安全。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.joshwcomeau.com/css/interop-2027/" rel="noreferrer">The Future of CSS：把浏览器兼容性当成设计约束</a> <a href="https://news.ycombinator.com/item?id=50175070" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 592分 · 262条评论（采集时） · 过去24小时提交</p>
+<p>作者用可交互示例解释自己希望进入 Interop 2027 的十项 CSS 能力，包括自定义函数和新的边角形状。<br>每项都标出当前浏览器支持情况，适合学习渐进增强；这是候选清单，不是已经确定的年度标准路线图。</p>
+</article>
+<h2 id="section-33">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/see-inside-cells-like-never-before-in-these-vivid-microscopic-images-20261021/" rel="noreferrer">显微镜如何让细胞内部的协作变得可见</a></h3>
+<p class="item-meta">Quanta · 2026-10-21</p>
+<p>这组显微影像把线粒体移动、细胞分裂和心肌收缩放到眼前，并解释荧光标记与逐层扫描如何区分细胞结构。<br>适合换个尺度理解生命系统的协作；画面中的颜色用于标记，不是肉眼可见的原色，机制解读仍要结合实验。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/children-today-are-suffering-a-severe-deficit-of-play" rel="noreferrer">往期佳作·2013-09-18｜The play deficit：自由玩耍如何练习协商</a></h3>
+<p class="item-meta">往期佳作·2013-09-18 · Aeon</p>
+<p>孩子能随时退出一场游戏，反而让参与者必须商量规则、照顾伙伴的能力和意愿。Peter Gray用这个机制解释自由玩耍为何也是社会学习。<br>这是一篇有明确立场的心理学随笔；文中把社会变化与心理问题相连的论证，不宜读成已排除其他解释的因果结论。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/DietrichGebert/ponytail" rel="noreferrer">DietrichGebert/ponytail</a></li><li><a href="https://github.com/supabase/supabase" rel="noreferrer">supabase/supabase</a></li><li><a href="https://github.com/strelov1/freehire" rel="noreferrer">strelov1/freehire</a></li><li><a href="https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl/" rel="noreferrer">TorchTitan Update: New SOTA Models, Performance at Scale, TitanRL</a></li><li><a href="https://iclr-blogposts.github.io/2026/blog/2026/performative-prediction/" rel="noreferrer">Performative Prediction made practical</a></li><li><a href="https://research.colfax-intl.com/optimization-diaries-improving-flashattention-4-backward-for-head-dimension-64/" rel="noreferrer">Optimization diaries: Improving FlashAttention-4 backward pass kernel design for head dimension 64</a></li><li><a href="https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/" rel="noreferrer">Empowering frontline maternal care with AI-assisted ultrasound</a></li><li><a href="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/" rel="noreferrer">PHP 安全更新：异常处理为何会影响请求隔离</a></li><li><a href="https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/" rel="noreferrer">证书格式正确，密钥却只剩一个字节</a></li><li><a href="https://www.joshwcomeau.com/css/interop-2027/" rel="noreferrer">The Future of CSS：把浏览器兼容性当成设计约束</a></li><li><a href="https://www.quantamagazine.org/see-inside-cells-like-never-before-in-these-vivid-microscopic-images-20261021/" rel="noreferrer">显微镜如何让细胞内部的协作变得可见</a></li><li><a href="https://aeon.co/essays/children-today-are-suffering-a-severe-deficit-of-play" rel="noreferrer">往期佳作·2013-09-18｜The play deficit：自由玩耍如何练习协商</a></li><li><a href="https://news.ycombinator.com/item?id=50180873" rel="noreferrer">PHP 安全更新：异常处理为何会影响请求隔离 · 讨论</a></li><li><a href="https://news.ycombinator.com/item?id=50177916" rel="noreferrer">证书格式正确，密钥却只剩一个字节 · 讨论</a></li><li><a href="https://news.ycombinator.com/item?id=50175070" rel="noreferrer">The Future of CSS：把浏览器兼容性当成设计约束 · 讨论</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-22 · 38 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

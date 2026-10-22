@@ -1,0 +1,245 @@
+{
+  "id": "dots-trending-2026-10-22",
+  "revision": 1,
+  "date": "2026-10-22",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "12条精选：开源数据管线、训练系统与反馈循环教程、运行时安全，以及科学和人文阅读。",
+  "topics": [
+    "开源",
+    "人工智能",
+    "系统工程",
+    "学习资料",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+2079 · JavaScript · GitHub today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "给编码助手加一套先读现有实现、再选择最小改动的工作规则，减少重复造轮子。\n审查覆盖测试、安全和真实负载；适合研究自动化的开发流程，效果仍需在自己的任务上验证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[supabase/supabase](https://github.com/supabase/supabase)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+504 · TypeScript · GitHub today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 Postgres、身份验证、对象存储和实时通知组合成可自托管后端，减少应用原型的基础设施拼装。\n源码展示数据库变更如何转成通知、表如何暴露为 API，适合学习数据服务的模块化设计。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[strelov1/freehire](https://github.com/strelov1/freehire)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+360 · Go · GitHub today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "将不同招聘来源统一成一种记录，按稳定键去重，再接入全文搜索与语义检索。\n采集、补全、嵌入和索引由独立任务处理；更值得借鉴的是这条可自托管的数据管线，而非未经验证的职位覆盖率。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[TorchTitan Update: New SOTA Models, Performance at Scale, TitanRL](https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-21 · 训练系统"
+    },
+    {
+      "type": "paragraph",
+      "text": "TorchTitan 把新模型接入、通信计算重叠和细粒度重计算整合进同一套训练框架；TitanRL 还让训练与生成共享模型实现。\n适合研究大规模 MoE 训练和数值一致性；部分融合内核要求 NVIDIA SM100 及更新硬件，不能直接外推到现有集群。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Performative Prediction made practical](https://iclr-blogposts.github.io/2026/blog/2026/performative-prediction/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-04-27"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型上线会改变后来收到的数据，这篇教程用定价例子和可视化，把“反复重训后稳定”与“闭环表现最优”区分开。\n文中给出公式、实验和 PerformativeGym 实现，适合梳理推荐反馈循环；真实环境如何响应模型仍难估计，教程没有消除这一限制。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Optimization diaries: Improving FlashAttention-4 backward pass kernel design for head dimension 64](https://research.colfax-intl.com/optimization-diaries-improving-flashattention-4-backward-for-head-dimension-64/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-09-06"
+    },
+    {
+      "type": "paragraph",
+      "text": "这份优化日记从时间线和内存布局解释：给中间张量分配独立空间，怎样减少同步等待，让矩阵乘法与 softmax 重叠。\n附代码和 B200 基准，适合已有 CUDA 基础的读者学习内核诊断；结论针对头维度 64 的 FA4 反向计算，不是通用推理加速。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Empowering frontline maternal care with AI-assisted ultrasound](https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-21 · 跨场景验证"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google 介绍用标准化“盲扫”超声视频估计孕周的前瞻性研究，让未接受专门超声训练的操作人员采集数据。\n值得关注的是验证设计：只用芝加哥少量数据适配设备，再到未参与微调的内罗毕测试；这仍是特定任务的研究结果，不等于替代完整产检。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[PHP 安全更新：异常处理为何会影响请求隔离](https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/) [讨论](https://news.ycombinator.com/item?id=50180873)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 965分 · 532条评论（采集时） · 过去24小时提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "PHP 官方说明两处严重漏洞：内存耗尽或致命错误可能留下不完整、过期的内部状态，影响后续执行。\n文章还复盘了兼容性取舍和修复决策；适合从运行时隔离与开源维护流程理解这次更新。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[证书格式正确，密钥却只剩一个字节](https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/) [讨论](https://news.ycombinator.com/item?id=50177916)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 840分 · 401条评论（采集时） · 过去24小时提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "安全研究者复核了 eMudhra 的弱密钥事件：证书格式检查通过，并不代表私钥具有足够随机性。\n文章区分浏览器与其他 TLS 客户端的信任更新机制，提醒开发者别把浏览器已拦截等同于所有程序都安全。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[The Future of CSS：把浏览器兼容性当成设计约束](https://www.joshwcomeau.com/css/interop-2027/) [讨论](https://news.ycombinator.com/item?id=50175070)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 592分 · 262条评论（采集时） · 过去24小时提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者用可交互示例解释自己希望进入 Interop 2027 的十项 CSS 能力，包括自定义函数和新的边角形状。\n每项都标出当前浏览器支持情况，适合学习渐进增强；这是候选清单，不是已经确定的年度标准路线图。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[显微镜如何让细胞内部的协作变得可见](https://www.quantamagazine.org/see-inside-cells-like-never-before-in-these-vivid-microscopic-images-20261021/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-10-21"
+    },
+    {
+      "type": "paragraph",
+      "text": "这组显微影像把线粒体移动、细胞分裂和心肌收缩放到眼前，并解释荧光标记与逐层扫描如何区分细胞结构。\n适合换个尺度理解生命系统的协作；画面中的颜色用于标记，不是肉眼可见的原色，机制解读仍要结合实验。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[往期佳作·2013-09-18｜The play deficit：自由玩耍如何练习协商](https://aeon.co/essays/children-today-are-suffering-a-severe-deficit-of-play)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2013-09-18 · Aeon"
+    },
+    {
+      "type": "paragraph",
+      "text": "孩子能随时退出一场游戏，反而让参与者必须商量规则、照顾伙伴的能力和意愿。Peter Gray用这个机制解释自由玩耍为何也是社会学习。\n这是一篇有明确立场的心理学随笔；文中把社会变化与心理问题相连的论证，不宜读成已排除其他解释的因果结论。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail"
+    },
+    {
+      "title": "supabase/supabase",
+      "url": "https://github.com/supabase/supabase"
+    },
+    {
+      "title": "strelov1/freehire",
+      "url": "https://github.com/strelov1/freehire"
+    },
+    {
+      "title": "TorchTitan Update: New SOTA Models, Performance at Scale, TitanRL",
+      "url": "https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl/"
+    },
+    {
+      "title": "Performative Prediction made practical",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/performative-prediction/"
+    },
+    {
+      "title": "Optimization diaries: Improving FlashAttention-4 backward pass kernel design for head dimension 64",
+      "url": "https://research.colfax-intl.com/optimization-diaries-improving-flashattention-4-backward-for-head-dimension-64/"
+    },
+    {
+      "title": "Empowering frontline maternal care with AI-assisted ultrasound",
+      "url": "https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/"
+    },
+    {
+      "title": "PHP 安全更新：异常处理为何会影响请求隔离",
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"
+    },
+    {
+      "title": "证书格式正确，密钥却只剩一个字节",
+      "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/"
+    },
+    {
+      "title": "The Future of CSS：把浏览器兼容性当成设计约束",
+      "url": "https://www.joshwcomeau.com/css/interop-2027/"
+    },
+    {
+      "title": "显微镜如何让细胞内部的协作变得可见",
+      "url": "https://www.quantamagazine.org/see-inside-cells-like-never-before-in-these-vivid-microscopic-images-20261021/"
+    },
+    {
+      "title": "往期佳作·2013-09-18｜The play deficit：自由玩耍如何练习协商",
+      "url": "https://aeon.co/essays/children-today-are-suffering-a-severe-deficit-of-play"
+    },
+    {
+      "title": "PHP 安全更新：异常处理为何会影响请求隔离 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50180873"
+    },
+    {
+      "title": "证书格式正确，密钥却只剩一个字节 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50177916"
+    },
+    {
+      "title": "The Future of CSS：把浏览器兼容性当成设计约束 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50175070"
+    }
+  ],
+  "public_reviewed": true
+}
