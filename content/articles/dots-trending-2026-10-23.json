@@ -1,0 +1,245 @@
+{
+  "id": "dots-trending-2026-10-23",
+  "revision": 1,
+  "date": "2026-10-23",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "12条精选：开源开发工具、GPU内核、分片与可视化教程、推理模型，以及科学人文阅读。",
+  "topics": [
+    "开源",
+    "人工智能",
+    "系统工程",
+    "学习资料",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[fastapi/fastapi](https://github.com/fastapi/fastapi)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+101 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "用 Python 类型声明同时驱动参数校验、JSON 转换和 OpenAPI 文档，减少接口定义与文档各写一遍的重复工作。\n适合把模型服务或业务逻辑封装为 API；README 给出同步、异步与嵌套数据示例，生产部署仍需单独处理鉴权、运行配置和测试。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[luongnv89/claude-howto](https://github.com/luongnv89/claude-howto)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+177 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把命令、项目记忆、技能、子代理、Hooks 和 MCP 串成分级学习路线，提供图解、配置模板和代码审查等组合示例。\n适合从零散功能走向完整工作流；这是社区教程，复制脚本或连接外部服务前应核对版本、执行权限与凭据配置。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Flint：面向编码代理的稀疏模型](https://huggingface.co/RecursiveSI/flint)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · Apache 2.0 · 不代表今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "总参数约398亿、每词元激活约25亿，结合滑动窗口与全注意力，支持推理和多轮工具调用，并提供聊天模板与 SGLang 部署套件。\n适合研究本地编码代理；该 BF16 权重约80GB，不能仅凭小激活量估算显存，模型卡也提示不同评测框架与精度的结果不可直接比较。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[FlyDSL：把 AMD 内核优化接进原生 PyTorch 算子](https://pytorch.org/blog/accelerating-pytorch-on-amd-gpus-with-flydsl/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-22 01:45 · 北京时间 · PyTorch"
+    },
+    {
+      "type": "paragraph",
+      "text": "通过布局、分块与流水线安排，把 FlyDSL 内核接到现有矩阵乘、归一化和注意力接口；编译模式可实测后选择后端。\n附内核设计、基准与接入代码，主要面向 AMD MI350 系列；不支持的输入保留原实现，算子加速不等于整模型同幅提速。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[t-SNE 读图指南：哪些结构值得相信](https://distill.pub/2016/misread-tsne/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2016-10-13 · Distill"
+    },
+    {
+      "type": "paragraph",
+      "text": "从两团高斯点、随机噪声到环与结，逐步展示邻域尺度参数、迭代次数和随机运行怎样改变 t-SNE 图。\n交互对照帮助分清哪些结构可信：簇的面积与远簇间距不能直接解释，单张图也可能造出假簇；适合审查高维数据可视化。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[JAX 分片类型：布局与通信如何对应](https://blog.ezyang.com/2026/01/jax-sharding-type-system/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-01-28 · Edward Z. Yang"
+    },
+    {
+      "type": "paragraph",
+      "text": "从分片布局、设备间是否相同，到尚未汇总的局部结果，逐层说明 JAX 怎样把通信约束写进张量类型。\n配套代码把类型传播与反向梯度对应起来，适合已有分布式训练基础的读者；讨论限定显式分片，接口以2026年1月为准。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Lorenz and Little: How Much Does Your Tail Cost?](https://brooker.co.za/blog/2026/07/29/lorenz-and-little.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-07-29 · 性能测量"
+    },
+    {
+      "type": "paragraph",
+      "text": "最慢的少数请求究竟占了多少资源？这篇笔记从延迟样本求和出发，说明怎样估计长尾对平均延迟和并发占用的贡献。\n附公式、Python 实现与交互示例，适合学习服务容量分析；分位数插值和外推带有假设，不能直接把并发占比当成账单占比。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[WorldTUI：让小模型预测终端屏幕](https://simedw.com/2026/10/21/world-model-terminal/) [讨论](https://news.ycombinator.com/item?id=50190363)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-21"
+    },
+    {
+      "type": "paragraph",
+      "text": "把按键与屏幕差分当作训练数据，让3.6亿参数模型在浏览器里“扮演”终端；文章拆解自我纠错、逐行并行与推测验证。\n它没有真实 shell 或文件系统，状态一致性仍会失效；适合学习小模型的状态表示与推理优化，不宜当作可靠执行环境。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[OpenAI CLI：把 API 操作接进终端脚本](https://github.com/openai/openai-cli) [讨论](https://news.ycombinator.com/item?id=50191507)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · OpenAI 官方仓库"
+    },
+    {
+      "type": "paragraph",
+      "text": "用命令行生成图片、上传和下载文件、提交批处理，并把结果导出为 JSON 或 JSONL，便于串进现有脚本。\n它调用具体 REST API，不是会改项目的 Codex 代理；脚本应检查退出状态、显式选择输出格式，并避免泄露调试日志中的敏感数据。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[earstrip：把地图多边形逐步切成三角形](https://globus.software/blog/2026/10/16/cutting-map-polygons/) [讨论](https://news.ycombinator.com/item?id=50193170)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-16"
+    },
+    {
+      "type": "paragraph",
+      "text": "从逐个切“耳朵”开始，用凹顶点筛选、空间分桶、三角带和无分支计数，逐步压低地图多边形的三角化成本。\n作者附源码、数据和逐步基准，适合学习如何一次改动一个计算环节；实验针对 M4 Pro 单核与指定地图数据，复杂边界仍需回退算法。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[共同生活：在日常摩擦中练习相互照顾](https://aeon.co/essays/living-in-community-is-where-self-illusions-go-to-die)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-10-22"
+    },
+    {
+      "type": "paragraph",
+      "text": "共住能分摊家务和照护，也会暴露对隐私、整洁与金钱的不同期待。作者以近六年的实践，讨论冲突如何成为学习协商与互相照顾的机会。\n这是一篇个人经验随笔，不是普遍有效的处方；共同目标、明确的退出安排，以及反复修复关系，都是她认为不可省略的条件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[往期佳作·2026-08-26｜希尔伯特空间：量子态为何像一支抽象箭头？](https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-08-26 · Quanta"
+    },
+    {
+      "type": "paragraph",
+      "text": "把红、黄、绿灯看成三种可能结果，文章用箭头和坐标轴解释量子态、测量与基底，再说明波函数和矩阵为何能描述同一套物理。\n这张“可能性地图”不是粒子所在的普通三维空间；文末还区分数学工具与物理实在，避免把直观类比误当成世界本身。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "fastapi/fastapi",
+      "url": "https://github.com/fastapi/fastapi"
+    },
+    {
+      "title": "luongnv89/claude-howto",
+      "url": "https://github.com/luongnv89/claude-howto"
+    },
+    {
+      "title": "Flint：面向编码代理的稀疏模型",
+      "url": "https://huggingface.co/RecursiveSI/flint"
+    },
+    {
+      "title": "FlyDSL：把 AMD 内核优化接进原生 PyTorch 算子",
+      "url": "https://pytorch.org/blog/accelerating-pytorch-on-amd-gpus-with-flydsl/"
+    },
+    {
+      "title": "t-SNE 读图指南：哪些结构值得相信",
+      "url": "https://distill.pub/2016/misread-tsne/"
+    },
+    {
+      "title": "JAX 分片类型：布局与通信如何对应",
+      "url": "https://blog.ezyang.com/2026/01/jax-sharding-type-system/"
+    },
+    {
+      "title": "Lorenz and Little: How Much Does Your Tail Cost?",
+      "url": "https://brooker.co.za/blog/2026/07/29/lorenz-and-little.html"
+    },
+    {
+      "title": "WorldTUI：让小模型预测终端屏幕 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50190363"
+    },
+    {
+      "title": "WorldTUI：让小模型预测终端屏幕",
+      "url": "https://simedw.com/2026/10/21/world-model-terminal/"
+    },
+    {
+      "title": "OpenAI CLI：把 API 操作接进终端脚本 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50191507"
+    },
+    {
+      "title": "OpenAI CLI：把 API 操作接进终端脚本",
+      "url": "https://github.com/openai/openai-cli"
+    },
+    {
+      "title": "earstrip：把地图多边形逐步切成三角形 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50193170"
+    },
+    {
+      "title": "earstrip：把地图多边形逐步切成三角形",
+      "url": "https://globus.software/blog/2026/10/16/cutting-map-polygons/"
+    },
+    {
+      "title": "共同生活：在日常摩擦中练习相互照顾",
+      "url": "https://aeon.co/essays/living-in-community-is-where-self-illusions-go-to-die"
+    },
+    {
+      "title": "往期佳作·2026-08-26｜希尔伯特空间：量子态为何像一支抽象箭头？",
+      "url": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/"
+    }
+  ],
+  "public_reviewed": true
+}
