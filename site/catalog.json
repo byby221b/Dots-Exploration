@@ -1,6 +1,24 @@
 {
   "articles": [
     {
+      "channel": "exploration",
+      "date": "2026-10-23",
+      "disclosures": 1,
+      "id": "math-shared-foundations-2026-10-23",
+      "images": [
+        "assets/math-2026-10-23/objective.png",
+        "assets/math-2026-10-23/proof.png",
+        "assets/math-2026-10-23/geometry.png",
+        "assets/math-2026-10-23/general.png",
+        "assets/math-2026-10-23/center.png",
+        "assets/math-2026-10-23/gradient.png",
+        "assets/math-2026-10-23/answer.png"
+      ],
+      "revision": 1,
+      "series": "数学共性小课",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-10-23",
       "disclosures": 0,
@@ -458,13 +476,13 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 40,
+  "articles_count": 41,
   "channels": {
-    "exploration": 19,
+    "exploration": 20,
     "trending": 21
   },
   "end": "2026-10-23",
-  "images_count": 47,
+  "images_count": 54,
   "start": "2026-10-01",
   "trending_items": 253
 }
