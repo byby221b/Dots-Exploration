@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-24">2026-10-24</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">10条精选：代理隔离、语音模型、高斯过程与调试教程、系统实践，以及细胞入侵研究。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-7">🧠 AI/模型</a></li><li><a href="#section-20">🔥 热议话题</a></li><li><a href="#section-30">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/NVIDIA/OpenShell" rel="noreferrer">NVIDIA/OpenShell</a></h3>
+<p class="item-meta">⭐+1119 · Rust · GitHub stars today（非北京时间自然日）</p>
+<p>把代理可访问的文件、进程与网络写成策略，在运行时由隔离环境执行；凭证只加到允许访问的目标请求上，不直接交给代理。<br>适合研究工具调用的权限边界与策略变更审查；仍要按文档配置运行环境，不能把“有沙箱”当成完整安全保证。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/OpenBMB/VoxCPM" rel="noreferrer">OpenBMB/VoxCPM</a></h3>
+<p class="item-meta">⭐+150 · Python · GitHub stars today（非北京时间自然日）</p>
+<p>在连续语音表示上生成声音，省去先转成离散语音编号的步骤；VoxCPM2 提供多语言合成、文字描述音色和流式输出。<br>仓库包含训练、微调与部署入口，适合顺着模型结构研究语音服务；参考声音需取得授权，生成质量仍应按语言与场景实测。</p>
+</article>
+<h2 id="section-7">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/XHToken/Spark-X2.6-4B" rel="noreferrer">Spark-X2.6-4B：可调思考预算的端侧模型</a></h3>
+<p class="item-meta">HF 当前热榜 · 不代表今日首发</p>
+<p>沿用上一代架构，把改进放在后训练，并提供不思考、低预算和高预算三档设置，便于按任务调整延迟与推理开销。<br>模型卡给出 Transformers、SGLang、vLLM 与本地运行示例；长上下文配置仍受设备内存约束，榜单位置不代表实际任务表现。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.cs.cornell.edu/~asampson/blog/autoreduction.html" rel="noreferrer">自动缩减测试用例：把大故障压成可解释的小例子</a></h3>
+<p class="item-meta">深度精选·2024-07-15</p>
+<p>从解释器故障出发，用 Shrinkray 自动删减输入，再用脚本判断是否仍复现同一个错误。<br>逐步示范如何排除无效输入、锁定目标报错，适合排查研究代码和编译器问题；脚本只判断“出错了”还不够。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://distill.pub/2019/visual-exploration-gaussian-processes/" rel="noreferrer">高斯过程：怎样把已有观测变成预测与不确定性</a></h3>
+<p class="item-meta">深度精选·2019-04-02</p>
+<p>从二维高斯分布出发，用交互图解释观测如何约束整条函数，再逐步组合平滑、周期和趋势等假设。<br>适合补齐回归与不确定性的直觉，正文含数学推导并链接 Python 笔记本；预测范围仍受所选模型假设限制。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://research.google/blog/bringing-foundational-models-to-the-front-lines-of-tb-screening/" rel="noreferrer">结核筛查：从模型分数走到离线临床流程</a></h3>
+<p class="item-meta">2026-10-23 · Google Research</p>
+<p>Google 回顾胸片筛查从研究验证到合作伙伴部署的过程，并说明开放影像表征和模型如何供本地团队适配，涵盖离线运行、设备差异与转诊流程。<br>适合观察模型之外的部署约束；已落地的专用筛查工具不能等同于通用模型已获临床许可，筛查提示仍需后续确诊。</p>
+</article>
+<h2 id="section-20">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://block.xyz/dessa" rel="noreferrer">Dessa：只用语音训练的双向对话模型</a> <a href="https://news.ycombinator.com/item?id=50213925" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 近24小时讨论 · 官方研究介绍</p>
+<p>Block 团队介绍了一种直接听语音、生成语音的模型，可在对方说话时继续接收声音，探索不经文字中转的对话方式。<br>页面提供真实交互录音，并称模型从头用人类对话训练；这些仍是团队报告与演示，不等于已完成独立评测。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://david.lequin.dev/blog/bi-software-is-dead/" rel="noreferrer">用 HTML 仪表盘承接分析需求：权限与维护仍是核心</a> <a href="https://news.ycombinator.com/item?id=50212320" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 近24小时讨论 · 原文2026-10-14</p>
+<p>作者复盘了把生成式分析页面存为 HTML、通过数据仓库执行查询的实践：页面按查看者身份取数，隔离代码与登录凭证。<br>文章具体讨论权限复用、发布确认和内容版本管理，适合审查自建分析工具的边界；成本对比未计工程师工时，且依赖已有数据平台。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://alexsci.com/blog/uuidv7-is-weird/" rel="noreferrer">UUIDv7 的时间字段，能保证哪些顺序？</a> <a href="https://news.ycombinator.com/item?id=50211746" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 近24小时讨论 · 原文2026-10-19</p>
+<p>文章用时钟回拨与同毫秒批量生成的例子，区分大致按时间排序、严格递增和准确创建时间，提醒读者检查具体实现。<br>RFC 允许调整时间字段，也把计数器等方案留给实现选择；适合审查数据库主键与事件排序假设，不应把 ID 当成精确业务时间。</p>
+</article>
+<h2 id="section-30">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/malaria-parasite-caught-in-the-act-of-breaking-and-entering-20261023/" rel="noreferrer">疟原虫如何穿过细胞膜，又让入口消失？</a></h3>
+<p class="item-meta">2026-10-23 · Quanta</p>
+<p>报道追踪一种短暂的蛋白质入口：疟原虫借它改变红细胞膜的形状，进入后膜又封合。冷冻电镜让这套入侵结构的细节变得可见。<br>研究团队还据此设计了阻止入侵的蛋白质，但证据目前来自试管实验，尚未在动物模型中验证安全性和有效性。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/NVIDIA/OpenShell" rel="noreferrer">NVIDIA/OpenShell</a></li><li><a href="https://github.com/OpenBMB/VoxCPM" rel="noreferrer">OpenBMB/VoxCPM</a></li><li><a href="https://huggingface.co/XHToken/Spark-X2.6-4B" rel="noreferrer">Spark-X2.6-4B：可调思考预算的端侧模型</a></li><li><a href="https://www.cs.cornell.edu/~asampson/blog/autoreduction.html" rel="noreferrer">自动缩减测试用例：把大故障压成可解释的小例子</a></li><li><a href="https://distill.pub/2019/visual-exploration-gaussian-processes/" rel="noreferrer">高斯过程：怎样把已有观测变成预测与不确定性</a></li><li><a href="https://research.google/blog/bringing-foundational-models-to-the-front-lines-of-tb-screening/" rel="noreferrer">结核筛查：从模型分数走到离线临床流程</a></li><li><a href="https://block.xyz/dessa" rel="noreferrer">Dessa：只用语音训练的双向对话模型</a></li><li><a href="https://news.ycombinator.com/item?id=50213925" rel="noreferrer">Dessa：只用语音训练的双向对话模型 · 讨论</a></li><li><a href="https://david.lequin.dev/blog/bi-software-is-dead/" rel="noreferrer">用 HTML 仪表盘承接分析需求：权限与维护仍是核心</a></li><li><a href="https://news.ycombinator.com/item?id=50212320" rel="noreferrer">用 HTML 仪表盘承接分析需求：权限与维护仍是核心 · 讨论</a></li><li><a href="https://alexsci.com/blog/uuidv7-is-weird/" rel="noreferrer">UUIDv7 的时间字段，能保证哪些顺序？</a></li><li><a href="https://news.ycombinator.com/item?id=50211746" rel="noreferrer">UUIDv7 的时间字段，能保证哪些顺序？ · 讨论</a></li><li><a href="https://www.quantamagazine.org/malaria-parasite-caught-in-the-act-of-breaking-and-entering-20261023/" rel="noreferrer">疟原虫如何穿过细胞膜，又让入口消失？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-24 · 42 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

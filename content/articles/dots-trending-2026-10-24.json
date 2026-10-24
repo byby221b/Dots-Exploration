@@ -1,0 +1,213 @@
+{
+  "id": "dots-trending-2026-10-24",
+  "revision": 1,
+  "date": "2026-10-24",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "10条精选：代理隔离、语音模型、高斯过程与调试教程、系统实践，以及细胞入侵研究。",
+  "topics": [
+    "开源",
+    "人工智能",
+    "系统工程",
+    "学习资料",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[NVIDIA/OpenShell](https://github.com/NVIDIA/OpenShell)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1119 · Rust · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把代理可访问的文件、进程与网络写成策略，在运行时由隔离环境执行；凭证只加到允许访问的目标请求上，不直接交给代理。\n适合研究工具调用的权限边界与策略变更审查；仍要按文档配置运行环境，不能把“有沙箱”当成完整安全保证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+150 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "在连续语音表示上生成声音，省去先转成离散语音编号的步骤；VoxCPM2 提供多语言合成、文字描述音色和流式输出。\n仓库包含训练、微调与部署入口，适合顺着模型结构研究语音服务；参考声音需取得授权，生成质量仍应按语言与场景实测。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Spark-X2.6-4B：可调思考预算的端侧模型](https://huggingface.co/XHToken/Spark-X2.6-4B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 不代表今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "沿用上一代架构，把改进放在后训练，并提供不思考、低预算和高预算三档设置，便于按任务调整延迟与推理开销。\n模型卡给出 Transformers、SGLang、vLLM 与本地运行示例；长上下文配置仍受设备内存约束，榜单位置不代表实际任务表现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[自动缩减测试用例：把大故障压成可解释的小例子](https://www.cs.cornell.edu/~asampson/blog/autoreduction.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2024-07-15"
+    },
+    {
+      "type": "paragraph",
+      "text": "从解释器故障出发，用 Shrinkray 自动删减输入，再用脚本判断是否仍复现同一个错误。\n逐步示范如何排除无效输入、锁定目标报错，适合排查研究代码和编译器问题；脚本只判断“出错了”还不够。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[高斯过程：怎样把已有观测变成预测与不确定性](https://distill.pub/2019/visual-exploration-gaussian-processes/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2019-04-02"
+    },
+    {
+      "type": "paragraph",
+      "text": "从二维高斯分布出发，用交互图解释观测如何约束整条函数，再逐步组合平滑、周期和趋势等假设。\n适合补齐回归与不确定性的直觉，正文含数学推导并链接 Python 笔记本；预测范围仍受所选模型假设限制。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[结核筛查：从模型分数走到离线临床流程](https://research.google/blog/bringing-foundational-models-to-the-front-lines-of-tb-screening/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-23 · Google Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google 回顾胸片筛查从研究验证到合作伙伴部署的过程，并说明开放影像表征和模型如何供本地团队适配，涵盖离线运行、设备差异与转诊流程。\n适合观察模型之外的部署约束；已落地的专用筛查工具不能等同于通用模型已获临床许可，筛查提示仍需后续确诊。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Dessa：只用语音训练的双向对话模型](https://block.xyz/dessa) [讨论](https://news.ycombinator.com/item?id=50213925)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 近24小时讨论 · 官方研究介绍"
+    },
+    {
+      "type": "paragraph",
+      "text": "Block 团队介绍了一种直接听语音、生成语音的模型，可在对方说话时继续接收声音，探索不经文字中转的对话方式。\n页面提供真实交互录音，并称模型从头用人类对话训练；这些仍是团队报告与演示，不等于已完成独立评测。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[用 HTML 仪表盘承接分析需求：权限与维护仍是核心](https://david.lequin.dev/blog/bi-software-is-dead/) [讨论](https://news.ycombinator.com/item?id=50212320)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 近24小时讨论 · 原文2026-10-14"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者复盘了把生成式分析页面存为 HTML、通过数据仓库执行查询的实践：页面按查看者身份取数，隔离代码与登录凭证。\n文章具体讨论权限复用、发布确认和内容版本管理，适合审查自建分析工具的边界；成本对比未计工程师工时，且依赖已有数据平台。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[UUIDv7 的时间字段，能保证哪些顺序？](https://alexsci.com/blog/uuidv7-is-weird/) [讨论](https://news.ycombinator.com/item?id=50211746)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 近24小时讨论 · 原文2026-10-19"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章用时钟回拨与同毫秒批量生成的例子，区分大致按时间排序、严格递增和准确创建时间，提醒读者检查具体实现。\nRFC 允许调整时间字段，也把计数器等方案留给实现选择；适合审查数据库主键与事件排序假设，不应把 ID 当成精确业务时间。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[疟原虫如何穿过细胞膜，又让入口消失？](https://www.quantamagazine.org/malaria-parasite-caught-in-the-act-of-breaking-and-entering-20261023/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-23 · Quanta"
+    },
+    {
+      "type": "paragraph",
+      "text": "报道追踪一种短暂的蛋白质入口：疟原虫借它改变红细胞膜的形状，进入后膜又封合。冷冻电镜让这套入侵结构的细节变得可见。\n研究团队还据此设计了阻止入侵的蛋白质，但证据目前来自试管实验，尚未在动物模型中验证安全性和有效性。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NVIDIA/OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell"
+    },
+    {
+      "title": "OpenBMB/VoxCPM",
+      "url": "https://github.com/OpenBMB/VoxCPM"
+    },
+    {
+      "title": "Spark-X2.6-4B：可调思考预算的端侧模型",
+      "url": "https://huggingface.co/XHToken/Spark-X2.6-4B"
+    },
+    {
+      "title": "自动缩减测试用例：把大故障压成可解释的小例子",
+      "url": "https://www.cs.cornell.edu/~asampson/blog/autoreduction.html"
+    },
+    {
+      "title": "高斯过程：怎样把已有观测变成预测与不确定性",
+      "url": "https://distill.pub/2019/visual-exploration-gaussian-processes/"
+    },
+    {
+      "title": "结核筛查：从模型分数走到离线临床流程",
+      "url": "https://research.google/blog/bringing-foundational-models-to-the-front-lines-of-tb-screening/"
+    },
+    {
+      "title": "Dessa：只用语音训练的双向对话模型",
+      "url": "https://block.xyz/dessa"
+    },
+    {
+      "title": "Dessa：只用语音训练的双向对话模型 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50213925"
+    },
+    {
+      "title": "用 HTML 仪表盘承接分析需求：权限与维护仍是核心",
+      "url": "https://david.lequin.dev/blog/bi-software-is-dead/"
+    },
+    {
+      "title": "用 HTML 仪表盘承接分析需求：权限与维护仍是核心 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50212320"
+    },
+    {
+      "title": "UUIDv7 的时间字段，能保证哪些顺序？",
+      "url": "https://alexsci.com/blog/uuidv7-is-weird/"
+    },
+    {
+      "title": "UUIDv7 的时间字段，能保证哪些顺序？ · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50211746"
+    },
+    {
+      "title": "疟原虫如何穿过细胞膜，又让入口消失？",
+      "url": "https://www.quantamagazine.org/malaria-parasite-caught-in-the-act-of-breaking-and-entering-20261023/"
+    }
+  ],
+  "public_reviewed": true
+}
