@@ -1,0 +1,184 @@
+{
+  "id": "dots-trending-2026-10-25",
+  "revision": 1,
+  "date": "2026-10-25",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期关注代理工具、机器人运行系统、多模态模型与信息论图解，并阅读分布式数据库、系统语言及科学人文资料。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "系统工程",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+13 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 AWS 文档检索、任务技能与云服务工具接到编码代理中，技能按需加载，工具调用可用 IAM 条件单独限制。\n适合梳理代理部署与运维流程；读文档不需云账号，但实际 API 操作需要凭据、最小权限与审计配置。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[pollen-robotics/microduck](https://github.com/pollen-robotics/microduck)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+319 · Rust · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把学习得到的策略接到小型双足机器人的控制、相机与更新流程：训练侧使用 MuJoCo/PPO，运行侧加载 ONNX，并统一通过 JSON-RPC 控制。\n适合沿代码学习仿真到实机的接口与运行保障；本库主要提供运行系统，训练代码在独立仓库，实机复现还需对应硬件。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[MiniMax-M3.1-Flash](https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF trendingScore 榜单 · 不等于今日新发布"
+    },
+    {
+      "type": "paragraph",
+      "text": "面向编码与多模态代理，接收文本、图片和视频并生成文本；用全层稀疏注意力、量化感知训练，以及先预测候选词再验证的草稿机制改善推理。\n适合研究稀疏模型的部署组合，但约 428B 总参数仍带来较高硬件门槛；投机解码需要兼容框架，上下文与吞吐也受显存和配置约束。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[图解信息论：从编码走到熵、交叉熵与互信息](https://colah.github.io/posts/2015-09-Visual-Information/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2015-10-14"
+    },
+    {
+      "type": "paragraph",
+      "text": "从怎样给常见符号分配短码讲起，用面积图串起熵、交叉熵、KL散度和互信息，解释这些量分别在衡量什么。\n适合补齐损失函数与压缩的共同直觉；以图解和推导为主，分数码长对应长期平均，KL也不能当作普通距离。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[OBS Studio 33：浏览器源与插件目录一起更新](https://github.com/obsproject/obs-studio/releases/tag/33.0.0) [讨论](https://news.ycombinator.com/item?id=50218430)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 近24小时讨论 · 官方版本 33.0.0"
+    },
+    {
+      "type": "paragraph",
+      "text": "这次更新重点在浏览器源与插件加载：升级内嵌浏览器框架，重新组织插件目录，并改进预览里的素材吸附与数值输入。\n录制技术演示或维护自定义插件时值得核对迁移说明；旧插件目录仅保留到 34 版前，升级前仍应检查插件和操作系统支持。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[分布式 SQLite：复制、备份与合并各解决什么问题？](https://philipotoole.com/twelve-years-of-distributed-sqlite/) [讨论](https://news.ycombinator.com/item?id=50217500)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 近24小时讨论 · 原文 2026-10-23"
+    },
+    {
+      "type": "paragraph",
+      "text": "rqlite 作者回顾十二年实践，把分布式 SQLite 分为共识复制、日志备份和多写者合并，解释一致性、灾后恢复与离线协作的不同需求。\n适合选型前先厘清系统保证：多数节点确认写入，与单机日志备份解决的不是同一问题，不能只因都叫分布式 SQLite 就互相替代。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Goose：用数据栈约束换取连续布局](https://aardappel.github.io/goose/) [讨论](https://news.ycombinator.com/item?id=50224100)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 近24小时讨论 · 项目首次发布日期未核实"
+    },
+    {
+      "type": "paragraph",
+      "text": "用编译器安排的数据栈保存动态对象，离开作用域时统一回收；配合连续布局和相对引用，把内存管理与数据表示放在一起设计。\n适合比较系统语言如何用限制换效率；变长元素数组等结构有访问约束，项目仍新，官网基准不能外推成普遍快于 C++ 或 Rust。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[往期佳作·2026-03-09｜细胞核的入口，怎样一边放行一边拦截？](https://www.quantamagazine.org/disorder-drives-one-of-natures-most-complex-machines-20260309/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-03-09 · 往期佳作"
+    },
+    {
+      "type": "paragraph",
+      "text": "核孔不是一个敞开的洞：不断摆动的蛋白质与运输蛋白共同塑造动态屏障。文章结合酵母核孔的高速显微影像和计算模型，探查分子如何被放行或拦截。\n适合观察生物学如何把静态结构推进到动态机制；研究支持更灵活的屏障模型，但“刷状”与“凝胶状”结构是否并存，仍有争论。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[往期佳作·2018-04-23｜“平庸之恶”：一个概念与它的历史争议](https://aeon.co/ideas/what-did-hannah-arendt-really-mean-by-the-banality-of-evil)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2018-04-23 · 往期佳作"
+    },
+    {
+      "type": "paragraph",
+      "text": "Thomas White 梳理阿伦特对艾希曼的描述，以及后续史料对其动机判断的挑战，区分一个人的日常外表、意识形态与所实施的罪行。\n这是一篇有明确批评立场的哲学评论；它也提醒，“平庸”不等于无罪，讨论行动者的心理不能代替对行为责任的判断。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "aws/agent-toolkit-for-aws",
+      "url": "https://github.com/aws/agent-toolkit-for-aws"
+    },
+    {
+      "title": "pollen-robotics/microduck",
+      "url": "https://github.com/pollen-robotics/microduck"
+    },
+    {
+      "title": "MiniMax-M3.1-Flash",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+    },
+    {
+      "title": "图解信息论：从编码走到熵、交叉熵与互信息",
+      "url": "https://colah.github.io/posts/2015-09-Visual-Information/"
+    },
+    {
+      "title": "OBS Studio 33：浏览器源与插件目录一起更新",
+      "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0"
+    },
+    {
+      "title": "分布式 SQLite：复制、备份与合并各解决什么问题？",
+      "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/"
+    },
+    {
+      "title": "Goose：用数据栈约束换取连续布局",
+      "url": "https://aardappel.github.io/goose/"
+    },
+    {
+      "title": "往期佳作·2026-03-09｜细胞核的入口，怎样一边放行一边拦截？",
+      "url": "https://www.quantamagazine.org/disorder-drives-one-of-natures-most-complex-machines-20260309/"
+    },
+    {
+      "title": "往期佳作·2018-04-23｜“平庸之恶”：一个概念与它的历史争议",
+      "url": "https://aeon.co/ideas/what-did-hannah-arendt-really-mean-by-the-banality-of-evil"
+    }
+  ],
+  "public_reviewed": true
+}

@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-25">2026-10-25</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">本期关注代理工具、机器人运行系统、多模态模型与信息论图解，并阅读分布式数据库、系统语言及科学人文资料。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-7">🧠 AI/模型</a></li><li><a href="#section-14">🔥 热议话题</a></li><li><a href="#section-24">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/aws/agent-toolkit-for-aws" rel="noreferrer">aws/agent-toolkit-for-aws</a></h3>
+<p class="item-meta">⭐+13 · Python · GitHub stars today（非北京时间自然日）</p>
+<p>把 AWS 文档检索、任务技能与云服务工具接到编码代理中，技能按需加载，工具调用可用 IAM 条件单独限制。<br>适合梳理代理部署与运维流程；读文档不需云账号，但实际 API 操作需要凭据、最小权限与审计配置。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/pollen-robotics/microduck" rel="noreferrer">pollen-robotics/microduck</a></h3>
+<p class="item-meta">⭐+319 · Rust · GitHub stars today（非北京时间自然日）</p>
+<p>把学习得到的策略接到小型双足机器人的控制、相机与更新流程：训练侧使用 MuJoCo/PPO，运行侧加载 ONNX，并统一通过 JSON-RPC 控制。<br>适合沿代码学习仿真到实机的接口与运行保障；本库主要提供运行系统，训练代码在独立仓库，实机复现还需对应硬件。</p>
+</article>
+<h2 id="section-7">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash" rel="noreferrer">MiniMax-M3.1-Flash</a></h3>
+<p class="item-meta">HF trendingScore 榜单 · 不等于今日新发布</p>
+<p>面向编码与多模态代理，接收文本、图片和视频并生成文本；用全层稀疏注意力、量化感知训练，以及先预测候选词再验证的草稿机制改善推理。<br>适合研究稀疏模型的部署组合，但约 428B 总参数仍带来较高硬件门槛；投机解码需要兼容框架，上下文与吞吐也受显存和配置约束。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://colah.github.io/posts/2015-09-Visual-Information/" rel="noreferrer">图解信息论：从编码走到熵、交叉熵与互信息</a></h3>
+<p class="item-meta">深度精选 · 2015-10-14</p>
+<p>从怎样给常见符号分配短码讲起，用面积图串起熵、交叉熵、KL散度和互信息，解释这些量分别在衡量什么。<br>适合补齐损失函数与压缩的共同直觉；以图解和推导为主，分数码长对应长期平均，KL也不能当作普通距离。</p>
+</article>
+<h2 id="section-14">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/obsproject/obs-studio/releases/tag/33.0.0" rel="noreferrer">OBS Studio 33：浏览器源与插件目录一起更新</a> <a href="https://news.ycombinator.com/item?id=50218430" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 近24小时讨论 · 官方版本 33.0.0</p>
+<p>这次更新重点在浏览器源与插件加载：升级内嵌浏览器框架，重新组织插件目录，并改进预览里的素材吸附与数值输入。<br>录制技术演示或维护自定义插件时值得核对迁移说明；旧插件目录仅保留到 34 版前，升级前仍应检查插件和操作系统支持。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://philipotoole.com/twelve-years-of-distributed-sqlite/" rel="noreferrer">分布式 SQLite：复制、备份与合并各解决什么问题？</a> <a href="https://news.ycombinator.com/item?id=50217500" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 近24小时讨论 · 原文 2026-10-23</p>
+<p>rqlite 作者回顾十二年实践，把分布式 SQLite 分为共识复制、日志备份和多写者合并，解释一致性、灾后恢复与离线协作的不同需求。<br>适合选型前先厘清系统保证：多数节点确认写入，与单机日志备份解决的不是同一问题，不能只因都叫分布式 SQLite 就互相替代。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aardappel.github.io/goose/" rel="noreferrer">Goose：用数据栈约束换取连续布局</a> <a href="https://news.ycombinator.com/item?id=50224100" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 近24小时讨论 · 项目首次发布日期未核实</p>
+<p>用编译器安排的数据栈保存动态对象，离开作用域时统一回收；配合连续布局和相对引用，把内存管理与数据表示放在一起设计。<br>适合比较系统语言如何用限制换效率；变长元素数组等结构有访问约束，项目仍新，官网基准不能外推成普遍快于 C++ 或 Rust。</p>
+</article>
+<h2 id="section-24">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/disorder-drives-one-of-natures-most-complex-machines-20260309/" rel="noreferrer">往期佳作·2026-03-09｜细胞核的入口，怎样一边放行一边拦截？</a></h3>
+<p class="item-meta">Quanta · 2026-03-09 · 往期佳作</p>
+<p>核孔不是一个敞开的洞：不断摆动的蛋白质与运输蛋白共同塑造动态屏障。文章结合酵母核孔的高速显微影像和计算模型，探查分子如何被放行或拦截。<br>适合观察生物学如何把静态结构推进到动态机制；研究支持更灵活的屏障模型，但“刷状”与“凝胶状”结构是否并存，仍有争论。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/ideas/what-did-hannah-arendt-really-mean-by-the-banality-of-evil" rel="noreferrer">往期佳作·2018-04-23｜“平庸之恶”：一个概念与它的历史争议</a></h3>
+<p class="item-meta">Aeon · 2018-04-23 · 往期佳作</p>
+<p>Thomas White 梳理阿伦特对艾希曼的描述，以及后续史料对其动机判断的挑战，区分一个人的日常外表、意识形态与所实施的罪行。<br>这是一篇有明确批评立场的哲学评论；它也提醒，“平庸”不等于无罪，讨论行动者的心理不能代替对行为责任的判断。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/aws/agent-toolkit-for-aws" rel="noreferrer">aws/agent-toolkit-for-aws</a></li><li><a href="https://github.com/pollen-robotics/microduck" rel="noreferrer">pollen-robotics/microduck</a></li><li><a href="https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash" rel="noreferrer">MiniMax-M3.1-Flash</a></li><li><a href="https://colah.github.io/posts/2015-09-Visual-Information/" rel="noreferrer">图解信息论：从编码走到熵、交叉熵与互信息</a></li><li><a href="https://github.com/obsproject/obs-studio/releases/tag/33.0.0" rel="noreferrer">OBS Studio 33：浏览器源与插件目录一起更新</a></li><li><a href="https://philipotoole.com/twelve-years-of-distributed-sqlite/" rel="noreferrer">分布式 SQLite：复制、备份与合并各解决什么问题？</a></li><li><a href="https://aardappel.github.io/goose/" rel="noreferrer">Goose：用数据栈约束换取连续布局</a></li><li><a href="https://www.quantamagazine.org/disorder-drives-one-of-natures-most-complex-machines-20260309/" rel="noreferrer">往期佳作·2026-03-09｜细胞核的入口，怎样一边放行一边拦截？</a></li><li><a href="https://aeon.co/ideas/what-did-hannah-arendt-really-mean-by-the-banality-of-evil" rel="noreferrer">往期佳作·2018-04-23｜“平庸之恶”：一个概念与它的历史争议</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-25 · 43 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
