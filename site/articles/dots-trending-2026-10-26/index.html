@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-26">2026-10-26</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">本期阅读代理开发与审查工具、可解释性和 GPU 并行教程，并关注模型部署、上下文组织与科学判断。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-10">🧠 AI/模型</a></li><li><a href="#section-20">🔥 热议话题</a></li><li><a href="#section-30">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/Nutlope/hallmark" rel="noreferrer">Nutlope/hallmark</a></h3>
+<p class="item-meta">⭐+1,317 · CSS · GitHub stars today（非北京时间自然日）</p>
+<p>把页面目标、主题素材和浏览器检查串成设计流程，分别检查可访问性、常见模板化布局与细节完成度。<br>适合研究编码代理怎样保留既有交互并改版；完整视觉检查需要 Chrome，静态检查不能替代手机端实际验收。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/JetBrains/thinkrail" rel="noreferrer">JetBrains/thinkrail</a> <a href="https://news.ycombinator.com/item?id=50233294" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">⭐+51 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>围绕 pi 编码代理搭建编辑器、终端和审查界面，用独立工作区隔开并行任务，再用随代码维护的规格文档保存项目意图。<br>适合观察代理如何嵌入开发流程；工作区隔离不等于安全沙箱，实际使用仍需配置模型服务与工具权限。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/cloudflare/security-audit-skill" rel="noreferrer">cloudflare/security-audit-skill</a></h3>
+<p class="item-meta">⭐+2,878 · JavaScript · GitHub stars today（非北京时间自然日）</p>
+<p>把漏洞搜寻、反证验证和报告生成分开，由独立代理核对证据，并记录已覆盖范围、待核实线索与被推翻的候选。<br>适合借鉴多代理审查的证据管理；运行待审代码要求操作系统级隔离，条件不足时只能保留待验证结论。</p>
+</article>
+<h2 id="section-10">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/Nanbeige/Nanbeige4.3-33B" rel="noreferrer">Nanbeige4.3-33B：为工具调用保留跨轮推理</a></h3>
+<p class="item-meta">HF 当前热榜 · 不代表今日首发</p>
+<p>面向编码和办公代理，模板可分别控制当前是否思考、是否保留前几轮推理，并支持结构化工具调用。<br>团队将它定位为后续小模型蒸馏的教师，模型卡提供部署和评测配置；小模型蒸馏仍属计划，所列成绩是团队自报。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://distill.pub/2017/feature-visualization/" rel="noreferrer">特征可视化：怎样看见神经网络在寻找什么</a></h3>
+<p class="item-meta">深度精选·2017-11-07</p>
+<p>从随机噪声出发，固定网络、优化输入，让指定神经元或通道更活跃，再比较多种输入揭示它偏好的特征。<br>文章配有图解与开源实现，细讲正则化、参数化和特征组合；适合理解可解释性实验，也提醒你别把一张合成图当作完整解释。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://raphlinus.github.io/gpu/2020/04/30/prefix-sum.html" rel="noreferrer">GPU 前缀和：从顺序累加走到并行协作</a></h3>
+<p class="item-meta">深度精选·2020-04-30</p>
+<p>以“累加到当前位置”为例，沿 Vulkan 实现讨论线程协作、内存顺序与动态分配，解释为何算得对还需要调度与同步保证。<br>正文链接原型代码和算法资料，适合学习 GPU 并发的正确性边界；硬件与接口结论属于当时版本，应结合文末后续文章阅读。</p>
+</article>
+<h2 id="section-20">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras" rel="noreferrer">Cerebras：让权重驻留，把请求送过推理流水线</a> <a href="https://news.ycombinator.com/item?id=50227356" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 近24小时讨论 · 原文2026-10-22</p>
+<p>以大模型为例，按权重和请求状态占用把层分配到多块晶圆，再只传递中间计算结果，让不同请求同时占据不同流水级。<br>文章解释片上缓存如何限制并发，以及小批量怎样权衡延迟和吞吐；容量推算依赖量化与上下文长度假设，不是通用性能保证。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/slee-persis/GVS5H" rel="noreferrer">GVS5H：把多次模型调用组织成可追踪的协作</a> <a href="https://news.ycombinator.com/item?id=50228167" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 近24小时讨论 · 研究代码与运行记录</p>
+<p>让同一模型的新实例通过共享文件保存计划、笔记与当前解法，用任务分解和持久状态组织推理，而不额外训练模型。<br>仓库提供代码与运行记录，适合研究测试时计算如何分配；提升来自特定编程题评测，部分模型没有改善，不能推广为全面能力追平。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html" rel="noreferrer">上下文工程：哪些信息该留下，哪些工作该交给代码？</a> <a href="https://news.ycombinator.com/item?id=50235780" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 近24小时讨论 · 原文2026-10-24</p>
+<p>从错误事实、无关信息与工具冲突讲起，再用一个代理循环串起工具筛选、独立子任务、历史裁剪和摘要。<br>适合系统梳理代理输入如何动态组织，以及哪些约束应写进确定性代码；文中演示用于解释机制，不是这些做法普遍有效的实验结论。</p>
+</article>
+<h2 id="section-30">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/how-paradoxical-questions-and-simple-wonder-lead-to-great-science-20250528/" rel="noreferrer">往期佳作·2025-05-28｜从纸显微镜到细胞折纸：好问题怎样长出来？</a></h3>
+<p class="item-meta">Quanta · 科学家访谈</p>
+<p>Manu Prakash 从纸显微镜、海洋细胞的浮沉与伸缩结构讲起，展示怎样把日常观察变成可测量的研究问题。<br>访谈串起低成本仪器与基础研究：工具让更多人看到现象，新的疑问又推动工具设计；纸显微镜主要用于教育，不能直接等同于临床诊断设备。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/a-good-sceptic-has-more-than-doubt-and-less-than-certainty" rel="noreferrer">往期佳作·2026-09-21｜没有绝对把握，怎样仍能作出判断？</a></h3>
+<p class="item-meta">Aeon · 哲学随笔</p>
+<p>哲学家 Massimo Pigliucci 借西塞罗的怀疑主义，讨论如何按证据强弱持有观点：暂时采纳最可靠的解释，同时保留修改它的条件。<br>文章把方法落到区分价值与事实、认真反驳自己等习惯；这里的“可信”是哲学判断标准，不等同于现代统计概率。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/Nutlope/hallmark" rel="noreferrer">Nutlope/hallmark</a></li><li><a href="https://github.com/JetBrains/thinkrail" rel="noreferrer">JetBrains/thinkrail</a></li><li><a href="https://news.ycombinator.com/item?id=50233294" rel="noreferrer">讨论：JetBrains/thinkrail</a></li><li><a href="https://github.com/cloudflare/security-audit-skill" rel="noreferrer">cloudflare/security-audit-skill</a></li><li><a href="https://huggingface.co/Nanbeige/Nanbeige4.3-33B" rel="noreferrer">Nanbeige4.3-33B：为工具调用保留跨轮推理</a></li><li><a href="https://distill.pub/2017/feature-visualization/" rel="noreferrer">特征可视化：怎样看见神经网络在寻找什么</a></li><li><a href="https://raphlinus.github.io/gpu/2020/04/30/prefix-sum.html" rel="noreferrer">GPU 前缀和：从顺序累加走到并行协作</a></li><li><a href="https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras" rel="noreferrer">Cerebras：让权重驻留，把请求送过推理流水线</a></li><li><a href="https://news.ycombinator.com/item?id=50227356" rel="noreferrer">讨论：Cerebras：让权重驻留，把请求送过推理流水线</a></li><li><a href="https://github.com/slee-persis/GVS5H" rel="noreferrer">GVS5H：把多次模型调用组织成可追踪的协作</a></li><li><a href="https://news.ycombinator.com/item?id=50228167" rel="noreferrer">讨论：GVS5H：把多次模型调用组织成可追踪的协作</a></li><li><a href="https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html" rel="noreferrer">上下文工程：哪些信息该留下，哪些工作该交给代码？</a></li><li><a href="https://news.ycombinator.com/item?id=50235780" rel="noreferrer">讨论：上下文工程：哪些信息该留下，哪些工作该交给代码？</a></li><li><a href="https://www.quantamagazine.org/how-paradoxical-questions-and-simple-wonder-lead-to-great-science-20250528/" rel="noreferrer">往期佳作·2025-05-28｜从纸显微镜到细胞折纸：好问题怎样长出来？</a></li><li><a href="https://aeon.co/essays/a-good-sceptic-has-more-than-doubt-and-less-than-certainty" rel="noreferrer">往期佳作·2026-09-21｜没有绝对把握，怎样仍能作出判断？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-26 · 44 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
