@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "channel": "exploration",
+      "date": "2026-10-27",
+      "disclosures": 0,
+      "id": "technical-archaeology-2026-10-27",
+      "images": [],
+      "revision": 1,
+      "series": "技术考古",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-10-27",
       "disclosures": 0,
@@ -526,9 +536,9 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 46,
+  "articles_count": 47,
   "channels": {
-    "exploration": 21,
+    "exploration": 22,
     "trending": 25
   },
   "end": "2026-10-27",
