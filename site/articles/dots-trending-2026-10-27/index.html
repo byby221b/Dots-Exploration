@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-27">2026-10-27</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">从代理技能审查、端侧语音识别到 CPU 向量化，再看打印版式、类型分析与群体决策。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-10">🧠 AI/模型</a></li><li><a href="#section-17">🔥 热议话题</a></li><li><a href="#section-27">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/NVIDIA/SkillSpector" rel="noreferrer">NVIDIA/SkillSpector</a></h3>
+<p class="item-meta">⭐+214 · Python · GitHub stars today（非北京时间自然日）</p>
+<p>在安装代理技能前，先用静态规则扫描代码与提示词，再按需调用语言模型判断语义风险，覆盖提示注入、数据外传等问题。<br>可输出 JSON、Markdown 和 SARIF 报告，并用基线压低重复告警，适合接入安装审核；扫描通过不等于安全保证。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/makecindy/cindy" rel="noreferrer">makecindy/cindy</a></h3>
+<p class="item-meta">⭐+1,296 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>把 Claude Code、Codex 等执行框架放进同一客户端，切换模型时保留工作区、记忆和工具，也支持多代理分工。<br>适合研究跨框架的任务编排；公开仓库仅含桌面、移动客户端与共享包，后端服务另行维护，并非整套系统都已开源。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/KrushnaVardhanReddy/PaperPilot" rel="noreferrer">KrushnaVardhanReddy/PaperPilot</a> <a href="https://news.ycombinator.com/item?id=50238739" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · Rust</p>
+<p>用同一套 Rust 内核提供 PDF 合并、拆分、压缩与文字识别，并暴露命令行、浏览器和 MCP 工具接口。<br>适合把本地文档处理接入代理工作流；当前版本仍把 PDF 转 Office 等能力列在路线图，接入云端代理也须另查数据流向。</p>
+</article>
+<h2 id="section-10">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://pytorch.org/blog/optimizing-streaming-speech-recognition-on-arm-edge-devices-with-executorch/" rel="noreferrer">流式语音识别：把分块长度、精度与设备延迟一起测</a></h3>
+<p class="item-meta">PyTorch · 2026-10-26</p>
+<p>以手机上的实时转写为例，联合选择音频分块长度与数值精度，再用算子计时和原生内核采样定位计算与数据搬运瓶颈。<br>适合学习端侧推理怎样同时评估识别质量和响应速度；文中的首字延迟是条件估计，不能当作真实用户录音的端到端实测。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://nullprogram.com/blog/2015/07/10/" rel="noreferrer">从逐点计算到向量通道：用分形图学习 SIMD</a></h3>
+<p class="item-meta">深度精选·2015-07-10 · C / CPU 向量化</p>
+<p>从单个像素的复数迭代出发，把同一计算改写成四路、八路并行的向量指令，并与按行分配的多线程配合。<br>教程附 C 实现与分步计时，适合理解 CPU 向量化；性能和编译器细节来自当时的硬件与工具链，实践时需按当前平台核对。</p>
+</article>
+<h2 id="section-17">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://brennenputh.me/blog/printable-websites/" rel="noreferrer">网页也应有一套适合打印的版式</a> <a href="https://news.ycombinator.com/item?id=50241664" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · 原文2026-10-24</p>
+<p>作者从打印自己的博客入手，用专门的 CSS 隐藏导航、调整字号，并处理黑白输出，展示屏幕版式为何不能直接照搬到纸上。<br>改动很小，却能改善技术文章的批注与离线阅读；文中也承认代码块分页仍有缺陷，这是一份具体实践而非完善模板。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://pharo.org/news/2026-10-26-Pharo14Release.html" rel="noreferrer">Pharo 14：继续打磨可即时修改的编程环境</a> <a href="https://news.ycombinator.com/item?id=50241925" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · 官方发布2026-10-26</p>
+<p>这个面向对象语言把编辑、测试与调试放进持续运行的环境；第14版更新工具界面、统一重构命令，并扩展命令行测试和调试。<br>虚拟机新增 RISC-V 即时编译支持，并改进栈与内存管理。适合观察交互式开发工具如何与语言运行时一起演进。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md" rel="noreferrer">Type Server Protocol：把 Python 类型分析开放给工具</a> <a href="https://news.ycombinator.com/item?id=50248371" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · 既有协议文档</p>
+<p>微软的协议让工具通过 JSON-RPC 查询推断类型、显式声明类型和上下文期望类型，并用快照标识结果对应的代码状态。<br>额外只读连接可并发查询，文件变化则使旧快照失效；适合理解分析服务怎样共享状态。此次是新讨论，并非宣称协议今日发布。</p>
+</article>
+<h2 id="section-27">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/how-voting-is-like-a-klein-bottle-20261026/" rel="noreferrer">投票悖论，为什么会长成克莱因瓶？</a></h3>
+<p class="item-meta">Quanta · 2026-10-26</p>
+<p>每个人的排序都自洽，多数票却可能绕成“甲胜乙、乙胜丙、丙胜甲”的循环。文章把三候选人的偏好拼成几何结构，解释克莱因瓶模型的来历。<br>这让群体决策的结构性限制更直观；它没有找出万能投票规则，制度设计仍须明确愿意接受哪些取舍。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/what-cooperatives-for-an-anticapitalist-peace-look-like" rel="noreferrer">和平协议之后，怎样重建共同生活？</a></h3>
+<p class="item-meta">Aeon · 2026-10-26 · 田野研究随笔</p>
+<p>作者结合叙利亚北部与哥伦比亚的田野经历，讨论合作社如何通过共同生产、照护与议事，修复被冲突打断的社会关系。<br>文章主张把生计和自主权纳入和平建设，也交代市场与政治环境的约束；这是有明确立场的案例论证，不是普遍有效的因果结论。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/NVIDIA/SkillSpector" rel="noreferrer">NVIDIA/SkillSpector</a></li><li><a href="https://github.com/makecindy/cindy" rel="noreferrer">makecindy/cindy</a></li><li><a href="https://github.com/KrushnaVardhanReddy/PaperPilot" rel="noreferrer">KrushnaVardhanReddy/PaperPilot</a></li><li><a href="https://news.ycombinator.com/item?id=50238739" rel="noreferrer">讨论：KrushnaVardhanReddy/PaperPilot</a></li><li><a href="https://pytorch.org/blog/optimizing-streaming-speech-recognition-on-arm-edge-devices-with-executorch/" rel="noreferrer">流式语音识别：把分块长度、精度与设备延迟一起测</a></li><li><a href="https://nullprogram.com/blog/2015/07/10/" rel="noreferrer">从逐点计算到向量通道：用分形图学习 SIMD</a></li><li><a href="https://brennenputh.me/blog/printable-websites/" rel="noreferrer">网页也应有一套适合打印的版式</a></li><li><a href="https://news.ycombinator.com/item?id=50241664" rel="noreferrer">讨论：网页也应有一套适合打印的版式</a></li><li><a href="https://pharo.org/news/2026-10-26-Pharo14Release.html" rel="noreferrer">Pharo 14：继续打磨可即时修改的编程环境</a></li><li><a href="https://news.ycombinator.com/item?id=50241925" rel="noreferrer">讨论：Pharo 14：继续打磨可即时修改的编程环境</a></li><li><a href="https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md" rel="noreferrer">Type Server Protocol：把 Python 类型分析开放给工具</a></li><li><a href="https://news.ycombinator.com/item?id=50248371" rel="noreferrer">讨论：Type Server Protocol：把 Python 类型分析开放给工具</a></li><li><a href="https://www.quantamagazine.org/how-voting-is-like-a-klein-bottle-20261026/" rel="noreferrer">投票悖论，为什么会长成克莱因瓶？</a></li><li><a href="https://aeon.co/essays/what-cooperatives-for-an-anticapitalist-peace-look-like" rel="noreferrer">和平协议之后，怎样重建共同生活？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-27 · 46 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

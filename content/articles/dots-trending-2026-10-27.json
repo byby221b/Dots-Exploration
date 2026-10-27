@@ -1,0 +1,216 @@
+{
+  "id": "dots-trending-2026-10-27",
+  "revision": 1,
+  "date": "2026-10-27",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "从代理技能审查、端侧语音识别到 CPU 向量化，再看打印版式、类型分析与群体决策。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "系统工程",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+214 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "在安装代理技能前，先用静态规则扫描代码与提示词，再按需调用语言模型判断语义风险，覆盖提示注入、数据外传等问题。\n可输出 JSON、Markdown 和 SARIF 报告，并用基线压低重复告警，适合接入安装审核；扫描通过不等于安全保证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[makecindy/cindy](https://github.com/makecindy/cindy)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1,296 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 Claude Code、Codex 等执行框架放进同一客户端，切换模型时保留工作区、记忆和工具，也支持多代理分工。\n适合研究跨框架的任务编排；公开仓库仅含桌面、移动客户端与共享包，后端服务另行维护，并非整套系统都已开源。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[KrushnaVardhanReddy/PaperPilot](https://github.com/KrushnaVardhanReddy/PaperPilot) [讨论](https://news.ycombinator.com/item?id=50238739)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · Rust"
+    },
+    {
+      "type": "paragraph",
+      "text": "用同一套 Rust 内核提供 PDF 合并、拆分、压缩与文字识别，并暴露命令行、浏览器和 MCP 工具接口。\n适合把本地文档处理接入代理工作流；当前版本仍把 PDF 转 Office 等能力列在路线图，接入云端代理也须另查数据流向。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[流式语音识别：把分块长度、精度与设备延迟一起测](https://pytorch.org/blog/optimizing-streaming-speech-recognition-on-arm-edge-devices-with-executorch/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "PyTorch · 2026-10-26"
+    },
+    {
+      "type": "paragraph",
+      "text": "以手机上的实时转写为例，联合选择音频分块长度与数值精度，再用算子计时和原生内核采样定位计算与数据搬运瓶颈。\n适合学习端侧推理怎样同时评估识别质量和响应速度；文中的首字延迟是条件估计，不能当作真实用户录音的端到端实测。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从逐点计算到向量通道：用分形图学习 SIMD](https://nullprogram.com/blog/2015/07/10/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2015-07-10 · C / CPU 向量化"
+    },
+    {
+      "type": "paragraph",
+      "text": "从单个像素的复数迭代出发，把同一计算改写成四路、八路并行的向量指令，并与按行分配的多线程配合。\n教程附 C 实现与分步计时，适合理解 CPU 向量化；性能和编译器细节来自当时的硬件与工具链，实践时需按当前平台核对。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[网页也应有一套适合打印的版式](https://brennenputh.me/blog/printable-websites/) [讨论](https://news.ycombinator.com/item?id=50241664)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-24"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从打印自己的博客入手，用专门的 CSS 隐藏导航、调整字号，并处理黑白输出，展示屏幕版式为何不能直接照搬到纸上。\n改动很小，却能改善技术文章的批注与离线阅读；文中也承认代码块分页仍有缺陷，这是一份具体实践而非完善模板。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Pharo 14：继续打磨可即时修改的编程环境](https://pharo.org/news/2026-10-26-Pharo14Release.html) [讨论](https://news.ycombinator.com/item?id=50241925)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 官方发布2026-10-26"
+    },
+    {
+      "type": "paragraph",
+      "text": "这个面向对象语言把编辑、测试与调试放进持续运行的环境；第14版更新工具界面、统一重构命令，并扩展命令行测试和调试。\n虚拟机新增 RISC-V 即时编译支持，并改进栈与内存管理。适合观察交互式开发工具如何与语言运行时一起演进。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Type Server Protocol：把 Python 类型分析开放给工具](https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md) [讨论](https://news.ycombinator.com/item?id=50248371)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 既有协议文档"
+    },
+    {
+      "type": "paragraph",
+      "text": "微软的协议让工具通过 JSON-RPC 查询推断类型、显式声明类型和上下文期望类型，并用快照标识结果对应的代码状态。\n额外只读连接可并发查询，文件变化则使旧快照失效；适合理解分析服务怎样共享状态。此次是新讨论，并非宣称协议今日发布。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[投票悖论，为什么会长成克莱因瓶？](https://www.quantamagazine.org/how-voting-is-like-a-klein-bottle-20261026/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-10-26"
+    },
+    {
+      "type": "paragraph",
+      "text": "每个人的排序都自洽，多数票却可能绕成“甲胜乙、乙胜丙、丙胜甲”的循环。文章把三候选人的偏好拼成几何结构，解释克莱因瓶模型的来历。\n这让群体决策的结构性限制更直观；它没有找出万能投票规则，制度设计仍须明确愿意接受哪些取舍。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[和平协议之后，怎样重建共同生活？](https://aeon.co/essays/what-cooperatives-for-an-anticapitalist-peace-look-like)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-10-26 · 田野研究随笔"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者结合叙利亚北部与哥伦比亚的田野经历，讨论合作社如何通过共同生产、照护与议事，修复被冲突打断的社会关系。\n文章主张把生计和自主权纳入和平建设，也交代市场与政治环境的约束；这是有明确立场的案例论证，不是普遍有效的因果结论。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NVIDIA/SkillSpector",
+      "url": "https://github.com/NVIDIA/SkillSpector"
+    },
+    {
+      "title": "makecindy/cindy",
+      "url": "https://github.com/makecindy/cindy"
+    },
+    {
+      "title": "KrushnaVardhanReddy/PaperPilot",
+      "url": "https://github.com/KrushnaVardhanReddy/PaperPilot"
+    },
+    {
+      "title": "讨论：KrushnaVardhanReddy/PaperPilot",
+      "url": "https://news.ycombinator.com/item?id=50238739"
+    },
+    {
+      "title": "流式语音识别：把分块长度、精度与设备延迟一起测",
+      "url": "https://pytorch.org/blog/optimizing-streaming-speech-recognition-on-arm-edge-devices-with-executorch/"
+    },
+    {
+      "title": "从逐点计算到向量通道：用分形图学习 SIMD",
+      "url": "https://nullprogram.com/blog/2015/07/10/"
+    },
+    {
+      "title": "网页也应有一套适合打印的版式",
+      "url": "https://brennenputh.me/blog/printable-websites/"
+    },
+    {
+      "title": "讨论：网页也应有一套适合打印的版式",
+      "url": "https://news.ycombinator.com/item?id=50241664"
+    },
+    {
+      "title": "Pharo 14：继续打磨可即时修改的编程环境",
+      "url": "https://pharo.org/news/2026-10-26-Pharo14Release.html"
+    },
+    {
+      "title": "讨论：Pharo 14：继续打磨可即时修改的编程环境",
+      "url": "https://news.ycombinator.com/item?id=50241925"
+    },
+    {
+      "title": "Type Server Protocol：把 Python 类型分析开放给工具",
+      "url": "https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md"
+    },
+    {
+      "title": "讨论：Type Server Protocol：把 Python 类型分析开放给工具",
+      "url": "https://news.ycombinator.com/item?id=50248371"
+    },
+    {
+      "title": "投票悖论，为什么会长成克莱因瓶？",
+      "url": "https://www.quantamagazine.org/how-voting-is-like-a-klein-bottle-20261026/"
+    },
+    {
+      "title": "和平协议之后，怎样重建共同生活？",
+      "url": "https://aeon.co/essays/what-cooperatives-for-an-anticapitalist-peace-look-like"
+    }
+  ],
+  "public_reviewed": true
+}
