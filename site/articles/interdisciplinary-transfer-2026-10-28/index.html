@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>让个人回答带点随机，怎样学到总体分布？ · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">跨学科偷师 / <time datetime="2026-10-28">2026-10-28</time> / 修订 1</p><h1>让个人回答带点随机，怎样学到总体分布？</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-2">先看一个人的回答怎样改变</a></li><li><a href="#section-6">再看一千个回答怎样合起来</a></li><li><a href="#section-12">从问卷到机器学习，什么保持不变</a></li><li><a href="#section-16">成立的关键，藏在服务器知道的那条规则里</a></li><li><a href="#section-18">可选深入：检验一次协议版本混用</a></li></ol></nav><div class="prose"><div class="article-content"><p>给每个回答加入规则已知的随机扰动，可以让单个回答不再直接暴露真值；收集足够多回答后，又能校正扰动，估计总体比例。问卷调查里的这套办法，后来被迁移到客户端统计与分布学习。</p>
+<p>主文约4分钟。我们只看一个问题：一项功能究竟有多少人启用？目标是知道比例，不是查出谁启用了它。</p>
+<h2 id="section-2">先看一个人的回答怎样改变</h2>
+<p>设备知道真实答案，但不把它原样上传。每次独立做一次随机选择：75%的概率报告真实答案，25%的概率把“是”和“否”互换；只发送最终答案，不发送这次是否翻转。这样的做法叫随机化回答。[1]</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">设备的真实状态</th><th scope="col">报告“是”的概率</th><th scope="col">报告“否”的概率</th></tr></thead><tbody><tr><td>已启用</td><td>75%</td><td>25%</td></tr><tr><td>未启用</td><td>25%</td><td>75%</td></tr></tbody></table></div>
+<p>服务器看见一个“是”，可能来自已启用的设备，也可能来自一次翻转。因此，它不能把报告直接当作这个人的真实状态。不过，两种情况下出现“是”的概率仍相差3倍：信息泄露受到限制，并没有完全消失。网络身份、其他日志等信息，也不会被这次翻转自动隐藏。</p>
+<h2 id="section-6">再看一千个回答怎样合起来</h2>
+<p>用一个人为构造的例子：1000台设备中，400台启用、600台未启用。它们遵守同一规则，独立随机化。</p>
+<p>400台启用设备，预计有400×75%=300台报告“是”；600台未启用设备，预计有600×25%=150台报告“是”。加起来，预计收到450个“是”，占45%。这里的450是平均意义上的数量，一次实际收集可能多些，也可能少些。</p>
+<p>服务器虽然不知道真实的400，却知道扰动规则。它可以这样读那张表：无论真实答案怎样，报告“是”都有25%的起点；真实状态从“否”换成“是”，报告“是”的概率再增加50个百分点。因此：</p>
+<p>预计报告“是”的比例 = 25% + 50% × 真实启用比例</p>
+<p>把观察到的比例代进去，便得到一个估计。若这次恰好观察到45%，估计为（45%−25%）÷50%=40%。这一步恢复的是总体比例，不是把450个“是”逐个拆成“哪些是真的、哪些是翻转的”。</p>
+<h2 id="section-12">从问卷到机器学习，什么保持不变</h2>
+<p>调查统计中，受访者持有自己的答案；客户端统计中，设备持有自己的状态。随机规则都在发送之前执行，收集方拿到的是扰动后的报告，再用已知规则估计人群分布。迁移的结构很具体：个人真值对应设备真值，问卷随机选择对应本地随机程序，人群比例对应类别出现的频率。</p>
+<p>RAPPOR 的2014年原文明确承接了早期问卷中的随机化回答，把它用于客户端字符串的群体统计。它还专门处理同一客户端反复报告的问题；实际方案比这里的一次二元回答复杂，不能理解成每天独立翻转一次就一直安全。[1]</p>
+<p>在机器学习里，这首先落到“学习一个类别分布”。ICML 2016 的研究直接比较随机化回答与 RAPPOR 等机制，研究相同隐私约束下怎样更准确地估计类别比例，并指出这类统计能够支持依赖计数的模型。这里的迁移锚点是分布估计，不是声称给任意训练数据加点噪声，就能无损训练神经网络。[2]</p>
+<h2 id="section-16">成立的关键，藏在服务器知道的那条规则里</h2>
+<p>上面的校正要求设备确实执行约定规则，服务器也使用匹配的概率。少量随机波动可以随样本增加而减小；如果程序用错概率，或某类用户更容易拒绝上报，数据多了也不一定能得到正确的人群比例。调查研究同样发现，受访者不理解、不信任或不遵守随机规则，会破坏原有估计依据。[3]</p>
+<h2 id="section-18">可选深入：检验一次协议版本混用</h2>
+<p>下面是本期提出的扩展检验，尚未运行，也不作为新算法主张：同一批报告若混入两种随机规则，按版本分别校正，能否减少错误统一校正造成的偏差？它检查的是规则错配这一工程前提。</p>
+<p>仍用合成数据，把设备分成等大的两组，并让每组的真实启用比例都为40%。第一组以75%的概率报真，第二组改成60%，其余概率都翻转。第一组预计45%报告“是”；第二组预计40%×60%+60%×40%=48%报告“是”。合起来是46.5%。如果服务器误以为所有设备都按75%报真，统一校正会得到43%，而非40%。这3个百分点来自规则错配，不是有限样本随机波动。</p>
+<p>最低成本原型只需两列合成输入：真实二元状态、预先分配的协议版本。每次按上述方式分组并固定各组40%启用，再分别生成总计100、1000、10000条独立设备报告，各重复200次；这些数量是实验设计建议，不是已完成实验。比较三种读法：直接把报告比例当真值、错误地统一校正、按各版本概率校正后按设备数加权。真值只用于离线评估，不交给收集端。</p>
+<p>记录每种读法的平均估计、与40%的差值，以及跨次波动。预计错误统一校正会趋近43%；匹配规则的校正会围绕40%波动，但第二组更难估准。若增加样本后仍有稳定偏差，先查翻转实现、分组权重与参与选择，不应只归因于随机噪声。实际使用协议版本信息也要审查其是否增加识别风险，不能为方便校正额外收集个人敏感字段。</p>
+<p>为什么60%报真那组更难估计？把“报真”的概率记作 t，把真实启用比例记作 p，报告“是”的平均比例记作 q。已启用时报告“是”的概率是 t，未启用时则是1−t，故：</p>
+<p>q = p×t + (1−p)×(1−t) = (1−t) + (2t−1)×p</p>
+<p>所以用观察比例估计 p 时，要先减去1−t，再除以2t−1。t=0.75时除以0.5；t=0.60时除以0.2，同样大小的报告比例波动会被放大更多。t=0.50时，无论真实比例多少，报告平均都是一半“是”，这时已没有可恢复的总体信号。更强的个体掩护与更大的统计代价，在同一个公式中相遇。[2]</p>
+<p>最后还有一个重要边界：有限样本校正偶尔会给出小于0或大于1的结果。它提示估计受噪声影响；强行截回区间虽能得到合法比例，却会改变估计偏差，实验应分别记录原始估计与截断结果。一次回答的保护也不能直接推广到同一个人的无限次独立报告；重复收集要单独分析。[1][2]</p></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://systems.cs.columbia.edu/private-systems-class/papers/Erlingsson2014RAPPOR.pdf" rel="noreferrer">[1] Erlingsson、Pihur、Korolova：RAPPOR（CCS 2014），原始论文全文</a></li><li><a href="https://proceedings.mlr.press/v48/kairouz16.pdf" rel="noreferrer">[2] Kairouz、Bonawitz、Ramage：Discrete Distribution Estimation under Local Privacy（ICML 2016）</a></li><li><a href="https://imai.fas.harvard.edu/research/files/randresp.pdf" rel="noreferrer">[3] Blair、Imai、Zhou：Design and Analysis of the Randomized Response Technique（JASA 2015），作者全文</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-28 · 49 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
