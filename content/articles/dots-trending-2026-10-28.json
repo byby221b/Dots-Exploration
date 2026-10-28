@@ -1,0 +1,192 @@
+{
+  "id": "dots-trending-2026-10-28",
+  "revision": 1,
+  "date": "2026-10-28",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "从编码代理与科学任务编排，到持续学习和缓存一致性，再看交互式模拟与失去的哲学。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "系统工程",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1,598 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把文档知识库、问答、出题与掌握度练习放进同一学习工作区，检索引擎和学习上下文可跨模式复用。\n它还提供带标准答案片段的检索评测，便于比较召回与排序；这些指标衡量资料检索，不等于已经证明辅导能提升学习效果。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[obra/superpowers](https://github.com/obra/superpowers)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+617 · Shell · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把需求澄清、设计确认、任务拆解、测试先行和代码审查编成可组合技能，让编码代理按可检查的步骤推进。\n适合观察怎样把工程规范接进代理工作流；流程是否奏效，仍要通过实际运行测试、检查结果来判断。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[gitroomhq/postiz-app](https://github.com/gitroomhq/postiz-app)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+951 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把多平台内容排期、团队协作和数据分析集中到自托管服务，并提供 API 接入自动化工作流。\n可借鉴其任务调度与渠道集成方式；部署前仍需按渠道申请开发者应用，并配置相应权限。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Sage-A1.5：让科学任务拆分与途中自检可配置](https://huggingface.co/InternScience/Sage-A1.5)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "这款35B混合专家模型面向长流程科学任务，借助工具把独立问题分给并行子代理，再汇总各自上下文中的结果。\n编排与自检模式均需主动启用：执行框架负责启动子代理，自检则是模型内部复盘，并非独立验证器。适合研究长任务如何组织与纠偏。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Sleep：把短期上下文巩固进长期参数](https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google Research · 2026-10-27"
+    },
+    {
+      "type": "paragraph",
+      "text": "将在线接收信息与离线训练交替进行：启用预留的专家子网络，用蒸馏把短期记忆写入长期参数，再筛选自生成样本继续练习。\n作者在持续翻译、知识吸收与推理任务上检验这种安排；适合研究新信息怎样转为可保留的知识，专家模块预先配置，训练规则由人设定。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[缓存一致性：一次写入为何要先取得独占权？](https://fgiesen.wordpress.com/2014/07/07/cache-coherency/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2014-07-07 · CPU 缓存与并发"
+    },
+    {
+      "type": "paragraph",
+      "text": "从缓存行的读写出发，逐步引入共享、独占、修改、失效四种状态，说明多个核心如何协调同一份数据。\n教程再连接写缓冲与内存顺序，适合理清并发程序的正确性与通信代价；采用简化协议模型，不能直接替代具体处理器的同步规范。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Ghostty 1.4：把终端输入、解析与内存回收分开优化](https://ghostty.org/docs/install/release-notes/1-4-0) [讨论](https://news.ycombinator.com/item?id=50261998)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 官方发布2026-10-27"
+    },
+    {
+      "type": "paragraph",
+      "text": "新版终端将伪终端读取与解析分到不同线程，并在空闲时压缩不可见的滚动历史，减少高输出负载下的等待和常驻内存。\n发布说明同时列出图像协议支持和多项安全修复。它是理解终端性能的具体案例；文中吞吐与内存收益依赖平台和测试负载。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Genie 4：让场景生成接收持续交互](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/) [讨论](https://news.ycombinator.com/item?id=50261319)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 研究预览"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google DeepMind 的研究预览把画面、环境音和对话一起生成，允许用键盘和文字持续改变场景，并借助 Gemini 维持情境连贯。\n它展示了交互式模拟的方向，但目前只向受信测试者开放；官方仍指出物体持续性、复杂物理和长期一致性会出错，不能视作可靠物理仿真。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[没有死亡的失去，也需要被命名](https://aeon.co/essays/we-need-a-language-to-name-the-grief-that-comes-without-death)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-10-27 · 哲学随笔"
+    },
+    {
+      "type": "paragraph",
+      "text": "失去一段关系或一种人生可能，为何也会像哀伤？作者从个人经历与哲学研究出发，把焦点放在生活结构和自我认同被打断。\n文章讨论共同语言如何让这些损失被理解、被他人看见；这是概念分析与个人叙事，不是诊断标准或治疗建议。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor"
+    },
+    {
+      "title": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers"
+    },
+    {
+      "title": "gitroomhq/postiz-app",
+      "url": "https://github.com/gitroomhq/postiz-app"
+    },
+    {
+      "title": "Sage-A1.5：让科学任务拆分与途中自检可配置",
+      "url": "https://huggingface.co/InternScience/Sage-A1.5"
+    },
+    {
+      "title": "Sleep：把短期上下文巩固进长期参数",
+      "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/"
+    },
+    {
+      "title": "缓存一致性：一次写入为何要先取得独占权？",
+      "url": "https://fgiesen.wordpress.com/2014/07/07/cache-coherency/"
+    },
+    {
+      "title": "Ghostty 1.4：把终端输入、解析与内存回收分开优化",
+      "url": "https://ghostty.org/docs/install/release-notes/1-4-0"
+    },
+    {
+      "title": "讨论：Ghostty 1.4：把终端输入、解析与内存回收分开优化",
+      "url": "https://news.ycombinator.com/item?id=50261998"
+    },
+    {
+      "title": "Genie 4：让场景生成接收持续交互",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+    },
+    {
+      "title": "讨论：Genie 4：让场景生成接收持续交互",
+      "url": "https://news.ycombinator.com/item?id=50261319"
+    },
+    {
+      "title": "没有死亡的失去，也需要被命名",
+      "url": "https://aeon.co/essays/we-need-a-language-to-name-the-grief-that-comes-without-death"
+    }
+  ],
+  "public_reviewed": true
+}
