@@ -1,0 +1,280 @@
+{
+  "id": "dots-trending-2026-10-29",
+  "revision": 1,
+  "date": "2026-10-29",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "开源工具、小模型与同传、优化与模型解释教程，以及蜘蛛丝材料机制。",
+  "topics": [
+    "开源",
+    "人工智能",
+    "工程",
+    "科学"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[elayadesign/ai-design-skills](https://github.com/elayadesign/ai-design-skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+2,139 · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "先围绕受众、单一转化目标和已有证据确定页面论证，再约束字体、间距与动效，让编码代理不从空泛提示开始。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合复用落地页的需求澄清与分段实现流程；目前集合主要是一项技能，固定视觉规则仍需按品牌和真实测试调整。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[macro-inc/macro](https://github.com/macro-inc/macro)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+117 · Rust · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "将邮件、聊天、文档、任务和客户记录放在同一后台，用双向链接保留“为何做这件事”的上下文，并供代理检索。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究团队知识与代理记忆的组织方式；自托管遵循AGPLv3，部署包含多项服务，不能把“开源”理解成轻量即用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[pbakaus/impeccable](https://github.com/pbakaus/impeccable)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1,472 · Rust · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把“更克制、强化层次”等设计意图变成可定位组件的操作，并用确定性规则检查常见样式问题，支持命令行与CI。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合迭代已有界面；源码扫描只覆盖模式规则，对比度等问题要检查实际渲染页，安装钩子也应先审阅。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[LFM3-1.7B：让小模型承接本地工具任务](https://huggingface.co/LiquidAI/LFM3-1.7B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "将短卷积、滑窗注意力和全局注意力组合在约17亿参数模型中，面向本地工具调用、结构化输出与专门任务微调。"
+    },
+    {
+      "type": "paragraph",
+      "text": "可研究小模型如何接入代理；官方不建议用它承担复杂多步推理或代理编程，知识密集任务仍需搭配检索。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Hy-SimulMT：边听边译，权衡等待与准确度](https://huggingface.co/tencent/Hy-SimulMT-30B-A3B-FP8)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 非今日首发"
+    },
+    {
+      "type": "paragraph",
+      "text": "连续接收中英语音并增量生成译文，借助推理服务把等待与翻译质量一起处理，适合探索会议和访谈中的实时辅助。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这份热榜权重是FP8版本，只输出译文；要听到语音或保留音色，还须另接语音合成系统，实际延迟取决于整条处理流程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[PyTorch 2.15：默认通信后端换新，升级要看兼容边界](https://pytorch.org/blog/pytorch-2-15-release-blog/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-28"
+    },
+    {
+      "type": "paragraph",
+      "text": "新版默认启用重写的 NCCL 多卡通信后端，记录通信过程以帮助定位挂起故障；低精度解码也减少了额外内核启动。"
+    },
+    {
+      "type": "paragraph",
+      "text": "做训练或推理部署值得看，升级前须核对 Python、macOS 与梯度类型变化，多项新接口仍不稳定。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[参数对称性：为什么相同函数仍会走出不同训练轨迹？](https://spaces.ac.cn/archives/11985)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-27"
+    },
+    {
+      "type": "paragraph",
+      "text": "从参数缩放出发，区分单个权重与成对参数的对称性，再检查换一种参数表示后更新是否一致，重新推导有效学习率。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究优化器与调参迁移的人；文中逐项标出近似假设，不能把有效学习率当成普遍收敛保证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[扩散与自编码器：从去噪目标建立生成直觉](https://sander.ai/2022/01/31/diffusion.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2022-01-31"
+    },
+    {
+      "type": "paragraph",
+      "text": "从去噪自编码器出发，把噪声预测、分数函数与逐步生成连起来，解释为何一个网络要覆盖不同噪声强度。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合已有神经网络基础、想建立扩散直觉的读者；两类模型目标不同，这个联系不代表可以直接互换。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[强化学习可解释性：从游戏失误追到内部特征](https://distill.pub/2020/understanding-rl-vision/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2020-11-17"
+    },
+    {
+      "type": "paragraph",
+      "text": "用 CoinRun 游戏追踪智能体的失败，把隐藏层信号拆成可辨认的物体特征，观察它们怎样影响对未来得分的估计和动作。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合入门模型可解释性；作者还编辑权重检验解释，但实验局限于特定游戏，环境多样性假说尚未证实。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Gemini 4 Carbon：长流程工程与网络防御](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-28"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google将新模型重点放在长流程软件工程与漏洞发现、验证和修复，并展示了编码、可靠性与防护评测结果。"
+    },
+    {
+      "type": "paragraph",
+      "text": "目前先向部分网络防御者与受信伙伴开放；公布的能力与安全收益来自特定评测和内部观察，不能等同于普遍可靠。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Emacs 50年：先解决协作，再改变编辑方式](https://www.technologyreview.com/2026/10/20/1145399/emacs-turns-50/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-20"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章从TECO宏与实时屏幕编辑讲起，追踪Emacs如何把各自改造的命令收拢为共享约定，降低协作时的学习成本。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它把编辑器演化连接到代码分享与GNU的起源；值得读的是技术设计与社区规则如何相互塑造，而非一份功能入门。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[蜘蛛丝怎样从蛋白液变成坚韧纤维？](https://www.quantamagazine.org/how-spiders-spin-silk-dope-into-natures-toughest-material-20261028/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-10-28 · 材料科学"
+    },
+    {
+      "type": "paragraph",
+      "text": "研究者用核磁共振追踪天然蜘蛛丝蛋白，发现特定氨基酸之间的弱相互作用能排出水分，先把蛋白聚成稠密液滴，再参与纤维形成。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这为仿生材料提供了分子层面的线索；液滴、胶束和液晶可能共存，实验还没有解释完整纺丝过程，也未复制出天然丝的全部性能。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "elayadesign/ai-design-skills",
+      "url": "https://github.com/elayadesign/ai-design-skills"
+    },
+    {
+      "title": "macro-inc/macro",
+      "url": "https://github.com/macro-inc/macro"
+    },
+    {
+      "title": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable"
+    },
+    {
+      "title": "LFM3-1.7B：让小模型承接本地工具任务",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+    },
+    {
+      "title": "Hy-SimulMT：边听边译，权衡等待与准确度",
+      "url": "https://huggingface.co/tencent/Hy-SimulMT-30B-A3B-FP8"
+    },
+    {
+      "title": "PyTorch 2.15：默认通信后端换新，升级要看兼容边界",
+      "url": "https://pytorch.org/blog/pytorch-2-15-release-blog/"
+    },
+    {
+      "title": "参数对称性：为什么相同函数仍会走出不同训练轨迹？",
+      "url": "https://spaces.ac.cn/archives/11985"
+    },
+    {
+      "title": "扩散与自编码器：从去噪目标建立生成直觉",
+      "url": "https://sander.ai/2022/01/31/diffusion.html"
+    },
+    {
+      "title": "强化学习可解释性：从游戏失误追到内部特征",
+      "url": "https://distill.pub/2020/understanding-rl-vision/"
+    },
+    {
+      "title": "Gemini 4 Carbon：长流程工程与网络防御",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+    },
+    {
+      "title": "Emacs 50年：先解决协作，再改变编辑方式",
+      "url": "https://www.technologyreview.com/2026/10/20/1145399/emacs-turns-50/"
+    },
+    {
+      "title": "蜘蛛丝怎样从蛋白液变成坚韧纤维？",
+      "url": "https://www.quantamagazine.org/how-spiders-spin-silk-dope-into-natures-toughest-material-20261028/"
+    }
+  ],
+  "public_reviewed": true
+}

@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "channel": "trending",
+      "date": "2026-10-29",
+      "disclosures": 0,
+      "id": "dots-trending-2026-10-29",
+      "images": [],
+      "revision": 1,
+      "series": "每日 Trending",
+      "trending_items": 12
+    },
+    {
       "channel": "exploration",
       "date": "2026-10-28",
       "disclosures": 0,
@@ -556,13 +566,13 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 49,
+  "articles_count": 50,
   "channels": {
     "exploration": 23,
-    "trending": 26
+    "trending": 27
   },
-  "end": "2026-10-28",
+  "end": "2026-10-29",
   "images_count": 54,
   "start": "2026-10-01",
-  "trending_items": 302
+  "trending_items": 314
 }
