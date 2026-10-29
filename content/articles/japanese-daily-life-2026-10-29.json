@@ -1,0 +1,128 @@
+{
+  "id": "japanese-daily-life-2026-10-29",
+  "revision": 1,
+  "date": "2026-10-29",
+  "channel": "exploration",
+  "series": "日语生活碎片",
+  "title": "没听清时，让对话继续",
+  "summary": "从一段官方教学对话开始，练习听不明白时的简短请求；保留平假名和罗马音辅助，题目答案单独放在末尾。",
+  "topics": [
+    "日语",
+    "生活会话"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "对方刚说完房间号码，你没听清。今天练一个能让对话继续的小请求，不用先学会报号码。前几期练过喜好、问位置、要东西和问价格；这次练的是没听明白时怎样请对方帮忙。"
+    },
+    {
+      "type": "heading",
+      "text": "先听两遍，不急着看答案"
+    },
+    {
+      "type": "paragraph",
+      "text": "[播放 IRODORI 官方音轨02-03](https://www.irodori.jpf.go.jp/assets/data/starter/audio/02/X_%5B02-03%5D_kiku3.mp3)。定位：入门第2课，编号02-03，整条音轨；备用：[官方播放页](https://www.irodori.jpf.go.jp/starter/audio/lesson02.html)，找到同一编号。"
+    },
+    {
+      "type": "paragraph",
+      "text": "第一遍：开头报出的房间号码，后面有没有再出现？\n第二遍：找「お願いします／おねがいします／onegaishimasu／拜托了」，它出现一次还是两次？不必记号码，答案在末尾。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是官方教学对话。已核对音频文件、编号和官方脚本，未实际试听；下面的题目依据脚本，练音形对应，不分析这段录音的连读或弱化。"
+    },
+    {
+      "type": "heading",
+      "text": "三个小目标"
+    },
+    {
+      "type": "paragraph",
+      "text": "每组依次为常用写法／平假名读音／罗马音／中文意思。罗马音不是汉语拼音，只用来辅助认读。"
+    },
+    {
+      "type": "paragraph",
+      "text": "もう／もう／mō／再、又（在本句中）。\n一度／いちど／ichido／一次。\nお願いします／おねがいします／onegaishimasu／拜托了、麻烦您（礼貌地提出请求）。"
+    },
+    {
+      "type": "paragraph",
+      "text": "前两个合起来，就是“再一次”。「一度／いちど／ichido／一次」通常可以写成汉字；教材这里写作平假名。两种写法的读音相同，不必先背会汉字。"
+    },
+    {
+      "type": "heading",
+      "text": "把请求拆成两块"
+    },
+    {
+      "type": "paragraph",
+      "text": "主句取自02-03，省去开头引起注意的招呼，按常用汉字写法呈现：\n常用写法：もう一度、お願いします。\n平假名：もういちど、おねがいします。\n罗马音：Mō ichido, onegaishimasu.\n中文：请再说一遍。"
+    },
+    {
+      "type": "paragraph",
+      "text": "1. もう一度／もういちど／mō ichido／再一次：先说明希望对方怎样做。\n2. お願いします／おねがいします／onegaishimasu／拜托了：放在后面，把前面的内容变成礼貌的请求。"
+    },
+    {
+      "type": "paragraph",
+      "text": "为什么短句里没有“说”？因为对方刚报过号码，此时“再一次”指向的就是刚才那句话。双方知道请求的是什么，所以可以不把动作说全。这句中间没有助词；只记住这个具体说法，不把省略推广到所有句子。"
+    },
+    {
+      "type": "paragraph",
+      "text": "同样把请求内容放在前面，后面接礼貌结尾，也能请求一样东西。复习两周前见过的“茶”：\n常用写法：お茶、お願いします。\n平假名：おちゃ、おねがいします。\n罗马音：Ocha, onegaishimasu.\n中文：麻烦给我茶。\n这是原创替换例句，暂无配音，不是02-03中的原句；“茶”是有意复习，不算本期新词。"
+    },
+    {
+      "type": "heading",
+      "text": "今天只认一个读音：拉长的一拍"
+    },
+    {
+      "type": "paragraph",
+      "text": "もう／もう／mō／再：罗马音上方的横线表示长音，读的时候把 o 延长一拍。平假名是两个字，其中 o 的声音延长一拍，m 不变。这里讲标准读音和假名的对应，不是对本条录音唱法或口音的分析。"
+    },
+    {
+      "type": "paragraph",
+      "text": "看过主句中的“再”，遮住词卡后试着写出它的平假名，再核对末尾答案。不会写也没关系，先口头读，再回来看词卡。"
+    },
+    {
+      "type": "heading",
+      "text": "重听，再用一次"
+    },
+    {
+      "type": "paragraph",
+      "text": "回到02-03再听一遍，找刚学的礼貌结尾。然后想象对方报了一个号码，你没听清：用今天的主句请对方再说一遍。可以看罗马音，慢慢说，不用追录音速度。"
+    },
+    {
+      "type": "details",
+      "summary": "听完再看：答案",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "按官方脚本核对，第一题：有，对方再次说出了同一个房间号码。第二题：お願いします／おねがいします／onegaishimasu／拜托了，出现一次。"
+        },
+        {
+          "type": "paragraph",
+          "text": "假名题：もう／もう／mō／再。末尾的平假名让这里的 o 延长一拍。"
+        },
+        {
+          "type": "paragraph",
+          "text": "口头回应：\n常用写法：もう一度、お願いします。\n平假名：もういちど、おねがいします。\n罗马音：Mō ichido, onegaishimasu.\n中文：请再说一遍。"
+        },
+        {
+          "type": "paragraph",
+          "text": "可选核对：[官方脚本第11页，印刷页L2-11，编号02-03](https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L02.pdf#page=11)。本期只引用这一短句，不转载整段对话或音频；未验证你所在地区的播放情况。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "IRODORI 入门第2课官方音频页",
+      "url": "https://www.irodori.jpf.go.jp/starter/audio/lesson02.html"
+    },
+    {
+      "title": "官方音轨02-03",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/audio/02/X_%5B02-03%5D_kiku3.mp3"
+    },
+    {
+      "title": "官方脚本第11页",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L02.pdf#page=11"
+    }
+  ],
+  "public_reviewed": true
+}
