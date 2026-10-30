@@ -1,0 +1,260 @@
+{
+  "id": "dots-trending-2026-10-30",
+  "revision": 1,
+  "date": "2026-10-30",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending · 2026-10-30",
+  "summary": "本期11条：代理工具、开放权重与语音转写、归因基线和图网络教程，以及写作、网络地图与黑洞成像。",
+  "topics": [
+    "开源工具",
+    "模型",
+    "深度精选",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1,199 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把多个本地编码代理放进聊天界面，由统一运行服务管理进程、事件和审批，支持各自连接工具与独立电脑。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究多代理协作与权限设计；云电脑和外部应用仍依赖第三方服务，本地优先不等于所有处理都留在本机。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[CopilotKit/OpenBot](https://github.com/CopilotKit/OpenBot)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+247 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "让不同框架的代理通过统一交互协议接入浏览器、文件和应用；动作先过权限检查并留下审计记录，再交给工具执行。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是可改造的早期部署模板，适合学习代理治理；默认单用户模式把请求视为管理员，对外开放前必须配置登录。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[Nemotron 3.5 Transcribe：用指令选择转写方式](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜 · 模型卡发布日期 2026-10-28"
+    },
+    {
+      "type": "paragraph",
+      "text": "将声音识别、说话人区分与语言模型组合，按提示输出逐字稿、易读文本或带说话人标签的记录，也能参考领域词汇。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合长录音整理，但它是离线模型，不是实时流式识别；音频推理只评测了英语，说话人标签也不代表真实身份。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Mistral Large 4：从 API 预览走到开放权重](https://mistral.ai/news/mistral-large-4-oss/) [讨论](https://news.ycombinator.com/item?id=50289418)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-29"
+    },
+    {
+      "type": "paragraph",
+      "text": "此前的预览版如今公布权重，并继续强化学习训练，新增三档推理模式，让自托管者在复杂任务与计算开销之间选择。"
+    },
+    {
+      "type": "paragraph",
+      "text": "相较此前 API 预览，新增的是可下载部署的模型和更新后的评测；许可对模型即服务业务另有商业授权要求，开放权重不等于无限制使用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从可运行到好玩：用模型迭代浏览器游戏](https://simonwillison.net/2026/Oct/28/vibe-game-development/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-28 · Simon Willison · 作者实践"
+    },
+    {
+      "type": "paragraph",
+      "text": "Simon 展示四款浏览器游戏的提示词、迭代过程与试玩链接，重点从画面能运行转到玩法、任务衔接和实际试玩。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合观察低风险原型如何逐步成形；“更好玩”是作者体验，复杂项目仍需反复测试，不能当作模型能力的统一评测。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[特征归因：先问“相对于什么”](https://distill.pub/2020/attribution-baselines/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2020-01-10 · Distill"
+    },
+    {
+      "type": "paragraph",
+      "text": "用图像分类拆解积分梯度：沿着参考输入到真实图片的路径累积变化，比较黑图、模糊图和随机参考怎样改变“重要像素”。"
+    },
+    {
+      "type": "paragraph",
+      "text": "交互图与公式帮助理解解释中的隐含假设；换参考会改变问题，多次平均也仍需选择分布，没有适用于所有任务的统一基线。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[把图接进强化学习：从动作设计到可运行代码](https://iclr-blogposts.github.io/2026/blog/2026/rl-with-gnns/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-04-27 · ICLR Blogposts"
+    },
+    {
+      "type": "paragraph",
+      "text": "从节点、边如何代表动作讲起，串起图网络、无效动作屏蔽和强化学习训练，附 PyTorch Geometric 与 SB3 的完整实现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合已有强化学习基础、想处理变化图规模的读者；顶点覆盖只是教学案例，作者不建议据此替代成熟求解器，跨规模泛化也需另验。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[LLM Voice：写作中哪些工作值得自己保留？](https://martinfowler.com/bliki/LLM-Voice.html) [讨论](https://news.ycombinator.com/item?id=50290177)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-10-29"
+    },
+    {
+      "type": "paragraph",
+      "text": "Martin Fowler讨论为什么流畅却缺少个人判断的文字会让读者退出，并把亲自组织语言视作澄清思考的一部分。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是作者的写作立场，不是识别 AI 文本的可靠方法；他也保留疾病辅助、跨语言沟通等例外，适合检查自己的编辑分工。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[如果 IPv4 地址决定国家面积，地图会怎样变？](https://iptrust.co/blog/if-ipv4-were-land) [讨论](https://news.ycombinator.com/item?id=50287775)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 数据口径2026年10月"
+    },
+    {
+      "type": "paragraph",
+      "text": "按各国可定位 IPv4 地址所占比例重新分配地图面积，把抽象的网络资源分布变成直观的几何比较。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合练习核对可视化分母；它使用商业定位库与简化地理轮廓，遗漏部分小地区，不能直接当成用户数或互联网使用量地图。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[黑洞照片：怎样把地球上的望远镜拼成一只眼睛？](https://www.quantamagazine.org/how-do-you-take-a-picture-of-a-black-hole-20261029/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-10-29 · 访谈文字稿"
+    },
+    {
+      "type": "paragraph",
+      "text": "各地射电望远镜用原子钟标记信号，再把记录对齐合成图像。访谈解释为什么离我们更远的 M87 黑洞，反而先于银河系中心黑洞成像。"
+    },
+    {
+      "type": "paragraph",
+      "text": "关键在观测期间是否变化太快：后者周围物质变化更快，重建更难。照片呈现的是周围发光物质与黑洞阴影；动态影像仍是后续目标。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[借物理学理解人生：模型什么时候有帮助？](https://aeon.co/essays/how-to-use-physics-to-make-sense-of-the-messiness-of-life)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-10-29 · 个人随笔"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从失业经历谈起，借复杂系统与工程中的备用容量，重新思考“努力必有回报”的预期，以及为什么时间安排需要留有余地。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是一篇借科学反省生活的随笔。混沌、相变与社会公平之间的联系主要是类比，不是物理定律已经证明了人生或社会结论。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot"
+    },
+    {
+      "title": "CopilotKit/OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot"
+    },
+    {
+      "title": "Nemotron 3.5 Transcribe：用指令选择转写方式",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
+    },
+    {
+      "title": "Mistral Large 4：从 API 预览走到开放权重",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/"
+    },
+    {
+      "title": "The October inflection point for vibe game development",
+      "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/"
+    },
+    {
+      "title": "Visualizing the Impact of Feature Attribution Baselines",
+      "url": "https://distill.pub/2020/attribution-baselines/"
+    },
+    {
+      "title": "Using Graph Neural Networks in Reinforcement Learning: A Practical Guide",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/rl-with-gnns/"
+    },
+    {
+      "title": "LLM Voice：写作中哪些工作值得自己保留？",
+      "url": "https://martinfowler.com/bliki/LLM-Voice.html"
+    },
+    {
+      "title": "如果 IPv4 地址决定国家面积，地图会怎样变？",
+      "url": "https://iptrust.co/blog/if-ipv4-were-land"
+    },
+    {
+      "title": "黑洞照片：怎样把地球上的望远镜拼成一只眼睛？",
+      "url": "https://www.quantamagazine.org/how-do-you-take-a-picture-of-a-black-hole-20261029/"
+    },
+    {
+      "title": "借物理学理解人生：模型什么时候有帮助？",
+      "url": "https://aeon.co/essays/how-to-use-physics-to-make-sense-of-the-messiness-of-life"
+    }
+  ],
+  "public_reviewed": true
+}

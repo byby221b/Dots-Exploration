@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · 2026-10-30 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-30">2026-10-30</time> / 修订 1</p><h1>Dots Trending · 2026-10-30</h1><p class="lead">本期11条：代理工具、开放权重与语音转写、归因基线和图网络教程，以及写作、网络地图与黑洞成像。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-9">🧠 AI/模型</a></li><li><a href="#section-30">🔥 热议话题</a></li><li><a href="#section-39">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/milind-soni/OpenMausBot" rel="noreferrer">milind-soni/OpenMausBot</a></h3>
+<p class="item-meta">⭐+1,199 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>把多个本地编码代理放进聊天界面，由统一运行服务管理进程、事件和审批，支持各自连接工具与独立电脑。</p>
+<p>适合研究多代理协作与权限设计；云电脑和外部应用仍依赖第三方服务，本地优先不等于所有处理都留在本机。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/CopilotKit/OpenBot" rel="noreferrer">CopilotKit/OpenBot</a></h3>
+<p class="item-meta">⭐+247 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>让不同框架的代理通过统一交互协议接入浏览器、文件和应用；动作先过权限检查并留下审计记录，再交给工具执行。</p>
+<p>这是可改造的早期部署模板，适合学习代理治理；默认单用户模式把请求视为管理员，对外开放前必须配置登录。</p>
+</article>
+<h2 id="section-9">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B" rel="noreferrer">Nemotron 3.5 Transcribe：用指令选择转写方式</a></h3>
+<p class="item-meta">HF 当前热榜 · 模型卡发布日期 2026-10-28</p>
+<p>将声音识别、说话人区分与语言模型组合，按提示输出逐字稿、易读文本或带说话人标签的记录，也能参考领域词汇。</p>
+<p>适合长录音整理，但它是离线模型，不是实时流式识别；音频推理只评测了英语，说话人标签也不代表真实身份。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://mistral.ai/news/mistral-large-4-oss/" rel="noreferrer">Mistral Large 4：从 API 预览走到开放权重</a> <a href="https://news.ycombinator.com/item?id=50289418" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · 原文2026-10-29</p>
+<p>此前的预览版如今公布权重，并继续强化学习训练，新增三档推理模式，让自托管者在复杂任务与计算开销之间选择。</p>
+<p>相较此前 API 预览，新增的是可下载部署的模型和更新后的评测；许可对模型即服务业务另有商业授权要求，开放权重不等于无限制使用。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://simonwillison.net/2026/Oct/28/vibe-game-development/" rel="noreferrer">从可运行到好玩：用模型迭代浏览器游戏</a></h3>
+<p class="item-meta">2026-10-28 · Simon Willison · 作者实践</p>
+<p>Simon 展示四款浏览器游戏的提示词、迭代过程与试玩链接，重点从画面能运行转到玩法、任务衔接和实际试玩。</p>
+<p>适合观察低风险原型如何逐步成形；“更好玩”是作者体验，复杂项目仍需反复测试，不能当作模型能力的统一评测。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://distill.pub/2020/attribution-baselines/" rel="noreferrer">特征归因：先问“相对于什么”</a></h3>
+<p class="item-meta">深度精选·2020-01-10 · Distill</p>
+<p>用图像分类拆解积分梯度：沿着参考输入到真实图片的路径累积变化，比较黑图、模糊图和随机参考怎样改变“重要像素”。</p>
+<p>交互图与公式帮助理解解释中的隐含假设；换参考会改变问题，多次平均也仍需选择分布，没有适用于所有任务的统一基线。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://iclr-blogposts.github.io/2026/blog/2026/rl-with-gnns/" rel="noreferrer">把图接进强化学习：从动作设计到可运行代码</a></h3>
+<p class="item-meta">深度精选·2026-04-27 · ICLR Blogposts</p>
+<p>从节点、边如何代表动作讲起，串起图网络、无效动作屏蔽和强化学习训练，附 PyTorch Geometric 与 SB3 的完整实现。</p>
+<p>适合已有强化学习基础、想处理变化图规模的读者；顶点覆盖只是教学案例，作者不建议据此替代成熟求解器，跨规模泛化也需另验。</p>
+</article>
+<h2 id="section-30">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://martinfowler.com/bliki/LLM-Voice.html" rel="noreferrer">LLM Voice：写作中哪些工作值得自己保留？</a> <a href="https://news.ycombinator.com/item?id=50290177" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · 原文2026-10-29</p>
+<p>Martin Fowler讨论为什么流畅却缺少个人判断的文字会让读者退出，并把亲自组织语言视作澄清思考的一部分。</p>
+<p>这是作者的写作立场，不是识别 AI 文本的可靠方法；他也保留疾病辅助、跨语言沟通等例外，适合检查自己的编辑分工。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://iptrust.co/blog/if-ipv4-were-land" rel="noreferrer">如果 IPv4 地址决定国家面积，地图会怎样变？</a> <a href="https://news.ycombinator.com/item?id=50287775" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · 数据口径2026年10月</p>
+<p>按各国可定位 IPv4 地址所占比例重新分配地图面积，把抽象的网络资源分布变成直观的几何比较。</p>
+<p>适合练习核对可视化分母；它使用商业定位库与简化地理轮廓，遗漏部分小地区，不能直接当成用户数或互联网使用量地图。</p>
+</article>
+<h2 id="section-39">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/how-do-you-take-a-picture-of-a-black-hole-20261029/" rel="noreferrer">黑洞照片：怎样把地球上的望远镜拼成一只眼睛？</a></h3>
+<p class="item-meta">Quanta · 2026-10-29 · 访谈文字稿</p>
+<p>各地射电望远镜用原子钟标记信号，再把记录对齐合成图像。访谈解释为什么离我们更远的 M87 黑洞，反而先于银河系中心黑洞成像。</p>
+<p>关键在观测期间是否变化太快：后者周围物质变化更快，重建更难。照片呈现的是周围发光物质与黑洞阴影；动态影像仍是后续目标。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/how-to-use-physics-to-make-sense-of-the-messiness-of-life" rel="noreferrer">借物理学理解人生：模型什么时候有帮助？</a></h3>
+<p class="item-meta">Aeon · 2026-10-29 · 个人随笔</p>
+<p>作者从失业经历谈起，借复杂系统与工程中的备用容量，重新思考“努力必有回报”的预期，以及为什么时间安排需要留有余地。</p>
+<p>这是一篇借科学反省生活的随笔。混沌、相变与社会公平之间的联系主要是类比，不是物理定律已经证明了人生或社会结论。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/milind-soni/OpenMausBot" rel="noreferrer">milind-soni/OpenMausBot</a></li><li><a href="https://github.com/CopilotKit/OpenBot" rel="noreferrer">CopilotKit/OpenBot</a></li><li><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B" rel="noreferrer">Nemotron 3.5 Transcribe：用指令选择转写方式</a></li><li><a href="https://mistral.ai/news/mistral-large-4-oss/" rel="noreferrer">Mistral Large 4：从 API 预览走到开放权重</a></li><li><a href="https://simonwillison.net/2026/Oct/28/vibe-game-development/" rel="noreferrer">The October inflection point for vibe game development</a></li><li><a href="https://distill.pub/2020/attribution-baselines/" rel="noreferrer">Visualizing the Impact of Feature Attribution Baselines</a></li><li><a href="https://iclr-blogposts.github.io/2026/blog/2026/rl-with-gnns/" rel="noreferrer">Using Graph Neural Networks in Reinforcement Learning: A Practical Guide</a></li><li><a href="https://martinfowler.com/bliki/LLM-Voice.html" rel="noreferrer">LLM Voice：写作中哪些工作值得自己保留？</a></li><li><a href="https://iptrust.co/blog/if-ipv4-were-land" rel="noreferrer">如果 IPv4 地址决定国家面积，地图会怎样变？</a></li><li><a href="https://www.quantamagazine.org/how-do-you-take-a-picture-of-a-black-hole-20261029/" rel="noreferrer">黑洞照片：怎样把地球上的望远镜拼成一只眼睛？</a></li><li><a href="https://aeon.co/essays/how-to-use-physics-to-make-sense-of-the-messiness-of-life" rel="noreferrer">借物理学理解人生：模型什么时候有帮助？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-30 · 52 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
