@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "channel": "exploration",
+      "date": "2026-10-31",
+      "disclosures": 4,
+      "id": "interview-challenge-2026-10-31",
+      "images": [],
+      "revision": 1,
+      "series": "每周面试挑战",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-10-31",
       "disclosures": 0,
@@ -613,9 +623,9 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 54,
+  "articles_count": 55,
   "channels": {
-    "exploration": 25,
+    "exploration": 26,
     "trending": 29
   },
   "end": "2026-10-31",
