@@ -1,0 +1,241 @@
+{
+  "id": "dots-trending-2026-10-31",
+  "revision": 1,
+  "date": "2026-10-31",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending",
+  "summary": "本期10条：移动应用与浏览器工具、长文档解析、推理模型课程和价值学习，以及扩展安全、排障技能、星际空间与兴趣探索。",
+  "topics": [
+    "开源工具",
+    "模型",
+    "深度精选",
+    "工程实践",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[expo/skills](https://github.com/expo/skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+38 · Shell · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "Expo 官方把应用构建、升级、调试及 Expo 应用服务（EAS）的部署流程整理为编码代理可调用的技能。"
+    },
+    {
+      "type": "paragraph",
+      "text": "框架技能与付费服务相关技能分开标注，适合希望让代理遵循平台约束、而非凭通用经验编写移动应用的开发者。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[lightpanda-io/browser](https://github.com/lightpanda-io/browser)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+626 · Zig · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "Lightpanda 是用 Zig 从头实现、面向自动化与 AI 代理的无头浏览器，并非 Chromium 分支。"
+    },
+    {
+      "type": "paragraph",
+      "text": "项目提供 Chrome 调试协议（CDP）接入和页面内容导出，适合研究网页操作的资源开销；其性能数字来自项目自测，不宜直接外推到所有站点。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[Unlimited-OCR-2](https://huggingface.co/baidu/Unlimited-OCR-2)"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型精选 · 首发 2026-10-27 · 当前 HF trendingScore 第 6；非今日发布"
+    },
+    {
+      "type": "paragraph",
+      "text": "Unlimited-OCR-2 用稀疏参考滑窗注意力，把跨页读取集中到固定大小的工作参考集合，降低长文档解码的计算和显存增长。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究多页资料解析；部署说明提醒，缩小页窗口会影响跨窗口内容衔接，“无限长度”不代表无限显存或无损解析。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Building Reasoning Models from the Ground Up: A Full Video Course](https://magazine.sebastianraschka.com/p/building-reasoning-models)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-10-24 · 8 节视频，逾 11 小时"
+    },
+    {
+      "type": "paragraph",
+      "text": "从预训练的 Qwen3 小模型出发，逐步实现答案验证、采样与多数投票、GRPO 和蒸馏，串起“怎样评估，再怎样改进推理”的完整路径。"
+    },
+    {
+      "type": "paragraph",
+      "text": "早期生成和评估可用 CPU 跟做，训练部分更适合 GPU；需要 Python/PyTorch 基础，不要求先学完上一门课程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[The Paths Perspective on Value Learning](https://distill.pub/2019/paths-perspective-on-value-learning/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2019-09-30 · 价值学习的路径视角"
+    },
+    {
+      "type": "paragraph",
+      "text": "从两条轨迹在同一状态交汇的小例子出发，解释时序差分学习怎样复用其他经历中的后续收益，再用同一视角串起 Sarsa、Q-learning 和 Double Q-learning。"
+    },
+    {
+      "type": "paragraph",
+      "text": "图与公式逐步对应，适合建立价值估计的直觉；文章也说明，函数逼近把不该合并的状态混在一起时，误差会被放大。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[nesformer](https://simonwillison.net/2026/Oct/30/nesformer/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "技术博客 · 2026-10-30 · 编译出的神经网络 CPU"
+    },
+    {
+      "type": "paragraph",
+      "text": "nesformer 把 NES 的 6502 CPU 逻辑编译成 Qwen3.5 架构的权重，并把 DeltaNet 状态当作内存；这些权重由编译器计算，未经过训练。"
+    },
+    {
+      "type": "paragraph",
+      "text": "项目展示的是把确定性机器装进神经网络计算图的实验，画面和手柄仍由外部程序处理，运行远慢于真机，也不支持所有卡带。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[Backdoor in Claude Code for VS Code extension on the Cursor Marketplace](https://phorion.io/blog/offical-claude-code-vsx-compromise/) [讨论](https://news.ycombinator.com/item?id=50300683)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文 2026-10-30 · 更新2026-10-31"
+    },
+    {
+      "type": "paragraph",
+      "text": "Phorion 分析了 Cursor Marketplace 上被植入 SSH 后门的 Claude Code 扩展，10 月 31 日更新将受影响版本列为 2.1.312 和 2.1.313。"
+    },
+    {
+      "type": "paragraph",
+      "text": "重点不只是卸载插件：报告指出后门还可能留下持久化组件，需要按安全公告核查；不应把这个发行渠道的问题泛化为所有 Claude Code 安装。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[AI isn't replacing SREs, it's deskilling them](https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling) [讨论](https://news.ycombinator.com/item?id=50305693)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 往期原文 2026-02-28"
+    },
+    {
+      "type": "paragraph",
+      "text": "当常见故障都交给 AI，站点可靠性工程师（SRE）还能从哪里练出应对陌生事故的判断力？作者借“自动化的反讽”提出这一风险，并建议保留人工排障练习，让工程师参与分析，而不只是批准机器建议。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是一篇厂商团队的工程评论，引用其他领域研究作类比，并非已经测得 SRE 技能退化幅度的实证结论。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[A New Map of ‘Empty’ Space Challenges a Tranquil Picture of the Galaxy](https://www.quantamagazine.org/a-new-map-of-empty-space-challenges-a-tranquil-picture-of-the-galaxy-20261030/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-30 · Perri Thaler"
+    },
+    {
+      "type": "paragraph",
+      "text": "研究者把星际尘埃的三维分布与紫外辐射地图结合，发现太阳邻域大量气体可能处于传统静态模型预期之外的不稳定温区。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这提示星际空间持续的加热和冷却或能帮助解释恒星形成效率为何偏低；分析仍在同行评审中，分辨率与地图平滑的影响尚需评估。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[In praise of the dilettante](https://aeon.co/essays/why-the-dilettante-is-the-anti-hero-of-our-over-optimised-age)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-10-30 · Jay Miller"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者为广泛而认真地培养兴趣辩护：可以深入参与一项爱好，却不必把身份永久绑定在一个领域。"
+    },
+    {
+      "type": "paragraph",
+      "text": "他区分这种主动探索与浅尝辄止，也承认专业实践有门槛；这是关于如何生活的哲学主张，并非否定专业能力或长期投入。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "expo/skills",
+      "url": "https://github.com/expo/skills"
+    },
+    {
+      "title": "lightpanda-io/browser",
+      "url": "https://github.com/lightpanda-io/browser"
+    },
+    {
+      "title": "Unlimited-OCR-2",
+      "url": "https://huggingface.co/baidu/Unlimited-OCR-2"
+    },
+    {
+      "title": "Building Reasoning Models from the Ground Up: A Full Video Course",
+      "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models"
+    },
+    {
+      "title": "The Paths Perspective on Value Learning",
+      "url": "https://distill.pub/2019/paths-perspective-on-value-learning/"
+    },
+    {
+      "title": "nesformer",
+      "url": "https://simonwillison.net/2026/Oct/30/nesformer/"
+    },
+    {
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/"
+    },
+    {
+      "title": "AI isn't replacing SREs, it's deskilling them",
+      "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling"
+    },
+    {
+      "title": "A New Map of ‘Empty’ Space Challenges a Tranquil Picture of the Galaxy",
+      "url": "https://www.quantamagazine.org/a-new-map-of-empty-space-challenges-a-tranquil-picture-of-the-galaxy-20261030/"
+    },
+    {
+      "title": "In praise of the dilettante",
+      "url": "https://aeon.co/essays/why-the-dilettante-is-the-anti-hero-of-our-over-optimised-age"
+    }
+  ],
+  "public_reviewed": true
+}

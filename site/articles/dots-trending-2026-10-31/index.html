@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-10-31">2026-10-31</time> / 修订 1</p><h1>Dots Trending</h1><p class="lead">本期10条：移动应用与浏览器工具、长文档解析、推理模型课程和价值学习，以及扩展安全、排障技能、星际空间与兴趣探索。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-9">🧠 AI/模型</a></li><li><a href="#section-26">🔥 热议话题</a></li><li><a href="#section-35">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/expo/skills" rel="noreferrer">expo/skills</a></h3>
+<p class="item-meta">⭐+38 · Shell · GitHub stars today（非北京时间自然日）</p>
+<p>Expo 官方把应用构建、升级、调试及 Expo 应用服务（EAS）的部署流程整理为编码代理可调用的技能。</p>
+<p>框架技能与付费服务相关技能分开标注，适合希望让代理遵循平台约束、而非凭通用经验编写移动应用的开发者。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/lightpanda-io/browser" rel="noreferrer">lightpanda-io/browser</a></h3>
+<p class="item-meta">⭐+626 · Zig · GitHub stars today（非北京时间自然日）</p>
+<p>Lightpanda 是用 Zig 从头实现、面向自动化与 AI 代理的无头浏览器，并非 Chromium 分支。</p>
+<p>项目提供 Chrome 调试协议（CDP）接入和页面内容导出，适合研究网页操作的资源开销；其性能数字来自项目自测，不宜直接外推到所有站点。</p>
+</article>
+<h2 id="section-9">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/baidu/Unlimited-OCR-2" rel="noreferrer">Unlimited-OCR-2</a></h3>
+<p class="item-meta">模型精选 · 首发 2026-10-27 · 当前 HF trendingScore 第 6；非今日发布</p>
+<p>Unlimited-OCR-2 用稀疏参考滑窗注意力，把跨页读取集中到固定大小的工作参考集合，降低长文档解码的计算和显存增长。</p>
+<p>适合研究多页资料解析；部署说明提醒，缩小页窗口会影响跨窗口内容衔接，“无限长度”不代表无限显存或无损解析。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://magazine.sebastianraschka.com/p/building-reasoning-models" rel="noreferrer">Building Reasoning Models from the Ground Up: A Full Video Course</a></h3>
+<p class="item-meta">深度精选 · 2026-10-24 · 8 节视频，逾 11 小时</p>
+<p>从预训练的 Qwen3 小模型出发，逐步实现答案验证、采样与多数投票、GRPO 和蒸馏，串起“怎样评估，再怎样改进推理”的完整路径。</p>
+<p>早期生成和评估可用 CPU 跟做，训练部分更适合 GPU；需要 Python/PyTorch 基础，不要求先学完上一门课程。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://distill.pub/2019/paths-perspective-on-value-learning/" rel="noreferrer">The Paths Perspective on Value Learning</a></h3>
+<p class="item-meta">深度精选 · 2019-09-30 · 价值学习的路径视角</p>
+<p>从两条轨迹在同一状态交汇的小例子出发，解释时序差分学习怎样复用其他经历中的后续收益，再用同一视角串起 Sarsa、Q-learning 和 Double Q-learning。</p>
+<p>图与公式逐步对应，适合建立价值估计的直觉；文章也说明，函数逼近把不该合并的状态混在一起时，误差会被放大。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://simonwillison.net/2026/Oct/30/nesformer/" rel="noreferrer">nesformer</a></h3>
+<p class="item-meta">技术博客 · 2026-10-30 · 编译出的神经网络 CPU</p>
+<p>nesformer 把 NES 的 6502 CPU 逻辑编译成 Qwen3.5 架构的权重，并把 DeltaNet 状态当作内存；这些权重由编译器计算，未经过训练。</p>
+<p>项目展示的是把确定性机器装进神经网络计算图的实验，画面和手柄仍由外部程序处理，运行远慢于真机，也不支持所有卡带。</p>
+</article>
+<h2 id="section-26">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://phorion.io/blog/offical-claude-code-vsx-compromise/" rel="noreferrer">Backdoor in Claude Code for VS Code extension on the Cursor Marketplace</a> <a href="https://news.ycombinator.com/item?id=50300683" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · 原文 2026-10-30 · 更新2026-10-31</p>
+<p>Phorion 分析了 Cursor Marketplace 上被植入 SSH 后门的 Claude Code 扩展，10 月 31 日更新将受影响版本列为 2.1.312 和 2.1.313。</p>
+<p>重点不只是卸载插件：报告指出后门还可能留下持久化组件，需要按安全公告核查；不应把这个发行渠道的问题泛化为所有 Claude Code 安装。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling" rel="noreferrer">AI isn&#x27;t replacing SREs, it&#x27;s deskilling them</a> <a href="https://news.ycombinator.com/item?id=50305693" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 过去24小时提交 · 往期原文 2026-02-28</p>
+<p>当常见故障都交给 AI，站点可靠性工程师（SRE）还能从哪里练出应对陌生事故的判断力？作者借“自动化的反讽”提出这一风险，并建议保留人工排障练习，让工程师参与分析，而不只是批准机器建议。</p>
+<p>这是一篇厂商团队的工程评论，引用其他领域研究作类比，并非已经测得 SRE 技能退化幅度的实证结论。</p>
+</article>
+<h2 id="section-35">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/a-new-map-of-empty-space-challenges-a-tranquil-picture-of-the-galaxy-20261030/" rel="noreferrer">A New Map of ‘Empty’ Space Challenges a Tranquil Picture of the Galaxy</a></h3>
+<p class="item-meta">2026-10-30 · Perri Thaler</p>
+<p>研究者把星际尘埃的三维分布与紫外辐射地图结合，发现太阳邻域大量气体可能处于传统静态模型预期之外的不稳定温区。</p>
+<p>这提示星际空间持续的加热和冷却或能帮助解释恒星形成效率为何偏低；分析仍在同行评审中，分辨率与地图平滑的影响尚需评估。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/why-the-dilettante-is-the-anti-hero-of-our-over-optimised-age" rel="noreferrer">In praise of the dilettante</a></h3>
+<p class="item-meta">2026-10-30 · Jay Miller</p>
+<p>作者为广泛而认真地培养兴趣辩护：可以深入参与一项爱好，却不必把身份永久绑定在一个领域。</p>
+<p>他区分这种主动探索与浅尝辄止，也承认专业实践有门槛；这是关于如何生活的哲学主张，并非否定专业能力或长期投入。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/expo/skills" rel="noreferrer">expo/skills</a></li><li><a href="https://github.com/lightpanda-io/browser" rel="noreferrer">lightpanda-io/browser</a></li><li><a href="https://huggingface.co/baidu/Unlimited-OCR-2" rel="noreferrer">Unlimited-OCR-2</a></li><li><a href="https://magazine.sebastianraschka.com/p/building-reasoning-models" rel="noreferrer">Building Reasoning Models from the Ground Up: A Full Video Course</a></li><li><a href="https://distill.pub/2019/paths-perspective-on-value-learning/" rel="noreferrer">The Paths Perspective on Value Learning</a></li><li><a href="https://simonwillison.net/2026/Oct/30/nesformer/" rel="noreferrer">nesformer</a></li><li><a href="https://phorion.io/blog/offical-claude-code-vsx-compromise/" rel="noreferrer">Backdoor in Claude Code for VS Code extension on the Cursor Marketplace</a></li><li><a href="https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling" rel="noreferrer">AI isn&#x27;t replacing SREs, it&#x27;s deskilling them</a></li><li><a href="https://www.quantamagazine.org/a-new-map-of-empty-space-challenges-a-tranquil-picture-of-the-galaxy-20261030/" rel="noreferrer">A New Map of ‘Empty’ Space Challenges a Tranquil Picture of the Galaxy</a></li><li><a href="https://aeon.co/essays/why-the-dilettante-is-the-anti-hero-of-our-over-optimised-age" rel="noreferrer">In praise of the dilettante</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-10-31 · 54 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
