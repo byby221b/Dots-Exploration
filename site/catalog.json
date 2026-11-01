@@ -206,6 +206,16 @@
       "trending_items": 12
     },
     {
+      "channel": "exploration",
+      "date": "2026-10-19",
+      "disclosures": 0,
+      "id": "research-stress-test-2026-10-19",
+      "images": [],
+      "revision": 1,
+      "series": "研究想法压力测试",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-10-19",
       "disclosures": 0,
@@ -633,9 +643,9 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 56,
+  "articles_count": 57,
   "channels": {
-    "exploration": 26,
+    "exploration": 27,
     "trending": 30
   },
   "end": "2026-11-01",

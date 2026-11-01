@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>采样候选评估，何时能支持全目录模型选择 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">研究想法压力测试 / <time datetime="2026-10-19">2026-10-19</time> / 修订 1</p><h1>采样候选评估，何时能支持全目录模型选择</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-3">先明确要用评估决定什么</a></li><li><a href="#section-8">采样省下了什么，又改变了什么</a></li><li><a href="#section-14">什么条件能支持保序</a></li><li><a href="#section-19">一个边界例子：平均更稳定，也可能选错</a></li><li><a href="#section-24">证据究竟支持到哪里</a></li><li><a href="#section-28">最低成本实验：先固定模型，只动评估</a></li><li><a href="#section-35">把混杂因素和公平预算关住</a></li><li><a href="#section-37">什么结果值得继续，什么结果应修改判断</a></li><li><a href="#section-40">主要来源</a></li></ol></nav><div class="prose"><div class="article-content"><p>每周探索 · 研究想法压力测试 · 2026年10月19日</p>
+<p class="source-title">采样候选评估，何时能支持全目录模型选择</p>
+<p>阅读约10分钟 · 公开研究主张审查</p>
+<h2 id="section-3">先明确要用评估决定什么</h2>
+<p>两套推荐模型已经训练好。你要选择哪套更能把用户的已知正例排进完整候选目录的前K位，但给每个用户遍历所有物品很贵。常见做法是保留正例，再随机抽一小批竞争项，只在这个小候选集中打分。这种评估便宜，关键是它能否支持原来的选型决定。</p>
+<p>这是真实文献中的同一技术问题。<a href="https://arxiv.org/pdf/2106.10621" rel="noreferrer">Li等的KDD 2020论文</a>研究采样Hit-Ratio与全目录Hit-Ratio之间的对应，提出映射和有条件的保序结论；<a href="https://research.google/pubs/on-sampled-metrics-for-item-recommendation/" rel="noreferrer">Krichene与Rendle的KDD 2020论文</a>则分析一般情况下的偏差，并提出修正方法。这里的条件很重要，不能把两篇论文压成“采样有效”和“采样无效”的口号。</p>
+<p>本期建议审查一个收窄后的假设：<strong>对于预先指定的模型对、用户分布和全目录Top-K目标，给定采样规模与选型规则，采样评估的误选风险能够低于事先约定的容忍度。</strong>这是待验证的工程假设，并非上述论文已经给出的普遍保证。</p>
+<p>与10月5日讨论公平模型基线相比，本期新增的是：固定模型后，候选抽样怎样改变名次尺度，以及什么条件足以保留模型顺序。无需读过往期。</p>
+<h2 id="section-8">采样省下了什么，又改变了什么</h2>
+<p>先限定一个清楚的模型：每个用户有一个留出的正例，候选目录共N项，包含这个正例；其余N−1项是按该协议视作非正例的竞争项，并不意味着它们真实不相关。所有物品的相对排序对子集不变，并列时使用固定规则。</p>
+<p>全目录HR@K（命中率）是：正例名次不超过K的用户比例。每个用户只贡献命中或未命中，最后按相同权重平均。采样时，从其余竞争项中均匀、无放回抽m项，再与正例组成m＋1项的小目录；SHR@k表示小目录前k位的命中率。K和k分别对应两个目录，数值相同也不表示门槛相同。</p>
+<p>看一个正向例子。完整目录有6项，某用户的正例排第2，前面只有1个竞争项。现在从其余5项抽2项：如果抽中前面那一项，正例在小目录排第2；如果没有抽中，就排第1。5选2共有10种等概率候选组合，其中避开那一项的组合有4选2，即6种。因此，这个用户的采样HR@1在重复抽样下平均为0.6。</p>
+<p>这说明采样仍然保留了一部分排序信息：原来第1名的正例总会命中；第6名在这个协议下不可能成为第1；第2名则有0.6的命中概率。随着全目录名次变差，采样命中的概率不会上升。采样把完整名次变成一个平滑的命中机会，能够用于低成本观察。</p>
+<p>但全目录HR@1对第2名的记分是0。采样时，被移除的竞争项改变了“进前1”的难度。重复抽样能把0.6估得更准，却不会把它变回0。需要区分的是抽样随机波动，以及评估目标本身的偏移。</p>
+<h2 id="section-14">什么条件能支持保序</h2>
+<p>Li等论文§2.3、定理2.1给出的充分条件，可以读成一句话：在共同目录大小和采样协议下，如果模型A的全目录命中率在<strong>每一个截断位置</strong>都不低于B，那么采样命中率的期望也不会把B排到A前面。论文主推导采用有放回抽样；这里的无放回教学协议也有同样的单调性逻辑。</p>
+<p>为什么要检查每一个位置？把模型在各个名次上的用户比例看成一份分布。抽样给每个名次赋予不同的命中概率；若A从最前面到任意位置累积的正例比例都不少于B，这种偏向靠前名次的计分就不会反转期望顺序。只有某一个K上领先，不足以满足这个条件。</p>
+<p>论文还研究SHR@k与全目录HR@f(k)的近似对应，并在数据集上检验映射后的选型一致性。这里f(k)是对应的全目录截断位置，通常不等于k。若你的决策目标始终是全目录Top-10，就必须检验Top-10；不能发现采样结果更像全目录Top-200后，把后者当成原目标已经通过验证。</p>
+<p>上述结论谈的是期望顺序，有限次抽样仍有波动。用户候选规模不同时，还要分层检查；不能只凭混合后的全目录曲线占优，直接套用共同目录大小的结论。</p>
+<h2 id="section-19">一个边界例子：平均更稳定，也可能选错</h2>
+<p>继续使用6项目录、抽2个竞争项、评估前1位的同一协议。现在有两个等权用户，模型A把他们的正例排在第1、第6；模型B均排第2。以下是原创教学例子，不是真实实验。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">模型</th><th scope="col">全目录正例名次</th><th scope="col">全目录HR@1</th><th scope="col">采样HR@1期望</th></tr></thead><tbody><tr><td>A</td><td>1、6</td><td>0.5</td><td>0.5</td></tr><tr><td>B</td><td>2、2</td><td>0</td><td>0.6</td></tr></tbody></table></div>
+<p>A有一位用户必命中、一位必不命中，平均0.5；B的两位用户都以0.6的概率避开唯一强竞争项，平均0.6。于是全目录前1选择A，采样前1的期望选择B。每位用户的10种候选组合均已枚举，与手算一致。</p>
+<p>这不违背保序条件：全目录K＝1时A领先，K＝2至5时B领先，两条命中率曲线交叉。它也没有证明采样一律不能用，只证明“固定一个K上的优势”不能自动迁移到小目录同名指标。</p>
+<h2 id="section-24">证据究竟支持到哪里</h2>
+<p><strong>支持证据：</strong>Li等直接研究同一评估问题，给出保序的充分条件和截断位置映射；§5的实验显示，映射后的采样指标在所考察模型、数据与设置下可以支持筛选。这为低成本评估提供了有条件的依据，不能升级为任意模型对、同一个数值K下都一致。</p>
+<p><strong>最强限制：</strong>Krichene与Rendle证明一般采样指标即使取期望，也不必保持全目录指标的模型顺序，并在推荐评估中考察修正效果。其<a href="https://www.ijcai.org/proceedings/2021/0651.pdf" rel="noreferrer">IJCAI 2021扩展摘要§3–5</a>公开说明：修正需要权衡偏差与方差。它是同一项工作的扩展介绍，不是额外一项独立复现。</p>
+<p>最接近的比较路线因此有三条：原始采样命中率、带明确目标与校准过程的映射或修正指标、同一用户集上的精确全目录命中率。它们都在处理评估成本与评估可信度。训练负采样、困难负例训练、模型架构改进属于另一个环节，可以组合，但不能用训练收益代替评估保序证据。</p>
+<h2 id="section-28">最低成本实验：先固定模型，只动评估</h2>
+<p>以下是未运行的建议方案。第一轮不训练新模型，可利用公开数据、合法可用的已有检查点，或公开的逐用户全目录排序结果做小规模审计。其成本取决于目录和模型大小；已有可复核排名时，可以跳过模型推理。若没有可复核的权重或排序，就先补齐这一前提。</p>
+<p><strong>先锁定决策。</strong>选择两套已有模型，固定数据切分、候选资格、历史物品过滤、单正例定义、用户权重、并列处理，以及目标K。预先规定最小有用差异δ、允许误选风险ε和“不足以决定”的处理方式；δ用命中率百分点表示，ε用概率表示，取值应由实际决策成本确定。不能看完结果再放宽。</p>
+<p><strong>再建立小而准确的参照。</strong>预先随机选定一组用户，为他们保留完整物品目录并计算一次精确排名。这样减少的是用户数量，完整候选目标仍保持不变。结果对这组用户是精确评估，对用户总体仍有抽样不确定性，必须另外报告。</p>
+<p><strong>最后只重抽竞争项。</strong>从已缓存的全目录顺序生成候选子集。每一轮、每一位用户，两模型共用同一个候选池；下一轮重新抽池。先固定采样规模，比较原始SHR@k与全目录HR@K，再扫描少量预先规定的采样规模，观察结论是否稳定。只对值得继续的配置加入修正指标，避免先做庞大参数搜索。</p>
+<p>每个配置记录：全目录模型差值；采样差值的均值与抽样误差；采样选型与全目录选型不一致的频率；选错时损失了多少全目录命中率。预先固定一次选型采用的抽样轮数、平局与弃权规则，每次风险复现实验都完整执行该规则。只有误选概率的单侧置信上限低于ε，才称通过这组用户上的风险验收；零次误选不等于风险为零。允许弃权时，同时报告做出决定的比例。用户总体的不确定性另验。对于很小或置信区间跨零的全目录差值，先标为“难以区分”，不硬计谁选对。</p>
+<p>候选池重复抽样和用户抽样是两层不确定性。用同一用户上的两模型结果作配对比较；对用户做bootstrap时，把该用户两模型及全部候选抽样结果一起重抽。不要把100轮候选抽样当成100倍独立用户。训练随机种子的稳健性放到后续验证，冻结检查点的第一轮不能回答它。</p>
+<h2 id="section-35">把混杂因素和公平预算关住</h2>
+<ul><li>候选定义：固定是否排除训练交互、重复物品及不可推荐物品。均匀抽样与流行度抽样是不同协议，应分开报告；本课的手算与保序解释不能直接移用到任意采样器。</li><li>模型行为：先确认对子集删项不会改变剩余项的相对顺序。列表级重排器如果依赖整个候选集合，就需要真正运行各候选集；从全目录缓存截取分数不再等价。</li><li>校准泄漏：映射、修正系数与采样规模只用开发用户选择，两模型获得相同调参机会，再在未参与校准的用户上验收。同一固定目标K不能为各模型分别改成最有利的截断点。</li><li>成本口径：缓存排名的审计用于隔离统计问题，不是采样节省推理时间的实测证据。要报告速度，另做同硬件、同精度、同用户数的端到端计时，纳入候选构建、打分和指标计算；校准所需全目录计算也记入总预算。</li></ul>
+<h2 id="section-37">什么结果值得继续，什么结果应修改判断</h2>
+<ul><li>若全目录差异明确且达到δ，采样却稳定选择另一模型，或证据显示误选风险超过ε：不采用该配置做这一固定Top-K选型。风险区间跨越ε时，只能说暂未通过，可增加审计信息或全目录终审。</li><li>若一致性只出现在映射后的另一个截断位置：把结论限于那个目标；原来的Top-K决策仍未验证，不能换名义宣布成功。</li><li>若修正后偏差减小但区间过宽：增加信息量、扩大用户审计或采用全目录终审，暂不做胜负判断。</li><li>若留出用户上达到预设风险门槛、全目录差异足以支持决定，且成本确实降低：可作为当前任务的初筛工具，最终候选仍以预设全目录目标复核；更换目录规模、模型族或采样器后重新验收。</li></ul>
+<p>可复用的判断顺序是：先定完整候选目录下的决策目标，再核验便宜指标与它的关系，最后衡量节省的成本。采样数、重复次数与修正方法各解决不同部分，不能只用“结果很稳定”代替目标一致性。</p>
+<h2 id="section-40">主要来源</h2>
+<ul><li><a href="https://arxiv.org/pdf/2106.10621" rel="noreferrer">Li等，On Sampling Top-K Recommendation Evaluation（KDD 2020；公开作者稿§2.3、§3、§5）</a></li><li><a href="https://research.google/pubs/on-sampled-metrics-for-item-recommendation/" rel="noreferrer">Krichene与Rendle，On Sampled Metrics for Item Recommendation（KDD 2020，作者机构页面）</a></li><li><a href="https://www.ijcai.org/proceedings/2021/0651.pdf" rel="noreferrer">同一工作的IJCAI 2021扩展摘要（§3–5）</a></li><li><a href="https://github.com/dli12/KDD20-On-Sampling-Top-K-Recommendation-Evaluation" rel="noreferrer">Li等论文作者公开实现（复核入口；本期未安装或运行）</a></li></ul></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://arxiv.org/pdf/2106.10621" rel="noreferrer">Li等，On Sampling Top-K Recommendation Evaluation（KDD 2020；公开作者稿§2.3、§3、§5）</a></li><li><a href="https://research.google/pubs/on-sampled-metrics-for-item-recommendation/" rel="noreferrer">Krichene与Rendle，On Sampled Metrics for Item Recommendation（KDD 2020，作者机构页面）</a></li><li><a href="https://www.ijcai.org/proceedings/2021/0651.pdf" rel="noreferrer">同一工作的IJCAI 2021扩展摘要（§3–5）</a></li><li><a href="https://github.com/dli12/KDD20-On-Sampling-Top-K-Recommendation-Evaluation" rel="noreferrer">Li等论文作者公开实现（复核入口；本期未安装或运行）</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-01 · 57 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
