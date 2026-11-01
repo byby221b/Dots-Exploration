@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-01">2026-11-01</time> / 修订 1</p><h1>Dots Trending</h1><p class="lead">本期10条：开源工具、模型与深度学习资料、技术讨论和科学人文。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-9">🧠 AI/模型</a></li><li><a href="#section-26">🔥 热议话题</a></li><li><a href="#section-35">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/Donchitos/Claude-Code-Game-Studios" rel="noreferrer">Donchitos/Claude-Code-Game-Studios</a></h3>
+<p class="item-meta">⭐+742 · Shell · GitHub stars today（非北京时间自然日）</p>
+<p>这套 Claude Code 模板把游戏开发拆为设计、程序、测试与发布等角色，并提供 Godot、Unity 和 Unreal 引擎相关工作流。</p>
+<p>用户可以选择不同流程强度，按项目需要保留或减少文档与审查步骤；它提供的是代理协作配置，不是已验证能独立完成游戏的开发团队。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/pingdotgg/t3code" rel="noreferrer">pingdotgg/t3code</a></h3>
+<p class="item-meta">⭐+1,148 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>T3 Code 为已安装在电脑上的编码代理提供统一操作界面，可从手机、网页或桌面应用控制不同工具。</p>
+<p>它复用 Claude Code、Codex 等工具的现有账号与认证，适合需要跨设备管理代理任务的人；使用前仍须安装并登录至少一种受支持工具。</p>
+</article>
+<h2 id="section-9">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder" rel="noreferrer">Qwen3.5-4B-3D-Coder：用小模型生成 Three.js 场景</a></h3>
+<p class="item-meta">HF 当前热榜第 8 · 10-25 已有预览，10-30 增加可选图像输入</p>
+<p>这是独立开发者对 Qwen3.5-4B 的微调，面向 Three.js 三维场景代码生成；配合原模型的视觉组件，可尝试从参考图生成场景。</p>
+<p>目前仍是早期预览，并非 Qwen 官方版本；作者展示的是定性样例，生成结果可能需要纠错，图像还会占用额外显存和上下文。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://distill.pub/2021/understanding-gnns/" rel="noreferrer">Understanding Convolutions on Graphs</a></h3>
+<p class="item-meta">深度精选 · 2021-09-02 · 从邻居聚合到图上的频谱</p>
+<p>从图像网格与不规则图的差别出发，文章解释节点如何汇总邻居信息，并用同一套构件比较图卷积、图注意力等模型。</p>
+<p>它进一步把局部信息传播连到图上的频谱表示，说明节点重编号为何只应相应重排节点输出，以及全局谱方法的计算成本和跨图迁移限制；适合具备矩阵运算基础的读者。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huyenchip.com/2021/09/07/a-friendly-introduction-to-machine-learning-compilers-and-optimizers.html" rel="noreferrer">A friendly introduction to machine learning compilers and optimizers</a></h3>
+<p class="item-meta">深度精选 · 2021-09-07 · 理解模型如何变成硬件上的计算</p>
+<p>文章先区分“能在硬件上运行”和“运行得快”，再解释编译器怎样通过中间表示连接模型与机器指令，以及分块、算子融合为何能减少内存访问。</p>
+<p>随后比较手写优化规则与自动调优的取舍，适合建立性能排查的基本框架；文中的工具生态和性能数字属于 2021 年背景，不应当作今天的选型清单。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.sglang.io/blog/unified-memory" rel="noreferrer">SGLang：让 KV 缓存与循环状态共享一池显存</a></h3>
+<p class="item-meta">深度精选 · 2026-10-22 · 日期据官方目录</p>
+<p>混合模型既保存随上下文增长的 KV 缓存，也保存固定大小的循环状态，固定切分显存可能让一边用满、另一边闲置。</p>
+<p>文章用内存块图讲解两者如何共用空间、搬移和淘汰；特定缓存压力实验显示的收益，不能推广成通用吞吐加速。</p>
+</article>
+<h2 id="section-26">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://xoranth.net/gcc-switch/" rel="noreferrer">Switch Lowering in GCC</a> <a href="https://news.ycombinator.com/item?id=50314085" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 196 分 · 39 条评论 · 原文 2024-01-14 · 旧文新讨论</p>
+<p>同一段 C 语言 switch，可以被 GCC 编译成跳转表、逐层比较的分支树，或用比特位判断集合成员的代码。</p>
+<p>文章逐步改变 case 的疏密与共享目标，再对照汇编解释选择依据；这篇旧文适合建立阅读编译结果的直觉，不应把示例中的启发式阈值当成所有版本通用的规则。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://jepsen.io/analyses/particledb-1.1.4" rel="noreferrer">Jepsen: ParticleDB 1.1.4</a> <a href="https://news.ycombinator.com/item?id=50316100" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 189 分 · 99 条评论 · 原文 2026-10-31</p>
+<p>Jepsen 在 ParticleDB 1.1.4 至 1.1.18.11.rc-22 上开展单节点测试，发现事务、查询语义与持久性等问题，并展示随机生成 SQL、与 PostgreSQL 对照如何找出可复现错误。</p>
+<p>截至其最后测试版本仍有问题未解决；厂商称后续 1.1.19-rc.13 已全部修复，但 Jepsen 未复测该版本，不能把厂商声明当成独立验证结论。</p>
+</article>
+<h2 id="section-35">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/what-crystals-older-than-the-sun-reveal-about-the-start-of-the-solar-system-20260302/" rel="noreferrer">What Crystals Older Than the Sun Reveal About the Start of the Solar System</a></h3>
+<p class="item-meta">往期佳作 · 2026-03-02 · James Dinneen</p>
+<p>陨石中比太阳更古老的微小晶粒保存着恒星物质的化学线索，可帮助检验太阳系究竟由超新星爆炸，还是大质量恒星吹出的恒星风触发形成。</p>
+<p>铝与铁同位素的相对丰度是区分两种解释的关键，但测量和模型仍有争议；寻找特定来源的晶粒是在约束假说，还不是确定了太阳系的唯一诞生过程。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/play-is-doing-its-work-even-if-were-not-keeping-score" rel="noreferrer">More nothing now</a></h3>
+<p class="item-meta">往期佳作 · 2026-09-01 · Justin Neuman</p>
+<p>孩子把卡坦岛棋盘拼成不计分的新世界，引出自由探索与按既定规则争胜的区别。</p>
+<p>作者借游戏哲学讨论积分与打卡如何取代原本的兴趣，主张为成年人保留不必证明产出的玩耍空间；这是文化评论，并非否定竞技活动。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/Donchitos/Claude-Code-Game-Studios" rel="noreferrer">Donchitos/Claude-Code-Game-Studios</a></li><li><a href="https://github.com/pingdotgg/t3code" rel="noreferrer">pingdotgg/t3code</a></li><li><a href="https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder" rel="noreferrer">Qwen3.5-4B-3D-Coder：用小模型生成 Three.js 场景</a></li><li><a href="https://distill.pub/2021/understanding-gnns/" rel="noreferrer">Understanding Convolutions on Graphs</a></li><li><a href="https://huyenchip.com/2021/09/07/a-friendly-introduction-to-machine-learning-compilers-and-optimizers.html" rel="noreferrer">A friendly introduction to machine learning compilers and optimizers</a></li><li><a href="https://www.sglang.io/blog/unified-memory" rel="noreferrer">SGLang：让 KV 缓存与循环状态共享一池显存</a></li><li><a href="https://xoranth.net/gcc-switch/" rel="noreferrer">Switch Lowering in GCC</a></li><li><a href="https://jepsen.io/analyses/particledb-1.1.4" rel="noreferrer">Jepsen: ParticleDB 1.1.4</a></li><li><a href="https://www.quantamagazine.org/what-crystals-older-than-the-sun-reveal-about-the-start-of-the-solar-system-20260302/" rel="noreferrer">What Crystals Older Than the Sun Reveal About the Start of the Solar System</a></li><li><a href="https://aeon.co/essays/play-is-doing-its-work-even-if-were-not-keeping-score" rel="noreferrer">More nothing now</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-01 · 56 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

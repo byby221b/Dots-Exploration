@@ -1,0 +1,241 @@
+{
+  "id": "dots-trending-2026-11-01",
+  "revision": 1,
+  "date": "2026-11-01",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "Dots Trending",
+  "summary": "本期10条：开源工具、模型与深度学习资料、技术讨论和科学人文。",
+  "topics": [
+    "开源工具",
+    "模型",
+    "深度精选",
+    "工程实践",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+742 · Shell · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "这套 Claude Code 模板把游戏开发拆为设计、程序、测试与发布等角色，并提供 Godot、Unity 和 Unreal 引擎相关工作流。"
+    },
+    {
+      "type": "paragraph",
+      "text": "用户可以选择不同流程强度，按项目需要保留或减少文档与审查步骤；它提供的是代理协作配置，不是已验证能独立完成游戏的开发团队。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[pingdotgg/t3code](https://github.com/pingdotgg/t3code)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1,148 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "T3 Code 为已安装在电脑上的编码代理提供统一操作界面，可从手机、网页或桌面应用控制不同工具。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它复用 Claude Code、Codex 等工具的现有账号与认证，适合需要跨设备管理代理任务的人；使用前仍须安装并登录至少一种受支持工具。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[Qwen3.5-4B-3D-Coder：用小模型生成 Three.js 场景](https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜第 8 · 10-25 已有预览，10-30 增加可选图像输入"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是独立开发者对 Qwen3.5-4B 的微调，面向 Three.js 三维场景代码生成；配合原模型的视觉组件，可尝试从参考图生成场景。"
+    },
+    {
+      "type": "paragraph",
+      "text": "目前仍是早期预览，并非 Qwen 官方版本；作者展示的是定性样例，生成结果可能需要纠错，图像还会占用额外显存和上下文。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Understanding Convolutions on Graphs](https://distill.pub/2021/understanding-gnns/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2021-09-02 · 从邻居聚合到图上的频谱"
+    },
+    {
+      "type": "paragraph",
+      "text": "从图像网格与不规则图的差别出发，文章解释节点如何汇总邻居信息，并用同一套构件比较图卷积、图注意力等模型。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它进一步把局部信息传播连到图上的频谱表示，说明节点重编号为何只应相应重排节点输出，以及全局谱方法的计算成本和跨图迁移限制；适合具备矩阵运算基础的读者。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[A friendly introduction to machine learning compilers and optimizers](https://huyenchip.com/2021/09/07/a-friendly-introduction-to-machine-learning-compilers-and-optimizers.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2021-09-07 · 理解模型如何变成硬件上的计算"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章先区分“能在硬件上运行”和“运行得快”，再解释编译器怎样通过中间表示连接模型与机器指令，以及分块、算子融合为何能减少内存访问。"
+    },
+    {
+      "type": "paragraph",
+      "text": "随后比较手写优化规则与自动调优的取舍，适合建立性能排查的基本框架；文中的工具生态和性能数字属于 2021 年背景，不应当作今天的选型清单。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[SGLang：让 KV 缓存与循环状态共享一池显存](https://www.sglang.io/blog/unified-memory)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-10-22 · 日期据官方目录"
+    },
+    {
+      "type": "paragraph",
+      "text": "混合模型既保存随上下文增长的 KV 缓存，也保存固定大小的循环状态，固定切分显存可能让一边用满、另一边闲置。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章用内存块图讲解两者如何共用空间、搬移和淘汰；特定缓存压力实验显示的收益，不能推广成通用吞吐加速。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[Switch Lowering in GCC](https://xoranth.net/gcc-switch/) [讨论](https://news.ycombinator.com/item?id=50314085)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 196 分 · 39 条评论 · 原文 2024-01-14 · 旧文新讨论"
+    },
+    {
+      "type": "paragraph",
+      "text": "同一段 C 语言 switch，可以被 GCC 编译成跳转表、逐层比较的分支树，或用比特位判断集合成员的代码。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章逐步改变 case 的疏密与共享目标，再对照汇编解释选择依据；这篇旧文适合建立阅读编译结果的直觉，不应把示例中的启发式阈值当成所有版本通用的规则。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Jepsen: ParticleDB 1.1.4](https://jepsen.io/analyses/particledb-1.1.4) [讨论](https://news.ycombinator.com/item?id=50316100)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 189 分 · 99 条评论 · 原文 2026-10-31"
+    },
+    {
+      "type": "paragraph",
+      "text": "Jepsen 在 ParticleDB 1.1.4 至 1.1.18.11.rc-22 上开展单节点测试，发现事务、查询语义与持久性等问题，并展示随机生成 SQL、与 PostgreSQL 对照如何找出可复现错误。"
+    },
+    {
+      "type": "paragraph",
+      "text": "截至其最后测试版本仍有问题未解决；厂商称后续 1.1.19-rc.13 已全部修复，但 Jepsen 未复测该版本，不能把厂商声明当成独立验证结论。"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[What Crystals Older Than the Sun Reveal About the Start of the Solar System](https://www.quantamagazine.org/what-crystals-older-than-the-sun-reveal-about-the-start-of-the-solar-system-20260302/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作 · 2026-03-02 · James Dinneen"
+    },
+    {
+      "type": "paragraph",
+      "text": "陨石中比太阳更古老的微小晶粒保存着恒星物质的化学线索，可帮助检验太阳系究竟由超新星爆炸，还是大质量恒星吹出的恒星风触发形成。"
+    },
+    {
+      "type": "paragraph",
+      "text": "铝与铁同位素的相对丰度是区分两种解释的关键，但测量和模型仍有争议；寻找特定来源的晶粒是在约束假说，还不是确定了太阳系的唯一诞生过程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[More nothing now](https://aeon.co/essays/play-is-doing-its-work-even-if-were-not-keeping-score)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作 · 2026-09-01 · Justin Neuman"
+    },
+    {
+      "type": "paragraph",
+      "text": "孩子把卡坦岛棋盘拼成不计分的新世界，引出自由探索与按既定规则争胜的区别。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者借游戏哲学讨论积分与打卡如何取代原本的兴趣，主张为成年人保留不必证明产出的玩耍空间；这是文化评论，并非否定竞技活动。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Donchitos/Claude-Code-Game-Studios",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios"
+    },
+    {
+      "title": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code"
+    },
+    {
+      "title": "Qwen3.5-4B-3D-Coder：用小模型生成 Three.js 场景",
+      "url": "https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder"
+    },
+    {
+      "title": "Understanding Convolutions on Graphs",
+      "url": "https://distill.pub/2021/understanding-gnns/"
+    },
+    {
+      "title": "A friendly introduction to machine learning compilers and optimizers",
+      "url": "https://huyenchip.com/2021/09/07/a-friendly-introduction-to-machine-learning-compilers-and-optimizers.html"
+    },
+    {
+      "title": "SGLang：让 KV 缓存与循环状态共享一池显存",
+      "url": "https://www.sglang.io/blog/unified-memory"
+    },
+    {
+      "title": "Switch Lowering in GCC",
+      "url": "https://xoranth.net/gcc-switch/"
+    },
+    {
+      "title": "Jepsen: ParticleDB 1.1.4",
+      "url": "https://jepsen.io/analyses/particledb-1.1.4"
+    },
+    {
+      "title": "What Crystals Older Than the Sun Reveal About the Start of the Solar System",
+      "url": "https://www.quantamagazine.org/what-crystals-older-than-the-sun-reveal-about-the-start-of-the-solar-system-20260302/"
+    },
+    {
+      "title": "More nothing now",
+      "url": "https://aeon.co/essays/play-is-doing-its-work-even-if-were-not-keeping-score"
+    }
+  ],
+  "public_reviewed": true
+}
