@@ -1,0 +1,76 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>Dots Trending｜视觉工具、生成模型与可复现计算 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-02">2026-11-02</time> / 修订 1</p><h1>Dots Trending｜视觉工具、生成模型与可复现计算</h1><p class="lead">从可微视觉工具、音视频与三维生成，到浮点计算、测试缩减和宇宙磁场，精选值得展开学习的公开资料。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-13">🧠 AI/模型</a></li><li><a href="#section-38">🔥 热议话题</a></li><li><a href="#section-43">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/kornia/kornia" rel="noreferrer">kornia/kornia</a></h3>
+<p class="item-meta">⭐+101 · Python · GitHub stars today（非北京时间自然日）</p>
+<p>把图像变换、相机几何和特征匹配写成 PyTorch 张量操作，许多步骤可以在 GPU 上批量执行，并保留梯度供模型训练使用。</p>
+<p>适合需要让图像、掩码和关键点同步变换的视觉流程；单张图片的 CPU 处理与部分低精度算子，仍要按具体任务检查支持和性能。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/cjpais/Handy" rel="noreferrer">cjpais/Handy</a></h3>
+<p class="item-meta">⭐+339 · Rust · GitHub stars today（非北京时间自然日）</p>
+<p>按快捷键录音后，Handy 会先过滤静音，再用本地语音模型转成文字，粘贴到当前应用的输入框；基础转写流程在电脑上完成。</p>
+<p>它支持 Windows、macOS 和 Linux，适合日常口述输入，也能参考其语音检测与桌面集成设计；Linux 的快捷键和文字输入兼容性需要额外配置。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/FlashML-org/FreeToken" rel="noreferrer">FlashML-org/FreeToken</a></h3>
+<p class="item-meta">⭐+242 · Python · GitHub stars today（非北京时间自然日）</p>
+<p>面向消费级电脑运行混合专家模型：根据带宽安排 CPU 与 GPU 分工，把常用专家权重缓存到显存，并在专家缓存和上下文缓存之间动态分配空间。</p>
+<p>项目提供兼容常见模型服务接口的运行入口，适合研究显存受限时怎样减少搬运和重复计算；实际可运行的模型与速度仍取决于硬件、内存和量化配置。</p>
+</article>
+<h2 id="section-13">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://spaces.ac.cn/archives/11993" rel="noreferrer">平均之路：从Attention到TTT</a></h3>
+<p class="item-meta">2026-11-01 · 苏剑林 · 推导笔记</p>
+<p>文章从注意力需要保存的键和值出发，用一个随输入更新的小模型学习“由键预测值”，再通过平均近似，连接到测试时训练（TTT）和 DeltaNet、MesaNet。</p>
+<p>适合追踪长序列信息如何压进固定大小的状态；作者也指出关键近似依赖较强的分布假设，这是一条理解架构关系的推导路线，尚无本文实验验证。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/Pika-Labs/Pika-H3-Flex" rel="noreferrer">Pika H3 Flex：用六步采样生成带声音的视频</a></h3>
+<p class="item-meta">HF当前热榜第9 · 2026-10-29发布</p>
+<p>Pika 在 MiniMax H3 上训练适配器，用六步采样联合生成视频与声音，并接受首尾帧或图像、视频、音频参考，便于反复调整镜头和动作。</p>
+<p>下载版原生输出 480p 或 768p，4K 与分轨音频属于另行提供的 API 服务；本地代表性测试使用 H100 80GB，大请求可能还需要把部分计算或数据移到 CPU，并配备较大的主机内存。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/speridlabs/idol" rel="noreferrer">Idol：把单张物体图片变成可转动的三维表示</a></h3>
+<p class="item-meta">HF当前热榜第10 · 发布日期未核实</p>
+<p>Idol 先移除图片背景，再生成由许多带颜色、透明度的小椭球组成的三维高斯表示，并导出标准 PLY 文件，方便从新视角查看物体。</p>
+<p>它提供不同采样步数与细节数量的设置；照片没拍到的部分由模型推测。运行还依赖需单独接受条款的 DINOv3 与 FLUX.2 图像组件。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://distill.pub/2016/deconv-checkerboard/" rel="noreferrer">Deconvolution and Checkerboard Artifacts</a></h3>
+<p class="item-meta">深度精选 · 2016-10-17 · 图解上采样与棋盘格伪影</p>
+<p>把低分辨率特征放大成图像时，转置卷积的窗口可能覆盖得不均匀，逐层叠加后形成棋盘格。文章用交互图解释这种结构如何影响输出与梯度。</p>
+<p>再对照“先缩放、后卷积”的代码和图像实验，适合学习从算子设计定位视觉伪影；实验来自当时的生成模型与风格迁移任务。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://siboehm.com/articles/23/Inlining-FMA-FP-consistency" rel="noreferrer">Can Function Inlining Affect Floating Point Outputs?</a></h3>
+<p class="item-meta">深度精选 · 2023-06-23 · 从 C++ 到汇编的浮点一致性</p>
+<p>同样写成乘法再加法，编译器可能把它们融合为一条 FMA 指令，只在最后舍入一次；把函数展开到调用位置后，编译器能一起优化更多运算，结果的末几位也可能改变。</p>
+<p>作者沿 C++、LLVM 中间表示和汇编追踪这个过程，适合排查重构后的数值差异；文中编译器默认选项属于 2023 年环境，实践时需核对版本。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://matklad.github.io/2026/04/20/test-case-minimization.html" rel="noreferrer">256 Lines or Less: Test Case Minimization</a></h3>
+<p class="item-meta">深度精选 · 2026-04-20 · Zig 代码与随机测试</p>
+<p>随机测试找到了错误，怎样把漫长的失败过程缩成容易调试的例子？文章用有限随机字节驱动测试，再减少字节预算，搜索更短的失败输入。</p>
+<p>完整 Zig 实现串起输入生成、独立进程运行与种子重放，适合学习可复现测试的构造；有限随机尝试找到的是较小反例，并不保证全局最小。</p>
+</article>
+<h2 id="section-38">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/" rel="noreferrer">The AI cost of JavaScript frameworks</a> <a href="https://news.ycombinator.com/item?id=50323088" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 293 分 · 228 条评论 · 原文 2026-10-28</p>
+<p>作者让同一编码代理用不同前端框架构建同一个小型应用，再分别测量生成成本、代码量，以及页面性能和可访问性。</p>
+<p>这份可复现比较更值得借鉴的是统一规格、重复运行与报告波动的方法；结果只覆盖一个内容型应用和特定代理，框架选择仍需结合自己的负载。</p>
+</article>
+<h2 id="section-43">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/radio-maps-may-reveal-the-universes-biggest-magnetic-fields-20240206/" rel="noreferrer">Radio Maps May Reveal the Universe’s Biggest Magnetic Fields</a></h3>
+<p class="item-meta">往期佳作 · 2024-02-06 · Jonathan O’Callaghan</p>
+<p>研究者尝试从射电图像的亮度变化，推断星系团中磁场的方向，将稀薄空间里难以测量的磁场结构画成地图。</p>
+<p>这为追溯宇宙磁场的起源提供了一条观测路径；方法仍有争议，因为电子或气体密度的变化也可能影响图像中的梯度。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/its-not-just-screen-time-kids-are-bombarded-by-hectic-media" rel="noreferrer">The bombarding of childhood</a></h3>
+<p class="item-meta">往期佳作 · 2026-09-14 · Natalia Kucirkova</p>
+<p>同样看二十分钟屏幕，连贯故事和快速切换的片段会给孩子留下不同的理解空间。作者建议把叙事节奏、停顿和有意义的重复纳入媒介质量评价。</p>
+<p>文章帮助区分“持续吸引目光”和“给思考留时间”；它提出的是供成人判断的设计框架，适合的节奏仍随年龄、语言和感官特点而变。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/kornia/kornia" rel="noreferrer">kornia/kornia</a></li><li><a href="https://github.com/cjpais/Handy" rel="noreferrer">cjpais/Handy</a></li><li><a href="https://github.com/FlashML-org/FreeToken" rel="noreferrer">FlashML-org/FreeToken</a></li><li><a href="https://spaces.ac.cn/archives/11993" rel="noreferrer">平均之路：从Attention到TTT</a></li><li><a href="https://huggingface.co/Pika-Labs/Pika-H3-Flex" rel="noreferrer">Pika H3 Flex：用六步采样生成带声音的视频</a></li><li><a href="https://huggingface.co/speridlabs/idol" rel="noreferrer">Idol：把单张物体图片变成可转动的三维表示</a></li><li><a href="https://distill.pub/2016/deconv-checkerboard/" rel="noreferrer">Deconvolution and Checkerboard Artifacts</a></li><li><a href="https://siboehm.com/articles/23/Inlining-FMA-FP-consistency" rel="noreferrer">Can Function Inlining Affect Floating Point Outputs?</a></li><li><a href="https://matklad.github.io/2026/04/20/test-case-minimization.html" rel="noreferrer">256 Lines or Less: Test Case Minimization</a></li><li><a href="https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/" rel="noreferrer">The AI cost of JavaScript frameworks</a></li><li><a href="https://www.quantamagazine.org/radio-maps-may-reveal-the-universes-biggest-magnetic-fields-20240206/" rel="noreferrer">Radio Maps May Reveal the Universe’s Biggest Magnetic Fields</a></li><li><a href="https://aeon.co/essays/its-not-just-screen-time-kids-are-bombarded-by-hectic-media" rel="noreferrer">The bombarding of childhood</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-02 · 58 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
