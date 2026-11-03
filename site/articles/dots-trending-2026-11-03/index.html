@@ -1,0 +1,76 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-03">2026-11-03</time> / 修订 1</p><h1>每日 Trending 速览</h1><p class="lead">从桌面代理和自定义注意力，到权重编辑、数仓迁移与奇异原子。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-13">🧠 AI/模型</a></li><li><a href="#section-30">🔥 热议话题</a></li><li><a href="#section-43">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/vercel-labs/agent-desktop" rel="noreferrer">vercel-labs/agent-desktop</a></h3>
+<p class="item-meta">⭐+2,275 · Rust · GitHub stars today（非北京时间自然日）</p>
+<p>把操作系统提供的界面控件树转成带引用的 JSON，代理据此点击或输入，再取新快照核验结果；支持 macOS、Windows 和 Linux。</p>
+<p>它用快照标识管理控件引用，界面变化后要求重新定位，适合研究桌面代理如何减少点错对象，以及怎样与用户的手动操作配合。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/D4Vinci/Scrapling" rel="noreferrer">D4Vinci/Scrapling</a></h3>
+<p class="item-meta">⭐+706 · Python · GitHub stars today（非北京时间自然日）</p>
+<p>将网页请求、浏览器渲染、解析和并发采集整合到一个 Python 框架，也提供供 AI 代理调用的 MCP 接口。</p>
+<p>可重点学习可复用会话、暂停恢复和结构化导出，适合把零散采集脚本整理成持续运行的流程；使用时需遵守目标网站的访问规则。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/hyprwm/Hyprland" rel="noreferrer">hyprwm/Hyprland</a></h3>
+<p class="item-meta">⭐+509 · C++ · GitHub stars today（非北京时间自然日）</p>
+<p>面向 Linux 的桌面合成器，负责把应用窗口组织、绘制到屏幕上；它支持自动平铺窗口，也保留特效和多种布局。</p>
+<p>配置保存即可重载，程序还能通过进程间通信接口控制桌面。窗口规则、插件和按工作区切换布局，适合定制自己的操作环境。</p>
+</article>
+<h2 id="section-13">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://simonwillison.net/2026/Nov/2/llm/" rel="noreferrer">LLM 0.37：统一接入兼容端点与多模态嵌入</a></h3>
+<p class="item-meta">新文·2026-11-02</p>
+<p>命令行工具 LLM 新增命令，可登记兼容 OpenAI 接口的模型服务；嵌入接口也能为图片、音频等二进制输入标明内容类型。</p>
+<p>适合统一管理不同服务的调用方式，并接入能把多种媒体转成向量的模型；具体支持哪些输入，仍由所选模型和插件决定。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://research.colfax-intl.com/a-users-guide-to-flexattention-in-flash-attention-cute-dsl/" rel="noreferrer">FlexAttention：把注意力规则写成可组合函数</a></h3>
+<p class="item-meta">深度精选·2025-11-14</p>
+<p>从两个小函数入手：一个修改注意力分数，一个规定哪些位置可以互相关注，再将规则组合成文档隔离、前缀可见等模式。</p>
+<p>教程继续把规则转成分块结构，跳过整块无效计算，并给出 CuTe DSL 与 PyTorch 代码。适合已有注意力基础、想编写自定义内核的读者。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://tridao.me/blog/2026/mamba3-part2/" rel="noreferrer">Mamba-3：从连续状态方程推到高效递推</a></h3>
+<p class="item-meta">深度精选·2026-03-16</p>
+<p>从随时间变化的状态方程出发，逐步推导计算机执行的离散更新，再用旋转表示复数状态，解释模型怎样跟踪奇偶等变化。</p>
+<p>后半篇连接到实现：把旋转移到输入和输出，并用多路输入、输出提高计算密度。适合有线性代数基础、想看清表达能力与访存取舍的读者。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://lemire.me/blog/2026/10/31/beating-the-compiler-at-signed-32-bit-division/" rel="noreferrer">整数除法优化：从误差界推到 CPU 指令</a></h3>
+<p class="item-meta">深度精选·2026-10-31 · 数学／C++／汇编</p>
+<p>先把常数除法写成乘法加移位，再利用 64 位寄存器容得下的乘积，缩短有符号 32 位除法的指令依赖链。</p>
+<p>从数学界限、C++ 到汇编和实测逐层讲解；收益随除数、编译器和 CPU 改变，文中也展示了反而更慢的情形。</p>
+</article>
+<h2 id="section-30">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://rikiyat.github.io/blog/weight-space-programming/" rel="noreferrer">权重空间编程：让模型分析并修改另一个模型</a> <a href="https://news.ycombinator.com/item?id=50341174" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">新文·2026-11-02 · HN 1860 分／590 条评论（采集时）</p>
+<p>作者让 Astra 查看并修改小模型权重，利用前向运行的反馈寻找修改方向，而无需梯度训练；公开了实验日志与修改后的权重。</p>
+<p>在 Qwen 的数学测试中，收益主要来自减少反复推理到超时的情况；较少出现循环的 Gemma 对照收益很小。适合研究模型编辑究竟修复了什么。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://posthog.com/blog/moving-off-duckdb" rel="noreferrer">PostHog：为什么从 DuckDB 迁向分布式数仓</a> <a href="https://news.ycombinator.com/item?id=50338747" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">新文·2026-11-02 · HN 158 分／107 条评论（采集时）</p>
+<p>当数据达到约 2PB 时，PostHog 遇到单机计算资源难预估、元数据持续膨胀和连接协议兼容等问题，团队逐项复盘了应对过程。</p>
+<p>文章解释为何转向 Trino 与自建 HogLake，适合学习云数仓如何划分计算、存储和元数据职责；这些取舍对应其具体生产负载。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://blog.cloudflare.com/dns-targeted-zone-builds/" rel="noreferrer">Cloudflare：只重建受影响的 DNS 数据</a> <a href="https://news.ycombinator.com/item?id=50337558" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">新文·2026-11-02 · HN 138 分／47 条评论（采集时）</p>
+<p>修改一条 DNS 记录时，先判断需要重建哪些数据，再合并同一区域的待办事件，减少重复读取和整区重建。</p>
+<p>文章详解局部更新与消息确认如何保持一致。团队报告峰值内存下降 85%，构建中位延迟约从 7.7 秒降至 3.3 秒；该计时止于存储写入，后续全球分发另计。</p>
+</article>
+<h2 id="section-43">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/is-there-anything-left-in-the-dream-of-cold-fusion-20261102/" rel="noreferrer">μ 子催化聚变：发电之外，奇异原子还有什么价值？</a></h3>
+<p class="item-meta">新文·2026-11-02 · George Musser</p>
+<p>用更重的 μ 子替代电子，原子会缩小，让氢核更容易靠近并聚变；文章由此带读者进入奇异原子的研究。</p>
+<p>这项研究尚未实现能量收支平衡，而奇异原子本身能帮助研究强电场和原子核结构。看点是可检验的基础物理问题，以及实验如何拓展研究工具。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/the-self-making-world-of-jean-baptiste-lamarck" rel="noreferrer">拉马克的另一面：生物也在改造自己的环境</a></h3>
+<p class="item-meta">新文·2026-11-02 · Jessica Riskin</p>
+<p>科学史学者 Jessica Riskin 从珊瑚造礁、动物行为与生态位建构出发，重读拉马克关于生物改造自身和环境的想法。</p>
+<p>文章提供一种理解演化史的视角：生物也参与塑造选择环境。这是作者的历史论述，涉及遗传机制的争议需要与具体实验结论分开阅读。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/vercel-labs/agent-desktop" rel="noreferrer">vercel-labs/agent-desktop</a></li><li><a href="https://github.com/D4Vinci/Scrapling" rel="noreferrer">D4Vinci/Scrapling</a></li><li><a href="https://github.com/hyprwm/Hyprland" rel="noreferrer">hyprwm/Hyprland</a></li><li><a href="https://simonwillison.net/2026/Nov/2/llm/" rel="noreferrer">LLM 0.37：统一接入兼容端点与多模态嵌入</a></li><li><a href="https://research.colfax-intl.com/a-users-guide-to-flexattention-in-flash-attention-cute-dsl/" rel="noreferrer">FlexAttention：把注意力规则写成可组合函数</a></li><li><a href="https://tridao.me/blog/2026/mamba3-part2/" rel="noreferrer">Mamba-3：从连续状态方程推到高效递推</a></li><li><a href="https://lemire.me/blog/2026/10/31/beating-the-compiler-at-signed-32-bit-division/" rel="noreferrer">整数除法优化：从误差界推到 CPU 指令</a></li><li><a href="https://rikiyat.github.io/blog/weight-space-programming/" rel="noreferrer">权重空间编程：让模型分析并修改另一个模型</a></li><li><a href="https://posthog.com/blog/moving-off-duckdb" rel="noreferrer">PostHog：为什么从 DuckDB 迁向分布式数仓</a></li><li><a href="https://blog.cloudflare.com/dns-targeted-zone-builds/" rel="noreferrer">Cloudflare：只重建受影响的 DNS 数据</a></li><li><a href="https://www.quantamagazine.org/is-there-anything-left-in-the-dream-of-cold-fusion-20261102/" rel="noreferrer">μ 子催化聚变：发电之外，奇异原子还有什么价值？</a></li><li><a href="https://aeon.co/essays/the-self-making-world-of-jean-baptiste-lamarck" rel="noreferrer">拉马克的另一面：生物也在改造自己的环境</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-03 · 60 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
