@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>数据库怎样把零散修改，攒成成批写入？ · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">技术考古 / <time datetime="2026-11-03">2026-11-03</time> / 修订 1</p><h1>数据库怎样把零散修改，攒成成批写入？</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">先收下修改，再安排归位</a></li><li><a href="#section-4">同一个商品，可以暂时留下两个版本</a></li><li><a href="#section-10">删除记录，也要让旧文件知道</a></li><li><a href="#section-14">整理得勤，还是多攒几批？</a></li><li><a href="#section-18">可选深入｜四个转折，各自解决什么</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">先收下修改，再安排归位</h2>
+<p>许多记录不断被修改时，数据库可以先把新内容集中记下来，再分批整理进长期保存的文件。这样能减少零散的磁盘访问，代价是查询要辨认新旧版本，后台也得持续整理。</p>
+<p>主文约4分钟。设想商品库存表远大于内存，修改分散在许多商品上。传统办法会找到相应数据页，修改后再写回；内存缓存能合并一部分修改，但装不下的活跃数据仍可能带来大量零散访问。1996年的 LSM 论文直接面对的，就是高频插入、删除带来的磁盘维护成本。[1]</p>
+<p>LSM 是一种把修改先放进内存、再分批并入磁盘数据的组织方法。下面用甲、乙、丙三个商品追踪它；这只是演示步骤的小例子，实际收益来自大量记录一起处理。</p>
+<h2 id="section-4">同一个商品，可以暂时留下两个版本</h2>
+<p>第一批写入“甲=10、乙=8”。系统先把修改记进可供故障恢复的日志，再放进内存中的有序缓冲。攒够一批后，把内容写成按商品名排序的文件。日志保留修改过程，排序文件方便查询，它们各有用途。</p>
+<p>第二批写入“甲=12、丙=6”，经过同样的步骤形成新文件。旧文件里的“甲=10”暂时留着。此时查询甲，系统依据版本先后返回12；查询乙，则仍能从旧文件取到8。[2][3]</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">阶段</th><th scope="col">磁盘上保存的内容</th><th scope="col">查询甲</th></tr></thead><tbody><tr><td>第一批落盘</td><td>旧文件：甲=10，乙=8</td><td>10</td></tr><tr><td>第二批落盘</td><td>新文件：甲=12，丙=6；旧文件保留</td><td>12</td></tr><tr><td>后台合并完成</td><td>整理后：甲=12，乙=8，丙=6</td><td>12</td></tr></tbody></table></div>
+<p>这里的合并整理（compaction），是把若干有序文件归并成新文件，同时清理已无保留用途的旧版本。表中假设只读取当前值，没有需要保留旧版本的快照。[3]</p>
+<p>写入时省下了逐条回到旧位置改写的工作，整理时又要读写一批数据。文件若一直堆积，查询就可能需要检查更多位置。因此，接收新修改与后台整理，必须一起维持下去。</p>
+<h2 id="section-10">删除记录，也要让旧文件知道</h2>
+<p>回到第二批刚落盘、尚未合并的时候：现在删除甲。系统先写下一条“甲已删除”的记录，查询便返回不存在。这个标记会挡住旧文件中的10和12。</p>
+<p>等合并覆盖了甲的所有更老版本，又没有旧快照需要它们时，才可以把旧值和删除标记一起清掉。若只删标记、却留下某个更老文件里的甲，后续查询就可能把已删除商品重新找回来。[2][3]</p>
+<p>可以顺手检查一下自己的理解：只合并新文件和删除记录，旧文件还没参与，能把删除标记扔掉吗？答案是保留，因为旧文件里的甲=10仍需被遮住。</p>
+<h2 id="section-14">整理得勤，还是多攒几批？</h2>
+<p>围绕同一个问题，后来形成了不同的整理策略。一种做法把新数据较积极地并入下一层，减少重复版本和待查文件；另一种让几批数据先并存，攒到合适规模再合并，通常可以少重写一些内容，却要承担更多读取和临时空间开销。[4]</p>
+<p>今天的固态盘省去了机械磁头来回寻道，但后台重写仍要花带宽、空间和计算资源。RocksDB团队在2021年的经验论文中回顾：早期重点是减少额外写入，随后更多应用受空间成本约束，降低CPU开销也逐渐重要。优化目标随实际负担改变。[5]</p>
+<p>读完抓住这一点就够了：LSM让修改先集中到达，再成批归位。判断它是否合算，要把前台写入、后续查询和后台整理放在同一张账单里。</p>
+<h2 id="section-18">可选深入｜四个转折，各自解决什么</h2>
+<p>这几处关联有原文依据，具体文件组织并不完全相同。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">节点</th><th scope="col">改变的步骤与代价</th></tr></thead><tbody><tr><td>LSM原论文，1996</td><td>把索引维护推迟并成批处理，减少机械磁盘访问；部分即时查询可能付出更多读取成本。[1]</td></tr><tr><td>Bigtable，2006</td><td>将日志、内存缓冲和有序文件结合，并用后台合并控制文件数量；论文明确说明它与LSM的组织思路相似。[2]</td></tr><tr><td>LevelDB</td><td>把文件按层及商品名范围组织，整理时选取相互重叠的文件；工作范围更可控，但被选中的旧数据仍可能反复重写。[3]</td></tr><tr><td>RocksDB</td><td>基于LevelDB代码发展，为不同负载提供多种整理策略；资源优化从写入扩展到空间和CPU效率。[4][5]</td></tr></tbody></table></div>
+<p>当年没有被普遍放弃的是B-tree：一种按键值范围逐层定位记录的索引。原始LSM论文也讨论了缓存的收益。若反复修改的只是少数热点记录，内存缓存已能吸收大量变化，不能仅凭“写得频繁”就判断LSM更好。[1]</p>
+<p>今天值得重审的是整理频率：用真实读写比例和热点分布，观察后台写入字节、峰值磁盘占用、查询延迟及整理积压，再比较策略。这里只提出判断方法，没有运行数据库性能实验。[4][5]</p>
+<p>与此前的存在性过滤、服务器扩容分配和训练中间结果重算相比，本期新增的是单机存储中的版本归并：数据已经保存，问题是何时整理，以及何时可以安全丢弃旧值。</p></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://www.cs.umb.edu/~poneil/lsmtree.pdf" rel="noreferrer">[1] O’Neil等：The Log-Structured Merge-Tree（1996），摘要、§2与§6</a></li><li><a href="https://storage.googleapis.com/gweb-research2023-media/pubtools/4443.pdf" rel="noreferrer">[2] Bigtable（OSDI 2006），§5.3、§5.4与§10</a></li><li><a href="https://github.com/google/leveldb/blob/main/doc/impl.md" rel="noreferrer">[3] LevelDB官方实现说明：Files、Sorted tables、Compactions</a></li><li><a href="https://github.com/meta/rocksdb/wiki/Compaction" rel="noreferrer">[4] RocksDB官方文档：Compaction</a></li><li><a href="https://www.usenix.org/system/files/fast21-dong.pdf" rel="noreferrer">[5] RocksDB团队经验论文（FAST 2021），§2与§3</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-03 · 61 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
