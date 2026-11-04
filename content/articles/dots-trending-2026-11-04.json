@@ -1,0 +1,260 @@
+{
+  "id": "dots-trending-2026-11-04",
+  "revision": 1,
+  "date": "2026-11-04",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "每日 Trending 速览",
+  "summary": "从本地推理和CPU矩阵乘，到并发错误处理、Mac镜像分发与四色定理。",
+  "topics": [
+    "开源工具",
+    "模型机制",
+    "系统工程",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[max-sixty/worktrunk](https://github.com/max-sixty/worktrunk)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+438 · Rust · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "给并行编码代理各开一个 Git 工作目录，避免改动互相踩踏。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它用分支名统一创建、切换和清理工作树，还能用钩子准备环境，并在支持的文件系统上共享构建缓存，减少并行任务的准备成本。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[JustVugg/colibri](https://github.com/JustVugg/colibri)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+802 · C · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "面向每次只调用部分专家分支的混合专家模型（MoE），将常用专家留在显存，其余放内存或按需从磁盘读取，支持运行超出显存容量的模型。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这个 C 引擎把缓存、预取与计算重叠，并提供 CUDA、Vulkan 后端。显存需求降低后，磁盘容量和读取带宽仍是重要条件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[floci-io/floci](https://github.com/floci-io/floci)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+482 · Java · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "在开发和 CI 中模拟 AWS 服务，把现有 SDK、CLI 或基础设施工具的端点改指向本机即可接入。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它提供存储、队列等兼容接口，数据库与 Lambda 等通过 Docker 执行，减少测试对云账户的依赖；具体 API 仍应核对支持范围。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[CPU 矩阵乘：从三重循环一路优化到缓存分块](https://siboehm.com/articles/22/Fast-MMM-on-CPU)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2022-08-14"
+    },
+    {
+      "type": "paragraph",
+      "text": "从矩阵乘的运算量出发，解释循环顺序为何影响缓存命中与向量化，再用分块和多线程逐步改写 C++。"
+    },
+    {
+      "type": "paragraph",
+      "text": "每步都有代码与实测，适合建立性能分析直觉；实验围绕固定尺寸矩阵展开，使用快速浮点优化时还需留意精度与特殊值处理。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[线性网络的学习动力学：不同特征为何依次被学会](https://francisbach.com/closed-form-dynamics/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-03-05"
+    },
+    {
+      "type": "paragraph",
+      "text": "以两个矩阵相乘构成的线性网络为例，把参数更新看作连续过程，解释特征方向怎样对齐、不同强度的成分如何依次学会。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章在特定初始化与数据条件下推导公式、绘制轨迹，并比较梯度下降与 Muon。适合有线性代数和微积分基础、想深入理解训练过程的读者。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[并发任务报错后，谁负责收场？](https://blog.nelhage.com/post/concurrent-error-handling/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-03-23 · Nelson Elhage"
+    },
+    {
+      "type": "paragraph",
+      "text": "一个后台任务失败，主程序却继续等待，错误就可能变成死锁。作者从这个小例子推导任务树、异常向上传递和取消机制，说明结构化并发为何把任务寿命绑在一起。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合检查批处理或服务中的错误传播与资源清理；文中也保留了取消机制本身难以设计的代价。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[旧奔腾上的现代棋力：算法能补多少硬件？](https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html) [讨论](https://news.ycombinator.com/item?id=50349276)"
+    },
+    {
+      "type": "paragraph",
+      "text": "原文·2026-11-01，今日 HN 讨论 · HN 442 分／209 条评论（采集时）"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者把现代 Stockfish 移植到 200MHz、64MB 的奔腾电脑，调整搜索和小型神经网络评估，再与运行在现代硬件上的旧版 Crafty 对弈。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章展示软件改进如何弥补推理硬件的差距。新引擎表现更强，但模型训练仍借助现代硬件；它研究的是旧电脑上的运行能力。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Namespace：把大批 Mac 镜像分发到机架](https://namespace.so/blog/mac-at-any-scale) [讨论](https://news.ycombinator.com/item?id=50352758)"
+    },
+    {
+      "type": "paragraph",
+      "text": "新文·2026-11-03 · HN 310 分／175 条评论（采集时）"
+    },
+    {
+      "type": "paragraph",
+      "text": "为大量 Mac 提供构建环境时，系统镜像的存储与分发会成为负担。Namespace 用稀疏与增量格式减少数据量，让节点互传所需数据块。"
+    },
+    {
+      "type": "paragraph",
+      "text": "本地再利用 APFS 的写时复制共享镜像，只有修改的数据块才另占空间；文章串起虚拟机隔离、镜像分发和性能取舍，适合学习大规模构建平台设计。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Safari 自适应暗色：按内容处理颜色](https://webkit.org/blog/18541/introducing-adaptive-dark-mode/) [讨论](https://news.ycombinator.com/item?id=50358562)"
+    },
+    {
+      "type": "paragraph",
+      "text": "新文·2026-11-03 · HN 260 分／164 条评论（采集时）"
+    },
+    {
+      "type": "paragraph",
+      "text": "Safari 27.3 beta 可将浅色网页自动转暗：调整亮度时保留色相，并按文字、图标和图片的特点分别处理。"
+    },
+    {
+      "type": "paragraph",
+      "text": "已声明深色支持的页面保持原样，画布内容也保留原色；开发者可据此检查混合内容的显示，首个 beta 尚未支持“light only”退出设置。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[四色定理再证明：同时缩小许多局部，让着色更快](https://www.quantamagazine.org/the-four-color-theorem-gets-a-rare-new-proof-20260910/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-09-10 · Gregory Barber"
+    },
+    {
+      "type": "paragraph",
+      "text": "把地图变成平面图后，研究者寻找能同时缩减、又互不干扰的局部结构，让四色着色从平方时间降到近线性时间。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章解释重证已知定理如何带来更快算法，也介绍计算机在验证局部结构中的作用；适合看懂证明思路与算法效率怎样联系起来。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[相信与判断：私人信念怎样与公共论证共处](https://aeon.co/essays/the-psychology-of-separating-church-and-state)"
+    },
+    {
+      "type": "paragraph",
+      "text": "新文·2026-11-03 · Neil Van Leeuwen、Jacob Eisler"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者区分会随证据调整的事实判断，与表达身份和承诺的宗教信念，讨论这种差别如何支持政教分离。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章把私人动机与公共论证分开，提供理解多元社会的一种视角；这是作者的心理学与政治哲学论证，并非对所有信徒的统一描述。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "max-sixty/worktrunk",
+      "url": "https://github.com/max-sixty/worktrunk"
+    },
+    {
+      "title": "JustVugg/colibri",
+      "url": "https://github.com/JustVugg/colibri"
+    },
+    {
+      "title": "floci-io/floci",
+      "url": "https://github.com/floci-io/floci"
+    },
+    {
+      "title": "CPU 矩阵乘：从三重循环一路优化到缓存分块",
+      "url": "https://siboehm.com/articles/22/Fast-MMM-on-CPU"
+    },
+    {
+      "title": "线性网络的学习动力学：不同特征为何依次被学会",
+      "url": "https://francisbach.com/closed-form-dynamics/"
+    },
+    {
+      "title": "并发任务报错后，谁负责收场？",
+      "url": "https://blog.nelhage.com/post/concurrent-error-handling/"
+    },
+    {
+      "title": "旧奔腾上的现代棋力：算法能补多少硬件？",
+      "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html"
+    },
+    {
+      "title": "Namespace：把大批 Mac 镜像分发到机架",
+      "url": "https://namespace.so/blog/mac-at-any-scale"
+    },
+    {
+      "title": "Safari 自适应暗色：按内容处理颜色",
+      "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/"
+    },
+    {
+      "title": "四色定理再证明：同时缩小许多局部，让着色更快",
+      "url": "https://www.quantamagazine.org/the-four-color-theorem-gets-a-rare-new-proof-20260910/"
+    },
+    {
+      "title": "相信与判断：私人信念怎样与公共论证共处",
+      "url": "https://aeon.co/essays/the-psychology-of-separating-church-and-state"
+    }
+  ],
+  "public_reviewed": true
+}
