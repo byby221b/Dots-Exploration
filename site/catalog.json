@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "channel": "exploration",
+      "date": "2026-11-04",
+      "disclosures": 1,
+      "id": "interdisciplinary-transfer-2026-11-04",
+      "images": [],
+      "revision": 1,
+      "series": "跨学科偷师",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-11-04",
       "disclosures": 0,
@@ -693,9 +703,9 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 62,
+  "articles_count": 63,
   "channels": {
-    "exploration": 29,
+    "exploration": 30,
     "trending": 33
   },
   "end": "2026-11-04",

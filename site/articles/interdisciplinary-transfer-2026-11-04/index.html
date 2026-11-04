@@ -1,0 +1,26 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>下一条信息，怎样补上已有内容的空白？ · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">跨学科偷师 / <time datetime="2026-11-04">2026-11-04</time> / 修订 1</p><h1>下一条信息，怎样补上已有内容的空白？</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-2">两台传感器，该装在哪里？</a></li><li><a href="#section-8">为什么每选一次，都要重新算？</a></li><li><a href="#section-12">把同一张表用到摘要选句</a></li><li><a href="#section-17">什么时候需要换一个模型？</a></li></ol></nav><div class="prose"><div class="article-content"><p>挑选一组东西时，每加入一个，就重新计算其余选项还能补上什么。这样，名额会更多地留给尚未覆盖的部分。</p>
+<p>主文约4分钟。先看一个只需数格子的例子，再把同一张表用到摘要选句。</p>
+<h2 id="section-2">两台传感器，该装在哪里？</h2>
+<p>设想六个区域需要监测，只能安装两台同样成本的传感器。三个候选位置的覆盖范围已经测定；一个区域只要被任意一台监测到，就算覆盖。这里暂不考虑故障概率和观测精度，所有区域同样重要。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">候选位置</th><th scope="col">能够覆盖的区域</th><th scope="col">单独覆盖数</th></tr></thead><tbody><tr><td>甲</td><td>1、2、3、4</td><td>4</td></tr><tr><td>乙</td><td>1、2、3</td><td>3</td></tr><tr><td>丙</td><td>5、6</td><td>2</td></tr></tbody></table></div>
+<p>如果先给每个位置独立打分，再取分数最高的两个，会选甲和乙。但乙能看到的区域，甲已经全部看到了。两台合起来仍只覆盖4个区域。</p>
+<p>换一个步骤：先选覆盖最多的甲，随后划掉已覆盖的1、2、3、4，再看谁能补上空白。乙新增0个，丙新增2个，于是第二台选丙，六个区域全部覆盖。</p>
+<p>新加入一个选项带来的额外收益，叫作“边际收益”。丙的独立分数低，却能补上甲缺少的部分；第二步需要的正是这个额外贡献。</p>
+<h2 id="section-8">为什么每选一次，都要重新算？</h2>
+<p>乙在什么都没安装时能新增3个区域；甲装好以后，乙的新增覆盖降为0。随着已经选中的东西增多，同一个候选能补上的空白只会减少或保持不变。满足这种“收益递减”关系的集合评分，称为“次模函数”。</p>
+<p>每一步都挑当前边际收益最高的选项，是这里使用的贪心选择。它省去了枚举全部组合的成本，但也会多做一些动态评分。上面的三选二可以穷举核对：甲乙覆盖4个，甲丙6个，乙丙5个；甲丙恰好最优。候选更多时，逐步挑选通常只是一种有条件保证的近似。</p>
+<p>传感器部署确实存在这种研究路线。例如，水网监测工作把污染事件发生后能减少多少损失，写成整组传感器的收益，并利用收益递减来加速选址。[1] 六个区域的表是为解释步骤制作的小例子，并非该论文的实验数据。</p>
+<h2 id="section-12">把同一张表用到摘要选句</h2>
+<p>现在保留表中全部覆盖关系，只换对象：甲、乙、丙变成三句候选文字，1到6变成六条已核实的信息，例如地点、日期、票价、报名方式、交通和无障碍设施。暂设句子等长，摘要只能选两句。甲交代前四项，乙重复前三项，丙补充后两项。</p>
+<p>这样，“安装位置”对应“选一句”，“监测区域”对应“覆盖一条信息”，“两台预算”对应“两句预算”。先甲后丙的计算完全相同。迁移成立的关键是：同一条信息只计一次，而且每句覆盖哪些信息已固定。</p>
+<p>这条迁移已有直接研究。Takamura与Okumura在2009年研究如何在长度预算内选句，尽量覆盖更多信息；实际实现用词及其权重表示信息。[2] Lin与Bilmes在2011年进一步组合代表性与多样性：某部分内容已被充分代表后，继续堆相似句子的奖励会减弱。[3]</p>
+<p>真正困难的地方也随之移动：监测区域比较明确，文字是否表达同一事实却可能判断错。“票价100元”和“票价不超过100元”有很多相同词，含义仍有差别。若覆盖表本身错了，选得再仔细也可能漏掉重要限定。</p>
+<h2 id="section-17">什么时候需要换一个模型？</h2>
+<p>假如两段材料必须合起来才能支持一条结论，第一段单独没有收益，第二段在第一段之后才变得有价值，这就是互补关系。它与刚才的收益递减不同。遇到这类证据链，需要明确表示组合条件，不能只数新增词或新增主题。</p>
+<p>读完可以留下一个判断动作：拿到“选最好的几条”的任务，先检查候选之间是否大量重叠，再问评分有没有随已选集合而更新。</p>
+<details><summary>深入阅读：成立条件、已有方法与一个小实验</summary><p>以下是可选细节。设 S 为已经选中的位置集合，F(S) 为其覆盖的不同区域数。加入候选 x 的收益写成 Δ(x｜S)=F(S∪{x})−F(S)。在表中，Δ(乙｜空集)=3，Δ(乙｜{甲})=0。符号只是“加入后覆盖数减去加入前覆盖数”的简写。</p>
+<p>对于空集得分为0、非负、添加选项不降分的次模目标，若每个选项成本相同，最多选 k 个，每次取最大边际收益的标准贪心至少达到最优目标值的1−1/e，约63.2%。这里 e 是自然对数的底。这个下界约束的是所定义的目标值，不是摘要正确率；实际词数预算涉及不同成本，需要对应的算法和保证。[3]</p>
+<p>一个直接相关的先例，是TREC RAG 2025的WING-II报告：固定检索给出的至多100段材料，逐步选24段，合并尚未覆盖的加权词组、相关性和来源多样性，再压缩、生成答案。[4] 因而把覆盖增益用于检索后选材，已经有做法。该报告的对照还改变了压缩和答案构造；其中较轻的基线也使用同一选择器，这些对照不能用于估计选择器本身的收益。</p>
+<p>一个可检验的延伸问题是：候选中的重复内容越多，动态覆盖选择相对固定排序是否越有帮助？这是本期提出的实验设计，尚未执行，也不主张算法新颖。最低成本原型可用20组公开短材料，每组列出人工核验的事实清单和候选句；先统一句长与两句预算，再只改变重复候选的比例。</p>
+<p>比较三种办法：固定独立分数取前两句、每步重算新增事实数、随机选两句。每个重复比例条件下，三种方法使用同一候选池；不同条件间保持候选数量、事实全集、权重和预算一致，只改变重叠程度。随机法多次运行取平均，小规模再穷举最优组合作参照。记录独立事实覆盖数、重复数、重要限定遗漏数，以及评分耗时。先用人工覆盖表排除识别错误，再替换成自动词匹配，单独测量覆盖估计带来的损失。</p>
+<p>预期需由实验判断：若人工表下动态选择只在高重复组明显获益，说明应按候选冗余决定是否投入这一步；若换成自动表后收益消失，优先修正信息表示。若任务主要依赖两段合起来才成立的证据，先重建组合目标。把选择器、信息识别和后续生成分开测试，才能知道收益来自哪一步。</p></details></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://cs.stanford.edu/~jure/pubs/bwsn-jwrpm08.pdf" rel="noreferrer">[1] Efficient Sensor Placement Optimization for Securing Large Water Distribution Networks（2008）</a></li><li><a href="https://aclanthology.org/E09-1089/" rel="noreferrer">[2] Text Summarization Model Based on Maximum Coverage Problem and its Variant（EACL 2009）</a></li><li><a href="https://aclanthology.org/P11-1052/" rel="noreferrer">[3] A Class of Submodular Functions for Document Summarization（ACL 2011）</a></li><li><a href="https://trec.nist.gov/pubs/trec34/papers/WING-II.rag.pdf" rel="noreferrer">[4] Submodular Evidence Selection for Grounded Answer Generation in TREC RAG 2025</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-04 · 63 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
