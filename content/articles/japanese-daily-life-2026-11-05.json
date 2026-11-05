@@ -1,0 +1,128 @@
+{
+  "id": "japanese-daily-life-2026-11-05",
+  "revision": 1,
+  "date": "2026-11-05",
+  "channel": "exploration",
+  "series": "日语生活碎片",
+  "title": "初次见面，先把名字说清楚",
+  "summary": "用一段官方教学音频练习简短自我介绍，保留平假名和罗马音辅助；只讲一个句型，答案单独放在末尾。",
+  "topics": [
+    "日语",
+    "生活会话"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "第一次见面，想先告诉对方自己叫什么。今天练一个很短的自我介绍，把名字说出来就能接上话。此前练过问位置、问价和请人重复；这次换成主动介绍自己，不要求听懂后面的所有信息。"
+    },
+    {
+      "type": "heading",
+      "text": "先听两遍，带着小问题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[播放官方音轨03-01，约14秒](https://www.irodori.jpf.go.jp/assets/data/starter/audio/03/X_%5B03-01%5D_kiku1.mp3)。定位：IRODORI 入门第3课，03-01，整条音轨。备用：[官方播放页](https://www.irodori.jpf.go.jp/en/starter/audio/lesson03.html)，找同一编号。"
+    },
+    {
+      "type": "paragraph",
+      "text": "第一遍：开头是在介绍自己，还是在询问对方的名字？\n第二遍：找这个名字，它出现一次还是两次？\n常用写法：トン\n平假名：とん\n罗马音：Ton\n中文：录音人物的名字。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这是官方教学材料。已核对音轨文件、时长和对应脚本，未实际试听；本期练声音、假名与意思的对应，不分析这段录音的连读、弱化或重音。"
+    },
+    {
+      "type": "heading",
+      "text": "两个常用表达"
+    },
+    {
+      "type": "paragraph",
+      "text": "每项保留常用写法、平假名、罗马音和中文。罗马音不是汉语拼音，只是辅助认读；现在不必撤掉它。"
+    },
+    {
+      "type": "paragraph",
+      "text": "常用写法／平假名：はじめまして\n罗马音：hajimemashite\n中文：初次见面时的问候。"
+    },
+    {
+      "type": "paragraph",
+      "text": "常用写法／平假名：です\n罗马音：desu\n中文：本句放在名字后，使自我介绍更礼貌。不要把它在所有句子里都翻成“是”。"
+    },
+    {
+      "type": "heading",
+      "text": "一句自我介绍，拆成两块"
+    },
+    {
+      "type": "paragraph",
+      "text": "主例句取自音轨开头：\n常用写法：はじめまして。トンです。\n平假名：はじめまして。とんです。\n罗马音：Hajimemashite. Ton desu.\n中文：初次见面，我叫 Ton。"
+    },
+    {
+      "type": "paragraph",
+      "text": "前一句是第一次见面的招呼。介绍名字的那一句只有两块：\n① トン／とん／Ton／录音人物的名字：先说名字。\n② です／です／desu／本句的礼貌结尾：放在名字后。"
+    },
+    {
+      "type": "paragraph",
+      "text": "为什么没有单独说“我”？在自我介绍的情境中，对方知道你说的是自己，所以可以省略。这一句没有助词，不必再在名字后硬添一个。先记住这个具体用途：名字在前，礼貌结尾在后。"
+    },
+    {
+      "type": "paragraph",
+      "text": "把名字换成另一位虚构人物，结构不变：\n常用写法：リンです。\n平假名：りんです。\n罗马音：Rin desu.\n中文：我叫 Rin。\n这是原创替换例句，暂无配音，不在03-01音轨里。这两个例子中的名字用片假名书写，这里补平假名仅为帮助认读。"
+    },
+    {
+      "type": "heading",
+      "text": "今天只认一个假名对应"
+    },
+    {
+      "type": "paragraph",
+      "text": "在刚才的问候里，找到「し／shi／用于表示一个日语音的假名」。它对应罗马音 shi。练习时把这一处和前后的声音连起来，不把它当成汉语拼音。"
+    },
+    {
+      "type": "paragraph",
+      "text": "遮住词卡，想一想：问候语里对应 shi 的假名，长什么样？不会写也可以先回看，再指给自己看一次。"
+    },
+    {
+      "type": "heading",
+      "text": "重听，再说一次"
+    },
+    {
+      "type": "paragraph",
+      "text": "重听03-01，只找开头的问候和名字后的礼貌结尾，后面的内容暂时放过。然后想象第一次见到新同事：用今天的结构介绍自己。可以先照着主例句练，再把名字换成自己的；不必追赶录音速度。"
+    },
+    {
+      "type": "details",
+      "summary": "听完再看：答案",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "按官方脚本核对：第一题，开头是在介绍自己。第二题，トン／とん／Ton／录音人物的名字，出现一次。"
+        },
+        {
+          "type": "paragraph",
+          "text": "假名题：し／shi／对应 shi 的平假名。它出现在 はじめまして／はじめまして／hajimemashite／初次见面时的问候 之中。"
+        },
+        {
+          "type": "paragraph",
+          "text": "口头回应可先照读，再替换名字：\n常用写法：はじめまして。トンです。\n平假名：はじめまして。とんです。\n罗马音：Hajimemashite. Ton desu.\n中文：初次见面，我叫 Ton。"
+        },
+        {
+          "type": "paragraph",
+          "text": "可选核对：[官方脚本第12页，L3-12，03-01](https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L03.pdf#page=12)；[官方语法说明第14页，L3-14](https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L03.pdf#page=14)。这里只引用开头的短句，不转载完整对话或音频；未验证你所在地区的播放情况。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "IRODORI 入门第3课官方音频页",
+      "url": "https://www.irodori.jpf.go.jp/en/starter/audio/lesson03.html"
+    },
+    {
+      "title": "官方音轨03-01",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/audio/03/X_%5B03-01%5D_kiku1.mp3"
+    },
+    {
+      "title": "官方脚本与语法说明",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L03.pdf"
+    }
+  ],
+  "public_reviewed": true
+}
