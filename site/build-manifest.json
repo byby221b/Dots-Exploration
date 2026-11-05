@@ -50,7 +50,7 @@
   "articles/japanese-daily-life-2026-10-15/index.html": "8eaead574c622557c2fff78618b3e1c43be048594a29202e9641c0fc8dcc8781",
   "articles/japanese-daily-life-2026-10-22/index.html": "f11b444b13b0be60d9136d73a88dd5df82e853e9cf00d1272c0591f7e8168889",
   "articles/japanese-daily-life-2026-10-29/index.html": "775d9240e69df2ccc1b1c879cf71b42d53a3b3cc7c482daa48a54217c4f8a37b",
-  "articles/japanese-daily-life-2026-11-05/index.html": "8327be089feecc85d6fe407db91030ca68add3cb6213ab7ccabf57635b712356",
+  "articles/japanese-daily-life-2026-11-05/index.html": "73cf07038a08862a8331ed69f6b458de06a0f4166e6e3b514ea9a7b0ab346d3f",
   "articles/math-shared-foundations-2026-10-01-positive-formula-revision/index.html": "67176ed06b51ef9549d9257a34a079ea51d19c3139648366f7d91f3d55ac80a3",
   "articles/math-shared-foundations-2026-10-02-clarity-revision/index.html": "be1361ff954ffb1a06036496a4b70f4d83efec69bafc3d26d18349772ab02e27",
   "articles/math-shared-foundations-2026-10-09/index.html": "3eb94673b2e439f5c9606ee8f3edb6b5e5674a1a26994040bdd0b0db25015703",
@@ -126,10 +126,10 @@
   "assets/math_shared_foundations_2026-10-16/result.png": "2f87d9eeea9bb55c84ed834803be9f5f15e7d020f8836074350557796d0c361f",
   "assets/research_stress_test_2026-10-05/mechanism.png": "1bb3d8e27a0f23b74a2d18b216b476c2758707fb30117108ce97a8feeea26a41",
   "assets/technical-archaeology-2026-10-13/ring.png": "80eac9c2878306c5c1adcadf9357736bf31039016322d40ff6a9706872ff889a",
-  "catalog.json": "c3f51e8601bd08e1b430caea139fcd08ffe9bea7a35ffd82eb9303d41f7a0e52",
+  "catalog.json": "5812d3550b43c079836574b3fede2e1068ee3cf1755b7a0b29ffc581cd7ff6ad",
   "exploration/index.html": "eb5f4f33aa005b1c92fcac3094b0383a32438924223462f5b20eb70b0201efe6",
   "index.html": "78e1bb463d7ddacbacd75432b57f10374da0e43d0462f30fd47b629b05053fed",
-  "search-index.js": "36e6929e15770d16b572645c82f1f7419cc17f8539fa6e5b02aa284da87f3eb5",
+  "search-index.js": "049bf36f18e3306c66a15d57a2a972c1c268a2f305a43ba99adbae771d7e2452",
   "style.css": "958741aa7f66e7af705ec4ca298d26584788172764d2aacf5bb40368ef3af363",
   "trending/index.html": "6da2f12ea007a4388e8453ab31b362dc5441b4b1c541ebcb67b9e9cee11739ee"
 }
