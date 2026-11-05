@@ -1,0 +1,204 @@
+{
+  "id": "dots-trending-2026-11-05",
+  "revision": 1,
+  "date": "2026-11-05",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "从长上下文模型、主观标注和推荐编码，到矩阵分解、安全修补、终端与 JSON API，以及模型内部变化的实验。",
+  "topics": [
+    "AI模型",
+    "推荐系统",
+    "系统工程",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "暂无可推送内容"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Kimi K3.1 Pro：长上下文模型的接入细节](https://huggingface.co/moonshotai/Kimi-K3.1-Pro)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜第 6 · 开放权重／定制许可"
+    },
+    {
+      "type": "paragraph",
+      "text": "支持文本与图像输入的开放权重 MoE，提供约百万 token 上下文，模型卡同时列出架构、评测条件与部署指引。"
+    },
+    {
+      "type": "paragraph",
+      "text": "接入时有个实用细节：连续工具调用必须保留完整助手消息，不能只回传正文；它采用定制许可，部署前还需核对适用条款。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Agile Deliberation：用边界案例把主观标准变清楚](https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "新文 · 2026-11-04 · Google Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "给图片打“健康食物”等主观标签时，它先拆出子类别，再找有争议的图片请人澄清边界，自动把反馈写回分类提示词。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章附代码与演示；两个主观分类任务中的18场用户实验报告了更一致的标注和更低的负担，尚不能泛化到所有标注任务。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Semantic IDs：把商品编码、行为序列与语言模型接起来](https://eugeneyan.com/writing/semantic-ids/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2025-09-14 · Eugene Yan"
+    },
+    {
+      "type": "paragraph",
+      "text": "用残差量化把商品描述变成多级离散编码，再扩展Qwen词表、接入购买序列。教程串起损失函数、编码碰撞处理与两阶段微调，适合从原理读到代码。"
+    },
+    {
+      "type": "paragraph",
+      "text": "在每个正例配500个负例的验证中，语义ID版SASRec仍落后于普通ID基线；这不是最终语言模型推荐效果的直接比较。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[CANS-SVD：把矩阵分解改写成更适合GPU的计算](https://iclr-blogposts.github.io/2026/blog/2026/polar-svd/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选 · 2026-04-27 · ICLR Blogposts 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "从奇异值分解（SVD）与极分解的关系出发，用多项式迭代把主要计算变成GPU擅长的矩阵乘，并给出公式、伪代码与JAX实现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "B200实验展示加速潜力，也显示TF32重构误差高于FP32；收益取决于矩阵规模、秩与精度要求，不能只看速度。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[PHP2Shell：AI 加快找漏洞，修补为何仍然慢？](https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability)"
+    },
+    {
+      "type": "paragraph",
+      "text": "新文·2026-11-02 · HN 1044 分／624 条评论（采集时）"
+    },
+    {
+      "type": "paragraph",
+      "text": "IEEE 以 PHP2Shell 为例，解释 AI 如何帮助安全专家把旧崩溃缺陷变成可利用漏洞，让积累多年的技术债更快暴露。"
+    },
+    {
+      "type": "paragraph",
+      "text": "找出漏洞只是前半程；修复还要堵住攻击路径并保持原有功能，文章进一步讨论维护者资源与形式化验证能怎样帮助防守。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[kitty 0.50：给终端加上贴边窗口与会话恢复](https://sw.kovidgoyal.net/kitty/changelog/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "新文·2026-11-03 · HN 357 分／226 条评论（采集时）"
+    },
+    {
+      "type": "paragraph",
+      "text": "新增贴边窗口，可把文件树或小终端固定在编辑器旁，并随所属窗口一起移动；标签页也能按命名工作区管理。"
+    },
+    {
+      "type": "paragraph",
+      "text": "启用会话恢复后，重新登录可带回窗口、标签页与滚动历史；本版还修复远程控制认证问题，值得查看完整升级说明。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Go JSON v2：把语法处理与类型映射拆开](https://go.dev/blog/jsonv2)"
+    },
+    {
+      "type": "paragraph",
+      "text": "新文·2026-11-04 · HN 214 分／93 条评论（采集时）"
+    },
+    {
+      "type": "paragraph",
+      "text": "Go 1.27 的新 JSON API 把语法读写交给 jsontext，把 Go 类型与 JSON 的映射交给 json/v2，让流式处理与自定义编码更容易组合。"
+    },
+    {
+      "type": "paragraph",
+      "text": "新默认值拒绝重复键和无效 UTF-8；旧包继续受支持，迁移可逐项调整行为。适合借具体兼容案例理解 API 为什么需要重新设计。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[模型能察觉自己的内部变化吗？把“检测”与“描述”分开测试](https://www.quantamagazine.org/new-research-tests-whether-ai-models-know-their-own-thoughts-20261104/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "原文·2026-11-04 · Quanta"
+    },
+    {
+      "type": "paragraph",
+      "text": "研究者向模型内部注入概念相关的活动模式，再分别测试它能否发现异常、说出注入了什么。后续实验发现，两种能力可能来自不同机制。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这篇报道梳理实验控制与争论，提醒我们区分异常检测、概念描述和主观体验；现有结果不能证明模型具有意识。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kimi K3.1 Pro：长上下文模型的接入细节",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    },
+    {
+      "title": "Agile Deliberation：用边界案例把主观标准变清楚",
+      "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/"
+    },
+    {
+      "title": "Semantic IDs：把商品编码、行为序列与语言模型接起来",
+      "url": "https://eugeneyan.com/writing/semantic-ids/"
+    },
+    {
+      "title": "CANS-SVD：把矩阵分解改写成更适合GPU的计算",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/polar-svd/"
+    },
+    {
+      "title": "PHP2Shell：AI 加快找漏洞，修补为何仍然慢？",
+      "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability"
+    },
+    {
+      "title": "kitty 0.50：给终端加上贴边窗口与会话恢复",
+      "url": "https://sw.kovidgoyal.net/kitty/changelog/"
+    },
+    {
+      "title": "Go JSON v2：把语法处理与类型映射拆开",
+      "url": "https://go.dev/blog/jsonv2"
+    },
+    {
+      "title": "模型能察觉自己的内部变化吗？把“检测”与“描述”分开测试",
+      "url": "https://www.quantamagazine.org/new-research-tests-whether-ai-models-know-their-own-thoughts-20261104/"
+    }
+  ],
+  "public_reviewed": true
+}

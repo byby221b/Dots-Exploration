@@ -1,0 +1,53 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-05">2026-11-05</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">从长上下文模型、主观标注和推荐编码，到矩阵分解、安全修补、终端与 JSON API，以及模型内部变化的实验。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-2">🧠 AI/模型</a></li><li><a href="#section-19">🔥 热议话题</a></li><li><a href="#section-32">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<p>暂无可推送内容</p>
+<h2 id="section-2">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" rel="noreferrer">Kimi K3.1 Pro：长上下文模型的接入细节</a></h3>
+<p class="item-meta">HF 当前热榜第 6 · 开放权重／定制许可</p>
+<p>支持文本与图像输入的开放权重 MoE，提供约百万 token 上下文，模型卡同时列出架构、评测条件与部署指引。</p>
+<p>接入时有个实用细节：连续工具调用必须保留完整助手消息，不能只回传正文；它采用定制许可，部署前还需核对适用条款。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/" rel="noreferrer">Agile Deliberation：用边界案例把主观标准变清楚</a></h3>
+<p class="item-meta">新文 · 2026-11-04 · Google Research</p>
+<p>给图片打“健康食物”等主观标签时，它先拆出子类别，再找有争议的图片请人澄清边界，自动把反馈写回分类提示词。</p>
+<p>文章附代码与演示；两个主观分类任务中的18场用户实验报告了更一致的标注和更低的负担，尚不能泛化到所有标注任务。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://eugeneyan.com/writing/semantic-ids/" rel="noreferrer">Semantic IDs：把商品编码、行为序列与语言模型接起来</a></h3>
+<p class="item-meta">深度精选 · 2025-09-14 · Eugene Yan</p>
+<p>用残差量化把商品描述变成多级离散编码，再扩展Qwen词表、接入购买序列。教程串起损失函数、编码碰撞处理与两阶段微调，适合从原理读到代码。</p>
+<p>在每个正例配500个负例的验证中，语义ID版SASRec仍落后于普通ID基线；这不是最终语言模型推荐效果的直接比较。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://iclr-blogposts.github.io/2026/blog/2026/polar-svd/" rel="noreferrer">CANS-SVD：把矩阵分解改写成更适合GPU的计算</a></h3>
+<p class="item-meta">深度精选 · 2026-04-27 · ICLR Blogposts 2026</p>
+<p>从奇异值分解（SVD）与极分解的关系出发，用多项式迭代把主要计算变成GPU擅长的矩阵乘，并给出公式、伪代码与JAX实现。</p>
+<p>B200实验展示加速潜力，也显示TF32重构误差高于FP32；收益取决于矩阵规模、秩与精度要求，不能只看速度。</p>
+</article>
+<h2 id="section-19">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability" rel="noreferrer">PHP2Shell：AI 加快找漏洞，修补为何仍然慢？</a></h3>
+<p class="item-meta">新文·2026-11-02 · HN 1044 分／624 条评论（采集时）</p>
+<p>IEEE 以 PHP2Shell 为例，解释 AI 如何帮助安全专家把旧崩溃缺陷变成可利用漏洞，让积累多年的技术债更快暴露。</p>
+<p>找出漏洞只是前半程；修复还要堵住攻击路径并保持原有功能，文章进一步讨论维护者资源与形式化验证能怎样帮助防守。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://sw.kovidgoyal.net/kitty/changelog/" rel="noreferrer">kitty 0.50：给终端加上贴边窗口与会话恢复</a></h3>
+<p class="item-meta">新文·2026-11-03 · HN 357 分／226 条评论（采集时）</p>
+<p>新增贴边窗口，可把文件树或小终端固定在编辑器旁，并随所属窗口一起移动；标签页也能按命名工作区管理。</p>
+<p>启用会话恢复后，重新登录可带回窗口、标签页与滚动历史；本版还修复远程控制认证问题，值得查看完整升级说明。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://go.dev/blog/jsonv2" rel="noreferrer">Go JSON v2：把语法处理与类型映射拆开</a></h3>
+<p class="item-meta">新文·2026-11-04 · HN 214 分／93 条评论（采集时）</p>
+<p>Go 1.27 的新 JSON API 把语法读写交给 jsontext，把 Go 类型与 JSON 的映射交给 json/v2，让流式处理与自定义编码更容易组合。</p>
+<p>新默认值拒绝重复键和无效 UTF-8；旧包继续受支持，迁移可逐项调整行为。适合借具体兼容案例理解 API 为什么需要重新设计。</p>
+</article>
+<h2 id="section-32">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/new-research-tests-whether-ai-models-know-their-own-thoughts-20261104/" rel="noreferrer">模型能察觉自己的内部变化吗？把“检测”与“描述”分开测试</a></h3>
+<p class="item-meta">原文·2026-11-04 · Quanta</p>
+<p>研究者向模型内部注入概念相关的活动模式，再分别测试它能否发现异常、说出注入了什么。后续实验发现，两种能力可能来自不同机制。</p>
+<p>这篇报道梳理实验控制与争论，提醒我们区分异常检测、概念描述和主观体验；现有结果不能证明模型具有意识。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" rel="noreferrer">Kimi K3.1 Pro：长上下文模型的接入细节</a></li><li><a href="https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/" rel="noreferrer">Agile Deliberation：用边界案例把主观标准变清楚</a></li><li><a href="https://eugeneyan.com/writing/semantic-ids/" rel="noreferrer">Semantic IDs：把商品编码、行为序列与语言模型接起来</a></li><li><a href="https://iclr-blogposts.github.io/2026/blog/2026/polar-svd/" rel="noreferrer">CANS-SVD：把矩阵分解改写成更适合GPU的计算</a></li><li><a href="https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability" rel="noreferrer">PHP2Shell：AI 加快找漏洞，修补为何仍然慢？</a></li><li><a href="https://sw.kovidgoyal.net/kitty/changelog/" rel="noreferrer">kitty 0.50：给终端加上贴边窗口与会话恢复</a></li><li><a href="https://go.dev/blog/jsonv2" rel="noreferrer">Go JSON v2：把语法处理与类型映射拆开</a></li><li><a href="https://www.quantamagazine.org/new-research-tests-whether-ai-models-know-their-own-thoughts-20261104/" rel="noreferrer">模型能察觉自己的内部变化吗？把“检测”与“描述”分开测试</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-05 · 64 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
