@@ -1,0 +1,271 @@
+{
+  "id": "dots-trending-2026-11-07",
+  "revision": 1,
+  "date": "2026-11-07",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选开源工具、系统性技术资料与科学人文阅读，保留原始日期、使用条件和证据边界。",
+  "topics": [
+    "开源工具",
+    "系统学习",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[google/skills](https://github.com/google/skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+534 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 Google Cloud 的部署、排障和数据优化流程写成可按需安装的代理技能，覆盖多种编码助手。"
+    },
+    {
+      "type": "paragraph",
+      "text": "可从 BigQuery 示例学习怎样先核对权限、区域与费用，再选择优化路径；操作云资源仍需账户授权。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[nushell/nushell](https://github.com/nushell/nushell)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+131 · Rust · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "目录列表、进程和配置文件都可作为表格或记录在管道中传递，用相同命令筛选、排序和提取字段，减少反复切割文本。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它兼容现有可执行程序并支持多平台，适合整理数据与日常自动化；项目仍提醒部分命令可能不稳定，脚本需随版本核对。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[astral-sh/ruff](https://github.com/astral-sh/ruff)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+169 · Rust · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把代码规范检查、导入整理和格式化整合到一个 Rust 工具中，并缓存未改动文件，减少开发流程中的重复扫描。"
+    },
+    {
+      "type": "paragraph",
+      "text": "支持项目配置、编辑器和提交前检查，可逐步替换分散的 Python 工具；迁移时仍需核对启用规则与自动修复结果。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[ppmpreetham/BUI](https://github.com/ppmpreetham/BUI) · [讨论](https://news.ycombinator.com/item?id=50389333)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 发现 · 过去24小时提交 · GPL-3.0-or-later"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 Blender 的绘制与交互部件做成可复用库，让 Python、Rust、React 等共用原生界面，并只重绘发生变化的区域。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究跨语言界面与渲染开销；目前尚无输入法与屏幕阅读器支持，macOS 仍为实验支持。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Ripple-65B Preview：面向代码代理的稠密模型](https://huggingface.co/ricursiveAI/Ripple-65B-Preview)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜第 7 · 预览版 · Apache-2.0"
+    },
+    {
+      "type": "paragraph",
+      "text": "650 亿参数的稠密文本模型，主攻代码代理任务，同时提供基础版和量化版，适合对照其训练阶段与架构取舍。"
+    },
+    {
+      "type": "paragraph",
+      "text": "当前仍为预览版，评测由发布方提供；本仓库 BF16 权重约 130GB，部署还需额外运行内存。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Flow maps：让扩散模型学会跨一大步](https://sander.ai/2026/05/06/flow-maps.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-05-06 · Sander Dieleman"
+    },
+    {
+      "type": "paragraph",
+      "text": "从沿速度场小步移动，推到直接预测整段位移，解释 flow map 如何让扩散模型减少采样步数。"
+    },
+    {
+      "type": "paragraph",
+      "text": "用图解、积分与一致性条件串起训练损失和自动微分，需扩散模型与向量微积分基础；大跨度预测的可靠性也在讨论范围内。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[线程通信：看到“准备好了”，能否读到正确数据？](https://preshing.com/20120913/acquire-and-release-semantics/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2012-09-13 · Jeff Preshing"
+    },
+    {
+      "type": "paragraph",
+      "text": "以一个线程写数据、另一个读取就绪标志为例，用内存顺序图解释单次读写“原子化”后为何仍需要同步。"
+    },
+    {
+      "type": "paragraph",
+      "text": "沿代码理解 C++11 的 acquire/release 如何配对建立同步关系，适合补并发基础；文中的旧硬件指令需与当前平台区分。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[小模型何时求助大模型？先看信心是否可靠](https://hightouch.com/blog/llm-judges-identity-resolution) · [讨论](https://news.ycombinator.com/item?id=50397429)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-11-04"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hightouch 先让低成本模型检查用户档案是否误并了多人，再按模型给出的信心分数，把不确定案例交给 Opus。"
+    },
+    {
+      "type": "paragraph",
+      "text": "合成数据上的对照同时检查准确率、费用与信心校准，说明分级调用能否省钱，取决于小模型能否认出自己拿不准的案例。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Replit：给每个代理沙箱一套独立内核](https://frontier.replit.com/sandbox-engine-microvms-part-1/) · [讨论](https://news.ycombinator.com/item?id=50396834)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 过去24小时提交 · 原文2026-11-04"
+    },
+    {
+      "type": "paragraph",
+      "text": "Replit 用轻量虚拟机分隔客户沙箱，内部仍用容器管理进程，减少共享宿主内核带来的连带风险。"
+    },
+    {
+      "type": "paragraph",
+      "text": "预热池和按需读取磁盘缩短启动等待，网络规则与凭据注入放在虚拟机之外，适合研究代理执行环境如何划分隔离边界。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[波函数只是知识吗？用纸牌理解 PBR 定理](https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-11-06 · 科学解释"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章用纸牌游戏串起爱因斯坦、贝尔与 PBR 定理，解释量子态能否只是我们对客观世界的不完整知识。"
+    },
+    {
+      "type": "paragraph",
+      "text": "关键结论依赖独立制备等假设：它排除一类“只缺信息”的模型，并不直接证明现实不存在，适合练习分清定理与诠释。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[天文学里的“噪声”，也可能是值得研究的主角](https://aeon.co/essays/why-astrophysics-needs-to-abandon-the-big-questions)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-11-06 · 学科反思"
+    },
+    {
+      "type": "paragraph",
+      "text": "同一片星际尘埃，对宇宙学可能是待扣除的干扰，对研究恒星与行星形成的人却是主角。"
+    },
+    {
+      "type": "paragraph",
+      "text": "天文学家 Dylan Jow 借此讨论经费、仪器和“大问题”如何塑造研究方向，也提醒 AI 会继承模拟数据的假设；这是学科反思随笔。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "google/skills",
+      "url": "https://github.com/google/skills"
+    },
+    {
+      "title": "nushell/nushell",
+      "url": "https://github.com/nushell/nushell"
+    },
+    {
+      "title": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff"
+    },
+    {
+      "title": "ppmpreetham/BUI · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50389333"
+    },
+    {
+      "title": "ppmpreetham/BUI",
+      "url": "https://github.com/ppmpreetham/BUI"
+    },
+    {
+      "title": "Ripple-65B Preview：面向代码代理的稠密模型",
+      "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview"
+    },
+    {
+      "title": "Learning the integral of a diffusion model",
+      "url": "https://sander.ai/2026/05/06/flow-maps.html"
+    },
+    {
+      "title": "Acquire and Release Semantics",
+      "url": "https://preshing.com/20120913/acquire-and-release-semantics/"
+    },
+    {
+      "title": "小模型何时求助大模型？先看信心是否可靠 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50397429"
+    },
+    {
+      "title": "小模型何时求助大模型？先看信心是否可靠",
+      "url": "https://hightouch.com/blog/llm-judges-identity-resolution"
+    },
+    {
+      "title": "Replit：给每个代理沙箱一套独立内核 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50396834"
+    },
+    {
+      "title": "Replit：给每个代理沙箱一套独立内核",
+      "url": "https://frontier.replit.com/sandbox-engine-microvms-part-1/"
+    },
+    {
+      "title": "波函数只是知识吗？用纸牌理解 PBR 定理",
+      "url": "https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106/"
+    },
+    {
+      "title": "天文学里的“噪声”，也可能是值得研究的主角",
+      "url": "https://aeon.co/essays/why-astrophysics-needs-to-abandon-the-big-questions"
+    }
+  ],
+  "public_reviewed": true
+}
