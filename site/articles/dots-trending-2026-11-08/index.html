@@ -1,0 +1,52 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-08">2026-11-08</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">本期精选开源工具、技术资料与科学人文阅读。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-17">🧠 AI/模型</a></li><li><a href="#section-22">🔥 热议话题</a></li><li><a href="#section-31">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/vercel-labs/agent-browser" rel="noreferrer">vercel-labs/agent-browser</a></h3>
+<p class="item-meta">⭐+190 · Rust · GitHub stars today（非北京时间自然日）</p>
+<p>给 AI 智能体提供命令行浏览器：把页面转成带元素编号的可访问性树，再用编号点击、填写，并读取操作后的页面。</p>
+<p>浏览器在多次命令间保持状态，适合把网页操作接入智能体工具链，也提供截图、会话与权限控制接口。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/prometheus/prometheus" rel="noreferrer">prometheus/prometheus</a></h3>
+<p class="item-meta">⭐+322 · Go · GitHub stars today（非北京时间自然日）</p>
+<p>定期从服务拉取指标，用标签组织时间序列，再通过 PromQL 查询和规则触发告警，让系统状态变成可追踪的数据。</p>
+<p>适合搭建服务监控、分析负载和延迟变化；仓库附架构、配置与服务发现说明，可作为可观测性系统的学习入口。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/dsx-ai-factory/nvke" rel="noreferrer">dsx-ai-factory/nvke</a></h3>
+<p class="item-meta">⭐+123 · Go · GitHub stars today（非北京时间自然日）</p>
+<p>在自有 GPU 基础设施上创建和管理 Kubernetes 集群，让不同工作负载拥有独立控制平面与节点池，并统一处理扩缩容和节点身份。</p>
+<p>当前是预览版，仅支持 NICo 基础设施；认证默认未开启，适合隔离评估与架构学习，不宜直接用于生产。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/hedgerow-dev/coldframe" rel="noreferrer">Coldframe：用模拟冷柜控制器观察攻击行为</a> <a href="https://news.ycombinator.com/item?id=50406292" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 186 分 / 39 评（采集时累计） · 24 小时内提交</p>
+<p>这个单文件 Python 蜜罐模拟冷柜控制器的登录页、接口与操作面板，记录扫描、密码尝试和控制请求，而不连接真实设备。</p>
+<p>它把工业设备威胁观察做成可读代码，并说明隔离部署与日志处理方式；交互模拟较浅，适合作为防御研究示例。</p>
+</article>
+<h2 id="section-17">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://timvieira.github.io/testing-randomized-algorithms/" rel="noreferrer">随机算法怎么测：从采样误差到逐条执行路径核验</a></h3>
+<p class="item-meta">深度精选·2026-11-01 · 概率推导与 Python 实现</p>
+<p>以带权采样为例，先把“结果正确”写成可检验的期望关系，再比较多次模拟与执行路径枚举，定位藏在随机波动里的实现错误。</p>
+<p>教程给出 Python 代码，并扩展到受约束文本生成的整条采样流程；精确枚举适合有限离散的小实例，可用于设计比固定随机种子更有力的测试。</p>
+</article>
+<h2 id="section-22">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://hunch.net/?p=13764006" rel="noreferrer">AI 研究如何组织：John Langford 回顾 AI Frontiers 的结束</a> <a href="https://news.ycombinator.com/item?id=50406563" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 364 分 / 208 评（采集时累计） · 原文 2026-11-06</p>
+<p>John Langford 回顾团队如何共享训练代码、组织协作研究，以及重组后离开的原因；这是参与者的公开叙述与判断。</p>
+<p>文章把算力之外的组织问题摆到台前：新想法需要足够强的基线和协作，也需要通向实际应用的路径。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://asahilinux.org/2026/11/progress-report-7-3/" rel="noreferrer">Asahi Linux：从 M3 支持到每进程页大小</a> <a href="https://news.ycombinator.com/item?id=50401867" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 310 分 / 253 评（采集时累计） · 原文 2026-11-07</p>
+<p>官方进展报告宣布 M3 支持正式开放，并介绍驱动上游化、Thunderbolt 初步支持，以及不同内存页大小给游戏兼容带来的困难。</p>
+<p>每进程页大小方案尝试让按 4 KiB 内存页设计的程序运行在 16 KiB 页系统上；目前仍在探索，尚未作为正式功能交付。</p>
+</article>
+<h2 id="section-31">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/how-can-infinity-come-in-many-sizes-20260223/" rel="noreferrer">无限集合怎样比较大小？从逐一配对到对角线论证</a></h3>
+<p class="item-meta">往期佳作·2026-02-23 · Quanta · 图解数学</p>
+<p>文章从逐一配对出发，用连续图解说明自然数、偶数与有理数怎样对应，再用对角线论证解释实数为何无法全部排成一列。</p>
+<p>适合建立“可数与不可数”的直觉：比较的是能否建立一一对应，而非区间长度；无需高等数学基础。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/vercel-labs/agent-browser" rel="noreferrer">vercel-labs/agent-browser</a></li><li><a href="https://github.com/prometheus/prometheus" rel="noreferrer">prometheus/prometheus</a></li><li><a href="https://github.com/dsx-ai-factory/nvke" rel="noreferrer">dsx-ai-factory/nvke</a></li><li><a href="https://news.ycombinator.com/item?id=50406292" rel="noreferrer">Coldframe：用模拟冷柜控制器观察攻击行为 · 讨论</a></li><li><a href="https://github.com/hedgerow-dev/coldframe" rel="noreferrer">Coldframe：用模拟冷柜控制器观察攻击行为</a></li><li><a href="https://timvieira.github.io/testing-randomized-algorithms/" rel="noreferrer">随机算法怎么测：从采样误差到逐条执行路径核验</a></li><li><a href="https://news.ycombinator.com/item?id=50406563" rel="noreferrer">AI 研究如何组织：John Langford 回顾 AI Frontiers 的结束 · 讨论</a></li><li><a href="https://hunch.net/?p=13764006" rel="noreferrer">AI 研究如何组织：John Langford 回顾 AI Frontiers 的结束</a></li><li><a href="https://news.ycombinator.com/item?id=50401867" rel="noreferrer">Asahi Linux：从 M3 支持到每进程页大小 · 讨论</a></li><li><a href="https://asahilinux.org/2026/11/progress-report-7-3/" rel="noreferrer">Asahi Linux：从 M3 支持到每进程页大小</a></li><li><a href="https://www.quantamagazine.org/how-can-infinity-come-in-many-sizes-20260223/" rel="noreferrer">无限集合怎样比较大小？从逐一配对到对角线论证</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-08 · 69 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

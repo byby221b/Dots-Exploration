@@ -1,0 +1,211 @@
+{
+  "id": "dots-trending-2026-11-08",
+  "revision": 1,
+  "date": "2026-11-08",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选开源工具、技术资料与科学人文阅读。",
+  "topics": [
+    "开源工具",
+    "系统学习",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+190 · Rust · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "给 AI 智能体提供命令行浏览器：把页面转成带元素编号的可访问性树，再用编号点击、填写，并读取操作后的页面。"
+    },
+    {
+      "type": "paragraph",
+      "text": "浏览器在多次命令间保持状态，适合把网页操作接入智能体工具链，也提供截图、会话与权限控制接口。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[prometheus/prometheus](https://github.com/prometheus/prometheus)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+322 · Go · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "定期从服务拉取指标，用标签组织时间序列，再通过 PromQL 查询和规则触发告警，让系统状态变成可追踪的数据。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合搭建服务监控、分析负载和延迟变化；仓库附架构、配置与服务发现说明，可作为可观测性系统的学习入口。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[dsx-ai-factory/nvke](https://github.com/dsx-ai-factory/nvke)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+123 · Go · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "在自有 GPU 基础设施上创建和管理 Kubernetes 集群，让不同工作负载拥有独立控制平面与节点池，并统一处理扩缩容和节点身份。"
+    },
+    {
+      "type": "paragraph",
+      "text": "当前是预览版，仅支持 NICo 基础设施；认证默认未开启，适合隔离评估与架构学习，不宜直接用于生产。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Coldframe：用模拟冷柜控制器观察攻击行为](https://github.com/hedgerow-dev/coldframe) [讨论](https://news.ycombinator.com/item?id=50406292)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 186 分 / 39 评（采集时累计） · 24 小时内提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "这个单文件 Python 蜜罐模拟冷柜控制器的登录页、接口与操作面板，记录扫描、密码尝试和控制请求，而不连接真实设备。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它把工业设备威胁观察做成可读代码，并说明隔离部署与日志处理方式；交互模拟较浅，适合作为防御研究示例。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[随机算法怎么测：从采样误差到逐条执行路径核验](https://timvieira.github.io/testing-randomized-algorithms/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-11-01 · 概率推导与 Python 实现"
+    },
+    {
+      "type": "paragraph",
+      "text": "以带权采样为例，先把“结果正确”写成可检验的期望关系，再比较多次模拟与执行路径枚举，定位藏在随机波动里的实现错误。"
+    },
+    {
+      "type": "paragraph",
+      "text": "教程给出 Python 代码，并扩展到受约束文本生成的整条采样流程；精确枚举适合有限离散的小实例，可用于设计比固定随机种子更有力的测试。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[AI 研究如何组织：John Langford 回顾 AI Frontiers 的结束](https://hunch.net/?p=13764006) [讨论](https://news.ycombinator.com/item?id=50406563)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 364 分 / 208 评（采集时累计） · 原文 2026-11-06"
+    },
+    {
+      "type": "paragraph",
+      "text": "John Langford 回顾团队如何共享训练代码、组织协作研究，以及重组后离开的原因；这是参与者的公开叙述与判断。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章把算力之外的组织问题摆到台前：新想法需要足够强的基线和协作，也需要通向实际应用的路径。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Asahi Linux：从 M3 支持到每进程页大小](https://asahilinux.org/2026/11/progress-report-7-3/) [讨论](https://news.ycombinator.com/item?id=50401867)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 310 分 / 253 评（采集时累计） · 原文 2026-11-07"
+    },
+    {
+      "type": "paragraph",
+      "text": "官方进展报告宣布 M3 支持正式开放，并介绍驱动上游化、Thunderbolt 初步支持，以及不同内存页大小给游戏兼容带来的困难。"
+    },
+    {
+      "type": "paragraph",
+      "text": "每进程页大小方案尝试让按 4 KiB 内存页设计的程序运行在 16 KiB 页系统上；目前仍在探索，尚未作为正式功能交付。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[无限集合怎样比较大小？从逐一配对到对角线论证](https://www.quantamagazine.org/how-can-infinity-come-in-many-sizes-20260223/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "往期佳作·2026-02-23 · Quanta · 图解数学"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章从逐一配对出发，用连续图解说明自然数、偶数与有理数怎样对应，再用对角线论证解释实数为何无法全部排成一列。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合建立“可数与不可数”的直觉：比较的是能否建立一一对应，而非区间长度；无需高等数学基础。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser"
+    },
+    {
+      "title": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus"
+    },
+    {
+      "title": "dsx-ai-factory/nvke",
+      "url": "https://github.com/dsx-ai-factory/nvke"
+    },
+    {
+      "title": "Coldframe：用模拟冷柜控制器观察攻击行为 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50406292"
+    },
+    {
+      "title": "Coldframe：用模拟冷柜控制器观察攻击行为",
+      "url": "https://github.com/hedgerow-dev/coldframe"
+    },
+    {
+      "title": "随机算法怎么测：从采样误差到逐条执行路径核验",
+      "url": "https://timvieira.github.io/testing-randomized-algorithms/"
+    },
+    {
+      "title": "AI 研究如何组织：John Langford 回顾 AI Frontiers 的结束 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50406563"
+    },
+    {
+      "title": "AI 研究如何组织：John Langford 回顾 AI Frontiers 的结束",
+      "url": "https://hunch.net/?p=13764006"
+    },
+    {
+      "title": "Asahi Linux：从 M3 支持到每进程页大小 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50401867"
+    },
+    {
+      "title": "Asahi Linux：从 M3 支持到每进程页大小",
+      "url": "https://asahilinux.org/2026/11/progress-report-7-3/"
+    },
+    {
+      "title": "无限集合怎样比较大小？从逐一配对到对角线论证",
+      "url": "https://www.quantamagazine.org/how-can-infinity-come-in-many-sizes-20260223/"
+    }
+  ],
+  "public_reviewed": true
+}
