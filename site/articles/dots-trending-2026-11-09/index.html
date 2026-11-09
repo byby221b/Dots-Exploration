@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-09">2026-11-09</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">从物理仿真、界面组件与代理实践，到奖励设计、图像优化和科学人文阅读。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-13">🧠 AI/模型</a></li><li><a href="#section-26">🔥 热议话题</a></li><li><a href="#section-39">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/google-deepmind/mujoco" rel="noreferrer">google-deepmind/mujoco</a></h3>
+<p class="item-meta">⭐+41 · C++ · GitHub stars today（非北京时间自然日）</p>
+<p>把多关节物体的运动及其与环境的接触放进同一物理仿真，供机器人控制、强化学习和生物力学实验调用。</p>
+<p>项目提供 Python 接口与入门、模型编辑、控制器设计等教程，适合从可视化场景走到代码实验；网页演示无需安装。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/meta/astryx" rel="noreferrer">meta/astryx</a></h3>
+<p class="item-meta">⭐+875 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>把界面组件、主题和命令行文档放进同一套设计系统，让开发者与编码代理查阅相同接口，减少拼装页面时的不一致。</p>
+<p>可通过 CSS 变量定制品牌样式，也可导出组件源码继续修改；目前为 Beta，需要 React 19 或以上版本。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/anthropics/claude-quickstarts" rel="noreferrer">anthropics/claude-quickstarts</a></h3>
+<p class="item-meta">⭐+32 · Python · GitHub stars today（非北京时间自然日）</p>
+<p>官方示例集把客服、浏览器操作、桌面操作与自主编码拆成可运行项目；编码示例用 Git 和功能清单保存跨会话进度。</p>
+<p>适合比较工具调用、状态持久化和代理循环的实现。运行需 Claude API；桌面操作示例建议放在虚拟机中，示例代码仍需按生产需求加固。</p>
+</article>
+<h2 id="section-13">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/NousResearch/Arete-27B" rel="noreferrer">Arete-27B：用监督微调研究回答倾向的变化</a></h3>
+<p class="item-meta">HF 当前热榜第 9 · Qwen3.8-27B 后训练 · Apache-2.0</p>
+<p>作者用约两万条问题及教师回答微调 Qwen3.8-27B，研究回答内容与立场如何变化；模型卡公开训练配置及 803 题评测。</p>
+<p>适合学习数据构造与判分方法。结果对应作者自定的题目和标准，跨模型对比的解码参数也不完全相同，不能直接当作通用能力排名。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://lilianweng.github.io/posts/2024-11-28-reward-hacking/" rel="noreferrer">奖励如何偏离目标：从强化学习到模型评判的系统梳理</a></h3>
+<p class="item-meta">深度精选·2024-11-28 · Lilian Weng · 奖励设计与评估综述</p>
+<p>从“赛艇反复撞奖励标记而不完赛”的例子出发，区分任务真正目标、人工反馈和模型打分，梳理奖励为何会被优化偏。</p>
+<p>综述连起奖励设计、偏好训练、模型评判与检测方法，适合检查评估指标的漏洞；含公式与实验图，需强化学习基础，缓解方案仍有限。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://distill.pub/2018/differentiable-parameterizations/" rel="noreferrer">可微图像参数化：换一种表示，怎样改变优化结果？</a></h3>
+<p class="item-meta">深度精选·2018-07-25 · Distill · 原理与配套代码</p>
+<p>把图像表示成傅里叶系数、小网络或三维纹理，再让梯度穿过生成过程，观察同一优化目标怎样产生不同的路径与视觉结果。</p>
+<p>文章用风格迁移、透明图案和三维贴图串起原理与笔记本代码；适合学习参数化设计，需要梯度下降基础，实现基于 TensorFlow／Lucid。</p>
+</article>
+<h2 id="section-26">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://caleb.software/posts/claude-to-pi.html" rel="noreferrer">编码助手怎样适应自己的工作流？一次从 Claude Code 到 Pi 的迁移</a> <a href="https://news.ycombinator.com/item?id=50410107" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 691 分 / 428 评（采集时累计） · 原文 2026-09-21（11-07 更新）</p>
+<p>作者从编辑器多会话、提示词开销与版本变动出发，解释为何转向可扩展的 Pi，并用自写插件补上常用功能。</p>
+<p>这份个人实践记录提供了一套选工具的检查项：能否稳定配合审查代码、并行任务和定制需求；体验结论对应作者当时的版本。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html" rel="noreferrer">把写作当作思考工具：先留下草稿，再找出真正的问题</a> <a href="https://news.ycombinator.com/item?id=50412067" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 271 分 / 80 评（采集时累计） · 原文 2026-11-07</p>
+<p>作者用审稿与研究笔记说明：把想法写下来后，原本模糊的理解漏洞和概念联系才变得可见，文字也能成为可反复加工的外部记忆。</p>
+<p>建议先自由写出粗稿，再换成读者视角删改，并固定写作时间；重点是借写与改推进思考，而不只产出一篇看似完整的文章。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://linebender.org/blog/jit-bitmap-text/" rel="noreferrer">微控制器怎样快画文字？把字符串临时编译成绘制指令</a> <a href="https://news.ycombinator.com/item?id=50412072" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN · 93 分 / 18 评（采集时累计） · 原文 2026-11-07</p>
+<p>在内存有限的 RP2350 上，作者把字符串临时编译为 ARM 指令，逐扫描线生成位图，再展开为彩色像素，兼顾比例字体与低延迟。</p>
+<p>正文拆解字体压缩、指令排布和字距调整，并给出代码与周期分析；适合学习怎样把硬件约束转成具体的渲染与内存设计。</p>
+</article>
+<h2 id="section-39">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/yu-deng-wins-the-fields-medal-2026-for-his-work-on-the-random-data-problem-20260723/" rel="noreferrer">随机波浪中的秩序：邓煜如何把微观相互作用连到整体规律</a></h3>
+<p class="item-meta">往期佳作·2026-07-23 · Quanta · Jordana Cepelewicz</p>
+<p>每条随机波形都在变化，一整群波形的统计分布却可能保持不变。人物报道以这类问题为线索，介绍邓煜对波动方程与随机性的研究。</p>
+<p>文章穿插围棋、诗歌与合作经历，并解释研究者怎样拆解复杂相互作用，连接微观运动和宏观规律；适合作为数学物理的入门阅读。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/what-if-jobs-are-not-the-solution-but-the-problem" rel="noreferrer">工作之外，怎样理解人的价值与生活意义？</a></h3>
+<p class="item-meta">往期佳作·2016-11-25 · Aeon · James Livingston</p>
+<p>历史学家 James Livingston 追问：当收入、身份与道德评价都绑在职业上，我们还能够怎样想象有意义的生活？</p>
+<p>文章主张重新审视“有工作就有价值”的观念，并讨论照护、闲暇与收入保障；这是带有鲜明立场的论说，就业数据属于当时语境。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/google-deepmind/mujoco" rel="noreferrer">google-deepmind/mujoco</a></li><li><a href="https://github.com/meta/astryx" rel="noreferrer">meta/astryx</a></li><li><a href="https://github.com/anthropics/claude-quickstarts" rel="noreferrer">anthropics/claude-quickstarts</a></li><li><a href="https://huggingface.co/NousResearch/Arete-27B" rel="noreferrer">Arete-27B：用监督微调研究回答倾向的变化</a></li><li><a href="https://lilianweng.github.io/posts/2024-11-28-reward-hacking/" rel="noreferrer">奖励如何偏离目标：从强化学习到模型评判的系统梳理</a></li><li><a href="https://distill.pub/2018/differentiable-parameterizations/" rel="noreferrer">Differentiable Image Parameterizations</a></li><li><a href="https://news.ycombinator.com/item?id=50410107" rel="noreferrer">编码助手怎样适应自己的工作流？一次从 Claude Code 到 Pi 的迁移 · 讨论</a></li><li><a href="https://caleb.software/posts/claude-to-pi.html" rel="noreferrer">编码助手怎样适应自己的工作流？一次从 Claude Code 到 Pi 的迁移</a></li><li><a href="https://news.ycombinator.com/item?id=50412067" rel="noreferrer">把写作当作思考工具：先留下草稿，再找出真正的问题 · 讨论</a></li><li><a href="https://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html" rel="noreferrer">把写作当作思考工具：先留下草稿，再找出真正的问题</a></li><li><a href="https://news.ycombinator.com/item?id=50412072" rel="noreferrer">微控制器怎样快画文字？把字符串临时编译成绘制指令 · 讨论</a></li><li><a href="https://linebender.org/blog/jit-bitmap-text/" rel="noreferrer">微控制器怎样快画文字？把字符串临时编译成绘制指令</a></li><li><a href="https://www.quantamagazine.org/yu-deng-wins-the-fields-medal-2026-for-his-work-on-the-random-data-problem-20260723/" rel="noreferrer">随机波浪中的秩序：邓煜如何把微观相互作用连到整体规律</a></li><li><a href="https://aeon.co/essays/what-if-jobs-are-not-the-solution-but-the-problem" rel="noreferrer">工作之外，怎样理解人的价值与生活意义？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-09 · 70 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
