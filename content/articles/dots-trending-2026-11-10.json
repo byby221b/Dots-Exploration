@@ -1,0 +1,292 @@
+{
+  "id": "dots-trending-2026-11-10",
+  "revision": 1,
+  "date": "2026-11-10",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "从可复用技能与持久记忆，到扩散原理、统计评测、聚类优化和科学人文阅读。",
+  "topics": [
+    "开源工具",
+    "模型与学习",
+    "工程实践",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[anthropics/skills](https://github.com/anthropics/skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+1,038 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把任务说明、脚本与参考资料封装成可按需加载的技能，示例覆盖文档生成、网页测试和工作流程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合学习如何把一次性提示整理成可复用的操作规范；仓库强调这些是教学示例，关键任务仍需在自己的环境中验证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[garrytan/gbrain](https://github.com/garrytan/gbrain)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+216 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把事实和出处存成可修正、可撤回的持久记忆，让不同智能体通过同一接口检索；可先只用本地关键词搜索，再添加语义检索。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究记忆的来源追踪与共享权限。启用云端嵌入、提取或综合回答时，相关文本可能传给服务商，自托管也需检查数据边界。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[homeassistant-ai/ha-mcp](https://github.com/homeassistant-ai/ha-mcp)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+31 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "为 Home Assistant 提供智能体可调用的接口，覆盖设备状态、自动化配置、执行追踪和备份，能沿“读取现状→修改→检查结果”组织操作。"
+    },
+    {
+      "type": "paragraph",
+      "text": "提供只读模式、逐工具开关和审批策略，适合研究家庭自动化的工具设计；接入涉及设备控制权限，连接地址与访问凭证需要妥善保护。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[让编码助手“听见”房间：用多设备定位间歇蜂鸣声](https://simonwillison.net/2026/Nov/9/mysterious-beeps/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "新文·2026-11-09 · Simon Willison · 原型实践"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者让手机和平板同时录音，用校准声对齐片段，再估计蜂鸣声位置；拍手测试、回放和手动标记帮助逐步排除误报。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这份实践展示怎样给编码助手建立真实环境的反馈回路。约四十厘米精度是作者家中的单次结果，设备位置仍需人工辅助。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Language Explorer：把全球语言多样性放到同一张地图上](https://research.google/blog/exploring-the-worlds-languages-with-language-explorer/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "新文·2026-11-09 · Google Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "想了解一种语言与地区、社区的关系，可以用 Language Explorer 浏览全球语言数据；平台以开放的 LinguaMeta 数据集为基础组织可视化。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章把工具放回语言保存的现实背景：扩大覆盖还需要母语者、学术机构和文化组织参与，不能只靠增加软件支持名单。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从概率搬运理解扩散：串起去噪、流匹配与快速采样](https://iclr-blogposts.github.io/2026/blog/2026/tracing-principles-behind-modern-diffusion-models/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-04-27 · ICLR Blogposts · 约54分钟"
+    },
+    {
+      "type": "paragraph",
+      "text": "把生成过程想成一团样本从噪声移动到数据，在高斯加噪设定下，沿变量替换解释去噪、分数模型与流匹配怎样对应。"
+    },
+    {
+      "type": "paragraph",
+      "text": "再从许多小步走向直接学习大步跳转，比较一致性模型等加速思路；有推导与交互图，适合已懂基本扩散流程的读者。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[评测差一分，真的更好吗？把误差与重复性放回比较](https://iclr-blogposts.github.io/2026/blog/2026/why-ai-evaluations-need-error-bars/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-04-27 · ICLR Blogposts · 约22分钟"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型输出、任务环境和评分者都会波动，单次分数容易把随机变化误认成进步。文章梳理置信区间、重复测量与聚类数据的处理方法。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合据此检查评测设计：哪些题共享背景、评分是否稳定、提升是否值得成本；这是统计方法综述，不是一套开箱即用的评测代码。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[e-means：用小批次更新，减少聚类需要的数据遍历](https://e-means.github.io/) [讨论](https://news.ycombinator.com/item?id=50429734)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 258 分 / 17 评（采集时累计） · 原文 未标注日期"
+    },
+    {
+      "type": "paragraph",
+      "text": "把聚类中心改成指数移动平均，配合自动选参、失活簇重启与专用内核，让每轮数据遍历包含更多有效更新。"
+    },
+    {
+      "type": "paragraph",
+      "text": "原文附交互示例、论文和代码；作者实验中显著缩短训练时间，但收益取决于数据、硬件与对照实现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[界面状态更新：从一个标签追到布局与渲染](https://blog.zortax.de/posts/a-critique-of-gpui) [讨论](https://news.ycombinator.com/item?id=50420857)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 134 分 / 97 评（采集时累计） · 原文 2026-11-08"
+    },
+    {
+      "type": "paragraph",
+      "text": "从修改一行标签出发，对比 GPUI、即时模式与信号驱动界面，追问状态变化如何传到布局和渲染。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者也开发参评框架，测试工具尚未公开；适合学习更新粒度与性能权衡，不宜直接当作框架排行榜。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从 Rust 走近 Gleam：类型、消息与容错进程](https://nchagnet.eu/blog/you-should-try-gleam) [讨论](https://news.ycombinator.com/item?id=50424366)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 114 分 / 120 评（采集时累计） · 原文 2026-11-01（11-02 更新）"
+    },
+    {
+      "type": "paragraph",
+      "text": "用并排代码解释管道、尾递归和类型定义，再把任务调度器拆成通过消息协作的进程，展示 BEAM 与 OTP 的思路。"
+    },
+    {
+      "type": "paragraph",
+      "text": "前后端可共享类型，但生态仍较小；OTP 的进程管理并不等同于 Kubernetes 的容器隔离与集群调度。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[RNA 能自我复制，是否就足以解释生命起源？](https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-09 · Quanta · Philip Ball"
+    },
+    {
+      "type": "paragraph",
+      "text": "RNA 既能保存信息又能催化反应，看似解开“先有基因还是蛋白质”的难题；小型核酶实验又让这条路径更可信。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章也梳理复制易失效、原始环境难确认等障碍：能复制的分子仍不等于生命，还需要获取能量的代谢过程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[“平等”的不同含义：从历史走向共同实践](https://aeon.co/essays/historical-ideas-of-equality-help-us-imagine-an-equal-world)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-09 · Aeon · Teresa M Bejan"
+    },
+    {
+      "type": "paragraph",
+      "text": "从古代的比例与均衡，到英国平等派争取同等地位，文章说明“平等”一词如何在不同历史条件下承担不同任务。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者主张，陪审与共同讨论等实践，让差异暂时不决定谁的声音算数；这是一篇政治思想史论说，而非概念定论。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills"
+    },
+    {
+      "title": "garrytan/gbrain",
+      "url": "https://github.com/garrytan/gbrain"
+    },
+    {
+      "title": "homeassistant-ai/ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp"
+    },
+    {
+      "title": "让编码助手“听见”房间：用多设备定位间歇蜂鸣声",
+      "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/"
+    },
+    {
+      "title": "Language Explorer：把全球语言多样性放到同一张地图上",
+      "url": "https://research.google/blog/exploring-the-worlds-languages-with-language-explorer/"
+    },
+    {
+      "title": "从概率搬运理解扩散：串起去噪、流匹配与快速采样",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/tracing-principles-behind-modern-diffusion-models/"
+    },
+    {
+      "title": "评测差一分，真的更好吗？把误差与重复性放回比较",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/why-ai-evaluations-need-error-bars/"
+    },
+    {
+      "title": "e-means：用小批次更新，减少聚类需要的数据遍历 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50429734"
+    },
+    {
+      "title": "e-means：用小批次更新，减少聚类需要的数据遍历",
+      "url": "https://e-means.github.io/"
+    },
+    {
+      "title": "界面状态更新：从一个标签追到布局与渲染 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50420857"
+    },
+    {
+      "title": "界面状态更新：从一个标签追到布局与渲染",
+      "url": "https://blog.zortax.de/posts/a-critique-of-gpui"
+    },
+    {
+      "title": "从 Rust 走近 Gleam：类型、消息与容错进程 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50424366"
+    },
+    {
+      "title": "从 Rust 走近 Gleam：类型、消息与容错进程",
+      "url": "https://nchagnet.eu/blog/you-should-try-gleam"
+    },
+    {
+      "title": "RNA 能自我复制，是否就足以解释生命起源？",
+      "url": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109/"
+    },
+    {
+      "title": "“平等”的不同含义：从历史走向共同实践",
+      "url": "https://aeon.co/essays/historical-ideas-of-equality-help-us-imagine-an-equal-world"
+    }
+  ],
+  "public_reviewed": true
+}
