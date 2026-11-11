@@ -1,0 +1,218 @@
+{
+  "id": "interdisciplinary-transfer-2026-11-11",
+  "revision": 1,
+  "date": "2026-11-11",
+  "channel": "exploration",
+  "series": "跨学科偷师",
+  "title": "下一次遇到新类别的概率，怎样从样本估计？",
+  "summary": "用十条记录的留一测试，理解只出现一次的类别怎样帮助估计未见概率，再看它在语言统计中的真实应用与边界。",
+  "topics": [
+    "统计估计",
+    "物种采样",
+    "语言模型"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "只出现过一次的类别，能为“还没见过的类别有多容易遇到”提供线索。Good–Turing 方法用这些少见记录，给下一次遇到新类别的总概率作一个估计。"
+    },
+    {
+      "type": "paragraph",
+      "text": "主文约 4 分钟。先用十条动物观察记录算一遍，再把同一操作搬到文本中的词对。"
+    },
+    {
+      "type": "heading",
+      "text": "十条记录里，有多少线索指向未知？"
+    },
+    {
+      "type": "paragraph",
+      "text": "设想我们记录动物种类，用 A、B、C、D、E 代替名字。先采用一个简化条件：每次记录互不影响，各类出现的机会保持不变。这十条记录是教学例子，不是实地数据。"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "种类",
+        "记录次数"
+      ],
+      "rows": [
+        [
+          "A",
+          "4"
+        ],
+        [
+          "B",
+          "3"
+        ],
+        [
+          "C",
+          "1"
+        ],
+        [
+          "D",
+          "1"
+        ],
+        [
+          "E",
+          "1"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "我们想知道：第十一次记录，遇到名单之外种类的概率有多大？它问的是下一次的机会，不是“这片地方还剩多少种动物没发现”。"
+    },
+    {
+      "type": "paragraph",
+      "text": "直接按出现次数估计，A 占 40%，B 占 30%，其余各占 10%，已经分完 100%。于是名单外全是零。可没记录到，并不证明不可能遇到。难点是：怎样给未知留出有依据的份额？"
+    },
+    {
+      "type": "heading",
+      "text": "轮流藏起一条，看看什么会变成“没见过”"
+    },
+    {
+      "type": "paragraph",
+      "text": "暂时把这十条记录当成十次小测试。每次藏起一条，用另外九条作为已知名单，再检查藏起来的那条是不是新种类。"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "藏起哪类记录",
+        "另外九条里还有它吗？",
+        "这种测试有几次"
+      ],
+      "rows": [
+        [
+          "A 或 B",
+          "有",
+          "7"
+        ],
+        [
+          "C、D 或 E",
+          "没有",
+          "3"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "藏起一条 A，仍有三条 A；藏起一条 B，仍有两条 B。只有藏起 C、D、E 时，那个种类会从已知名单里消失。十次测试中有三次遇到“新种类”，比例正好是 3 ÷ 10＝30%。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这就是关键桥梁：**出现一次的种类，恰好是删去一条后会变成未见种类的那些记录。** Good–Turing 的基本估计，是用“只出现一次的种类数 ÷ 总记录数”估计所有未见种类合计的概率。[1][2]"
+    },
+    {
+      "type": "paragraph",
+      "text": "这里要分清两步：藏一条的 30% 精确对应“用九条记录做测试”；把它用于已经看完十条之后的下一次，是相邻样本量的近似。它没有证明真实概率恰好是 30%。十条样本很少，适合讲步骤，不适合据此作精确决策。"
+    },
+    {
+      "type": "heading",
+      "text": "把动物种类换成相邻词对"
+    },
+    {
+      "type": "paragraph",
+      "text": "在文本中，可以把每个相邻词对当成一个类别，例如“喝 茶”或“喝 咖啡”。一条记录就是某个词对出现一次。仍假设五个已见词对的次数是 4、3、1、1、1，同样数出三个只出现一次的词对，基本估计仍为 30%。"
+    },
+    {
+      "type": "paragraph",
+      "text": "对应关系没有换：动物种类对应词对类型，观察次数对应词对出现次数，名单外动物对应训练文本没出现的词对。要估计的是下一条词对落在训练名单之外的总概率。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这已经有真实的统计语言模型研究。Church 和 Gale 比较过 Good–Turing 与留出估计来估算英语相邻词对的概率；Gale 和 Sampson 也直接解释了物种计数与词、词对等语言对象的对应。[2][3] 它不是本期新提出的算法，也不表示现代神经语言模型都直接使用这条公式。"
+    },
+    {
+      "type": "paragraph",
+      "text": "还有一步不能省：30% 只是一整篮“未知”的份额，并没有告诉我们每个新词对该分多少。“喝 咖啡”和一个不通顺的组合，不能仅因都没出现过就被判为同样可能。真实语言模型还要结合其他信息分配这部分概率。"
+    },
+    {
+      "type": "heading",
+      "text": "什么时候这条线索会变弱？"
+    },
+    {
+      "type": "paragraph",
+      "text": "最重要的是采样方式要对得上。换地点、季节或观察方法，下一次动物分布可能变了；换文本主题、重复转载同一篇文章、改分词规则，也会改变词对统计。连续文本中的词对还会重叠、相互依赖，不能直接当成独立抽样。"
+    },
+    {
+      "type": "paragraph",
+      "text": "小样本本身也会误导。假如真实世界只有 A–E 五类，这张表仍可能出现；此时我们已经见齐了，真实未见概率为零，公式却估计 30%。所以它提供可检查的估计，不是这份样本的保证。把它叫作“剩余物种占比”“未知知识比例”或“幻觉率”，都会换掉原本的问题。"
+    },
+    {
+      "type": "paragraph",
+      "text": "本期新增的是：怎样用有限样本估计名单外的概率。此前的信息覆盖选择，是在已知候选里挑互补内容；这里没有那份完整候选清单，也不在决定下一条选谁。"
+    },
+    {
+      "type": "heading",
+      "text": "可选深入：最小原型怎样检查它是否有用？"
+    },
+    {
+      "type": "paragraph",
+      "text": "可以做一个不训练模型的小实验，问题固定为“下一条词对有没有在训练样本出现过”。下面是本期提出的诊断设计，尚未运行，也不主张它是新的统计方法。"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "先固定一份公开语料、分词规则和相邻词对定义，形成一个有限的词对池。按词对在池里的出现次数，从池中独立、有放回地抽取训练样本；再独立抽取测试样本。这一步人为建立稳定采样基线，只研究这个固定语料池。",
+        "用 100、1000、10000 条训练记录，分别计算“只出现一次的类型数 ÷ 训练记录数”。每个规模独立重复 100 轮；每轮再抽 10000 条测试记录，统计其中不在训练名单里的记录比例。分母是测试记录数，不是新类型数。",
+        "把估计值与测试比例比较，报告平均偏差、绝对误差和各轮结果的分布，同时与“未见概率恒为零”的朴素办法比较。不要只展示碰巧接近的一轮；测试比例本身也有抽样误差。",
+        "然后固定相同分词和训练量，改为按文章或时间划分训练、测试，作为现实压力测试。若误差扩大，再区分主题改变、文本依赖与重复文章的影响，不把一次变化全归因于某一个因素。"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "可检验的预期是：在固定词对池的独立抽样条件下，随着样本增多，这个未见概率估计应更稳定；把同一规则搬到主题变化的文本时，误差未必随样本增多而消失。第一阶段能检查估计机制，不能证明它能预测未来互联网文本。上述规模只是原型设计参数，不是论文结果。"
+    },
+    {
+      "type": "heading",
+      "text": "可选深入：它从哪里来，没解决什么？"
+    },
+    {
+      "type": "paragraph",
+      "text": "Good 1953 年的原文以“物种”描述问题，同时就已列出文学词汇应用，因此不宜把这段历史讲成“先在生态学发明，后来才搬到语言学”。原文给出样本覆盖与未见概率的近似；后来的实际方法还处理稀疏计数的平滑，即利用相邻频数的信息缓和偶然起伏。[1][2]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Church 和 Gale 的实验使用约 4400 万词的 AP 新闻语料，删除相同或近似重复文章后，随机划分词对进行训练、测试。作者特别指出，若按前后半年划分，主题变化会造成差异；他们研究的是这份新闻语料，不是所有英语。[3] 这正是为什么原型先建立固定池基线，再单独检查时间变化。"
+    },
+    {
+      "type": "paragraph",
+      "text": "记住操作和对象就够了：数“只出现一次”，估“下一次碰到名单外”的合计机会；结果不能直接告诉你未知类别的数量、名字，或每个类别各自的概率。"
+    },
+    {
+      "type": "heading",
+      "text": "一手来源与定位"
+    },
+    {
+      "type": "paragraph",
+      "text": "[1. Good，1953：The Population Frequencies of Species and the Estimation of Population Parameters](https://gwern.net/doc/statistics/order/capture/1953-good-2.pdf) · 印刷页 237 的词汇应用；页 239，式 (8)–(9)；页 241 的近似限制。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[2. Gale & Sampson，1995：Good–Turing Frequency Estimation Without Tears](https://www.grsampson.net/AGTf.pdf) · 作者提供全文，§1 的语言对象映射、§9 的未见总概率分配、§10 的假设限制。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[3. Church & Gale，1991：A comparison of the enhanced Good-Turing and deleted estimation methods for estimating probabilities of English bigrams](https://doi.org/10.1016/0885-2308%2891%2990016-J) · §2 的数据与切分条件；[公开全文](https://www.cs.toronto.edu/~gpenn/csc401/readings/church-gale91.pdf)。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Good (1953), The Population Frequencies of Species and the Estimation of Population Parameters",
+      "url": "https://gwern.net/doc/statistics/order/capture/1953-good-2.pdf"
+    },
+    {
+      "title": "Gale & Sampson (1995), Good–Turing Frequency Estimation Without Tears",
+      "url": "https://www.grsampson.net/AGTf.pdf"
+    },
+    {
+      "title": "Church & Gale (1991), A comparison of the enhanced Good-Turing and deleted estimation methods for estimating probabilities of English bigrams",
+      "url": "https://doi.org/10.1016/0885-2308%2891%2990016-J"
+    },
+    {
+      "title": "Church & Gale (1991), public full text",
+      "url": "https://www.cs.toronto.edu/~gpenn/csc401/readings/church-gale91.pdf"
+    }
+  ],
+  "public_reviewed": true
+}
