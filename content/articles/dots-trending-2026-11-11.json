@@ -1,0 +1,312 @@
+{
+  "id": "dots-trending-2026-11-11",
+  "revision": 1,
+  "date": "2026-11-11",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "从浏览器 GPU 与 TPU 推理优化，到流水线训练、推荐算法实现、形式化验证和生命起源。",
+  "topics": [
+    "开源工具",
+    "模型与学习",
+    "工程实践",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+465 · JavaScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把需求澄清、拆任务、测试与代码审查整理成 25 个工程技能，让编码代理按明确的质量关卡推进。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合借鉴团队的代理工作规范；单独安装技能可能缺少共享检查清单，需留意依赖。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[we-promise/sure](https://github.com/we-promise/sure)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+159 · Ruby · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "接续已停止维护的 Maybe Finance，提供可用 Docker 自托管的个人财务应用，并支持浏览器、移动端和 API。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合希望自己掌握财务数据的人；这是社区分支，部署、备份与升级仍需自行维护，采用 AGPLv3。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[tokio-rs/topcoat](https://github.com/tokio-rs/topcoat)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+192 · Rust · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把服务端渲染、路由、组件与资源管理整合成 Rust 全栈框架，部分 Rust 表达式可转换为浏览器端 JavaScript。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合探索不依赖独立前端构建的交互网页；项目明确处于实验阶段，接口可能破坏性变更。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[MiniMax-H3-Image：统一高分辨率生成与编辑](https://huggingface.co/MiniMaxAI/MiniMax-H3-Image)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜第 7 · 开放权重／专门社区许可"
+    },
+    {
+      "type": "paragraph",
+      "text": "在同一模型中结合文生图与多图编辑，以 6 步采样直接生成约 1600 万像素图像，可接收最多 16 张参考图。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究高分辨率创作流程；模型文件约 69GB，另需约 67GB 文本编码器，部署需核对硬件与专门社区许可。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[ExecuTorch WebGPU：让 PyTorch 模型直接在浏览器 GPU 上运行](https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-10 · PyTorch"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 PyTorch 模型导出为 .pte 文件后，可用 WebGPU 在浏览器本地 GPU 上运行，无需转成其他框架格式。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章拆解着色器、动态形状与内存调度，适合做端侧文本、视觉和语音应用；后端仍处早期开发阶段。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[TPU 推理优化：把 62 层计算串成连续的数据流](https://pytorch.org/blog/optimizing-muse-spark-open-on-tpu-v7-with-sglang-torchtpu/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-11-10 · TPU 推理优化"
+    },
+    {
+      "type": "paragraph",
+      "text": "小批量解码常被权重搬运与通信打断。作者把 62 层计算合成一个 Pallas 内核程序，让传输与计算交叠，再逐项分析瓶颈。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配合缓存布局、分层缓存和调度实验，展示四颗 TPU v7 上的优化路径；适合已有并行计算基础的读者，收益随并发而变。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[流水线并行训练：模型拆到多张 GPU 后，怎样减少等待？](https://siboehm.com/articles/22/pipeline-parallel-training)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2022-10-03 · 流水线并行"
+    },
+    {
+      "type": "paragraph",
+      "text": "教程把模型按层拆到多张 GPU，用小批次调度图追踪计算与等待，从朴素切分逐步讲到 GPipe 和 PipeDream。"
+    },
+    {
+      "type": "paragraph",
+      "text": "逐步推导空闲比例、激活内存与通信量，再解释如何组合数据并行；适合建立分布式训练直觉，硬件数值需按当下设备重算。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从推荐模型学 CUDA：隐式矩阵分解如何搬到 GPU](https://www.benfrederickson.com/implicit-matrix-factorization-on-the-gpu/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2017-11-15 · Ben Frederickson · CUDA 与推荐算法"
+    },
+    {
+      "type": "paragraph",
+      "text": "用真实推荐算法串起 CUDA：先把不同用户的计算交给线程块，再用线程组协作求和与连续访存减少开销。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合补齐“算法怎样映射到硬件”的直觉；这是 2017 年教程，具体 API 与性能数字应按历史背景阅读。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[同一个 tar 包，为何会解出不同文件？](https://stoppels.ch/2026/11/07/the-hardest-tarball.html) [讨论](https://news.ycombinator.com/item?id=50441338)"
+    },
+    {
+      "type": "paragraph",
+      "text": "原文 2026-11-07 · HN 144分 / 31评论（累计）"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者用硬链接和扩展头的大小字段构造一个小例子，逐一比较常见解包器，追踪它们怎样读取同一组字节。"
+    },
+    {
+      "type": "paragraph",
+      "text": "附可复现命令与边界测试集，适合学习文件格式歧义、跨实现兼容性和防御性解析。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[CPython 形式化：怎样检查证明对应真实解释器？](https://broyojo.com/python-formalization/) [讨论](https://news.ycombinator.com/item?id=50435105)"
+    },
+    {
+      "type": "paragraph",
+      "text": "原文 2026-11-10 · HN 128分 / 55评论（累计）"
+    },
+    {
+      "type": "paragraph",
+      "text": "项目让代理逐行建立 CPython 的数学模型，并与真实解释器对测，再用 Lean 检查证明、由另一代理复审。"
+    },
+    {
+      "type": "paragraph",
+      "text": "重点是识别“证明正确、模型却错”的陷阱；作者报告已检查约 14.3% 的候选函数，多线程仍不在范围内，并非整个 Python 已获验证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[把推理看作寻路：多次采样与训练分别改变什么？](https://alexwang.ai/posts/reasoning-as-pathfinding/) [讨论](https://news.ycombinator.com/item?id=50445013)"
+    },
+    {
+      "type": "paragraph",
+      "text": "原文 2026-11-08 · HN 94分 / 42评论（累计）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把一次推理看作从问题走向答案的路径，文章推导多次采样成功率，以及二元奖励下策略梯度与成功样本训练的联系。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合理清推理时计算与训练的区别：独立采样、可靠验答器是关键条件，单条思考链变长并不保证更准确。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[生命起源的“脂质优先”假说：小泡怎样保存组成信息？](https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-10 · Quanta"
+    },
+    {
+      "type": "paragraph",
+      "text": "生命起源是否先需要一个容器？文章用相互促进生成的两类分子，解释小泡如何维持组成、分裂并让后代继承比例。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这展示了“脂质优先”假说的机制；计算模型之外，能否实验实现演化、复制是否足够准确，仍有争议。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[无法治愈时，如何继续照护？Joan Halifax 的实践与反思](https://aeon.co/essays/how-does-roshi-joan-halifax-make-sense-of-her-buddhist-life)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-10 · Aeon"
+    },
+    {
+      "type": "paragraph",
+      "text": "医生访谈 Joan Halifax，串起她的人类学、佛教实践与临终照护经历，追问无法治愈时还能怎样帮助。"
+    },
+    {
+      "type": "paragraph",
+      "text": "人物故事也讨论照护的边界：过度付出可能耗尽照护者，甚至削弱受助者自主性；这是经验反思，并非疗效论证。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills"
+    },
+    {
+      "title": "we-promise/sure",
+      "url": "https://github.com/we-promise/sure"
+    },
+    {
+      "title": "tokio-rs/topcoat",
+      "url": "https://github.com/tokio-rs/topcoat"
+    },
+    {
+      "title": "MiniMax-H3-Image：统一高分辨率生成与编辑",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    },
+    {
+      "title": "ExecuTorch WebGPU：让 PyTorch 模型直接在浏览器 GPU 上运行",
+      "url": "https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/"
+    },
+    {
+      "title": "TPU 推理优化：把 62 层计算串成连续的数据流",
+      "url": "https://pytorch.org/blog/optimizing-muse-spark-open-on-tpu-v7-with-sglang-torchtpu/"
+    },
+    {
+      "title": "流水线并行训练：模型拆到多张 GPU 后，怎样减少等待？",
+      "url": "https://siboehm.com/articles/22/pipeline-parallel-training"
+    },
+    {
+      "title": "从推荐模型学 CUDA：隐式矩阵分解如何搬到 GPU",
+      "url": "https://www.benfrederickson.com/implicit-matrix-factorization-on-the-gpu/"
+    },
+    {
+      "title": "同一个 tar 包，为何会解出不同文件？",
+      "url": "https://stoppels.ch/2026/11/07/the-hardest-tarball.html"
+    },
+    {
+      "title": "同一个 tar 包，为何会解出不同文件？ · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50441338"
+    },
+    {
+      "title": "CPython 形式化：怎样检查证明对应真实解释器？",
+      "url": "https://broyojo.com/python-formalization/"
+    },
+    {
+      "title": "CPython 形式化：怎样检查证明对应真实解释器？ · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50435105"
+    },
+    {
+      "title": "把推理看作寻路：多次采样与训练分别改变什么？",
+      "url": "https://alexwang.ai/posts/reasoning-as-pathfinding/"
+    },
+    {
+      "title": "把推理看作寻路：多次采样与训练分别改变什么？ · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50445013"
+    },
+    {
+      "title": "生命起源的“脂质优先”假说：小泡怎样保存组成信息？",
+      "url": "https://www.quantamagazine.org/the-case-for-a-bubble-at-lifes-start-20261110/"
+    },
+    {
+      "title": "无法治愈时，如何继续照护？Joan Halifax 的实践与反思",
+      "url": "https://aeon.co/essays/how-does-roshi-joan-halifax-make-sense-of-her-buddhist-life"
+    }
+  ],
+  "public_reviewed": true
+}
