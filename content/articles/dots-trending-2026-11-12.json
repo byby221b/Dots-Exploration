@@ -1,0 +1,292 @@
+{
+  "id": "dots-trending-2026-11-12",
+  "revision": 1,
+  "date": "2026-11-12",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "从代理代码审查与多模态模型，到优化器、GPU 内核和 Lean 教程，再看机房联锁与生命起源。",
+  "topics": [
+    "开源工具",
+    "模型与学习",
+    "工程实践",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[GoogleChrome/modern-web-guidance-src](https://github.com/GoogleChrome/modern-web-guidance-src)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+159 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把现代浏览器 API、兼容性与回退方案整理成可检索指南，帮助编码代理少写过时的网页实现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "源仓库还公开了真实网页任务与浏览器测试的评估流程，适合研究“怎样验证一份代理指南有用”；实验性 API 需显式启用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[shadcn/improve](https://github.com/shadcn/improve)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+361 · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "先审查代码并写出独立实施计划，再把执行交给其他代理；计划包含文件位置、现有代码、验证命令与停止条件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合探索大模型规划、小模型执行的分工。规划者会复核问题证据，执行在单独工作树中完成，最终合并仍由人决定。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[openai/codex-security](https://github.com/openai/codex-security)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+52 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把漏洞扫描、候选问题验证、补丁生成与修复复查接成工作流，可按仓库、路径或 Git 改动限定范围。"
+    },
+    {
+      "type": "paragraph",
+      "text": "提供命令行、TypeScript SDK 与 CI 接口，并保留报告、源码证据和排除范围；扫描结论仍需结合覆盖限制审阅，部分请求需要专门访问资格。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Qwen3.8-27B：可调思考深度的视觉语言模型](https://huggingface.co/Qwen/Qwen3.8-27B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF 当前热榜第 9 · Apache 2.0"
+    },
+    {
+      "type": "paragraph",
+      "text": "270 亿参数稠密模型支持文字、图像和视频输入，可调节思考深度，并选择是否保留多轮对话中的思考内容。"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型卡给出服务部署与调用示例，适合研究多模态代理；原生上下文为 262,144 token，扩展到百万需额外配置，并可能影响短文本表现。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从除零错误到状态传递：用 Lean 写懂 Monad](https://eli.thegreenplace.net/2026/monads-in-lean/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-11-10 · Lean 4 / 函数式编程"
+    },
+    {
+      "type": "paragraph",
+      "text": "教程从一个支持加法和除法的求值器出发，把“遇错停止”的重复判断抽成统一的计算连接方式，再逐步加入日志、变量状态和输入输出。"
+    },
+    {
+      "type": "paragraph",
+      "text": "完整 Lean 4 代码把抽象落到可追踪的例子，最后解释三条组合规则；适合已有基本编程经验、想读懂函数式程序的人。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[GPU 矩阵乘长教程：从访存层级走到异步流水线](https://www.aleksagordic.com/blog/matmul)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2025-09-29 · GPU 内核 / Hopper H100"
+    },
+    {
+      "type": "paragraph",
+      "text": "以矩阵乘为主线，先拆开 GPU 的内存层级与指令，再用分块复用数据，并让搬运与计算交叠，解释每一步为何能减少等待。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配有 CUDA／PTX 代码、示意图和逐级优化记录，适合系统补齐内核开发基础；后半篇围绕 Hopper H100，复现实验需对应硬件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从 SGD 到 Adam：逐步理解优化器如何更新参数](https://www.ruder.io/optimizing-gradient-descent/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·文章发布日期未核实 · 配套论文首发 2016-09-15"
+    },
+    {
+      "type": "paragraph",
+      "text": "从整批、逐样本和小批量更新出发，沿着减轻震荡、调整各参数步长的问题，推导 Momentum、Adagrad、RMSprop 与 Adam 的更新公式。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配有简短伪代码与轨迹图，适合有微积分基础的读者补齐优化器原理；这是经典方法综述，不是当前大模型训练配方。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[激光雷达与智能体：从地形图定位玛雅遗址](https://pietromiotti.com/latest/maya-site) [讨论](https://news.ycombinator.com/item?id=50452455)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 918 分 / 335 评（采集时累计）· 24 小时内提交 · 11 月 11 日更正"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者把公开激光雷达地形图交给智能体逐张筛查，再用原始点云核对疑似广场与建筑，展示了从遥感资料整理到候选地点报告的流程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者已更正：该遗址早在 2025 年论文中被标绘。这个案例也说明，识别目标与确认“此前未知”需要分别验证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[烟雾误报如何连锁触发机房过热](https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/) [讨论](https://news.ycombinator.com/item?id=50455394)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 402 分 / 199 评（采集时累计）· 24 小时内提交 · 原文 2026-11-10"
+    },
+    {
+      "type": "paragraph",
+      "text": "Jane Street 前系统工程师回忆：施工扬尘触发烟雾报警，既让喷淋管道充水，又关闭制冷；服务器继续发热，险些触发喷水。"
+    },
+    {
+      "type": "paragraph",
+      "text": "事后他改用整批服务器的平均温度报警，捕捉单机阈值容易漏掉的整体升温。适合用来检查安全联锁与监控规则之间的相互作用。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[把 SSH 私钥留在 Mac 安全隔区：原生配置与恢复准备](https://gatezh.com/posts/macos-secure-enclave-ssh-keys/) [讨论](https://news.ycombinator.com/item?id=50449748)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 380 分 / 136 评（采集时累计）· 24 小时内提交 · 原文 2026-02-12，11 月 11 日更新"
+    },
+    {
+      "type": "paragraph",
+      "text": "教程用 macOS 原生命令在 Secure Enclave 中生成不可导出的密钥，磁盘只保存引用，再由 Touch ID 批准签名，沿用服务器的公钥认证。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文中列出配置陷阱与替代工具；密钥绑定设备、不能备份，需预留独立登录方式。硬件隔离也不等于受控电脑上的所有 SSH 操作都安全。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[生命起源的“代谢优先”：先有持续反应，再有遗传信息？](https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "原文·2026-11-11 · Quanta · Jake Buehler"
+    },
+    {
+      "type": "paragraph",
+      "text": "代谢优先假说从能量流入的化学反应出发：矿物催化剂可能先帮助简单原料生成有机物，再逐步形成更复杂的反应网络。"
+    },
+    {
+      "type": "paragraph",
+      "text": "报道梳理热液环境与温和条件下的实验，也指出缺口：反应如何持续、传递改进，并与遗传分子和细胞膜共同运作，仍未解决。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[往期佳作·2018-08-23｜受精过程怎样被“游泳竞赛”比喻遮蔽](https://aeon.co/essays/the-idea-that-sperm-race-to-the-egg-is-just-another-macho-myth)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · Robert D Martin · 科学史与生殖生物学评论"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从显微镜时代的生殖观念讲起，转向生殖道的运输、筛选与暂存机制，解释为什么“最快的精子获胜”不足以描述整个过程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这篇旧文适合观察文化比喻怎样影响研究问题；其中演化解释带有作者立场，不宜把它作为当前生育治疗或避孕指南。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src"
+    },
+    {
+      "title": "shadcn/improve",
+      "url": "https://github.com/shadcn/improve"
+    },
+    {
+      "title": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security"
+    },
+    {
+      "title": "Qwen3.8-27B：可调思考深度的视觉语言模型",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    {
+      "title": "从除零错误到状态传递：用 Lean 写懂 Monad",
+      "url": "https://eli.thegreenplace.net/2026/monads-in-lean/"
+    },
+    {
+      "title": "GPU 矩阵乘长教程：从访存层级走到异步流水线",
+      "url": "https://www.aleksagordic.com/blog/matmul"
+    },
+    {
+      "title": "从 SGD 到 Adam：逐步理解优化器如何更新参数",
+      "url": "https://www.ruder.io/optimizing-gradient-descent/"
+    },
+    {
+      "title": "激光雷达与智能体：从地形图定位玛雅遗址",
+      "url": "https://pietromiotti.com/latest/maya-site"
+    },
+    {
+      "title": "激光雷达与智能体：从地形图定位玛雅遗址 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50452455"
+    },
+    {
+      "title": "烟雾误报如何连锁触发机房过热",
+      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/"
+    },
+    {
+      "title": "烟雾误报如何连锁触发机房过热 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50455394"
+    },
+    {
+      "title": "把 SSH 私钥留在 Mac 安全隔区：原生配置与恢复准备",
+      "url": "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/"
+    },
+    {
+      "title": "把 SSH 私钥留在 Mac 安全隔区：原生配置与恢复准备 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50449748"
+    },
+    {
+      "title": "生命起源的“代谢优先”：先有持续反应，再有遗传信息？",
+      "url": "https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111/"
+    },
+    {
+      "title": "往期佳作·2018-08-23｜受精过程怎样被“游泳竞赛”比喻遮蔽",
+      "url": "https://aeon.co/essays/the-idea-that-sperm-race-to-the-egg-is-just-another-macho-myth"
+    }
+  ],
+  "public_reviewed": true
+}

@@ -1,0 +1,76 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-12">2026-11-12</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">从代理代码审查与多模态模型，到优化器、GPU 内核和 Lean 教程，再看机房联锁与生命起源。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-13">🧠 AI/模型</a></li><li><a href="#section-30">🔥 热议话题</a></li><li><a href="#section-43">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/GoogleChrome/modern-web-guidance-src" rel="noreferrer">GoogleChrome/modern-web-guidance-src</a></h3>
+<p class="item-meta">⭐+159 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>把现代浏览器 API、兼容性与回退方案整理成可检索指南，帮助编码代理少写过时的网页实现。</p>
+<p>源仓库还公开了真实网页任务与浏览器测试的评估流程，适合研究“怎样验证一份代理指南有用”；实验性 API 需显式启用。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/shadcn/improve" rel="noreferrer">shadcn/improve</a></h3>
+<p class="item-meta">⭐+361 · GitHub stars today（非北京时间自然日）</p>
+<p>先审查代码并写出独立实施计划，再把执行交给其他代理；计划包含文件位置、现有代码、验证命令与停止条件。</p>
+<p>适合探索大模型规划、小模型执行的分工。规划者会复核问题证据，执行在单独工作树中完成，最终合并仍由人决定。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/openai/codex-security" rel="noreferrer">openai/codex-security</a></h3>
+<p class="item-meta">⭐+52 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>把漏洞扫描、候选问题验证、补丁生成与修复复查接成工作流，可按仓库、路径或 Git 改动限定范围。</p>
+<p>提供命令行、TypeScript SDK 与 CI 接口，并保留报告、源码证据和排除范围；扫描结论仍需结合覆盖限制审阅，部分请求需要专门访问资格。</p>
+</article>
+<h2 id="section-13">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noreferrer">Qwen3.8-27B：可调思考深度的视觉语言模型</a></h3>
+<p class="item-meta">HF 当前热榜第 9 · Apache 2.0</p>
+<p>270 亿参数稠密模型支持文字、图像和视频输入，可调节思考深度，并选择是否保留多轮对话中的思考内容。</p>
+<p>模型卡给出服务部署与调用示例，适合研究多模态代理；原生上下文为 262,144 token，扩展到百万需额外配置，并可能影响短文本表现。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://eli.thegreenplace.net/2026/monads-in-lean/" rel="noreferrer">从除零错误到状态传递：用 Lean 写懂 Monad</a></h3>
+<p class="item-meta">深度精选·2026-11-10 · Lean 4 / 函数式编程</p>
+<p>教程从一个支持加法和除法的求值器出发，把“遇错停止”的重复判断抽成统一的计算连接方式，再逐步加入日志、变量状态和输入输出。</p>
+<p>完整 Lean 4 代码把抽象落到可追踪的例子，最后解释三条组合规则；适合已有基本编程经验、想读懂函数式程序的人。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.aleksagordic.com/blog/matmul" rel="noreferrer">GPU 矩阵乘长教程：从访存层级走到异步流水线</a></h3>
+<p class="item-meta">深度精选·2025-09-29 · GPU 内核 / Hopper H100</p>
+<p>以矩阵乘为主线，先拆开 GPU 的内存层级与指令，再用分块复用数据，并让搬运与计算交叠，解释每一步为何能减少等待。</p>
+<p>配有 CUDA／PTX 代码、示意图和逐级优化记录，适合系统补齐内核开发基础；后半篇围绕 Hopper H100，复现实验需对应硬件。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.ruder.io/optimizing-gradient-descent/" rel="noreferrer">从 SGD 到 Adam：逐步理解优化器如何更新参数</a></h3>
+<p class="item-meta">深度精选·文章发布日期未核实 · 配套论文首发 2016-09-15</p>
+<p>从整批、逐样本和小批量更新出发，沿着减轻震荡、调整各参数步长的问题，推导 Momentum、Adagrad、RMSprop 与 Adam 的更新公式。</p>
+<p>配有简短伪代码与轨迹图，适合有微积分基础的读者补齐优化器原理；这是经典方法综述，不是当前大模型训练配方。</p>
+</article>
+<h2 id="section-30">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://pietromiotti.com/latest/maya-site" rel="noreferrer">激光雷达与智能体：从地形图定位玛雅遗址</a> <a href="https://news.ycombinator.com/item?id=50452455" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 918 分 / 335 评（采集时累计）· 24 小时内提交 · 11 月 11 日更正</p>
+<p>作者把公开激光雷达地形图交给智能体逐张筛查，再用原始点云核对疑似广场与建筑，展示了从遥感资料整理到候选地点报告的流程。</p>
+<p>作者已更正：该遗址早在 2025 年论文中被标绘。这个案例也说明，识别目标与确认“此前未知”需要分别验证。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/" rel="noreferrer">烟雾误报如何连锁触发机房过热</a> <a href="https://news.ycombinator.com/item?id=50455394" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 402 分 / 199 评（采集时累计）· 24 小时内提交 · 原文 2026-11-10</p>
+<p>Jane Street 前系统工程师回忆：施工扬尘触发烟雾报警，既让喷淋管道充水，又关闭制冷；服务器继续发热，险些触发喷水。</p>
+<p>事后他改用整批服务器的平均温度报警，捕捉单机阈值容易漏掉的整体升温。适合用来检查安全联锁与监控规则之间的相互作用。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://gatezh.com/posts/macos-secure-enclave-ssh-keys/" rel="noreferrer">把 SSH 私钥留在 Mac 安全隔区：原生配置与恢复准备</a> <a href="https://news.ycombinator.com/item?id=50449748" rel="noreferrer">讨论</a></h3>
+<p class="item-meta">HN 380 分 / 136 评（采集时累计）· 24 小时内提交 · 原文 2026-02-12，11 月 11 日更新</p>
+<p>教程用 macOS 原生命令在 Secure Enclave 中生成不可导出的密钥，磁盘只保存引用，再由 Touch ID 批准签名，沿用服务器的公钥认证。</p>
+<p>文中列出配置陷阱与替代工具；密钥绑定设备、不能备份，需预留独立登录方式。硬件隔离也不等于受控电脑上的所有 SSH 操作都安全。</p>
+</article>
+<h2 id="section-43">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111/" rel="noreferrer">生命起源的“代谢优先”：先有持续反应，再有遗传信息？</a></h3>
+<p class="item-meta">原文·2026-11-11 · Quanta · Jake Buehler</p>
+<p>代谢优先假说从能量流入的化学反应出发：矿物催化剂可能先帮助简单原料生成有机物，再逐步形成更复杂的反应网络。</p>
+<p>报道梳理热液环境与温和条件下的实验，也指出缺口：反应如何持续、传递改进，并与遗传分子和细胞膜共同运作，仍未解决。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/the-idea-that-sperm-race-to-the-egg-is-just-another-macho-myth" rel="noreferrer">往期佳作·2018-08-23｜受精过程怎样被“游泳竞赛”比喻遮蔽</a></h3>
+<p class="item-meta">Aeon · Robert D Martin · 科学史与生殖生物学评论</p>
+<p>作者从显微镜时代的生殖观念讲起，转向生殖道的运输、筛选与暂存机制，解释为什么“最快的精子获胜”不足以描述整个过程。</p>
+<p>这篇旧文适合观察文化比喻怎样影响研究问题；其中演化解释带有作者立场，不宜把它作为当前生育治疗或避孕指南。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/GoogleChrome/modern-web-guidance-src" rel="noreferrer">GoogleChrome/modern-web-guidance-src</a></li><li><a href="https://github.com/shadcn/improve" rel="noreferrer">shadcn/improve</a></li><li><a href="https://github.com/openai/codex-security" rel="noreferrer">openai/codex-security</a></li><li><a href="https://huggingface.co/Qwen/Qwen3.8-27B" rel="noreferrer">Qwen3.8-27B：可调思考深度的视觉语言模型</a></li><li><a href="https://eli.thegreenplace.net/2026/monads-in-lean/" rel="noreferrer">从除零错误到状态传递：用 Lean 写懂 Monad</a></li><li><a href="https://www.aleksagordic.com/blog/matmul" rel="noreferrer">GPU 矩阵乘长教程：从访存层级走到异步流水线</a></li><li><a href="https://www.ruder.io/optimizing-gradient-descent/" rel="noreferrer">从 SGD 到 Adam：逐步理解优化器如何更新参数</a></li><li><a href="https://pietromiotti.com/latest/maya-site" rel="noreferrer">激光雷达与智能体：从地形图定位玛雅遗址</a></li><li><a href="https://news.ycombinator.com/item?id=50452455" rel="noreferrer">激光雷达与智能体：从地形图定位玛雅遗址 · 讨论</a></li><li><a href="https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/" rel="noreferrer">烟雾误报如何连锁触发机房过热</a></li><li><a href="https://news.ycombinator.com/item?id=50455394" rel="noreferrer">烟雾误报如何连锁触发机房过热 · 讨论</a></li><li><a href="https://gatezh.com/posts/macos-secure-enclave-ssh-keys/" rel="noreferrer">把 SSH 私钥留在 Mac 安全隔区：原生配置与恢复准备</a></li><li><a href="https://news.ycombinator.com/item?id=50449748" rel="noreferrer">把 SSH 私钥留在 Mac 安全隔区：原生配置与恢复准备 · 讨论</a></li><li><a href="https://www.quantamagazine.org/what-is-the-metabolism-first-theory-for-the-origin-of-life-20261111/" rel="noreferrer">生命起源的“代谢优先”：先有持续反应，再有遗传信息？</a></li><li><a href="https://aeon.co/essays/the-idea-that-sperm-race-to-the-egg-is-just-another-macho-myth" rel="noreferrer">往期佳作·2018-08-23｜受精过程怎样被“游泳竞赛”比喻遮蔽</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-12 · 76 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
