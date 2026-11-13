@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-13">2026-11-13</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">从 GPU 内核调优与大规模训练，到本地推理、软件验证和电网成本分摊。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-5">🧠 AI/模型</a></li><li><a href="#section-18">🔥 热议话题</a></li><li><a href="#section-31">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/ggml-org/llama.cpp" rel="noreferrer">ggml-org/llama.cpp</a></h3>
+<p class="item-meta">⭐+176 · C++ · GitHub stars today（非北京时间自然日）</p>
+<p>用 C/C++ 在本机或云端运行大语言模型与视觉语言模型，支持量化、CPU/GPU 混合执行，以及多种硬件后端。</p>
+<p>适合研究有限显存下的推理部署，也能启动兼容 OpenAI 接口的服务；具体模型和硬件效果仍需实测。</p>
+</article>
+<h2 id="section-5">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder" rel="noreferrer">CCORE GLB-3D-Coder</a></h3>
+<p class="item-meta">2026-11-05 发布 · 独立 4B 微调</p>
+<p>把文字需求生成带预览和 GLB 导出按钮的 Three.js 页面，让低多边形素材能继续放进 Godot 等编辑器修改。</p>
+<p>这是基于 Qwen3.5-4B 的独立微调，公开权重与训练数据；生成代码可能很长，导出的材质和动画仍需检查。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://pytorch.org/blog/fast-by-default-compile-time-heuristics-for-helion-kernels/" rel="noreferrer">Helion：用编译期分析减少 GPU 内核调优等待</a></h3>
+<p class="item-meta">2026-11-12 · 内核优化深读</p>
+<p>自动调优要反复编译、试跑，形状一多就很费时。Helion 先估算寄存器、共享内存等用量，再按矩阵乘法或归约选择分块和并行配置。</p>
+<p>文章逐步解释配置取舍，并比较默认、启发式与完整调优。适合读懂“为什么这样调”；结果限于所测 NVIDIA 内核，动态尺寸仍可能回退。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://pytorch.org/blog/training-a-1t-parameter-moe-on-eu-public-infrastructure-with-pytorch-and-torchtitan/" rel="noreferrer">EUROPA：万亿级参数 MoE 在公共超算上的训练调优记录</a></h3>
+<p class="item-meta">2026-11-12 · 大规模训练实践</p>
+<p>节点间通信慢、显存又紧，怎样安排专家和优化器状态？团队按完整专家分配矩阵，把部分中间结果移到 CPU 内存，并调整通信缓冲区的分配。</p>
+<p>文章结合硬件带宽、内存账本和性能轨迹解释各步取舍，适合学习如何定位分布式训练瓶颈；方案依赖 GH200 的 CPU–GPU 高速互联。</p>
+</article>
+<h2 id="section-18">🔥 热议话题</h2>
+<p><a href="https://github.com/rust-lang/rust/releases/tag/1.100.0" rel="noreferrer">Rust 1.100.0</a> · <a href="https://news.ycombinator.com/item?id=50472038" rel="noreferrer">讨论</a></p>
+<p>2026-11-12</p>
+<p>这次稳定版将 never 类型与自定义内存分配器纳入稳定功能，并开放采样性能分析驱动优化选项。</p>
+<p>对底层服务开发者，可重点检查容器如何选择分配器；这些是语言与工具能力更新，不代表现有程序会自动变快。</p>
+<p><a href="https://pron.github.io/posts/correctness-and-complexity" rel="noreferrer">为什么正确软件难写：从可计算性到验证成本</a> · <a href="https://news.ycombinator.com/item?id=50465352" rel="noreferrer">讨论</a></p>
+<p>原文 2016-07-23 · 近 24 小时 HN 讨论</p>
+<p>这篇约 45 分钟的长文从停机问题讲到软件验证的复杂度，附证明与参考文献，适合系统理解“证明程序正确”究竟难在哪里。</p>
+<p>作者讨论的是一般性限制及验证成本，并非说具体软件无法验证。阅读需要一定离散数学基础。</p>
+<p><a href="https://blog.janestreet.com/software-engineering-interviews-are-changing-a-little/" rel="noreferrer">Jane Street：面试开始增加设计与代码验证环节</a> · <a href="https://news.ycombinator.com/item?id=50467297" rel="noreferrer">讨论</a></p>
+<p>原文 2026-11-02 · 近 24 小时 HN 讨论</p>
+<p>Jane Street 在部分校招现场面试中试行新环节，减少纯写代码，转向软件设计、检查代码质量，以及使用大模型生成代码。</p>
+<p>多数环节仍是不用大模型的传统编程题。文章说明了这家公司的局部试点，不能据此推断行业已全面改变招聘方式。</p>
+<h2 id="section-31">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://news.cornell.edu/stories/2026/11/data-centers-need-power-lower-income-rural-residents-pay-price" rel="noreferrer">数据中心扩张，电网账单由谁承担？</a></h3>
+<p class="item-meta">2026-11-09</p>
+<p>康奈尔大学介绍一项覆盖美国四个主要电网、2020—2025 年的研究：新增数据中心带来用电与扩容需求，成本分摊却仍可能依据过去的用电量。</p>
+<p>文章把讨论从总耗电量推进到“谁付钱、谁受益”。结论有地区与制度范围，不能直接套用到其他国家的电网。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/ggml-org/llama.cpp" rel="noreferrer">ggml-org/llama.cpp</a></li><li><a href="https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder" rel="noreferrer">CCORE GLB-3D-Coder</a></li><li><a href="https://pytorch.org/blog/fast-by-default-compile-time-heuristics-for-helion-kernels/" rel="noreferrer">Helion：用编译期分析减少 GPU 内核调优等待</a></li><li><a href="https://pytorch.org/blog/training-a-1t-parameter-moe-on-eu-public-infrastructure-with-pytorch-and-torchtitan/" rel="noreferrer">EUROPA：万亿级参数 MoE 在公共超算上的训练调优记录</a></li><li><a href="https://github.com/rust-lang/rust/releases/tag/1.100.0" rel="noreferrer">Rust 1.100.0</a></li><li><a href="https://pron.github.io/posts/correctness-and-complexity" rel="noreferrer">为什么正确软件难写：从可计算性到验证成本</a></li><li><a href="https://blog.janestreet.com/software-engineering-interviews-are-changing-a-little/" rel="noreferrer">Jane Street：面试开始增加设计与代码验证环节</a></li><li><a href="https://news.cornell.edu/stories/2026/11/data-centers-need-power-lower-income-rural-residents-pay-price" rel="noreferrer">数据中心扩张，电网账单由谁承担？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-13 · 78 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
