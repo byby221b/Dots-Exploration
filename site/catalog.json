@@ -6,9 +6,9 @@
       "disclosures": 0,
       "id": "dots-trending-2026-11-13",
       "images": [],
-      "revision": 1,
+      "revision": 2,
       "series": "每日 Trending",
-      "trending_items": 5
+      "trending_items": 8
     },
     {
       "channel": "exploration",
@@ -868,5 +868,5 @@
   "end": "2026-11-13",
   "images_count": 66,
   "start": "2026-10-01",
-  "trending_items": 468
+  "trending_items": 471
 }

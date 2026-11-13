@@ -42,7 +42,7 @@
   "articles/dots-trending-2026-11-10/index.html": "3cdf948f0c55eaa8dcd48c847a590154b9197fef7ca726f0d592c67501d2311d",
   "articles/dots-trending-2026-11-11/index.html": "612f991bdc6f181b35e9a888a67f39fc93281e9bd0c1bfacc7ee01a38be69c3b",
   "articles/dots-trending-2026-11-12/index.html": "f9c69fc049f3c25bb543c4e8352945612fb00c1317ae63ff985671000f3022bf",
-  "articles/dots-trending-2026-11-13/index.html": "e33b0bebfebd68b47502df543ffb8d077e47916d3d2c06c6985681f5dfce1d9f",
+  "articles/dots-trending-2026-11-13/index.html": "40dae9f059b38b5ae3b65b1dccb27b8b5e127e56b96b3ac750b311cb6d668dae",
   "articles/interdisciplinary-2026-10-01/index.html": "13c29be171a170e81468e61d031d49e322008cc83f46f91964a8aa9ee1dd639d",
   "articles/interdisciplinary-2026-10-07/index.html": "124c085d98f96c41d55337e4cf349ee349e77150b1260930d025a5f717581cd5",
   "articles/interdisciplinary-transfer-2026-10-14/index.html": "bd697d88c91c58b266e26020775280768f3dbd9720c15680211f82a651bdcded",
@@ -145,10 +145,10 @@
   "assets/math_shared_foundations_2026-10-16/result.png": "2f87d9eeea9bb55c84ed834803be9f5f15e7d020f8836074350557796d0c361f",
   "assets/research_stress_test_2026-10-05/mechanism.png": "1bb3d8e27a0f23b74a2d18b216b476c2758707fb30117108ce97a8feeea26a41",
   "assets/technical-archaeology-2026-10-13/ring.png": "80eac9c2878306c5c1adcadf9357736bf31039016322d40ff6a9706872ff889a",
-  "catalog.json": "75fc1350b2c997e9c66a0025a77d20264b012453dab7bf7f5fadde5f7cc43acf",
+  "catalog.json": "2cd4ad96be3ac40f024caa989be21e36854140f02452ebcbfdf0b4b6c41f5862",
   "exploration/index.html": "5b44f385b0aff944381a86767560d7919593dae32693a5524251422f22f13f96",
   "index.html": "2b832d67ff0e1cd0faa04a5123dca45fe8de7f7a9b0b7ec50f71e710da61c4bd",
-  "search-index.js": "0d569d0c1fb12969ce920bf9ad6943616c8757ffb443ba3bd7ac9dacdc6fd6fa",
+  "search-index.js": "f349219adb04666b4b7948700395271b806d1930ccf7b4551355768ca731bba3",
   "style.css": "958741aa7f66e7af705ec4ca298d26584788172764d2aacf5bb40368ef3af363",
   "trending/index.html": "e404bb9ab097724a10bc2103256be3e131c22aa585e01d90eac9388bb9183d7a"
 }
