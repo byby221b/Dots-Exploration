@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>端点与面积固定，怎样让曲线变化最平缓？ · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">每周面试挑战 / <time datetime="2026-11-14">2026-11-14</time> / 修订 1</p><h1>端点与面积固定，怎样让曲线变化最平缓？</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-2">主问题</a></li><li><a href="#section-6">独立追问</a></li></ol></nav><div class="prose"><div class="article-content"><p>微积分与优化 · 中等偏难 · 建议先独立思考 25–40 分钟；解答阅读约 10 分钟。需要会求导、定积分、分部积分与柯西–施瓦茨不等式，关键步骤会逐项说明。</p>
+<p>主问题据 UCL MATH0043 课程题改编；高度限制追问与中文解答为原创组织。不对应已核实的公司真题。</p>
+<h2 id="section-2">主问题</h2>
+<p>选择一个定义在 [0,1] 上的实值函数 f，要求 f 与一阶导数 f′ 在整个区间上连续（即 f 属于 C¹；端点导数取单侧值）。不要求二阶导数处处存在。这些条件也保证下面的斜率平方积分有限。</p>
+<p>另有三个条件：f(0)=0，f(1)=0，∫₀¹f(x)dx=1。题目不额外要求 f 非负，因此“面积”准确指带符号积分。单位区间与面积 1 都是教学设定。</p>
+<p>用 E(f)=∫₀¹[f′(x)]² dx 衡量变化程度：把每处斜率的平方沿全区间累积。求 E 的最小值及达到它的函数，并证明最优函数唯一。这里不优化曲线长度、最大斜率或二阶导数。</p>
+<h2 id="section-6">独立追问</h2>
+<p>保留主问题的全部条件，再要求每个 x∈[0,1] 都满足 f(x)≤5/4。重新求 E(f) 的最小值和唯一最优函数，并给出覆盖所有可行函数的证明。可行函数不预设对称。</p>
+<details><summary>三级提示：需要时展开</summary><h3 id="section-8-0">三级提示</h3>
+<p>提示一级：面积条件用到了 f，目标用到了 f′。能否借助端点为零，把面积改写成 f′ 与一个简单权重函数的乘积积分？</p>
+<p>提示二级：选择导数为 −1 的权重，用分部积分连接二者，再用柯西–施瓦茨。求出下界后，检查等号条件能否反推出合法函数。</p>
+<p>提示三级：追问先检查主问题的解是否越过上限。构造满足上限的候选后，把任意可行函数写成“候选＋差值”，展开斜率平方；利用面积相同和贴住上限区间的差值符号判断交叉项。</p></details>
+<details><summary>完整解答，想好再看</summary><h3 id="section-9-0">完整解答，想好再看</h3>
+<h3 id="section-9-1">1　把面积转成斜率的信息</h3>
+<p>把权重记为 w(x)=1/2−x。分部积分公式是 ∫wf′=[wf]₀¹−∫w′f。这里 w′=−1；两端 f=0 让边界项 [wf]₀¹=w(1)f(1)−w(0)f(0) 为零；剩下的就是题目给出的面积 1。</p>
+<figure><a class="image-link" href="../../assets/interview-challenge-2026-11-14/main-bound.png" aria-label="查看原图：w(x)=1/2−x。分部积分得到∫₀¹wf′=1。柯西–施瓦茨给出1≤(∫₀¹w²)E(f)=E(f)/12，因此E(f)≥12。"><img src="../../assets/interview-challenge-2026-11-14/main-bound.png" alt="w(x)=1/2−x。分部积分得到∫₀¹wf′=1。柯西–施瓦茨给出1≤(∫₀¹w²)E(f)=E(f)/12，因此E(f)≥12。" loading="lazy"></a><figcaption><span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<p>柯西–施瓦茨说：两函数乘积积分的平方，不超过各自平方积分的乘积。左侧刚好是 1，权重的平方积分是 1/12，故每个可行函数都满足 E(f)≥12。</p>
+<p>为什么把权重中心选在 1/2？任何 c−x 都能做同样的分部积分，但其平方积分为 (c−1/2)²+1/12。取 c=1/2 让它最小，所得能量下界最强。</p>
+<h3 id="section-9-6">2　用取等条件构造答案</h3>
+<p>在上述不等式中取等，需要 f′ 与 w 成比例，即 f′(x)=k(1/2−x) 在整个区间上成立。积分并用 f(0)=0，得到 f(x)=(k/2)x(1−x)；它自动满足另一端为零。面积为 k/12，因此 k=12。</p>
+<figure><a class="image-link" href="../../assets/interview-challenge-2026-11-14/main-equality.png" aria-label="查看原图：等号要求f′=k(1/2−x)。端点条件给f=(k/2)x(1−x)，面积条件给k=12。故f*=6x(1−x)，最小能量为12。"><img src="../../assets/interview-challenge-2026-11-14/main-equality.png" alt="等号要求f′=k(1/2−x)。端点条件给f=(k/2)x(1−x)，面积条件给k=12。故f*=6x(1−x)，最小能量为12。" loading="lazy"></a><figcaption><span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<p>直接代入：f*(x)=6x(1−x) 的面积为 1，导数为 6−12x，斜率平方积分为 12。统一下界被它达到，最优性成立。任何达到 12 的函数都必须满足刚才的等号条件；两函数的导数相同，函数就只差常数，而端点又固定常数为零，因此最优函数在整个区间上唯一。</p>
+<h3 id="section-9-10">3　高度受限后，怎样找候选</h3>
+<p>主问题的解在 x=1/2 处达到 3/2，超过 5/4，所以不能继续使用。记新上限 H=5/4。尝试让中间一段保持高度 H，左右各用一段二次曲线连接零端点，并让连接处的斜率为零。</p>
+<p>这只是寻找候选的方法，还没有证明最优函数必须对称或必须由这些段组成。接下来的证书会与任意可行函数比较，不限制它的形状。</p>
+<figure><a class="image-link" href="../../assets/interview-challenge-2026-11-14/curves.png" aria-label="查看原图：横轴x从0到1，纵轴为函数高度。烟蓝线f*=6x(1−x)在中点达到3/2；氧化红线上限解g在3/10到7/10之间等于5/4，两端为零。虚线H=5/4与红线平台重合，圆点标记两个连接点。"><img src="../../assets/interview-challenge-2026-11-14/curves.png" alt="横轴x从0到1，纵轴为函数高度。烟蓝线f*=6x(1−x)在中点达到3/2；氧化红线上限解g在3/10到7/10之间等于5/4，两端为零。虚线H=5/4与红线平台重合，圆点标记两个连接点。" loading="lazy"></a><figcaption><span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<p>图中烟蓝线是主问题的解，氧化红线是本节构造的上限解 g；横虚线标出 H=5/4，两个圆点对应 x=3/10、7/10。图像帮助比较形状，最优性仍需下面的证明。</p>
+<p>把左侧连接点记为 a。用 q(x)=Ax²+Bx 连接 q(0)=0、q(a)=H、q′(a)=0，解得 q(x)=H(2x/a−x²/a²)。右侧取镜像，中间保持 H。</p>
+<figure><a class="image-link" href="../../assets/interview-challenge-2026-11-14/cap-profile.png" aria-label="查看原图：H=5/4，a=3/10。0≤x≤a时g=H(2x/a−x²/a²)；a≤x≤1−a时g=H；右侧由g(x)=g(1−x)定义。面积H(1−2a/3)=1。"><img src="../../assets/interview-challenge-2026-11-14/cap-profile.png" alt="H=5/4，a=3/10。0≤x≤a时g=H(2x/a−x²/a²)；a≤x≤1−a时g=H；右侧由g(x)=g(1−x)定义。面积H(1−2a/3)=1。" loading="lazy"></a><figcaption><span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<p>左侧面积为 2Ha/3，右侧相同，中间为 H(1−2a)。总面积 H(1−2a/3)=1 给出 a=3/10，确实小于 1/2。连接点为 3/10 和 7/10。</p>
+<p>左段从零升到 H，右段从 H 降到零，且两段都不越过 H；接到中间时高度为 H、斜率为零。因此 g 与一阶导数都连续，满足题目要求的 C¹ 条件。二阶导数在两个连接点不存在，这不违反题面条件。</p>
+<h3 id="section-9-19">4　用任意可行函数检验它</h3>
+<p>取任意可行 f，令 h=f−g。两者端点和面积相同，所以 h(0)=h(1)=0、∫₀¹h=0。在中间区间 P=[a,1−a]，g 已达到上限 H，而 f≤H，所以 h≤0。记两侧的并集为 I=[0,a]∪[1−a,1]，便有 ∫I h=−∫P h≥0。</p>
+<p>展开斜率平方得到 E(f)=E(g)+2∫₀¹g′h′+∫₀¹(h′)²。最后一项非负，关键是交叉项。分三段做分部积分：外端 h=0，中间连接处 g′=0，因此所有边界项都为零。两侧 g″=−2H/a²，中间 g″=0，于是交叉项等于 (4H/a²)∫I h，仍非负。</p>
+<figure><a class="image-link" href="../../assets/interview-challenge-2026-11-14/cap-certificate.png" aria-label="查看原图：令h=f−g，I为两侧区间。∫I h=−∫a到1−a h≥0。交叉项2∫g′h′=(4H/a²)∫I h≥0。因此E(f)−E(g)≥∫(h′)²≥0，且E(g)=8H²/(3a)=125/9。"><img src="../../assets/interview-challenge-2026-11-14/cap-certificate.png" alt="令h=f−g，I为两侧区间。∫I h=−∫a到1−a h≥0。交叉项2∫g′h′=(4H/a²)∫I h≥0。因此E(f)−E(g)≥∫(h′)²≥0，且E(g)=8H²/(3a)=125/9。" loading="lazy"></a><figcaption><span class="reading-aid">点击图片查看原图 ↗</span></figcaption></figure>
+<p>所以 E(f)≥E(g)，这对非对称函数也成立。若取等，必有 ∫₀¹(h′)²=0，因为 h′ 连续，这迫使 h′ 处处为零，故 h 为常数；再由 h(0)=0 得 h 恒为零。追问的最优函数同样唯一。</p>
+<h3 id="section-9-24">5　算出最小能量</h3>
+<p>左段导数为 (2H/a)(1−x/a)，其中 (1−x/a)² 从 0 到 a 的积分为 a/3；左段能量因此是 4H²/(3a)。右段相同，中段导数为零。总能量 E(g)=8H²/(3a)=125/9，约为 13.8889，高于主问题的 12。</p>
+<p>已核对端点、面积、连接斜率与能量；最优性由上述证明给出。</p>
+<h3 id="section-9-27">两处常见错误</h3>
+<p>把主问题曲线超过上限的部分直接截平，会降低面积，破坏面积恰好为 1 的条件。追问必须连两侧一起重新安排。</p>
+<p>画出对称候选，或者写出某条必要微分方程，都还没有排除其他函数。主问题靠统一下界与取等条件；追问靠对所有可行 f 成立的非负差值证明。</p>
+<h3 id="section-9-30">方法与边界</h3>
+<p>这题练习两步：先把约束转成能量的统一界，再构造取等对象；新增逐点限制后，用接触区的符号控制能量差。结论依赖本题的端点、带符号面积与斜率平方目标。它不是最短曲线问题，也未建模真实材料的弯曲能。</p>
+<p>与固定总量的最小平方修正相比，本题优化整条函数的导数能量，并新增逐点高度限制；与断棒的几何积分、矩约束下的尾概率优化，核心对象和证明环节均不同。</p>
+<h3 id="section-9-33">来源与选读</h3>
+<p><a href="https://www.homepages.ucl.ac.uk/~ucahmto/latex_html/chapter2_latex2html/node9.html" rel="noreferrer">UCL MATH0043 §2：Isoperimetric Problems，Exercise 6</a>：原课程题端点为 1、积分为 2；把原函数减去 1 就得到本主问题。这里补齐了全局最小值与唯一性的证明，追问为新增组织。</p>
+<p><a href="https://www.math.purdue.edu/~arshak/S07/MA694A/lec1.pdf" rel="noreferrer">Arshak Petrosyan，Purdue MA694A，Lecture 1，§1.1，第 1–2 页</a>：提供导数能量与障碍问题背景。原资料讨论下障碍，本题使用上限，比较差值时不等号方向相反；正文的数值与证明单独推导。</p></details></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://www.homepages.ucl.ac.uk/~ucahmto/latex_html/chapter2_latex2html/node9.html" rel="noreferrer">UCL MATH0043 §2，Exercise 6</a></li><li><a href="https://www.math.purdue.edu/~arshak/S07/MA694A/lec1.pdf" rel="noreferrer">Purdue MA694A Lecture 1，§1.1</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-14 · 81 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
