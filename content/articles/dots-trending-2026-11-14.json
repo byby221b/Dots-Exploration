@@ -1,0 +1,272 @@
+{
+  "id": "dots-trending-2026-11-14",
+  "revision": 1,
+  "date": "2026-11-14",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "从本地审阅与点对点连接，到语音模型、可视化诊断和统计假设，再看网络科学与哲学解释。",
+  "topics": [
+    "开源工具",
+    "模型与学习",
+    "工程实践",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[backnotprop/plannotator](https://github.com/backnotprop/plannotator)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+108 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把代理给出的计划、文档和代码差异放到本地浏览器里批注，再把结构化反馈送回原会话，适合在多代理工作中保留人工审阅环节。"
+    },
+    {
+      "type": "paragraph",
+      "text": "支持多种编码助手与代码托管平台；内容默认保存在本地，调用 AI 或分享等联网功能时仍需核对数据去向。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[tailscale/tailcat](https://github.com/tailscale/tailcat)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+256 · Go · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "像 netcat 一样在两台机器间传递数据，但使用 WireGuard 加密，并尝试穿透网络地址转换，失败时经中继连接。"
+    },
+    {
+      "type": "paragraph",
+      "text": "连接信息由双方另行交换，无需 Tailscale 账号或管理员权限；适合研究轻量点对点工具，浏览器版目前仍只走中继。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[ZONOS3-Mini：可本地运行的多语言语音合成](https://huggingface.co/Zyphra/ZONOS3-Mini)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF trendingScore 当前前十 · Apache 2.0"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型支持 43 种语言，把文字与参考音色转成流式语音；总参数约 8 亿，每步激活约 1 亿，并提供浏览器与原生运行方式。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究语音助手和端侧部署；浏览器需要 WebGPU 支持，模型卡的速度结果来自特定硬件，本期未实际试听或测速。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Google /teamwork：把候选生成与独立验证接成循环](https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-13 · Google Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google 介绍多代理科研与工程流程：并行探索候选方案，再交给证明检查器、原有测试或硬件计时等验证工具筛选，并按任务拆分上下文。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章提供形式化、代码迁移与内核优化案例，适合研究长任务的质量控制；成效为团队报告，部分专用流程仍待后续开放。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[沿笔画看神经网络：把生成分支与内部记忆画出来](https://distill.pub/2016/handwriting/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2016-12-06 · Distill 归档"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章用带记忆的循环网络生成手写轨迹，同时画出可能的下一笔，再把内部单元的活动与笔画位置对齐，探索模型学到了什么。"
+    },
+    {
+      "type": "paragraph",
+      "text": "附交互图、实现说明与源码，适合有神经网络基础的读者学习可视化诊断；小模型常生成似字非字的笔画，不能据此认定它理解文字。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[公交等待悖论：从模拟与推导走回真实数据](https://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2018-09-13 · Jake VanderPlas"
+    },
+    {
+      "type": "paragraph",
+      "text": "随机到站的乘客更容易碰上较长的发车间隔。作者用 Python 模拟、概率推导和西雅图公交数据，逐步检验“平均等多久”的假设。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配有完整笔记本和数据处理代码，适合练习统计建模；真实公交不符合文中的泊松到达假设，不能把理论等待时间直接套到所有线路。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[IceWM：以键盘操作为核心的轻量窗口管理器](https://ice-wm.org/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 24 小时内提交 · 现有项目，非本日新版"
+    },
+    {
+      "type": "paragraph",
+      "text": "IceWM 为 X 窗口系统提供任务栏、工作区和可配置快捷键，也支持多显示器与主题，强调简洁、快速的桌面操作。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合想精简 Linux 桌面或研究窗口管理的人；官网列出的稳定版发布于 2026-08-06，本次热议不等于软件刚发布。\n[讨论](https://news.ycombinator.com/item?id=50478515)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Brave Search：按 HTTP 请求完成代理支付](https://brave.com/blog/search-api-agentic-payments/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "原文 2026-11-12 · HN 24 小时内提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "搜索接口接入 x402 协议：未付款请求先收到 HTTP 402 与价格信息，客户端签署付款后重试，验证通过才执行搜索并返回收据。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它把开户和固定方案之外的按次调用做成程序流程；目前使用 Base 网络上的 USDC，代理仍需单独管理钱包权限与开支。\n[讨论](https://news.ycombinator.com/item?id=50477649)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Isometric SF：让小模型逐块绘制像素城市](https://www.justinchavez.com/blog/isometric-sf-how/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "原文 2026-11-11 · HN 24 小时内提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者先把三维地图渲染成固定视角，再用大模型制作训练样例，逐级训练更便宜的小模型绘图，并以颜色与接缝指标选择版本。"
+    },
+    {
+      "type": "paragraph",
+      "text": "教程还解释瓦片混合、色差修正和坏图重拍，适合学习图像生成的整套工程流程；最终地图是风格化重绘，不能当作精确地理记录。\n[讨论](https://news.ycombinator.com/item?id=50487228)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[网络科学：从连接结构追到细胞与食物分子](https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-12 · Quanta 访谈文字稿"
+    },
+    {
+      "type": "paragraph",
+      "text": "Barabási 与 Strogatz 从网络如何生长、为何形成枢纽讲起，再讨论怎样把蛋白质相互作用和食物分子整理成可研究的关系图。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合观察同一数学视角怎样跨越社会与生物系统；访谈强调连接图只是起点，还需作用强度和动态机制，本期依据文字稿，未试听音频。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[“为何有物存在”：重新检查简单性这个前提](https://aeon.co/essays/a-new-answer-to-why-there-is-something-rather-than-nothing)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-12 · Aeon · Andrew T Brenner"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者先区分“有东西存在”与逻辑、数学等真理，再追问：若某个存在能解释许多真理，整体说明是否反而比空无更简单？"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章适合练习拆解解释的前提，也讨论简单性凭什么成为理由；这是作者明确标为高度推测的哲学提案，并非宇宙起源的科学定论。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "backnotprop/plannotator",
+      "url": "https://github.com/backnotprop/plannotator"
+    },
+    {
+      "title": "tailscale/tailcat",
+      "url": "https://github.com/tailscale/tailcat"
+    },
+    {
+      "title": "ZONOS3-Mini：可本地运行的多语言语音合成",
+      "url": "https://huggingface.co/Zyphra/ZONOS3-Mini"
+    },
+    {
+      "title": "Google /teamwork：把候选生成与独立验证接成循环",
+      "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/"
+    },
+    {
+      "title": "沿笔画看神经网络：把生成分支与内部记忆画出来",
+      "url": "https://distill.pub/2016/handwriting/"
+    },
+    {
+      "title": "公交等待悖论：从模拟与推导走回真实数据",
+      "url": "https://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/"
+    },
+    {
+      "title": "IceWM：以键盘操作为核心的轻量窗口管理器",
+      "url": "https://ice-wm.org/"
+    },
+    {
+      "title": "IceWM：以键盘操作为核心的轻量窗口管理器 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50478515"
+    },
+    {
+      "title": "Brave Search：按 HTTP 请求完成代理支付",
+      "url": "https://brave.com/blog/search-api-agentic-payments/"
+    },
+    {
+      "title": "Brave Search：按 HTTP 请求完成代理支付 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50477649"
+    },
+    {
+      "title": "Isometric SF：让小模型逐块绘制像素城市",
+      "url": "https://www.justinchavez.com/blog/isometric-sf-how/"
+    },
+    {
+      "title": "Isometric SF：让小模型逐块绘制像素城市 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50487228"
+    },
+    {
+      "title": "网络科学：从连接结构追到细胞与食物分子",
+      "url": "https://www.quantamagazine.org/can-network-science-transform-health-and-nutrition-20261112/"
+    },
+    {
+      "title": "“为何有物存在”：重新检查简单性这个前提",
+      "url": "https://aeon.co/essays/a-new-answer-to-why-there-is-something-rather-than-nothing"
+    }
+  ],
+  "public_reviewed": true
+}
