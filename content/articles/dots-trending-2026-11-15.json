@@ -1,0 +1,252 @@
+{
+  "id": "dots-trending-2026-11-15",
+  "revision": 1,
+  "date": "2026-11-15",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "从浏览器调试与服务监控，到三维生成、数值稳定性和双机推理，再看生命演化与知识的力量。",
+  "topics": [
+    "开源工具",
+    "模型与学习",
+    "工程实践",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+664 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "让编码代理直接检查真实 Chrome 页面，读取网络请求、控制台与性能轨迹，把“页面哪里慢、哪里出错”接到调试流程中。"
+    },
+    {
+      "type": "paragraph",
+      "text": "提供工具接口和命令行；连接后会向代理暴露浏览器内容，使用统计默认开启，接入前需检查数据范围与相关配置。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[louislam/uptime-kuma](https://github.com/louislam/uptime-kuma)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+430 · JavaScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "自托管监控工具可定期检查网页、端口、域名记录和容器状态，再通过通知与状态页展示故障，适合集中观察小型服务。"
+    },
+    {
+      "type": "paragraph",
+      "text": "支持证书信息和多种通知渠道；官方安装默认监听全部网络接口，持久化存储也不支持 NFS 网络文件系统，部署时需核对。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Tencent/LoopForge](https://github.com/Tencent/LoopForge)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+33 · Go · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把编码代理、脚本检查和人工审批串成可重用流程，在自托管工作区记录各阶段的产物、状态与重试路径。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究团队怎样组织代理交付；默认 Docker 方案面向可信团队，访问主机 Docker 服务的权限不能当作不可信多租户隔离。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Idol：从一张物体图生成可转动的三维表示](https://huggingface.co/speridlabs/idol)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF trendingScore 当前第 6 · Apache 2.0 · 现有模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型先去除背景、裁切物体，再生成许多带位置和颜色的三维高斯点，导出可在查看器中转动的 PLY 文件，包含输入图没展示的侧面。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究图像到三维的生成流程；未见部分由模型补全，不能当实测几何。运行还依赖两款需先同意访问条款的图像编码模型。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Log-Sum-Exp：怎样让概率计算避开数值溢出？](https://gregorygundersen.com/blog/2020/02/09/log-sum-exp/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2020-02-09 · Gregory Gundersen"
+    },
+    {
+      "type": "paragraph",
+      "text": "直接对很大的分数取指数会溢出，极小值又可能被舍成零。文章推导先减去最大值、再做指数求和与归一化，说明为何结果保持等价。"
+    },
+    {
+      "type": "paragraph",
+      "text": "配有 NumPy 例子和公式，适合有基础概率与 Python 经验的读者理解数值稳定性；极小概率仍可能舍入为零，实作宜采用成熟库。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[ggml 1.0.0：清理旧接口，推进多后端推理](https://github.com/ggml-org/ggml/releases/tag/v1.0.0)"
+    },
+    {
+      "type": "paragraph",
+      "text": "发布 2026-11-13 · HN 24 小时内提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "张量计算库这一版移除废弃接口，并改进多种硬件后端的矩阵运算、注意力和专家模型执行，也减少调度器搬运未使用输入的开销。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合跟踪本地推理底层如何演进；旧操作被删除，远程调用协议也有升级，集成方需检查兼容性，不能仅凭 1.0 版本号假定无缝替换。\n[讨论](https://news.ycombinator.com/item?id=50493062)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[PyPI 新安全页：看清软件包从哪里构建和发布](https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "原文 2026-11-06 · HN 24 小时内提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "新界面集中展示发布文件的来源证明，并标出证明缺失、构建来源不一致或相较旧版发生变化，帮助安装者追查供应链。"
+    },
+    {
+      "type": "paragraph",
+      "text": "来源证明回答的是文件从哪里来；没有证明不自动等于恶意，有证明也不能代替代码审查。文章解释了各类提示应怎样结合项目历史判断。\n[讨论](https://news.ycombinator.com/item?id=50497892)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[双机运行 GLM-5.3：从权重分片到通信与并发验证](https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026-11-13 · NVIDIA · HN 24 小时内提交"
+    },
+    {
+      "type": "paragraph",
+      "text": "教程用 vLLM 把模型权重与计算拆到两台 DGX Station，逐步检查高速互联、容器与权重一致性，再验证服务、显存和并发请求。"
+    },
+    {
+      "type": "paragraph",
+      "text": "附完整配置及测量步骤，适合已有 GPU 服务经验的读者；吞吐量受并发、前缀缓存和推测解码影响，文中数字不等于每位用户的生成速度。\n[讨论](https://news.ycombinator.com/item?id=50497155)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[生命起源的新问题：化学系统怎样开始持续演化？](https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-12 · Quanta · Yasemin Saplakoglu"
+    },
+    {
+      "type": "paragraph",
+      "text": "这篇长报道把此前几种“哪类分子先出现”的假说放回共同问题：分子反应怎样保存信息、持续繁殖，并形成能独立演化的系统。"
+    },
+    {
+      "type": "paragraph",
+      "text": "它串起祖先重建、化学实验与合成细胞研究；出现生长或分裂还不等于重建生命，部分成果仍是预印本或未发表工作。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[被迫迁徙的人，怎样重新想象知识与未来？](https://aeon.co/essays/those-forced-to-cross-borders-are-imagining-a-radical-new-world)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-13 · Aeon · Shahram Khosravi"
+    },
+    {
+      "type": "paragraph",
+      "text": "人类学者从自己的越境经历出发，把迁徙、隐蔽教育与阅读联系起来，讨论人在受限制的处境中怎样形成知识并想象另一种生活。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章可用来思考教育与行动能力的关系；论述结合个人经验、历史案例与明确政治立场，应作为作者的人类学评论阅读。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    },
+    {
+      "title": "louislam/uptime-kuma",
+      "url": "https://github.com/louislam/uptime-kuma"
+    },
+    {
+      "title": "Tencent/LoopForge",
+      "url": "https://github.com/Tencent/LoopForge"
+    },
+    {
+      "title": "Idol：从一张物体图生成可转动的三维表示",
+      "url": "https://huggingface.co/speridlabs/idol"
+    },
+    {
+      "title": "Log-Sum-Exp：怎样让概率计算避开数值溢出？",
+      "url": "https://gregorygundersen.com/blog/2020/02/09/log-sum-exp/"
+    },
+    {
+      "title": "ggml 1.0.0：清理旧接口，推进多后端推理",
+      "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0"
+    },
+    {
+      "title": "ggml 1.0.0：清理旧接口，推进多后端推理 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50493062"
+    },
+    {
+      "title": "PyPI 新安全页：看清软件包从哪里构建和发布",
+      "url": "https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/"
+    },
+    {
+      "title": "PyPI 新安全页：看清软件包从哪里构建和发布 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50497892"
+    },
+    {
+      "title": "双机运行 GLM-5.3：从权重分片到通信与并发验证",
+      "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/"
+    },
+    {
+      "title": "双机运行 GLM-5.3：从权重分片到通信与并发验证 · 讨论",
+      "url": "https://news.ycombinator.com/item?id=50497155"
+    },
+    {
+      "title": "生命起源的新问题：化学系统怎样开始持续演化？",
+      "url": "https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112/"
+    },
+    {
+      "title": "被迫迁徙的人，怎样重新想象知识与未来？",
+      "url": "https://aeon.co/essays/those-forced-to-cross-borders-are-imagining-a-radical-new-world"
+    }
+  ],
+  "public_reviewed": true
+}

@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-15">2026-11-15</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">从浏览器调试与服务监控，到三维生成、数值稳定性和双机推理，再看生命演化与知识的力量。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-13">🧠 AI/模型</a></li><li><a href="#section-22">🔥 热议话题</a></li><li><a href="#section-35">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp" rel="noreferrer">ChromeDevTools/chrome-devtools-mcp</a></h3>
+<p class="item-meta">⭐+664 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>让编码代理直接检查真实 Chrome 页面，读取网络请求、控制台与性能轨迹，把“页面哪里慢、哪里出错”接到调试流程中。</p>
+<p>提供工具接口和命令行；连接后会向代理暴露浏览器内容，使用统计默认开启，接入前需检查数据范围与相关配置。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/louislam/uptime-kuma" rel="noreferrer">louislam/uptime-kuma</a></h3>
+<p class="item-meta">⭐+430 · JavaScript · GitHub stars today（非北京时间自然日）</p>
+<p>自托管监控工具可定期检查网页、端口、域名记录和容器状态，再通过通知与状态页展示故障，适合集中观察小型服务。</p>
+<p>支持证书信息和多种通知渠道；官方安装默认监听全部网络接口，持久化存储也不支持 NFS 网络文件系统，部署时需核对。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/Tencent/LoopForge" rel="noreferrer">Tencent/LoopForge</a></h3>
+<p class="item-meta">⭐+33 · Go · GitHub stars today（非北京时间自然日）</p>
+<p>把编码代理、脚本检查和人工审批串成可重用流程，在自托管工作区记录各阶段的产物、状态与重试路径。</p>
+<p>适合研究团队怎样组织代理交付；默认 Docker 方案面向可信团队，访问主机 Docker 服务的权限不能当作不可信多租户隔离。</p>
+</article>
+<h2 id="section-13">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/speridlabs/idol" rel="noreferrer">Idol：从一张物体图生成可转动的三维表示</a></h3>
+<p class="item-meta">HF trendingScore 当前第 6 · Apache 2.0 · 现有模型</p>
+<p>模型先去除背景、裁切物体，再生成许多带位置和颜色的三维高斯点，导出可在查看器中转动的 PLY 文件，包含输入图没展示的侧面。</p>
+<p>适合研究图像到三维的生成流程；未见部分由模型补全，不能当实测几何。运行还依赖两款需先同意访问条款的图像编码模型。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://gregorygundersen.com/blog/2020/02/09/log-sum-exp/" rel="noreferrer">Log-Sum-Exp：怎样让概率计算避开数值溢出？</a></h3>
+<p class="item-meta">深度精选·2020-02-09 · Gregory Gundersen</p>
+<p>直接对很大的分数取指数会溢出，极小值又可能被舍成零。文章推导先减去最大值、再做指数求和与归一化，说明为何结果保持等价。</p>
+<p>配有 NumPy 例子和公式，适合有基础概率与 Python 经验的读者理解数值稳定性；极小概率仍可能舍入为零，实作宜采用成熟库。</p>
+</article>
+<h2 id="section-22">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/ggml-org/ggml/releases/tag/v1.0.0" rel="noreferrer">ggml 1.0.0：清理旧接口，推进多后端推理</a></h3>
+<p class="item-meta">发布 2026-11-13 · HN 24 小时内提交</p>
+<p>张量计算库这一版移除废弃接口，并改进多种硬件后端的矩阵运算、注意力和专家模型执行，也减少调度器搬运未使用输入的开销。</p>
+<p>适合跟踪本地推理底层如何演进；旧操作被删除，远程调用协议也有升级，集成方需检查兼容性，不能仅凭 1.0 版本号假定无缝替换。<br><a href="https://news.ycombinator.com/item?id=50493062" rel="noreferrer">讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/" rel="noreferrer">PyPI 新安全页：看清软件包从哪里构建和发布</a></h3>
+<p class="item-meta">原文 2026-11-06 · HN 24 小时内提交</p>
+<p>新界面集中展示发布文件的来源证明，并标出证明缺失、构建来源不一致或相较旧版发生变化，帮助安装者追查供应链。</p>
+<p>来源证明回答的是文件从哪里来；没有证明不自动等于恶意，有证明也不能代替代码审查。文章解释了各类提示应怎样结合项目历史判断。<br><a href="https://news.ycombinator.com/item?id=50497892" rel="noreferrer">讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/" rel="noreferrer">双机运行 GLM-5.3：从权重分片到通信与并发验证</a></h3>
+<p class="item-meta">深度精选·2026-11-13 · NVIDIA · HN 24 小时内提交</p>
+<p>教程用 vLLM 把模型权重与计算拆到两台 DGX Station，逐步检查高速互联、容器与权重一致性，再验证服务、显存和并发请求。</p>
+<p>附完整配置及测量步骤，适合已有 GPU 服务经验的读者；吞吐量受并发、前缀缓存和推测解码影响，文中数字不等于每位用户的生成速度。<br><a href="https://news.ycombinator.com/item?id=50497155" rel="noreferrer">讨论</a></p>
+</article>
+<h2 id="section-35">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112/" rel="noreferrer">生命起源的新问题：化学系统怎样开始持续演化？</a></h3>
+<p class="item-meta">2026-11-12 · Quanta · Yasemin Saplakoglu</p>
+<p>这篇长报道把此前几种“哪类分子先出现”的假说放回共同问题：分子反应怎样保存信息、持续繁殖，并形成能独立演化的系统。</p>
+<p>它串起祖先重建、化学实验与合成细胞研究；出现生长或分裂还不等于重建生命，部分成果仍是预印本或未发表工作。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/those-forced-to-cross-borders-are-imagining-a-radical-new-world" rel="noreferrer">被迫迁徙的人，怎样重新想象知识与未来？</a></h3>
+<p class="item-meta">2026-11-13 · Aeon · Shahram Khosravi</p>
+<p>人类学者从自己的越境经历出发，把迁徙、隐蔽教育与阅读联系起来，讨论人在受限制的处境中怎样形成知识并想象另一种生活。</p>
+<p>文章可用来思考教育与行动能力的关系；论述结合个人经验、历史案例与明确政治立场，应作为作者的人类学评论阅读。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp" rel="noreferrer">ChromeDevTools/chrome-devtools-mcp</a></li><li><a href="https://github.com/louislam/uptime-kuma" rel="noreferrer">louislam/uptime-kuma</a></li><li><a href="https://github.com/Tencent/LoopForge" rel="noreferrer">Tencent/LoopForge</a></li><li><a href="https://huggingface.co/speridlabs/idol" rel="noreferrer">Idol：从一张物体图生成可转动的三维表示</a></li><li><a href="https://gregorygundersen.com/blog/2020/02/09/log-sum-exp/" rel="noreferrer">Log-Sum-Exp：怎样让概率计算避开数值溢出？</a></li><li><a href="https://github.com/ggml-org/ggml/releases/tag/v1.0.0" rel="noreferrer">ggml 1.0.0：清理旧接口，推进多后端推理</a></li><li><a href="https://news.ycombinator.com/item?id=50493062" rel="noreferrer">ggml 1.0.0：清理旧接口，推进多后端推理 · 讨论</a></li><li><a href="https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/" rel="noreferrer">PyPI 新安全页：看清软件包从哪里构建和发布</a></li><li><a href="https://news.ycombinator.com/item?id=50497892" rel="noreferrer">PyPI 新安全页：看清软件包从哪里构建和发布 · 讨论</a></li><li><a href="https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/" rel="noreferrer">双机运行 GLM-5.3：从权重分片到通信与并发验证</a></li><li><a href="https://news.ycombinator.com/item?id=50497155" rel="noreferrer">双机运行 GLM-5.3：从权重分片到通信与并发验证 · 讨论</a></li><li><a href="https://www.quantamagazine.org/the-evolving-story-of-how-chemistry-became-biology-20261112/" rel="noreferrer">生命起源的新问题：化学系统怎样开始持续演化？</a></li><li><a href="https://aeon.co/essays/those-forced-to-cross-borders-are-imagining-a-radical-new-world" rel="noreferrer">被迫迁徙的人，怎样重新想象知识与未来？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-15 · 82 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
