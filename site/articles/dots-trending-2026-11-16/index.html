@@ -1,0 +1,58 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-16">2026-11-16</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">从办公组件与代理交互，到模型内部几何、硬件性能和地图部署，再看早年记忆与自我叙事。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-13">🧠 AI/模型</a></li><li><a href="#section-26">🔥 热议话题</a></li><li><a href="#section-35">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/dream-num/univer" rel="noreferrer">dream-num/univer</a></h3>
+<p class="item-meta">⭐+988 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>把电子表格和文档编辑器嵌入自己的产品，复用公式计算、渲染、撤销与重做，再通过接口连接业务数据或现有代理。</p>
+<p>开源仓库提供 Web 核心与 Sheets、Docs 能力；实时协作、文件导入导出等服务器功能及部分扩展另有商业许可，不能把演示全集当免费范围。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/ag-ui-protocol/ag-ui" rel="noreferrer">ag-ui-protocol/ag-ui</a></h3>
+<p class="item-meta">⭐+355 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>用统一事件把代理后台接到前端：流式文字、工具调用和状态变化可沿同一套接口传递，让界面及时显示进度并接受人的反馈。</p>
+<p>提供参考 HTTP 实现及多框架适配，适合研究交互式代理应用；它规范交互事件，具体功能仍需前后端及所用框架共同实现。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/NVIDIA/SkillEvaluator" rel="noreferrer">NVIDIA/SkillEvaluator</a></h3>
+<p class="item-meta">⭐+122 · Python · GitHub stars today（非北京时间自然日）</p>
+<p>先检查代理技能文件的结构与风险，再检测指导内容重叠，最后对比有无该技能的真实任务表现，帮助判断一份指令是否有效。</p>
+<p>静态质量评分不能代替实际评测；完整流程依赖扫描器、模型与沙箱，缺失检查会标为不完整，项目目前仍属实验性支持。</p>
+</article>
+<h2 id="section-13">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/thinkingmachines/Inkling-2-Small" rel="noreferrer">Inkling 2 Small：按需激活专家的多模态模型</a></h3>
+<p class="item-meta">HF trendingScore 当前第 8 · Apache 2.0</p>
+<p>模型接收文字与图像、输出文字，采用专家混合架构：总参数 5940 亿，每个 token 激活约 170 亿，并提供原生低精度权重。</p>
+<p>适合研究工具调用、代码与视觉任务；激活参数少不等于只需存放这部分权重，部署仍需匹配的推理框架和硬件，并自行验证任务效果。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://iclr-blogposts.github.io/2026/blog/2026/vis-llm-latent-geometry/" rel="noreferrer">把模型内部向量画出来：从状态采集到降维比较</a></h3>
+<p class="item-meta">深度精选·2026-04-27 · ICLR Blogposts</p>
+<p>文章从 Transformer 内部表示讲起，采集不同层的向量，再用 PCA、UMAP 压到低维，比较注意力与前馈模块留下的几何结构。</p>
+<p>提供代码、实验图与术语说明，适合有线性代数和模型基础的读者；归一化、异常点和降维设置会改变图形，聚类外观不能直接当作因果解释。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://en.algorithmica.org/hpc/" rel="noreferrer">现代硬件上的算法：从复杂度走到缓存与向量指令</a></h3>
+<p class="item-meta">深度精选·首次发布日期未核实 · Sergey Slotin · 归档教材</p>
+<p>在线教材把 CPU 流水线、缓存、性能分析和向量指令接到 C++ 实例，解释算法步骤数相近时，数据布局与访存为何仍会拉开速度。</p>
+<p>适合已有算法和 C++ 基础的读者，二分查找等案例附代码与测量；部分章节仍未完成，旧硬件上的加速比需在自己的环境重测。</p>
+</article>
+<h2 id="section-26">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://bruceroettgers.eu/blog/protomaps/" rel="noreferrer">Protomaps：用单文件和按需读取部署地图</a></h3>
+<p class="item-meta">原文 2026-11-15 · HN 24 小时内提交</p>
+<p>教程把地图瓦片装进一个 PMTiles 文件，浏览器通过 HTTP Range 请求只读取需要的片段，再用 MapLibre 显示地图，省去专门的瓦片服务器。</p>
+<p>涵盖数据裁剪、存储上传、缓存与页面接入；成本取决于流量和缓存策略，文中服务链接含推广关系，估算不能直接套到自己的访问规模。<br><a href="https://news.ycombinator.com/item?id=50509837" rel="noreferrer">讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://ykiko.me/en/articles/2105384023094834022/" rel="noreferrer">clice 1.0：为现代 C++ 重做语言服务</a></h3>
+<p class="item-meta">原文 2026-11-15 · HN 24 小时内提交</p>
+<p>这个基于 Clang 的语言服务器把编译放进独立进程，避免单个编译崩溃拖垮整个服务，并加入模块缓存、编译上下文切换和模板导航。</p>
+<p>发布文章解释了架构取舍与 C++23 实作，也附命令行工具介绍；作者将其作为首个稳定版，后续以维护和增量改进为主，具体项目兼容性仍需试用。<br><a href="https://news.ycombinator.com/item?id=50508715" rel="noreferrer">讨论</a></p>
+</article>
+<h2 id="section-35">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/where-do-children-s-earliest-memories-go" rel="noreferrer">早年的记忆去了哪里？从遗忘到自我叙事</a></h3>
+<p class="item-meta">往期佳作·2014-07-30 · Aeon · Kristin Ohlson</p>
+<p>作者从重访童年住处写起，结合记忆研究讨论：幼儿能形成记忆，但哪些经历能够长期保留，还受巩固过程、语言与家庭谈话影响。</p>
+<p>这篇旧文把个人回忆与当时的研究放在一起，适合思考“记不起”与“未受影响”的区别；它不是恢复早年记忆的操作指南。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/dream-num/univer" rel="noreferrer">dream-num/univer</a></li><li><a href="https://github.com/ag-ui-protocol/ag-ui" rel="noreferrer">ag-ui-protocol/ag-ui</a></li><li><a href="https://github.com/NVIDIA/SkillEvaluator" rel="noreferrer">NVIDIA/SkillEvaluator</a></li><li><a href="https://huggingface.co/thinkingmachines/Inkling-2-Small" rel="noreferrer">Inkling 2 Small：按需激活专家的多模态模型</a></li><li><a href="https://iclr-blogposts.github.io/2026/blog/2026/vis-llm-latent-geometry/" rel="noreferrer">把模型内部向量画出来：从状态采集到降维比较</a></li><li><a href="https://en.algorithmica.org/hpc/" rel="noreferrer">现代硬件上的算法：从复杂度走到缓存与向量指令</a></li><li><a href="https://bruceroettgers.eu/blog/protomaps/" rel="noreferrer">Protomaps：用单文件和按需读取部署地图</a></li><li><a href="https://news.ycombinator.com/item?id=50509837" rel="noreferrer">Protomaps：用单文件和按需读取部署地图 · 讨论</a></li><li><a href="https://ykiko.me/en/articles/2105384023094834022/" rel="noreferrer">clice 1.0：为现代 C++ 重做语言服务</a></li><li><a href="https://news.ycombinator.com/item?id=50508715" rel="noreferrer">clice 1.0：为现代 C++ 重做语言服务 · 讨论</a></li><li><a href="https://aeon.co/essays/where-do-children-s-earliest-memories-go" rel="noreferrer">早年的记忆去了哪里？从遗忘到自我叙事</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-16 · 83 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
