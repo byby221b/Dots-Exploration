@@ -1,0 +1,240 @@
+{
+  "id": "dots-trending-2026-11-17",
+  "revision": 1,
+  "date": "2026-11-17",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "开源工具、AI 研究与技术实践，以及科学人文精选。",
+  "topics": [
+    "开源",
+    "人工智能",
+    "技术实践",
+    "科学人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "🔧 开源热榜",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[alibaba/open-code-review](https://github.com/alibaba/open-code-review)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+951 · Go · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把代码变更分组、规则匹配与评论定位交给确定性流程，再让语言模型检索上下文、判断缺陷，输出精确到行的审查意见。"
+    },
+    {
+      "type": "paragraph",
+      "text": "可检查差异或扫描完整文件，适合研究工程约束与智能体如何配合；使用前需要配置模型，审查结果仍需人工核对。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[google-research/paper-orchestra](https://github.com/google-research/paper-orchestra)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+313 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把研究想法与实验日志交给分工明确的智能体，依次组织提纲、文献、章节、修改与绘图，生成符合模板的 LaTeX 稿件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合研究多智能体写作流程；数据集尚未随仓库发布，自动生成的引用与论证不能替代研究者核验。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[getarcaneapp/arcane](https://github.com/getarcaneapp/arcane)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+46 · Go · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "在浏览器里管理 Docker 容器、镜像、网络与 Compose 项目，同时查看实时日志和资源用量，也能通过代理管理远程主机。"
+    },
+    {
+      "type": "paragraph",
+      "text": "单容器部署便于自托管；它需要访问 Docker socket，部署时应按高权限管理入口保护认证与网络访问。"
+    },
+    {
+      "type": "heading",
+      "text": "🧠 AI/模型",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[Haru-4B：边听边说的连续语音模型](https://huggingface.co/higurashi-ai/Haru-4B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF trendingScore 榜单 · 研究用基础模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "每约 133 毫秒，把用户语音、模型上一帧语音和文字合到同一序列位置，再预测下一帧，让听与说可以同时进行。"
+    },
+    {
+      "type": "paragraph",
+      "text": "音频用连续向量表示，经 MeanFlow 采样一步生成；模型支持多语言，目前面向研究，事实与指令遵循能力有限，参考音色须获授权。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[A Field Guide to Rapidly Improving AI Products](https://hamel.dev/blog/posts/field-guide/index.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2025-03-24 · 评估与迭代实践"
+    },
+    {
+      "type": "paragraph",
+      "text": "用实际对话的错误分析建立评估标准，再把数据查看、专家反馈、合成测试和自动评审串成一条迭代流程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "指南给出案例、界面和示意代码，强调定期核对自动评分与人的判断；适合规划大模型应用的评估体系，案例收益不宜直接外推。"
+    },
+    {
+      "type": "heading",
+      "text": "🔥 热议话题",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[MIT How to Make (almost) Anything：从设计到实体原型](https://pub.cba.mit.edu/863.26/site/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 833 分 / 141 评（采集时累计） · 2026 学年课程"
+    },
+    {
+      "type": "paragraph",
+      "text": "这门 2026 年课程按周串起计算机辅助设计、切割、嵌入式编程、3D 打印与机电系统集成，附讲义和学生项目入口。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合把软件思维延伸到实体制作；网页可作学习路线，动手部分需要相应设备与实验条件，并非今日新开的课程。\n[讨论](https://news.ycombinator.com/item?id=50514470)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[CMU CS Learn：计算机课程开放观看](https://www.cs.cmu.edu/learn/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 608 分 / 96 评（采集时累计）"
+    },
+    {
+      "type": "paragraph",
+      "text": "CMU 集中开放课堂录像，当前可观看大规模数据机器学习与计算原理；机器学习系统、智能体等课程按公布日期陆续上线。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合按方向建立长期学习路线；配套自学课件和 AI 辅导仍是后续计划，不能把所有列出的课程当作已经可用。\n[讨论](https://news.ycombinator.com/item?id=50522980)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Jiff 1.0：把时区规则放进日期时间 API](https://burntsushi.net/jiff/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 300 分 / 72 评（采集时累计） · 原文 2026-11-15 · 深度精选"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从时间戳、当地钟表时间与时区的映射出发，用 Rust 示例解释夏令时造成的重复和缺失时刻，以及日期与时长运算。"
+    },
+    {
+      "type": "paragraph",
+      "text": "适合排查跨时区调度和日期计算问题，也是一份完整的领域建模教程；示例可独立运行，需要基本 Rust 阅读能力。\n[讨论](https://news.ycombinator.com/item?id=50519744)"
+    },
+    {
+      "type": "heading",
+      "text": "🔬 科学/人文",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "[宇宙由什么组成？暗能量巡天如何检验标准模型](https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-11-16"
+    },
+    {
+      "type": "paragraph",
+      "text": "从星系聚集、引力透镜到超新星，文章解释不同观测如何拼成宇宙膨胀史，以及它们为何对同一个模型形成约束。"
+    },
+    {
+      "type": "paragraph",
+      "text": "据报道，综合分析对随时间变化的暗能量给出约三西格玛的统计偏好，仍未达到发现标准；后续观测还需区分模型、测量与假设的影响。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[运输能力怎样参与国家形成？一位历史学者的论证](https://aeon.co/essays/the-origins-of-the-state-are-not-agrarian-but-pastoralist)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-11-16 · 历史论说"
+    },
+    {
+      "type": "paragraph",
+      "text": "历史学者 Lhamsuren Munkh-Erdene 从马匹、船只与远距离动员入手，论述运输和征服如何促成人口、资源与政治权力的集中。"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章借此批评以谷物农业解释国家起源的框架；这是作者鲜明的解释立场，可用于比较不同历史模型，不能当作已定论的单一原因。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review"
+    },
+    {
+      "title": "google-research/paper-orchestra",
+      "url": "https://github.com/google-research/paper-orchestra"
+    },
+    {
+      "title": "getarcaneapp/arcane",
+      "url": "https://github.com/getarcaneapp/arcane"
+    },
+    {
+      "title": "Haru-4B：边听边说的连续语音模型",
+      "url": "https://huggingface.co/higurashi-ai/Haru-4B"
+    },
+    {
+      "title": "A Field Guide to Rapidly Improving AI Products",
+      "url": "https://hamel.dev/blog/posts/field-guide/index.html"
+    },
+    {
+      "title": "MIT How to Make (almost) Anything：从设计到实体原型",
+      "url": "https://pub.cba.mit.edu/863.26/site/"
+    },
+    {
+      "title": "CMU CS Learn：计算机课程开放观看",
+      "url": "https://www.cs.cmu.edu/learn/"
+    },
+    {
+      "title": "Jiff 1.0：把时区规则放进日期时间 API",
+      "url": "https://burntsushi.net/jiff/"
+    },
+    {
+      "title": "宇宙由什么组成？暗能量巡天如何检验标准模型",
+      "url": "https://www.quantamagazine.org/what-makes-up-the-cosmos-a-20-year-survey-hints-that-something-is-missing-20261116/"
+    },
+    {
+      "title": "运输能力怎样参与国家形成？一位历史学者的论证",
+      "url": "https://aeon.co/essays/the-origins-of-the-state-are-not-agrarian-but-pastoralist"
+    }
+  ],
+  "public_reviewed": true
+}
