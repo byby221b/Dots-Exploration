@@ -1,0 +1,196 @@
+{
+  "id": "dots-trending-2026-11-18",
+  "revision": 1,
+  "date": "2026-11-18",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选 9 条：多源检索、界面设计与小模型训练，强化学习和网络可解释性，浏览器工程、凭据隔离与德黑兰的日常生活。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+696 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 Reddit、X、YouTube、HN 等平台的近期讨论汇成研究简报，并用互动量辅助筛选线索，适合了解一个主题最近在被讨论什么。\nREADME 区分了开箱可用来源与需要额外配置的渠道；热度不等于事实，值得借鉴的是多源检索流程，而不是照单全收它的结论。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+350 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google Stitch 的技能库把生成界面、提取 DESIGN.md、管理设计系统和转成 React 组件串成可复用流程。\n它遵循 Agent Skills 标准，但运行前仍须配置 Stitch MCP 服务；适合已有前端项目、希望让设计规范和代码转换更一致的人。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[jingyaogong/minimind](https://github.com/jingyaogong/minimind)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+192 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "用小模型展开预训练、监督微调、低秩适配、偏好优化与强化学习代码，包含 6400 万参数稠密模型和稀疏专家模型，适合理解训练流程。\n注意标题里的“2 小时”在 README 中限定为单张 NVIDIA 3090 上 SFT 跑一个 epoch，不是完整训练流程的统一耗时承诺。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[PPO：采样总量相同，怎样分配并行环境与轨迹长度？](https://iclr-blogposts.github.io/2026/blog/2026/ppo-batch-size/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·发布日期未核实·ICLR Blogposts 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "同样采样 1024 步，4 个环境各跑 256 步，与 16 个环境各跑 64 步并不等价：文中拆解轨迹相关性、优势估计和小批量更新。\n配有摆杆控制实验与代码，适合辨认强化学习更新中的波动来源；结论受任务和优势估计设置影响，不能直接推成普遍的调参规律。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Activation Atlas：把网络学到的概念画成地图](https://distill.pub/2019/activation-atlas/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2019-03-06·Distill"
+    },
+    {
+      "type": "paragraph",
+      "text": "把百万张图片的中间激活降维、分格平均，再反演成图像，从整体观察分类网络如何组合纹理、物体与背景。\n交互图和实验展示“棒球缝线被当成鲨鱼牙齿”一类特征复用；也讲清采样、降维和跨层对齐的局限，适合建立可解释性直觉。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[jQuery 4.1.0：响应网址、表单元素与选择器修复](https://github.com/jquery/jquery/releases/tag/4.1.0)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 244 分 / 134 评（采集时累计） · 原文 2026-11-17"
+    },
+    {
+      "type": "paragraph",
+      "text": "jQuery 4.1.0 的官方发布记录新增 Ajax 响应网址字段、表单关联自定义元素支持，并修复选择器的正则拒绝服务问题。\n维护现有 jQuery 项目时，可对照变更检查请求处理、表单序列化和选择器行为；发布记录也列出相应测试与修复提交。\n[HN 讨论](https://news.ycombinator.com/item?id=50537156)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[让远程编码代理用凭据，却不把凭据交给它](https://blog.antonio.cx/running-agents-with-lend)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 128 分 / 112 评（采集时累计） · 原文 2026-11-13，11-17 更新"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者把编码代理放在可丢弃的虚拟机中，用 lend 将敏感命令交回本机，经策略检查和本人批准后执行。\n文章也明确了边界：它不是沙箱；批准 shell 或会输出秘密的命令，仍可能把本机权限或凭据暴露出去。\n[HN 讨论](https://news.ycombinator.com/item?id=50526152)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Web Browser Engineering：亲手把浏览器拆开再搭起来](https://browser.engineering/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN · 115 分 / 20 评（采集时累计） · 深度精选·首次发布日期未核实"
+    },
+    {
+      "type": "paragraph",
+      "text": "这本免费在线教材用几千行 Python，从网络请求、HTML/CSS 布局一路搭到 JavaScript、渲染与可访问性。\n它不是新书，而是过去24小时重新进入 HN 讨论的系统教材，适合想把网页背后的运行机制串成一条完整链路的人。\n[HN 讨论](https://news.ycombinator.com/item?id=50537290)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[德黑兰的街头穿搭，如何悄悄改变公共生活](https://aeon.co/essays/its-not-political-the-young-fashionistas-of-tehran)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-11-17 · Parisa Khoshnami"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从德黑兰年轻女性的穿衣与聚集写起，用社会学家 Asef Bayat 的“在场的艺术”解释一种没有统一组织的社会变化。\n文章的关键区分是：个人未必把日常选择视为政治行动，但当足够多人持续这样生活，公共规范和执法方式也会受到压力。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill"
+    },
+    {
+      "title": "google-labs-code/stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills"
+    },
+    {
+      "title": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind"
+    },
+    {
+      "title": "PPO：采样总量相同，怎样分配并行环境与轨迹长度？",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/ppo-batch-size/"
+    },
+    {
+      "title": "Activation Atlas：把网络学到的概念画成地图",
+      "url": "https://distill.pub/2019/activation-atlas/"
+    },
+    {
+      "title": "jQuery 4.1.0：响应网址、表单元素与选择器修复",
+      "url": "https://github.com/jquery/jquery/releases/tag/4.1.0"
+    },
+    {
+      "title": "jQuery 4.1.0：响应网址、表单元素与选择器修复 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50537156"
+    },
+    {
+      "title": "让远程编码代理用凭据，却不把凭据交给它",
+      "url": "https://blog.antonio.cx/running-agents-with-lend"
+    },
+    {
+      "title": "让远程编码代理用凭据，却不把凭据交给它 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50526152"
+    },
+    {
+      "title": "Web Browser Engineering：亲手把浏览器拆开再搭起来",
+      "url": "https://browser.engineering/"
+    },
+    {
+      "title": "Web Browser Engineering：亲手把浏览器拆开再搭起来 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50537290"
+    },
+    {
+      "title": "德黑兰的街头穿搭，如何悄悄改变公共生活",
+      "url": "https://aeon.co/essays/its-not-political-the-young-fashionistas-of-tehran"
+    }
+  ],
+  "public_reviewed": true
+}
