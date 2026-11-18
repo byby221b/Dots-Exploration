@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>暂时变差的一步，怎样帮搜索走出死胡同？ · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">跨学科偷师 / <time datetime="2026-11-18">2026-11-18</time> / 修订 1</p><h1>暂时变差的一步，怎样帮搜索走出死胡同？</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-2">先看路怎么连，再看哪个方案好</a></li><li><a href="#section-6">物理里借来的，是允许越过障碍的随机移动</a></li><li><a href="#section-12">为什么还要降温，不能一直随机走？</a></li><li><a href="#section-15">这条迁移已经用在哪里？</a></li><li><a href="#section-18">边界很集中：路、时间和评分</a></li><li><a href="#section-20">可选深入｜用三状态做一个可证伪的小原型</a></li></ol></nav><div class="prose"><div class="article-content"><p>有时，一个更好的方案就在不远处，但每次只准改一点，而且中间必须先变差。若搜索坚持“每一步都要改善”，这条路就永远走不通。模拟退火借用物理中的降温思路，给暂时变差的移动留出受控的机会。</p>
+<p>主文约4分钟。下面只有三个状态，数值是教学设定，不是某个真实任务的实验结果。</p>
+<h2 id="section-2">先看路怎么连，再看哪个方案好</h2>
+<p>设三个候选方案排成 A ↔ B ↔ C。一次只能沿一条相邻连线移动，不能从 A 直接跳到 C。用“代价”衡量方案，越小越好：A 为2，B 为5，C 为0。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">当前位置</th><th scope="col">可以到哪里</th><th scope="col">只接受更好方案会怎样</th></tr></thead><tbody><tr><td>A，代价2</td><td>B，代价5</td><td>拒绝，留在A</td></tr><tr><td>B，代价5</td><td>A或C</td><td>两边都能接受</td></tr><tr><td>C，代价0</td><td>B，代价5</td><td>拒绝，留在C</td></tr></tbody></table></div>
+<p>从 A 出发，搜索停住了。它并不知道两步之外有 C，只看到下一步去 B 要多付3。A 是局部最优：相邻方案都不如它，却不是整个候选集合里最好的。这里缺的不是更精确的打分，而是一种愿意经过 B 的移动规则。</p>
+<h2 id="section-6">物理里借来的，是允许越过障碍的随机移动</h2>
+<p>材料中的微观排列并不只向更低能量变化。热运动让较高能量的排列也有机会出现；缓慢降温，则逐渐偏向低能量排列。过早冷却，系统可能还没来得及重新排列就停在局部状态。把这件事搬进搜索，就得到“先允许一些上坡，再逐步收紧”的思路。[1][2]</p>
+<p>1953年的 Metropolis 等人给出了用于物理统计计算的接受规则：先随机提出一次小改动；能量下降就接受，上升则按能量差与温度决定概率。1983年 Kirkpatrick 等人把代价当作能量，将这套机制用于优化。这是明确的数学对应，不只是把搜索画成爬山。[1][2]</p>
+<p>回到 A→B。代价增加3，算法不再一律拒绝。设一个正数 T，叫作温度；它是搜索参数，不是电脑的摄氏温度。这里先用往返提案机会相同的规则，具体做法见选读。若候选变差，接受概率为 exp(−增加的代价／T)；exp 是指数函数。变好或不变则接受。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">温度 T</th><th scope="col">已经提出 A→B 后的接受概率</th></tr></thead><tbody><tr><td>3</td><td>约36.8%</td></tr><tr><td>1</td><td>约5.0%</td></tr><tr><td>0.5</td><td>约0.25%</td></tr></tbody></table></div>
+<p>例如 T=3，抽一个0到1之间的均匀随机数：抽到0.2就接受，抽到0.8就拒绝。若接受到了 B，下一次又提出去 C，代价从5降到0，就直接接受。于是原本堵住的 A→B→C 路径有了通过机会。接受 B 并不保证下一步去 C，也可能又回到 A。</p>
+<h2 id="section-12">为什么还要降温，不能一直随机走？</h2>
+<p>同一规则也允许从好方案离开。到 C 后，去 B 要多付5；T=3时仍约有18.9%的接受机会。一直保持高温，有利于继续寻找，也会离开已经找到的好位置。逐步降温是在改变这种取舍，同时应另存“迄今最好的方案”，不要把最后停下的位置当成唯一成果。</p>
+<p>但一开始就设 T=0.5，从 A 接受去 B 已经很难。即使低温偏爱 C，搜索也未必到得了 C。因此一个降温方案必须同时说明：温度降到多少，以及降温前尝试多少次。只列一个很低的终点温度，并没有给出走到好解所需的时间。</p>
+<h2 id="section-15">这条迁移已经用在哪里？</h2>
+<p>1983年的论文讨论了电子系统的划分、元件摆放、布线和旅行商路线：状态换成完整设计，一次移动换成局部重排，代价换成待优化的设计指标。[2]</p>
+<p>在视觉推断中，Geman 与 Geman 1984年将像素灰度和边界表示为可局部改变的状态，用模型评价候选图像与观测的相容程度，再以随机更新和降温寻找高概率的恢复结果。他们采用按局部条件分布抽样的更新方式，并非逐字照搬上面的“提出后接受”步骤；共同机制是允许暂时不利的局部变化，再逐渐收紧。[3]</p>
+<h2 id="section-18">边界很集中：路、时间和评分</h2>
+<p>如果允许的移动根本连不到好方案，再高温也没用；降温过快或尝试次数太少，也可能困住。算法只能优化给定代价，不能替你证明代价代表真实质量。本例展示了跨障碍的可能性，没有证明退火在固定预算内胜过重启、较大步重排或其他搜索。</p>
+<h2 id="section-20">可选深入｜用三状态做一个可证伪的小原型</h2>
+<p>以下是待检验提案，尚未运行，不宣称新算法。仍从 A 出发，每步等概率提出向左或向右；在两端若提出越界，就留在原位。这样 A→B 与 B→A 的提案概率都为1/2，B↔C也一样，满足这里接受规则所用的对称提案条件。每次提案都计入预算，包括拒绝与原地停留。</p>
+<p>比较三组，各做100次提案、200个独立随机种子：①只接受不变或改善；②固定 T=3；③前50次 T=3，后50次 T=0.5。记录是否曾到 C、第一次到 C 的步数、最后是否在 C，以及最好代价。第三组只是方便测试的两阶段安排，不是推荐的通用降温表。</p>
+<p>假设是：在这个图里，第三组比第一组更容易曾到 C，并可能比第二组更常在结束时留在 C。若第二个优势没有出现，就不能把“降温有帮助”当成本次预算下的结论。再把 B 的代价从5提高到12，检验同一日程是否失效；更高障碍会降低从 A 进入 B 的概率，原来够用的尝试次数可能不够。</p>
+<p>如果只问“是否曾找到过 C”，第三组后半程降温不必优于持续高温；另存最好方案后，“找到”与“最终停住”更应分开。这能帮助判断退火带来的收益究竟来自探索，还是来自后段减少离开好位置。</p>
+<p>数学上，固定温度下的平衡分布与降温过程中的有限步表现是两件事。Geman 与 Geman给出了带条件的渐近退火结论，也指出理论日程在实践中可能太慢。它不能替这个100步原型保证成功。[3]</p>
+<p>与此前固定分数下的概率分配不同，本期新增的是“只能局部移动时，怎样越过必经的较差状态”。关键检查项是邻接关系、障碍高度、每段温度的尝试次数，以及保存最好解的方式。</p></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://appliedmaths.sun.ac.za/~htouchette/markovcourse/1953_equation%20of%20state%20calculations%20by%20fast%20computing0.pdf" rel="noreferrer">[1] Metropolis 等：Equation of State Calculations by Fast Computing Machines，1953，§II 的提案与接受规则</a></li><li><a href="https://cgi.cse.unsw.edu.au/~cs4601/refs/papers/KirkpatrickGelattVecchi83.pdf" rel="noreferrer">[2] Kirkpatrick、Gelatt、Vecchi：Optimization by Simulated Annealing，1983，pp.672–673及设计应用</a></li><li><a href="https://www.dam.brown.edu/people/geman/Homepage/Image%20processing%2C%20image%20analysis%2C%20Markov%20random%20fields%2C%20and%20MCMC/stochastic%20relaxation.pdf" rel="noreferrer">[3] Geman 与 Geman：Stochastic Relaxation, Gibbs Distributions, and the Bayesian Restoration of Images，1984，§I、§XI–XIII</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-18 · 88 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
