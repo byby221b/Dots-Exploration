@@ -1,0 +1,41 @@
+{
+  "id": "japanese-daily-life-2026-11-19",
+  "revision": 1,
+  "date": "2026-11-19",
+  "channel": "exploration",
+  "series": "日语生活碎片",
+  "title": "约看电影，怎么问几点开始？",
+  "summary": "用一段官方教学音频练习确认开始时间，先辨认一个短声音，再把它与假名和意思连起来；完整问答放在末尾。",
+  "topics": ["日语", "约时间"],
+  "blocks": [
+    {"type":"paragraph","text":"朋友约你去看电影，接下来想确认开始时间。今天只抓一个短声音，再学会一句提问。约5分钟包括重听和开口，不需要听懂整段邀请。"},
+    {"type":"heading","text":"先听一遍，只找一个声音"},
+    {"type":"paragraph","text":"[播放 IRODORI 官方音轨12-16，约32秒](https://www.irodori.jpf.go.jp/assets/data/starter/audio/12/X_%5B12-16%5D_kiku3.mp3)。定位：入门第12课，编号12-16，整条音轨。备用：[官方播放页](https://www.irodori.jpf.go.jp/starter/audio/lesson12.html)，找文件名 X_[12-16]_kiku3.mp3。"},
+    {"type":"paragraph","text":"第一遍只找 kara 这个读音。听到时轻点一下手指，先不猜整句意思，也不往下看完整问答。答案在末尾。"},
+    {"type":"paragraph","text":"这是教材里的约电影对话。已核对官方音轨、文件时长和对应脚本，未实际试听；本期练词义与声音—假名对应，不分析这段录音的连读、弱化或重音。"},
+    {"type":"heading","text":"把刚才的声音连到两个小语块"},
+    {"type":"table","headers":["通常写法","平假名读音","罗马音","中文意思"],"rows":[["何時","なんじ","nanji","几点"],["から","から","kara","本句表示从某个时间开始"]]},
+    {"type":"paragraph","text":"先认其中一个对应：罗马音 ka 对应平假名「か」，ra 对应「ら」，合起来就是「から／から／kara／从……开始」。只需在这两个假名里找到 ra 对应的那一个，不用默写。罗马音是日语读音辅助，不是汉语拼音。"},
+    {"type":"heading","text":"再听一次，暂时移开文字"},
+    {"type":"paragraph","text":"回到12-16，不看词卡再听一遍，只找刚才的目标声音。若能找到，再试着留意它前面是在问时间，还是在报时间；听不出来就看一眼词卡，再放一次。"},
+    {"type":"paragraph","text":"接着做一个很小的开口准备：假设你知道电影八点开始，想用同样的结构回答。先保留这个场景，下面看完句子拆分后说一次即可。完整问答与参考回应放在下一节；邮件是静态排版，答案没有真正锁定。"},
+    {"type":"details","summary":"听完再看：答案、句子拆分与回应","blocks":[
+      {"type":"paragraph","text":"按官方脚本，目标语块「から／から／kara／从……开始」在这段对话中出现两次：提问一次，报开始时间的回答一次。"},
+      {"type":"paragraph","text":"官方主例句：\n通常写法：何時からですか？\n平假名读音：なんじからですか？\n罗马音：Nanji kara desu ka?\n中文：几点开始？"},
+      {"type":"paragraph","text":"官方对应回答：\n通常写法：7時半からです。\n平假名读音：しちじはんからです。\n罗马音：Shichiji han kara desu.\n中文：七点半开始。"},
+      {"type":"heading","text":"只学一个位置：把开始标记放在时间后"},
+      {"type":"table","headers":["通常写法","平假名读音","罗马音","这一块的作用"],"rows":[["何時","なんじ","nanji","几点：先放要问的时间"],["から","から","kara","从……开始：紧跟时间"],["ですか","ですか","desu ka","本句的礼貌疑问结尾"]]},
+      {"type":"paragraph","text":"顺着三块读，就是“几点＋从这里开始＋礼貌地问”。双方已经在聊电影，因此可以省去“电影”这个明确的对象。回答时，把问句里的“几点”换成具体时间，再用礼貌陈述结尾。本期只记“时间后面接开始标记”这一个关系。"},
+      {"type":"paragraph","text":"回到八点开始的练习，只换时间：\n通常写法：8時からです。\n平假名读音：はちじからです。\n罗马音：Hachiji kara desu.\n中文：八点开始。\n这是原创替换例句，暂无配音；官方12-16没有这一句。"},
+      {"type":"paragraph","text":"假名小题答案：ra 对应「ら」。目标语块的完整写法与意思仍是「から／から／kara／从……开始」。"},
+      {"type":"paragraph","text":"最后再放一次12-16，找到提问后暂停，用八点开始的原创回应接一句。可以看罗马音慢慢说；不用一次认全假名，也不要求跟上原录音的速度。"},
+      {"type":"paragraph","text":"可选核对：[官方脚本第16页，L12-16，编号12-16](https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L12.pdf#page=16)。这里只引用必要的短问答，完整对话和音频留在官方站点；未验证你所在地区的播放情况。"}
+    ]}
+  ],
+  "sources": [
+    {"title":"IRODORI 入门第12课官方音频页","url":"https://www.irodori.jpf.go.jp/starter/audio/lesson12.html"},
+    {"title":"官方音轨12-16","url":"https://www.irodori.jpf.go.jp/assets/data/starter/audio/12/X_%5B12-16%5D_kiku3.mp3"},
+    {"title":"官方脚本第16页","url":"https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L12.pdf#page=16"}
+  ],
+  "public_reviewed": true
+}
