@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-19">2026-11-19</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">本期精选 10 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-10">🧠 AI/模型</a></li><li><a href="#section-20">🔥 热议话题</a></li><li><a href="#section-30">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/astral-sh/uv" rel="noreferrer">astral-sh/uv</a></h3>
+<p class="item-meta">⭐+258 · Rust · GitHub stars today（非北京时间自然日）</p>
+<p>把 Python 版本、虚拟环境、项目依赖和命令行工具统一到一套工作流，并提供锁文件与跨项目缓存。<br>做训练脚本和复现实验时，可以用单文件依赖声明或项目锁文件记录环境，让换机器后的依赖准备更可控。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/openvinotoolkit/openvino" rel="noreferrer">openvinotoolkit/openvino</a></h3>
+<p class="item-meta">⭐+24 · C++ · GitHub stars today（非北京时间自然日）</p>
+<p>面向模型推理的转换与部署工具，支持从 PyTorch、TensorFlow、ONNX 等来源接入，并在 CPU、Intel GPU 与 NPU 上执行。<br>README 给出了转换、编译到目标设备、执行推理的最小流程，适合评估边缘部署或已有 Intel 硬件上的推理方案。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/cursor/plugins" rel="noreferrer">cursor/plugins</a></h3>
+<p class="item-meta">⭐+314 · TypeScript · GitHub stars today（非北京时间自然日）</p>
+<p>Cursor 官方插件仓库把技能、规则和服务连接按独立插件组织，包含代码审查、文档浏览和面向代理的 CLI 设计示例。<br>对正在整理团队代理工具链的人，插件清单与目录结构比单个提示词更值得参考：可以借它明确每个工具包的职责与组成。</p>
+</article>
+<h2 id="section-10">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/tencent/Hy4-flash" rel="noreferrer">Hy4-flash：用稀疏专家与查表记忆分担计算</a></h3>
+<p class="item-meta">HF trendingScore 榜单 · Tencent Hy License</p>
+<p>模型卡披露约 2200 亿总参数、每个词元激活约 120 亿；专家在较低维空间计算，常见的二元、三元词组则通过哈希查表取回表示。<br>支持图文输入、文本输出和百万词元上下文，并提供投机解码设计；适合研究计算与记忆的分工，部署须评估完整权重存储及专用许可。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/n4ze3m/tiny-voca" rel="noreferrer">tiny-voca：4.5M 参数的英语语音合成</a></h3>
+<p class="item-meta">HF trendingScore 榜单 · Apache-2.0</p>
+<p>这个英语语音合成模型用约 18 小时合成语音从零训练，包含波形生成器共约 450 万参数，提供 PyTorch 权重和 ONNX 导出。<br>它适合观察端侧语音模型怎样压缩到轻量级：当前支持两种固定英语声音、24 kHz 单声道输出，尚无流式生成与声音克隆。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://sander.ai/2025/04/15/latents.html" rel="noreferrer">生成模型的潜空间：压缩之后，还要让模型学得动</a></h3>
+<p class="item-meta">深度精选·2025-04-15·Sander Dieleman</p>
+<p>从 VQ-VAE 到潜空间扩散，讲清压缩后的表示如何兼顾重建质量、计算成本，以及后续模型学习它的难度。<br>配合训练流程图和容量算例，讨论量化、辅助解码器与可变长度 token；值得借鉴的是“保留多少信息”和“保留什么结构”这两个设计问题。</p>
+</article>
+<h2 id="section-20">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://pikuma.com/blog/history-of-x86-4004-to-486" rel="noreferrer">x86 的古怪设计，藏着半个世纪的兼容性历史</a></h3>
+<p class="item-meta">HN 141 分／46 条评论（抓取时累计）；往期佳作·2026-10-02；过去24小时HN讨论</p>
+<p>文章沿着 4004 到 486 的演进，把小端序、寄存器名字、段地址和 A20 门这些细节，放回当时的硬件成本与软件兼容要求中。<br>读完能看到一条具体的技术路径：早期实用选择逐层沉淀，最终成为后来处理器必须继承或处理的约束。<br><a href="https://news.ycombinator.com/item?id=50546967" rel="noreferrer">HN 讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://energy-based-reasoners.github.io/" rel="noreferrer">Energy-Based Reasoners：让循环推理有一个进展信号</a></h3>
+<p class="item-meta">HN 300 分／52 条评论（抓取时累计）；研究项目；过去24小时HN讨论</p>
+<p>给每个潜在推理状态打一个“能量分”，再沿降低分数的方向更新，并利用梯度大小决定何时停止，让循环推理有可学习的进展信号。<br>作者在数独、迷宫、N 皇后与图着色任务上检验方法，提供论文与代码；适合研究自适应计算，现有结果仍限于这些算法推理基准。<br><a href="https://news.ycombinator.com/item?id=50543989" rel="noreferrer">HN 讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://jimmyhmiller.com/magic-of-partial-evaluation" rel="noreferrer">部分求值：从解释器一步步走向编译器</a></h3>
+<p class="item-meta">HN 95 分／23 条评论（抓取时累计）；原文2026年11月；过去24小时HN讨论</p>
+<p>作者从固定指数的幂运算讲起，展示怎样提前算掉已知输入对应的部分，只把依赖运行时输入的代码留下。<br>沿着可执行的小例子继续推演，文章把解释器专门化、编译器和编译器生成器串在一起，提供了理解 Futamura 投影的直观入口。<br><a href="https://news.ycombinator.com/item?id=50550096" rel="noreferrer">HN 讨论</a></p>
+</article>
+<h2 id="section-30">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/how-m-c-eschers-art-creates-bizarre-mathematical-worlds-20261118/" rel="noreferrer">埃舍尔的画里，藏着怎样的数学世界？</a></h3>
+<p class="item-meta">Quanta · 2026-11-18 · 图文导览</p>
+<p>这篇配图导览沿着埃舍尔的创作，解释密铺、对称、投影错觉与双曲空间如何进入鸟、鱼、楼梯和圆形图案。<br>尤其有趣的是艺术与数学的双向交流：数学图式启发了他的作品，后来数学家又反过来分析画中的变换与结构。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/astral-sh/uv" rel="noreferrer">astral-sh/uv</a></li><li><a href="https://github.com/openvinotoolkit/openvino" rel="noreferrer">openvinotoolkit/openvino</a></li><li><a href="https://github.com/cursor/plugins" rel="noreferrer">cursor/plugins</a></li><li><a href="https://huggingface.co/tencent/Hy4-flash" rel="noreferrer">Hy4-flash：用稀疏专家与查表记忆分担计算</a></li><li><a href="https://huggingface.co/n4ze3m/tiny-voca" rel="noreferrer">tiny-voca：4.5M 参数的英语语音合成</a></li><li><a href="https://sander.ai/2025/04/15/latents.html" rel="noreferrer">生成模型的潜空间：压缩之后，还要让模型学得动</a></li><li><a href="https://pikuma.com/blog/history-of-x86-4004-to-486" rel="noreferrer">x86 的古怪设计，藏着半个世纪的兼容性历史</a></li><li><a href="https://news.ycombinator.com/item?id=50546967" rel="noreferrer">x86 的古怪设计，藏着半个世纪的兼容性历史 · HN 讨论</a></li><li><a href="https://energy-based-reasoners.github.io/" rel="noreferrer">Energy-Based Reasoners：让循环推理有一个进展信号</a></li><li><a href="https://news.ycombinator.com/item?id=50543989" rel="noreferrer">Energy-Based Reasoners：让循环推理有一个进展信号 · HN 讨论</a></li><li><a href="https://jimmyhmiller.com/magic-of-partial-evaluation" rel="noreferrer">部分求值：从解释器一步步走向编译器</a></li><li><a href="https://news.ycombinator.com/item?id=50550096" rel="noreferrer">部分求值：从解释器一步步走向编译器 · HN 讨论</a></li><li><a href="https://www.quantamagazine.org/how-m-c-eschers-art-creates-bizarre-mathematical-worlds-20261118/" rel="noreferrer">埃舍尔的画里，藏着怎样的数学世界？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-19 · 89 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

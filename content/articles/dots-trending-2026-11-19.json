@@ -1,0 +1,212 @@
+{
+  "id": "dots-trending-2026-11-19",
+  "revision": 1,
+  "date": "2026-11-19",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选 10 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[astral-sh/uv](https://github.com/astral-sh/uv)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+258 · Rust · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 Python 版本、虚拟环境、项目依赖和命令行工具统一到一套工作流，并提供锁文件与跨项目缓存。\n做训练脚本和复现实验时，可以用单文件依赖声明或项目锁文件记录环境，让换机器后的依赖准备更可控。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+24 · C++ · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "面向模型推理的转换与部署工具，支持从 PyTorch、TensorFlow、ONNX 等来源接入，并在 CPU、Intel GPU 与 NPU 上执行。\nREADME 给出了转换、编译到目标设备、执行推理的最小流程，适合评估边缘部署或已有 Intel 硬件上的推理方案。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[cursor/plugins](https://github.com/cursor/plugins)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+314 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cursor 官方插件仓库把技能、规则和服务连接按独立插件组织，包含代码审查、文档浏览和面向代理的 CLI 设计示例。\n对正在整理团队代理工具链的人，插件清单与目录结构比单个提示词更值得参考：可以借它明确每个工具包的职责与组成。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Hy4-flash：用稀疏专家与查表记忆分担计算](https://huggingface.co/tencent/Hy4-flash)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF trendingScore 榜单 · Tencent Hy License"
+    },
+    {
+      "type": "paragraph",
+      "text": "模型卡披露约 2200 亿总参数、每个词元激活约 120 亿；专家在较低维空间计算，常见的二元、三元词组则通过哈希查表取回表示。\n支持图文输入、文本输出和百万词元上下文，并提供投机解码设计；适合研究计算与记忆的分工，部署须评估完整权重存储及专用许可。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[tiny-voca：4.5M 参数的英语语音合成](https://huggingface.co/n4ze3m/tiny-voca)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF trendingScore 榜单 · Apache-2.0"
+    },
+    {
+      "type": "paragraph",
+      "text": "这个英语语音合成模型用约 18 小时合成语音从零训练，包含波形生成器共约 450 万参数，提供 PyTorch 权重和 ONNX 导出。\n它适合观察端侧语音模型怎样压缩到轻量级：当前支持两种固定英语声音、24 kHz 单声道输出，尚无流式生成与声音克隆。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[生成模型的潜空间：压缩之后，还要让模型学得动](https://sander.ai/2025/04/15/latents.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2025-04-15·Sander Dieleman"
+    },
+    {
+      "type": "paragraph",
+      "text": "从 VQ-VAE 到潜空间扩散，讲清压缩后的表示如何兼顾重建质量、计算成本，以及后续模型学习它的难度。\n配合训练流程图和容量算例，讨论量化、辅助解码器与可变长度 token；值得借鉴的是“保留多少信息”和“保留什么结构”这两个设计问题。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[x86 的古怪设计，藏着半个世纪的兼容性历史](https://pikuma.com/blog/history-of-x86-4004-to-486)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 141 分／46 条评论（抓取时累计）；往期佳作·2026-10-02；过去24小时HN讨论"
+    },
+    {
+      "type": "paragraph",
+      "text": "文章沿着 4004 到 486 的演进，把小端序、寄存器名字、段地址和 A20 门这些细节，放回当时的硬件成本与软件兼容要求中。\n读完能看到一条具体的技术路径：早期实用选择逐层沉淀，最终成为后来处理器必须继承或处理的约束。\n[HN 讨论](https://news.ycombinator.com/item?id=50546967)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Energy-Based Reasoners：让循环推理有一个进展信号](https://energy-based-reasoners.github.io/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 300 分／52 条评论（抓取时累计）；研究项目；过去24小时HN讨论"
+    },
+    {
+      "type": "paragraph",
+      "text": "给每个潜在推理状态打一个“能量分”，再沿降低分数的方向更新，并利用梯度大小决定何时停止，让循环推理有可学习的进展信号。\n作者在数独、迷宫、N 皇后与图着色任务上检验方法，提供论文与代码；适合研究自适应计算，现有结果仍限于这些算法推理基准。\n[HN 讨论](https://news.ycombinator.com/item?id=50543989)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[部分求值：从解释器一步步走向编译器](https://jimmyhmiller.com/magic-of-partial-evaluation)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 95 分／23 条评论（抓取时累计）；原文2026年11月；过去24小时HN讨论"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从固定指数的幂运算讲起，展示怎样提前算掉已知输入对应的部分，只把依赖运行时输入的代码留下。\n沿着可执行的小例子继续推演，文章把解释器专门化、编译器和编译器生成器串在一起，提供了理解 Futamura 投影的直观入口。\n[HN 讨论](https://news.ycombinator.com/item?id=50550096)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[埃舍尔的画里，藏着怎样的数学世界？](https://www.quantamagazine.org/how-m-c-eschers-art-creates-bizarre-mathematical-worlds-20261118/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-11-18 · 图文导览"
+    },
+    {
+      "type": "paragraph",
+      "text": "这篇配图导览沿着埃舍尔的创作，解释密铺、对称、投影错觉与双曲空间如何进入鸟、鱼、楼梯和圆形图案。\n尤其有趣的是艺术与数学的双向交流：数学图式启发了他的作品，后来数学家又反过来分析画中的变换与结构。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "astral-sh/uv",
+      "url": "https://github.com/astral-sh/uv"
+    },
+    {
+      "title": "openvinotoolkit/openvino",
+      "url": "https://github.com/openvinotoolkit/openvino"
+    },
+    {
+      "title": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins"
+    },
+    {
+      "title": "Hy4-flash：用稀疏专家与查表记忆分担计算",
+      "url": "https://huggingface.co/tencent/Hy4-flash"
+    },
+    {
+      "title": "tiny-voca：4.5M 参数的英语语音合成",
+      "url": "https://huggingface.co/n4ze3m/tiny-voca"
+    },
+    {
+      "title": "生成模型的潜空间：压缩之后，还要让模型学得动",
+      "url": "https://sander.ai/2025/04/15/latents.html"
+    },
+    {
+      "title": "x86 的古怪设计，藏着半个世纪的兼容性历史",
+      "url": "https://pikuma.com/blog/history-of-x86-4004-to-486"
+    },
+    {
+      "title": "x86 的古怪设计，藏着半个世纪的兼容性历史 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50546967"
+    },
+    {
+      "title": "Energy-Based Reasoners：让循环推理有一个进展信号",
+      "url": "https://energy-based-reasoners.github.io/"
+    },
+    {
+      "title": "Energy-Based Reasoners：让循环推理有一个进展信号 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50543989"
+    },
+    {
+      "title": "部分求值：从解释器一步步走向编译器",
+      "url": "https://jimmyhmiller.com/magic-of-partial-evaluation"
+    },
+    {
+      "title": "部分求值：从解释器一步步走向编译器 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50550096"
+    },
+    {
+      "title": "埃舍尔的画里，藏着怎样的数学世界？",
+      "url": "https://www.quantamagazine.org/how-m-c-eschers-art-creates-bizarre-mathematical-worlds-20261118/"
+    }
+  ],
+  "public_reviewed": true
+}
