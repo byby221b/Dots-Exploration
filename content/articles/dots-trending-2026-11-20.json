@@ -1,0 +1,228 @@
+{
+  "id": "dots-trending-2026-11-20",
+  "revision": 1,
+  "date": "2026-11-20",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选 11 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+898 · Python · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把已有软件能力整理成代理可调用的命令行接口，提供结构化 JSON 输出、交互式命令环境和现成 CLI 的发现入口。\n它的生成流程从分析源码、设计命令到单元与端到端测试，适合研究怎样把桌面软件接入可验证的自动化工作流。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[toeverything/AFFiNE](https://github.com/toeverything/AFFiNE)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+182 · TypeScript · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "把文档、无限画布和表格放在同一个本地优先工作区，支持把文字、页面、图形等内容组合在一张画布中。\n适合一边整理研究笔记、一边画思路图的场景；仓库同时给出自托管入口，并解释协同编辑与本地数据同步所依赖的组件。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[nginx/nginx](https://github.com/nginx/nginx)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+73 · C · GitHub stars today（非北京时间自然日）"
+    },
+    {
+      "type": "paragraph",
+      "text": "NGINX 官方仓库提供 Web 服务、反向代理、负载均衡与缓存能力，README 从主进程、工作进程和模块配置讲起。\n如果想理解模型服务前面的流量入口，可以沿它的负载均衡、限流与缓存指南阅读，再联系共享内存如何协调多个工作进程。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[FastFrames-L：把视频生成拆成低延迟的逐帧流程](https://huggingface.co/apple/FastFrames-L)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF trendingScore 榜单"
+    },
+    {
+      "type": "paragraph",
+      "text": "Apple 的 140 亿参数视频模型逐帧生成，每帧采用两步扩散；模型卡介绍从大模型蒸馏到因果生成器，再联合优化解码器与注意力缓存修正的流程。\n它同时公开中间检查点、生成与延迟分析入口，适合研究如何联合优化生成步骤和外围计算；运行依赖 NVIDIA GPU 与兼容 CUDA 12.8 的驱动。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Voice Isolator：离线录音与实时流的人声降噪](https://huggingface.co/inworld/voice-isolator)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HF trendingScore 榜单 · Apache-2.0"
+    },
+    {
+      "type": "paragraph",
+      "text": "Inworld 提供 6400 万参数离线模型与约 5800 万参数实时模型，以频带切分、注意力和 Mamba 处理 48 kHz 音频，保留前景人声并分离背景残差。\n实时版本在 20 ms 前瞻设置下报告 63 ms 算法延迟，适合语音数据清洗和通话链路；多人音量接近时可能同时保留，使用时应按前景降噪而非指定说话人提取来评估。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[特征越稀疏，embedding 能省下多少维？](https://iclr-blogposts.github.io/2026/blog/2026/feature-reduction/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·发布日期未核实·ICLR Blogposts 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "从“每篇文档只含两个词”的简化问题出发，用二维坐标容纳三个词的存在关系，再推广到更多特征，解释稀疏组合如何节省 embedding 维度。\n配有几何图与构造证明，适合区分“能检索某个特征”和“保留全部距离”两种目标；结果依赖特定组合假设，应用时需核对这些条件。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[用 SQLite 搭建分布式 Blob 存储：一次贴着业务需求的取舍](https://zerodha.tech/blog/high-performance-distributed-blob-storage/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 259 分／69 条评论（抓取时累计）；原文2026-11-19"
+    },
+    {
+      "type": "paragraph",
+      "text": "Zerodha 将界面偏好与布局数据存进多个 SQLite 分片，通过压缩、批量提交和 Redis 协议兼容，把已有服务迁移到自建的 Blobasaur。\n文章完整交代了性能背后的条件：业务允许掉电时丢失少量近期写入，集群当前采用静态分槽，自动故障切换与在线重平衡仍待实现。\n[HN 讨论](https://news.ycombinator.com/item?id=50557537)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[内存紧张时，压缩交换能帮上什么忙？](https://curiousbits.nl/blog/do-not-buy-ram-compress/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 246 分／206 条评论（抓取时累计）；原文2026-11-19"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者在 Linux 工作站上用 zram 将部分内存页压缩存放，并用大量浏览器标签页演示：约5.7 GB数据占用1.7 GB实际内存。\n这个案例展示了用 CPU 开销换容量的思路；压缩率取决于数据，实际收益也需结合延迟与工作负载观察。\n[HN 讨论](https://news.ycombinator.com/item?id=50557661)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[PHP 8.6：部分函数应用与更可扩展的 I/O](https://www.php.net/releases/8.6/en.php)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 273 分／126 条评论（抓取时累计）；原文2026-11-19"
+    },
+    {
+      "type": "paragraph",
+      "text": "PHP 8.6 正式发布，支持预先绑定部分参数并生成闭包，也加入表示经过时间的 Duration 类与平台原生轮询接口。\n官方发布页用新旧代码并排说明变化，还列出弃用项和兼容性调整，适合快速了解语言演进与升级时需要核对的细节。\n[HN 讨论](https://news.ycombinator.com/item?id=50557870)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[当 AI 成为最稳定的倾听者，真正缺席的是什么？](https://aeon.co/essays/what-would-parenting-by-ai-look-like)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-11-19 · Tom Wooldridge · 观点文章"
+    },
+    {
+      "type": "paragraph",
+      "text": "心理学家 Tom Wooldridge 从科幻故事与临床观察出发，讨论缺少稳定陪伴的孩子为何会被持续回应、记住细节的 AI 吸引。\n他将问题引向两处：现实照护的缺口，以及人在相互影响、分歧和边界中学习关系的过程；文中的发展判断属于作者分析。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从一个填格游戏，看量子计算的优势](https://research.google/blog/a-game-you-cannot-win-unless-you-have-a-quantum-computer/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-19·Google Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "两人各填一行或一列、不能通信，并要求交点一致：魔方游戏的经典胜率上限是 8/9；Google 报告 Willow 处理器借助共享纠缠达到 98.30%。\n文章从游戏规则解释测量结果为何依赖共同测量的上下文，并说明这类结构化任务如何暴露随机测试容易掩盖的硬件误差。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything"
+    },
+    {
+      "title": "toeverything/AFFiNE",
+      "url": "https://github.com/toeverything/AFFiNE"
+    },
+    {
+      "title": "nginx/nginx",
+      "url": "https://github.com/nginx/nginx"
+    },
+    {
+      "title": "FastFrames-L：把视频生成拆成低延迟的逐帧流程",
+      "url": "https://huggingface.co/apple/FastFrames-L"
+    },
+    {
+      "title": "Voice Isolator：离线录音与实时流的人声降噪",
+      "url": "https://huggingface.co/inworld/voice-isolator"
+    },
+    {
+      "title": "特征越稀疏，embedding 能省下多少维？",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/feature-reduction/"
+    },
+    {
+      "title": "用 SQLite 搭建分布式 Blob 存储：一次贴着业务需求的取舍",
+      "url": "https://zerodha.tech/blog/high-performance-distributed-blob-storage/"
+    },
+    {
+      "title": "用 SQLite 搭建分布式 Blob 存储：一次贴着业务需求的取舍 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50557537"
+    },
+    {
+      "title": "内存紧张时，压缩交换能帮上什么忙？",
+      "url": "https://curiousbits.nl/blog/do-not-buy-ram-compress/"
+    },
+    {
+      "title": "内存紧张时，压缩交换能帮上什么忙？ · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50557661"
+    },
+    {
+      "title": "PHP 8.6：部分函数应用与更可扩展的 I/O",
+      "url": "https://www.php.net/releases/8.6/en.php"
+    },
+    {
+      "title": "PHP 8.6：部分函数应用与更可扩展的 I/O · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50557870"
+    },
+    {
+      "title": "当 AI 成为最稳定的倾听者，真正缺席的是什么？",
+      "url": "https://aeon.co/essays/what-would-parenting-by-ai-look-like"
+    },
+    {
+      "title": "从一个填格游戏，看量子计算的优势",
+      "url": "https://research.google/blog/a-game-you-cannot-win-unless-you-have-a-quantum-computer/"
+    }
+  ],
+  "public_reviewed": true
+}
