@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>三次称量，怎样找出轻重未知的假币？ · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading exploration"><a class="back" href="../../exploration/index.html">← 每周探索</a><article><header class="article-header"><p class="eyebrow">每周面试挑战 / <time datetime="2026-11-21">2026-11-21</time> / 修订 1</p><h1>三次称量，怎样找出轻重未知的假币？</h1></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-1">主问题</a></li><li><a href="#section-5">独立追问</a></li></ol></nav><div class="prose"><div class="article-content"><p>逻辑与策略 · 中等偏难 · 建议独立思考 25–40 分钟，解答阅读约 8–10 分钟。经典称量问题的中文改编与构造练习，不对应已核实的公司真题。若已经做过，可以只做追问；熟悉与否不代表能力高低。</p>
+<h2 id="section-1">主问题</h2>
+<p>有 N 枚外观相同、可以编号的硬币，其中恰好一枚是假币。所有真币的质量相同；假币质量与真币不同，但事先不知道偏重还是偏轻，也不知道相差多少。没有已知真币或其他砝码。</p>
+<p>只能用一架理想双盘天平，最多称三次。每次在左右两盘放相同枚数的硬币，一枚硬币在同一次称量中只能出现一次，也可以不上秤。天平只报告“左盘重、平衡、右盘重”，不报告差值；硬币可重复用于不同轮次，称量不会改变质量。后续摆法可以依赖先前结果。</p>
+<p>要求对每一种假币位置和轻重情形，都能确定是哪一枚，以及它偏重还是偏轻。可保证完成任务的最大 N 是多少？给出具体方案，并证明更多硬币做不到。这里优化最坏情况下的保证，不给假币位置或轻重指定概率分布。</p>
+<h2 id="section-5">独立追问</h2>
+<p>现在额外给你一枚已知为真的参考币 G，它不计入 N。每次仍须左右盘总枚数相同，参考币放上秤时也计入枚数；其余条件完全不变。最大 N 是否改变？给出新的上界与达到上界的摆法。</p>
+<details><summary>三级提示，思考后展开</summary><h3 id="section-7-0">三级提示</h3>
+<p>一级：一次称量有三种结果。先把“某枚偏重”和“同一枚偏轻”当成两个不同待区分的情形，数一数三次称量最多留下多少种结果记录。</p>
+<p>二级：总记录数只是必要条件。若第一次称 k 枚对 k 枚，左重、右重、平衡分别留下多少种情形？每个分支都只剩两次称量。</p>
+<p>三级：构造时可以预先安排好三次摆法。给每枚硬币写一个三位记录：放左盘记 +，不上秤记 0，放右盘记 −。若它偏重，结果记录与摆法一致；偏轻则所有符号反转。怎样避免两枚硬币的记录冲突，同时保证每次左右枚数相同？</p></details>
+<details><summary>完整解答，想好再看</summary><h3 id="section-8-0">先把“多少种结果”算清楚</h3>
+<p>要辨认的状态共有 2N 种：N 个编号各有偏重、偏轻两种可能。一次称量最多三种结果，三次最多形成 3³=27 条结果记录。即使后一次摆法依赖前一次结果，也只是把三层决策树的不同分支接起来，叶子数仍不超过 27。因此 2N≤27，先得到 N≤13。</p>
+<p>这一步还没证明 13 枚能做到。每个分支能装下多少状态，要受到实际摆法的约束。</p>
+<h3 id="section-8-3">第一称怎样把上界收紧</h3>
+<p>设第一称左右各放 k 枚，剩下 N−2k 枚不上秤。真币质量相同且两盘枚数相同，所以失衡只能由上秤的假币造成。三种分支如下：</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">第一称结果</th><th scope="col">剩余可能</th><th scope="col">状态数</th></tr></thead><tbody><tr><td>左盘重</td><td>左边某枚偏重，或右边某枚偏轻</td><td>2k</td></tr><tr><td>右盘重</td><td>左边某枚偏轻，或右边某枚偏重</td><td>2k</td></tr><tr><td>平衡</td><td>未上秤的某枚偏重或偏轻</td><td>2(N−2k)</td></tr></tbody></table></div>
+<p>每个分支只剩两次称量，最多区分 3²=9 种状态。于是 2k≤9，且 2(N−2k)≤9。两式左边都是偶数，因此实际都不超过 8：k≤4，N−2k≤4。合起来 N≤2k+4≤12。</p>
+<p>这个上界允许后续完全自适应，因而排除了所有可能策略，不只排除了某张固定表。接下来只要构造出 12 枚的方案，上界就成为答案。</p>
+<h3 id="section-8-8">用同一张表安排三次称量</h3>
+<p>先约定两个对应关系。摆法里的 +、0、− 分别表示左盘、不上秤、右盘；结果里的 +、0、− 分别表示左重、平衡、右重。一枚假币若偏重，它的结果就是自己的摆法记录；若偏轻，结果就是这份记录的相反号。0 的相反号仍为 0。</p>
+<p>例如第 5 枚的摆法是（−，+，+）：先放右盘，再两次放左盘。若它偏重，观察到右重、左重、左重；若它偏轻，观察到左重、右重、右重。其余真币的基准质量在每轮左右抵消。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">硬币</th><th scope="col">第1次</th><th scope="col">第2次</th><th scope="col">第3次</th></tr></thead><tbody><tr><td>1</td><td>0</td><td>0</td><td>−</td></tr><tr><td>2</td><td>0</td><td>−</td><td>+</td></tr><tr><td>3</td><td>0</td><td>−</td><td>0</td></tr><tr><td>4</td><td>0</td><td>−</td><td>−</td></tr><tr><td>5</td><td>−</td><td>+</td><td>+</td></tr><tr><td>6</td><td>−</td><td>+</td><td>0</td></tr><tr><td>7</td><td>−</td><td>+</td><td>−</td></tr><tr><td>8</td><td>+</td><td>0</td><td>−</td></tr><tr><td>9</td><td>+</td><td>0</td><td>0</td></tr><tr><td>10</td><td>+</td><td>0</td><td>+</td></tr><tr><td>11</td><td>−</td><td>−</td><td>+</td></tr><tr><td>12</td><td>+</td><td>+</td><td>0</td></tr></tbody></table></div>
+<p>逐行读，得到每枚硬币的三位摆法；逐列读，得到一轮称量。三轮实际操作为：</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="可横向滚动的表格"><table><thead><tr><th scope="col">轮次</th><th scope="col">左盘</th><th scope="col">右盘</th></tr></thead><tbody><tr><td>1</td><td>8、9、10、12</td><td>5、6、7、11</td></tr><tr><td>2</td><td>5、6、7、12</td><td>2、3、4、11</td></tr><tr><td>3</td><td>2、5、10、11</td><td>1、4、7、8</td></tr></tbody></table></div>
+<p>三次都是 4 枚对 4 枚，不依赖前一次结果。称完后，把结果记录与第一张表逐行对照：相同就表示该枚偏重；全部反号后相同就表示该枚偏轻。例如（+，−，−）对应第 5 枚偏轻。</p>
+<h3 id="section-8-15">为什么这张表不会误判</h3>
+<p>必须同时检查三件事：每行至少一个非零符号，避免从未上秤的硬币无法区分轻重；不同硬币的记录不相同，也不互为相反号，避免身份或轻重混淆；每列的 + 与 − 个数相同，保证称量合法。</p>
+<p>表中三列各有四个 +、四个 −，所以满足最后一条。对前两条，可以按 0 的位置检查：两个 0 的三行分别对应三个轴；恰一个 0 的六行，在每个零位置下各取同号、异号两类；没有 0 的三行代表四类正反号配对中的三类，只留（+，+，+）及其反号未用。因此 12 行加上各自的相反号，恰好给出 24 条不同的非零结果记录。</p>
+<p>这说明每个合法状态都会得到唯一解。三次全平衡，以及三次都左重或都右重，在本题与这张表下都不会出现。若真出现，说明实际情况不符合题设或操作出了差错，不能硬猜一个编号。</p>
+<p>构造达到前面的上界，所以没有参考币时最大 N=12。</p>
+<h3 id="section-8-20">追问：参考币怎样改变构造</h3>
+<p>有参考币时，待区分状态仍是 N 枚可疑币各自偏重、偏轻，共 2N 种。结果数上界保持 2N≤27，因此 N≤13。参考币本身没有待识别的轻重状态。</p>
+<p>从刚才的 12 枚方案直接扩充：每一轮都在左盘加上第 13 枚可疑币，在右盘加上参考币 G。原来的 4 对 4 变成 5 对 5；原有 12 枚的位置保持不变。</p>
+<p>若假币在原来的 12 枚里，第 13 枚与 G 都是真的，新增的一对在每轮抵消，所以旧的 24 条结果记录完全不变。若第 13 枚是假币，原来的 12 枚全真：它偏重时三次都左重，偏轻时三次都右重，正好使用之前空着的两条记录。于是 26 种状态都能区分，达到上界 13。</p>
+<p>为什么无参考币的证明在这里不再卡住 13？第一称虽然两盘总数相等，可疑币数量却是左边 5 枚、右边 4 枚。左重分支有“左边 5 枚之一偏重”或“右边 4 枚之一偏轻”，合计 9 种；右重也有 9 种；未上秤 4 枚留下 8 种。三个分支变为 9、9、8，不再要求两个失衡分支都是偶数。参考币改变了可实现的分组方式。</p>
+<h3 id="section-8-25">两处常见错误</h3>
+<p>只写 2N≤27 就宣布 13 可行：记录数量足够，还要能用合法称量实现。无参考币时，第一轮的偶数约束会进一步收紧上界。</p>
+<p>让两枚硬币的摆法互为反号：这会把“一枚偏重”和“另一枚偏轻”映射到同一结果。需要区分的是编号与轻重的组合，不能只检查编号是否不同。</p>
+<h3 id="section-8-28">可以带走的方法</h3>
+<p>先按操作规则数出每个分支能容纳的状态，再设计能够实际执行的状态编码。前者给出任何策略都不能突破的界，后者证明这个界可以达到。这里需要理想天平、恰一枚假币、左右同枚数和同时识别轻重；若只需找出假币，或者天平会误报，就应重新建立状态与结果的对应。</p>
+<p>本期新增的是正反号成对的称量构造，以及参考物怎样改变分支容量。鸡蛋测试的资源损耗、数卡比较的胜负证书，都不能直接给出这张称量表。解答已逐一核验所有合法状态；以上论证而非枚举本身给出正确性与最优性。</p></details></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://people.math.ethz.ch/~halorenz/publications/pdf/coin.pdf" rel="noreferrer">Halbeisen 与 Hungerbühler：The general counterfeit coin problem，§2–3</a></li><li><a href="https://chapelhillmathcircle.org/wp-content/uploads/2023/09/int20230923weighingproblemsproblems.pdf" rel="noreferrer">Chapel Hill Math Circle：Weighing Puzzles，2023-09-23，第13(b)题</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-21 · 93 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

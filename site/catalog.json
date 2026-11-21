@@ -2,6 +2,16 @@
   "articles": [
     {
       "channel": "exploration",
+      "date": "2026-11-21",
+      "disclosures": 2,
+      "id": "interview-challenge-2026-11-21",
+      "images": [],
+      "revision": 1,
+      "series": "每周面试挑战",
+      "trending_items": 0
+    },
+    {
+      "channel": "exploration",
       "date": "2026-11-20",
       "disclosures": 1,
       "id": "math-shared-foundations-2026-11-20",
@@ -1020,12 +1030,12 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 92,
+  "articles_count": 93,
   "channels": {
-    "exploration": 43,
+    "exploration": 44,
     "trending": 49
   },
-  "end": "2026-11-20",
+  "end": "2026-11-21",
   "images_count": 83,
   "start": "2026-10-01",
   "trending_items": 541
