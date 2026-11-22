@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-22">2026-11-22</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">本期精选 10 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-10">🧠 AI/模型</a></li><li><a href="#section-20">🔥 热议话题</a></li><li><a href="#section-30">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/obra/superpowers" rel="noreferrer">obra/superpowers</a></h3>
+<p class="item-meta">⭐+883 · Shell · GitHub 日榜</p>
+<p>把编码代理的工作拆成需求澄清、计划、实现和两轮审查，先请人确认设计，再在隔离的 Git 工作树里建立测试基线。<br>整套流程最值得借鉴的是每一步都有明确的验证条件，适合需要多人审查和回滚的改动。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/mjmirza/app-store-compliance" rel="noreferrer">mjmirza/app-store-compliance</a></h3>
+<p class="item-meta">⭐+720 · Shell · GitHub 日榜</p>
+<p>把 iOS 与 Android 提审前的检查集中成一份手册和静态扫描器，用于定位隐私清单、权限描述等项目文件里的可见问题。<br>它把机器能查的项目与仍要人工核实的事项分开，能用作提审清单，但扫描通过不代表商店审核通过。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/cathrynlavery/diagram-design" rel="noreferrer">cathrynlavery/diagram-design</a></h3>
+<p class="item-meta">⭐+583 · HTML · GitHub 日榜</p>
+<p>用独立 HTML 和 SVG 表达架构、流程等技术关系，适合把同一张图从浏览器预览带到文稿或幻灯片。<br>架构变更图尤其适合技术方案汇报：把改前、改后和新增、移除、重连的组件排在一起，方便读者逐项对照。</p>
+</article>
+<h2 id="section-10">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://eli.thegreenplace.net/2026/notes-on-the-discrete-fourier-transform-dft/" rel="noreferrer">离散傅里叶变换：为什么 N 个采样点只需要 N 个频点？</a></h3>
+<p class="item-meta">2026-11-21（作者当地日期）·Eli Bendersky</p>
+<p>把有限的采样看作一个周期，文章用彼此正交的旋转基底推导 DFT 和逆变换，再用 NumPy 演示怎样重建采样值。<br>把观测窗口截短后，即使采样值仍可准确重建，信号的频率成分也会散到邻近频点，形成频谱泄漏。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://bair.berkeley.edu/blog/2026/07/29/cuda-to-mlx-k-search/" rel="noreferrer">把 CUDA 算子调优经验迁移到 Apple Silicon</a></h3>
+<p class="item-meta">深度精选·2026-07-29·BAIR</p>
+<p>K-Search 把 CUDA 算子的分块、归约和同步经验转写成 Metal 上的实现约束，再生成候选代码并在真机上测量。<br>作者在 M1 Max 的 Mamba-370M 实验中，以并行扫描提高了整段输入的处理吞吐，最高约为社区 mlx-lm 的 20 倍；逐 token 解码没有同量级提升。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://bair.berkeley.edu/blog/2026/07/26/abbel/" rel="noreferrer">长对话压缩后，怎么检验模型记住了什么？</a></h3>
+<p class="item-meta">深度精选·2026-07-26·BAIR</p>
+<p>ABBEL 用一段不断更新的文字状态代替完整对话，并检查模型能否从这段状态还原刚观察到的信息，把“记住什么”变成训练信号。<br>作者在协作编程基准上报告，训练缩小了压缩策略与完整上下文的表现差距，同时降低了峰值上下文长度。</p>
+</article>
+<h2 id="section-20">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/" rel="noreferrer">Lean 社区核验标准黎曼猜想的形式化证明</a></h3>
+<p class="item-meta">HN 810 分／647 条评论（抓取时累计）；原文 2026-11-21</p>
+<p>Lean 与 Mathlib 社区联合声明称，Alpöge 的证明所用命题与 Mathlib 的标准陈述一致：黎曼 ζ 函数的非平凡零点实部均为 1/2。<br>多种独立实现的检查器通过了同一份导出的证明。这份联合声明核验的是标准黎曼猜想，不宜外推到更一般的 L 函数。<br><a href="https://news.ycombinator.com/item?id=50589618" rel="noreferrer">HN 讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://blog.tymscar.com/posts/studiodisplayethernet/" rel="noreferrer">下载速度少了四分之三，问题出在显示器的 USB 集线器？</a></h3>
+<p class="item-meta">HN 473 分／227 条评论（抓取时累计）；原文 2026-11-15</p>
+<p>作者发现同一网卡直连电脑能跑到约 2.2 Gbps，经显示器集线器却降到约 600 Mbps，于是对照驱动、流量控制与网卡的发包参数逐一排查。<br>在这套设备上，旧网卡通过集线器时来不及把收到的数据送走；更换支持更大突发传输的网卡后，高速下载不再丢帧。<br><a href="https://news.ycombinator.com/item?id=50587875" rel="noreferrer">HN 讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://jespino.github.io/gopgext/" rel="noreferrer">gopgext：用 Go 编写 PostgreSQL 扩展</a></h3>
+<p class="item-meta">HN 117 分／20 条评论（抓取时累计）；项目页未标发布日期</p>
+<p>这个实验项目以 TinyGo 编译 Go 代码，并生成 C 桥接与 SQL 安装脚本，让标注过的函数可以直接在 PostgreSQL 中调用。<br>它也尝试支持触发器、聚合和索引扩展；由于生成代码会在数据库进程内部运行，作者明确建议暂勿用于生产。<br><a href="https://news.ycombinator.com/item?id=50591260" rel="noreferrer">HN 讨论</a></p>
+</article>
+<h2 id="section-30">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/the-radical-reasons-why-you-dream-of-making-things-by-hand" rel="noreferrer">为什么工作越自动化，我们越想亲手做东西？</a></h3>
+<p class="item-meta">Aeon · 往期佳作·2026-07-06 · Joshua Habgood-Coote</p>
+<p>从东伦敦织工的花园到今天的烘焙和陶艺，作者把对手艺的怀念与工作中缺少长期练习、判断和自主权联系起来。<br>文章借罗斯金和莫里斯的讨论提出：可以把这种怀念变成一个面向未来的问题，什么样的工作值得让人一辈子精进？</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/obra/superpowers" rel="noreferrer">obra/superpowers</a></li><li><a href="https://github.com/mjmirza/app-store-compliance" rel="noreferrer">mjmirza/app-store-compliance</a></li><li><a href="https://github.com/cathrynlavery/diagram-design" rel="noreferrer">cathrynlavery/diagram-design</a></li><li><a href="https://eli.thegreenplace.net/2026/notes-on-the-discrete-fourier-transform-dft/" rel="noreferrer">离散傅里叶变换：为什么 N 个采样点只需要 N 个频点？</a></li><li><a href="https://bair.berkeley.edu/blog/2026/07/29/cuda-to-mlx-k-search/" rel="noreferrer">把 CUDA 算子调优经验迁移到 Apple Silicon</a></li><li><a href="https://bair.berkeley.edu/blog/2026/07/26/abbel/" rel="noreferrer">长对话压缩后，怎么检验模型记住了什么？</a></li><li><a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/" rel="noreferrer">Lean 社区核验标准黎曼猜想的形式化证明</a></li><li><a href="https://news.ycombinator.com/item?id=50589618" rel="noreferrer">Lean 社区核验标准黎曼猜想的形式化证明 · HN 讨论</a></li><li><a href="https://blog.tymscar.com/posts/studiodisplayethernet/" rel="noreferrer">下载速度少了四分之三，问题出在显示器的 USB 集线器？</a></li><li><a href="https://news.ycombinator.com/item?id=50587875" rel="noreferrer">下载速度少了四分之三，问题出在显示器的 USB 集线器？ · HN 讨论</a></li><li><a href="https://jespino.github.io/gopgext/" rel="noreferrer">gopgext：用 Go 编写 PostgreSQL 扩展</a></li><li><a href="https://news.ycombinator.com/item?id=50591260" rel="noreferrer">gopgext：用 Go 编写 PostgreSQL 扩展 · HN 讨论</a></li><li><a href="https://aeon.co/essays/the-radical-reasons-why-you-dream-of-making-things-by-hand" rel="noreferrer">为什么工作越自动化，我们越想亲手做东西？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-22 · 94 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>
