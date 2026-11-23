@@ -1,0 +1,200 @@
+{
+  "id": "dots-trending-2026-11-23",
+  "revision": 1,
+  "date": "2026-11-23",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选 9 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[microsoft/markitdown](https://github.com/microsoft/markitdown)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+459 · Python · GitHub Python 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 PDF、Word、PPT 和电子表格转成 Markdown，尽量保留标题、列表、表格与链接，便于接入检索和文本分析。\n输出侧重结构和内容，不复刻原文排版；图片描述和语音转写依赖在线服务，处理敏感文件前应确认启用的功能。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Depth Pro 2：单目视频深度，兼顾物体边缘和帧间稳定](https://huggingface.co/apple/DepthPro2)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hugging Face 热门第 8 · 权重仅限研究使用"
+    },
+    {
+      "type": "paragraph",
+      "text": "用普通单目相机的照片或视频，估计每个像素到相机的距离（米）。模型交替处理帧内细节与跨帧信息，兼顾物体边缘和视频里的深度稳定性。\n四种型号从 24M 到 872M 参数，可按速度和效果取舍；权重许可限非商业科学研究与学术开发。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[3×3 复数矩阵乘法，为什么不用 Tensor Core？](https://research.colfax-intl.com/accelerating-staple-networks-for-normalizing-flows-in-lattice-quantum-chromodynamics/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-21（UTC）·Colfax Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "格点量子色动力学的生成模型要反复相乘 3×3 双精度复数矩阵。作者用普通 CUDA 核心避免给小矩阵补零，再让线程交接累加结果，减少寄存器占用。\n在 H200 NVL 上，4 或 8 通道的隐藏层前向，相比改良 Triton 实现约快 2.0–3.4 倍。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[推理型检索的预算，花在改查询还是重排？](https://iclr-blogposts.github.io/2026/blog/2026/trade-offs-in-llm-compute-for-reasoning-intensive-information-retrieval/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·发布日期未核实·ICLR Blogposts 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "在 BRIGHT 基准上固定第一轮 BM25 检索，作者分别改变查询扩展模型、参与重排的候选数量和模型的思考设置。\n在这组实验里，轻量模型改写查询已带来大部分收益；把重排候选从 10 篇增至 100 篇，比单独开启思考模式更能改善排序。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Small SF：一座实时更新的袖珍旧金山](https://smallsf.com/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 126 分／54 条评论（抓取时累计）；项目页未标发布日期"
+    },
+    {
+      "type": "paragraph",
+      "text": "这张插画地图把旧金山的公交、轨道交通、渡轮和飞机叠在同一座微缩城市上，图层可以单独打开或关闭。\n项目明确把街道车流标为模拟数据，和实时公共交通分开呈现。\n[HN 讨论](https://news.ycombinator.com/item?id=50603589)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Fast-Anything：先测出瓶颈，再重写热点函数](https://github.com/EL4CTEO/fast-anything)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 177 分／148 条评论（抓取时累计）；项目页未标发布日期"
+    },
+    {
+      "type": "paragraph",
+      "text": "项目先分析程序耗时，再把适合移植的热点函数交给编码代理用 Rust 重写，通过回放记录的调用来比较结果和耗时。\n原实现可以随时切回；回放能抓住样本范围内的差异，例如字节长度与字符数混淆，但无法替代更全面的测试。\n[HN 讨论](https://news.ycombinator.com/item?id=50596155)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[C++26 更新草案：为契约断言增加强制检查标记](https://herbsutter.com/2026/11/21/c26-is-done-again-trip-report-november-2026-iso-c-standards-meeting-buzios-brazil/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 68 分／47 条评论（抓取时累计）；原文 2026-11-21"
+    },
+    {
+      "type": "paragraph",
+      "text": "Herb Sutter 的会议报告记录了 C++26 如何回应上一轮投票意见：委员会保留契约功能，并允许程序显式标记某条断言必须检查。\n被标记的断言一旦失败，执行不能继续越过该断言；更新后的技术工作已完成，预计仍需进入第二轮国际审批投票。\n[HN 讨论](https://news.ycombinator.com/item?id=50600838)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[在《GTA 6》里找齐 60 种鸟](https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 328 分／148 条评论（抓取时累计）；Audubon · 原文 2026-11-20"
+    },
+    {
+      "type": "paragraph",
+      "text": "Audubon 作者在海岸、湿地和林地等环境里找齐游戏图鉴的 60 种鸟，并把游戏里的分布和现实佛罗里达对照。\n南部水鸟多、北部林鸟多的设计有现实依据；游戏中容易遇到的美洲鹤，在现实里却是罕见的鸟。\n[HN 讨论](https://news.ycombinator.com/item?id=50602843)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[黑洞像钟一样振响之后，我们还能知道什么？](https://aeon.co/essays/black-holes-ring-like-bells-what-happens-next-is-stranger)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 往期佳作·2026-09-18 · Richard Dyer"
+    },
+    {
+      "type": "paragraph",
+      "text": "两个黑洞合并后，留下的黑洞会短暂振荡并发出逐渐衰减的引力波，研究者可以从这些信号检验引力理论。\n作者从钟声写到香水扩散，解释为何外部观测能推断质量和自旋，却难以还原黑洞的形成历史。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "microsoft/markitdown",
+      "url": "https://github.com/microsoft/markitdown"
+    },
+    {
+      "title": "Depth Pro 2：单目视频深度，兼顾物体边缘和帧间稳定",
+      "url": "https://huggingface.co/apple/DepthPro2"
+    },
+    {
+      "title": "3×3 复数矩阵乘法，为什么不用 Tensor Core？",
+      "url": "https://research.colfax-intl.com/accelerating-staple-networks-for-normalizing-flows-in-lattice-quantum-chromodynamics/"
+    },
+    {
+      "title": "推理型检索的预算，花在改查询还是重排？",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/trade-offs-in-llm-compute-for-reasoning-intensive-information-retrieval/"
+    },
+    {
+      "title": "Small SF：一座实时更新的袖珍旧金山",
+      "url": "https://smallsf.com/"
+    },
+    {
+      "title": "Small SF：一座实时更新的袖珍旧金山 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50603589"
+    },
+    {
+      "title": "Fast-Anything：先测出瓶颈，再重写热点函数",
+      "url": "https://github.com/EL4CTEO/fast-anything"
+    },
+    {
+      "title": "Fast-Anything：先测出瓶颈，再重写热点函数 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50596155"
+    },
+    {
+      "title": "C++26 更新草案：为契约断言增加强制检查标记",
+      "url": "https://herbsutter.com/2026/11/21/c26-is-done-again-trip-report-november-2026-iso-c-standards-meeting-buzios-brazil/"
+    },
+    {
+      "title": "C++26 更新草案：为契约断言增加强制检查标记 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50600838"
+    },
+    {
+      "title": "在《GTA 6》里找齐 60 种鸟",
+      "url": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife"
+    },
+    {
+      "title": "在《GTA 6》里找齐 60 种鸟 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50602843"
+    },
+    {
+      "title": "黑洞像钟一样振响之后，我们还能知道什么？",
+      "url": "https://aeon.co/essays/black-holes-ring-like-bells-what-happens-next-is-stranger"
+    }
+  ],
+  "public_reviewed": true
+}
