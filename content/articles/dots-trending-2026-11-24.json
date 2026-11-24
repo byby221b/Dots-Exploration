@@ -1,0 +1,212 @@
+{
+  "id": "dots-trending-2026-11-24",
+  "revision": 1,
+  "date": "2026-11-24",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选 10 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[pytorch/torchtitan](https://github.com/pytorch/torchtitan)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+16 · GitHub Python 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "PyTorch 原生的大模型训练框架，用 DeviceMesh 和 DTensor 组合参数分片、张量、流水线、上下文和专家并行，同一份模型定义可覆盖预训练、SFT 与强化学习。\n训练配置写成可读的 Python 配方，适合对照研究换一种并行布局时改的是模型、通信，还是训练配置。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[kvcache-ai/Mooncake](https://github.com/kvcache-ai/Mooncake)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+12 · GitHub C++ 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kimi 的服务架构将预填充与逐 token 解码分开，并用共享 KV 缓存池在不同推理实例之间复用前缀。\n仓库里可分别看 Mooncake Store 如何供多个实例共享缓存，以及 Transfer Engine 如何在节点间搬运缓存，适合拆解长上下文推理的存储和通信开销。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[perspective-dev/perspective](https://github.com/perspective-dev/perspective)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+38 · GitHub Rust 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "用于实时数据的表格、透视表与图表组件，可用 WebAssembly 在浏览器运行流式查询，也可把查询交给服务端或现有数据库。\n如果要做实时实验监控面板，它支持表格增量更新和视图联动，也能只把可见数据传给浏览器。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[SenseNova-Loop-9B：用层复用增加计算深度](https://huggingface.co/sensenova/SenseNova-Loop-9B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hugging Face 热门第 9 · Apache-2.0 · 2026-11-17 发布"
+    },
+    {
+      "type": "paragraph",
+      "text": "这款约 9B 参数的图文模型把中间 24 层运行两遍，32 套层权重对应一次前向中的 56 次层计算。\n第二遍接着处理第一遍的输出，增加了计算深度，却不用复制参数；部署时仍要按实际执行次数估算开销。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[表格模型怎样在单张 GPU 上用上 10 万行上下文？](https://iclr-blogposts.github.io/2026/blog/2026/chunked-tabpfn/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·发布日期未核实·ICLR Blogposts 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "TabPFN 在样本和特征两个维度上做注意力。文章先拆批次绕开 CUDA 网格限制，再分块算 softmax，保留不同块之间的完整注意力。\n作者在 TabArena 上无需重训便处理了 10 万行以上的上下文；分块降低峰值显存，但会增加运行时间。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[让 Transformer 每层按需读取先前层的输出](https://research.google/blog/supercharging-transformer-residual-connections/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-23 · Google Research · 回顾 ICML 2025 论文"
+    },
+    {
+      "type": "paragraph",
+      "text": "DeepCrossAttention 不把先前层的输出全加进同一条残差流，而是按 token 从多层表示里挑信息，查询、键和值还能各自选。\n在 LM1B 的同宽实验里，达到低于 14 的困惑度，标准模型用 42 层，DCA 用 30 层。它只加了不到 0.2% 的参数，但会增加内存带宽开销。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Kagi Mail 开启公测：邮件和日历走开放协议](https://blog.kagi.com/kagi-mail-public-beta)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 347 分／266 条评论（抓取时累计）；原文 2026-11-23"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kagi 推出支持自有域名的邮箱和日历，服务端基于开源 Stalwart，并支持 IMAP、JMAP 和 CalDAV，用户可以继续用兼容的第三方客户端。\n产品提供可关闭的 AI 邮件整理功能；官方也列出了公测仍缺的功能，包括通讯录和原生移动应用。\n[HN 讨论](https://news.ycombinator.com/item?id=50615481)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[关掉扬声器以后，MacBook 的触控板还能「说话」](https://github.com/os6/nospeaker)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 271 分／162 条评论（抓取时累计）；项目页未标发布日期"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nospeaker 用触控板原本负责模拟点击的震动马达带动玻璃，把语音里的主要共振频率转成可听的声音。\n作者目前只确认在一台 MacBook Pro 上测试通过，而且用到了未公开的 macOS 接口；这是硬件实验，不是通用的扬声器替代。\n[HN 讨论](https://news.ycombinator.com/item?id=50610318)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[电脑操作 Agent：有了截图，还需要无障碍树吗？](https://www.greptile.com/blog/trex-computer-use)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 43 分／22 条评论（抓取时累计）；原文 2026-11-19"
+    },
+    {
+      "type": "paragraph",
+      "text": "Greptile 在 172 道 OSWorld 任务上比较了三种设置：只看截图、加上无障碍树、再允许按控件编号点击。\n在这组实验里，结构化控件信息对较弱模型帮助明显，对最强的三款没有显著收益；画布内容和文字溢出仍需要靠截图识别。\n[HN 讨论](https://news.ycombinator.com/item?id=50615520)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[厄尔尼诺的历史，藏在珊瑚和航海日志里](https://aeon.co/essays/what-can-we-learn-from-the-past-experience-of-el-nino)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-11-23 · Dagomar Degroot"
+    },
+    {
+      "type": "paragraph",
+      "text": "环境史学者把珊瑚、树轮和航海日志等间接证据放在一起，追踪不同年代的厄尔尼诺如何改变各地的降雨与水源。\n文章区分了天气异常和它造成的灾害：相似的气候冲击，可以因蓄水、粮食储备和贸易条件不同而带来迥异的后果。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "pytorch/torchtitan",
+      "url": "https://github.com/pytorch/torchtitan"
+    },
+    {
+      "title": "kvcache-ai/Mooncake",
+      "url": "https://github.com/kvcache-ai/Mooncake"
+    },
+    {
+      "title": "perspective-dev/perspective",
+      "url": "https://github.com/perspective-dev/perspective"
+    },
+    {
+      "title": "SenseNova-Loop-9B：用层复用增加计算深度",
+      "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B"
+    },
+    {
+      "title": "表格模型怎样在单张 GPU 上用上 10 万行上下文？",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/chunked-tabpfn/"
+    },
+    {
+      "title": "让 Transformer 每层按需读取先前层的输出",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/"
+    },
+    {
+      "title": "Kagi Mail 开启公测：邮件和日历走开放协议",
+      "url": "https://blog.kagi.com/kagi-mail-public-beta"
+    },
+    {
+      "title": "Kagi Mail 开启公测：邮件和日历走开放协议 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50615481"
+    },
+    {
+      "title": "关掉扬声器以后，MacBook 的触控板还能「说话」",
+      "url": "https://github.com/os6/nospeaker"
+    },
+    {
+      "title": "关掉扬声器以后，MacBook 的触控板还能「说话」 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50610318"
+    },
+    {
+      "title": "电脑操作 Agent：有了截图，还需要无障碍树吗？",
+      "url": "https://www.greptile.com/blog/trex-computer-use"
+    },
+    {
+      "title": "电脑操作 Agent：有了截图，还需要无障碍树吗？ · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50615520"
+    },
+    {
+      "title": "厄尔尼诺的历史，藏在珊瑚和航海日志里",
+      "url": "https://aeon.co/essays/what-can-we-learn-from-the-past-experience-of-el-nino"
+    }
+  ],
+  "public_reviewed": true
+}
