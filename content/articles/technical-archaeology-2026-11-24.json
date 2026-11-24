@@ -1,0 +1,142 @@
+{
+  "id": "technical-archaeology-2026-11-24",
+  "revision": 1,
+  "date": "2026-11-24",
+  "channel": "exploration",
+  "series": "技术考古",
+  "title": "两个人同时改排班，数据库怎样避免两人都下班？",
+  "summary": "用一次两人排班，区分“每个人看到的记录都稳定”和“几个人的操作合在一起仍像依次执行”。",
+  "topics": [
+    "数据库",
+    "并发",
+    "一致性"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "一份始终不变的排班表，可以让一个人放心核对，却不一定能让两个人同时改完后仍有人值班。PostgreSQL 的一次设计转向，是保留这种稳定读法，再检查同时进行的操作能不能解释成依次完成。"
+    },
+    {
+      "type": "heading",
+      "text": "从一张两人排班表开始"
+    },
+    {
+      "type": "paragraph",
+      "text": "周六本来由小周、小林一起值班，至少得留一人。每个人点“申请下班”时，系统把检查和修改作为一个整体，这个整体叫事务：先查另一人是否值班；如果是，只把自己的记录改成“下班”；最后提交，让这一组修改正式生效。一个人单独操作时，这条规则没问题。"
+    },
+    {
+      "type": "paragraph",
+      "text": "为了让查询过程不受别人中途改表干扰，数据库给每个事务一份固定的可见记录，叫快照。它不是把整表复制一遍，而是用数据库保留的版本，让这次操作看到同一批已提交的数据，以及自己后续写入的内容。"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "操作",
+        "小周的事务",
+        "小林的事务"
+      ],
+      "rows": [
+        [
+          "同时查看",
+          "看到小林在班",
+          "看到小周在班"
+        ],
+        [
+          "分别修改",
+          "把小周改为下班",
+          "把小林改为下班"
+        ],
+        [
+          "各自提交后",
+          "小周下班",
+          "小林下班"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "只防两个人同时改同一行，可以避免一种覆盖；这里每人改的是自己的行，所以同样的防护挡不住。这种分别改不同记录，却一起破坏跨记录规则的情况，叫写偏斜。"
+    },
+    {
+      "type": "heading",
+      "text": "把两个操作真的排成一队"
+    },
+    {
+      "type": "paragraph",
+      "text": "假如小周先完整执行，小林再开始，小林会看到小周已下班，于是留下。反过来，小周会留下。无论先后，都不会产生“两人同时下班”。数据库不必真的让所有操作排队；只要已经提交的操作，合在一起能解释为某种逐一执行的结果即可。这个保证并不要求按提交时刻排队。"
+    },
+    {
+      "type": "paragraph",
+      "text": "这个例子只需两条线索。小周读到“小林在班”，要保留这个读取结果，就得把小周排在小林改表之前。小林读到“小周在班”，又要求把小林排在小周之前。两个要求互相绕回去，排不出顺序。"
+    },
+    {
+      "type": "paragraph",
+      "text": "加强后的做法保留快照，并额外追踪这种“我读过、别人改了”的关系。有可能形成不一致时，数据库拒绝让一笔操作成功提交；应用可以把被拒绝的一笔从检查开始重做。这次若看到对方已下班，就不再改自己的状态。这样的检查有记录成本，重做也占时间；它不等于其他写操作从此不会等待。"
+    },
+    {
+      "type": "paragraph",
+      "text": "记住一个区分：快照让一次操作的视野稳定；额外的检查让多次成功操作能排成一种实际可解释的顺序。两者可以同时存在。"
+    },
+    {
+      "type": "details",
+      "summary": "可选深入：历史转折和实现代价",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "可选深入：四次转折，解决的是同一个问题"
+        },
+        {
+          "type": "paragraph",
+          "text": "1995｜Berenson 等在《A Critique of ANSI SQL Isolation Levels》中把快照隔离写成明确的读写规则。读取固定视图、并发事务不能都成功写入同一数据项，能排除一批常见异常；但其联合账户例子揭示，还会发生不同记录间的写偏斜。回看排班，问题源于两次决定共享了对方仍在班这个前提。"
+        },
+        {
+          "type": "paragraph",
+          "text": "2005｜Fekete 等把冲突画成有方向的依赖图。作者证明，在快照隔离下破坏逐一执行等价性的环，必含相邻的两条、分别发生在并发事务之间的读后写依赖。排班中的两条箭头恰好围成环；一般情况，两条箭头只是一段线索，未必已经闭环。早期工作还讨论让应用事先分析并改变事务，例如让两笔操作更新同一条约束记录，主动制造写冲突。这可以有效，但要维护应用里的冲突设计。"
+        },
+        {
+          "type": "paragraph",
+          "text": "2008｜Cahill、Röhm、Fekete 把这个观察变成数据库运行时的规则：保留快照读取，记录足以找出危险结构的信息，必要时中止事务。这样不用逐个应用重写并发规则，也不必给每次读取加一个挡住写入的锁。代价是要维护依赖信息；因为判据保守，有些本来可以排出顺序的执行也可能被中止。"
+        },
+        {
+          "type": "paragraph",
+          "text": "2011–2012｜PostgreSQL 9.1 把这套设计带入 Serializable（可串行化）级别；Ports 与 Grittner 在 2012 年论文里解释了工程实现。实际系统不仅要记住读过的行，还得覆盖“查了一个范围、后来有人插进一行”这类情况；跟踪范围需要内存，合并记录又可能多报冲突。对于某些只读事务，可以等到可证明安全的快照，再免除大部分跟踪；等待本身也有代价。更早的 PostgreSQL 把旧的快照行为叫 Serializable；9.1 起，旧行为保留为 Repeatable Read（可重复读），新级别才提供更强保证。由现行文档确认，这并不是说所有数据库的同名级别实现一致。"
+        },
+        {
+          "type": "heading",
+          "text": "今天重审哪一笔账"
+        },
+        {
+          "type": "paragraph",
+          "text": "如果业务规则跨多条记录，先问所有会影响它的操作，是否在同一套规则下运行；单个事务本身写错了，提高隔离级别也修不好。选择由数据库检测时，要让应用把序列化失败当作可能的正常结果，并从事务开始处重试，而不是只补跑最后一次写入。不可重复的外部动作也不能未经设计就跟着重跑。"
+        },
+        {
+          "type": "paragraph",
+          "text": "如果规则很集中，让所有操作先争用同一条约束记录，可能更直白；读多、冲突少时，保留快照并少量重试也可能更合算。比较时别只数提交数，还要计首次成功前的重试、长事务和热点上的等待。两条路线的工程区别，是在哪里为同一个跨记录约束付成本。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Berenson 等 · A Critique of ANSI SQL Isolation Levels，§4，异常 A5B",
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-95-51.pdf"
+    },
+    {
+      "title": "Fekete 等 · Making Snapshot Isolation Serializable，Theorem 2.1 与 Example 2.2",
+      "url": "https://www.cse.iitb.ac.in/infolab/Data/Courses/CS632/2009/Papers/p492-fekete.pdf"
+    },
+    {
+      "title": "Cahill 等 · Serializable Isolation for Snapshot Databases，§2–3",
+      "url": "https://people.eecs.berkeley.edu/~kubitron/courses/cs262a-F13/handouts/papers/p729-cahill.pdf"
+    },
+    {
+      "title": "Ports 与 Grittner · Serializable Snapshot Isolation in PostgreSQL",
+      "url": "https://users.cs.utah.edu/~pandey/courses/cs6530/fall22/papers/mvcc/p1850_danrkports_vldb2012.pdf"
+    },
+    {
+      "title": "PostgreSQL 官方文档 · Transaction Isolation，Repeatable Read 与 Serializable",
+      "url": "https://www.postgresql.org/docs/current/transaction-iso.html"
+    }
+  ],
+  "public_reviewed": true
+}
