@@ -1,0 +1,196 @@
+{
+  "id": "dots-trending-2026-11-25",
+  "revision": 1,
+  "date": "2026-11-25",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选 9 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+163 · GitHub Python 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "把论文工作拆成检索、起稿、审阅和修订等阶段，在进入下一阶段前请作者确认。\n适合参考它的引文核查做法：先标明证据在原文的位置，再检查原文是否真的支持该论断，判断和署名责任仍由作者承担。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+33 · GitHub C++ 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "把流式与离线语音识别、语音合成、语音活动检测等功能放到可本地运行的 ONNX 工具包里，支持手机、桌面和嵌入式设备。\n做外语跟读工具时，可以用强制对齐从录音和现成文本得到词级时间戳，把播放位置与句子标注对齐。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[pola-rs/polars](https://github.com/pola-rs/polars)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+25 · GitHub Rust 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rust 写成的分析引擎让 DataFrame 和 SQL 共用同一套查询优化器，也支持在同一条查询里混用两种接口。\n对大规模 Parquet 统计，可以先用惰性查询描述筛选和聚合，再交给引擎统一优化；部分操作超过内存时也可以写入磁盘继续执行。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[36 亿参数的机器人策略，怎样装进 8 GB Jetson？](https://pytorch.org/blog/executorch-tensorrt-pytorch-robot-policies-at-nvidia-tensorrt-speed/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-24·PyTorch"
+    },
+    {
+      "type": "paragraph",
+      "text": "先导出计算图，再把 TensorRT 能运行的部分交给它，其余由 ExecuTorch 的 CUDA 后端处理。两边都在 GPU 上运行，中间张量无需搬回 CPU。\n作者报告，36 亿参数的 pi0.5 在 8 GB Jetson Orin Nano 上生成一组 50 个动作约需 467 毫秒；原生 PyTorch 在同一测试中显存不足。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[检索命中率接近 100%，比随机抽样强多少？](https://iclr-blogposts.github.io/2026/blog/2026/bits-over-random/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·发布日期未核实·ICLR Blogposts 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bits-over-Random 把实际命中率与随机抽取同样多候选时的命中率相比。候选取多了，随机命中也会升高，因此接近 100% 还需看基线。\n在 20 Newsgroups 的一项实验中，BM25 多返回一些候选后，至少命中一条的比例从 94% 升到 100%，下游分类准确率却从 66% 降到 50%。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[TryNix：把 Linux 内核编译成 WebAssembly，在浏览器里开桌面](https://fzakaria.com/2026/11/23/2035-came-early)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 961 分／366 条评论（抓取时累计）；原文 2026-11-23"
+    },
+    {
+      "type": "paragraph",
+      "text": "TryNix 换用 unkernel，让 Linux 内核以 WebAssembly 运行，同时继续模拟用户态程序，在浏览器里打开 Nix 应用和 Wayland 窗口。\n作者的首轮启动测试随程序而异，不能把最大提速当成普遍结果；最有趣的演示是在浏览器内部再开两层 Firefox。\n[HN 讨论](https://news.ycombinator.com/item?id=50624497)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Quad9 宣布停止向法国用户提供 DNS 服务](https://quad9.net/news/blog/quad9-service-deactivation-in-france/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 349 分／174 条评论（抓取时累计）；原文 2026-11-24"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quad9 宣布自 11 月 24 日起停止向法国用户提供递归 DNS 服务，并称这一决定源于当地法院对其提出的域名屏蔽要求。\n公告介绍了服务退出本身的局限：基于地理位置判断请求来源并不精确，可能误判实际不在法国的请求。\n[HN 讨论](https://news.ycombinator.com/item?id=50625384)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[用一只遥控器，让旧电视刚刚好够智能](https://qsantos.fr/2026/11/19/making-a-dumb-tv-just-smart-enough/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 168 分／54 条评论（抓取时累计）；原文 2026-11-19"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者用 ESP32 接收电视遥控器的红外信号，让它触发连接电视的电脑，在播放视频、游戏等模式之间切换，电视本身仍不联网。\n为避免应用频繁开错屏幕，他给电视和桌面分配独立的图形会话，让两块屏幕可以同时使用。\n[HN 讨论](https://news.ycombinator.com/item?id=50622934)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[精神困扰跨越文化时，变的是表达，还是机制？](https://aeon.co/essays/are-mental-illnesses-universal-or-are-they-culturally-specific)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-11-24 · Alexander Pereira"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者区分了文化影响诊断观念、心理困扰的表达及人群健康结果的几条路径，并以跨文化观察追问症状背后的机制是否也会改变。\n后者是文章提出、仍需验证的研究假说；它提醒读者，使用同一个诊断名称，未必意味着不同情境下的过程完全一样。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Imbad0202/academic-research-skills",
+      "url": "https://github.com/Imbad0202/academic-research-skills"
+    },
+    {
+      "title": "k2-fsa/sherpa-onnx",
+      "url": "https://github.com/k2-fsa/sherpa-onnx"
+    },
+    {
+      "title": "pola-rs/polars",
+      "url": "https://github.com/pola-rs/polars"
+    },
+    {
+      "title": "36 亿参数的机器人策略，怎样装进 8 GB Jetson？",
+      "url": "https://pytorch.org/blog/executorch-tensorrt-pytorch-robot-policies-at-nvidia-tensorrt-speed/"
+    },
+    {
+      "title": "检索命中率接近 100%，比随机抽样强多少？",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/bits-over-random/"
+    },
+    {
+      "title": "TryNix：把 Linux 内核编译成 WebAssembly，在浏览器里开桌面",
+      "url": "https://fzakaria.com/2026/11/23/2035-came-early"
+    },
+    {
+      "title": "TryNix：把 Linux 内核编译成 WebAssembly，在浏览器里开桌面 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50624497"
+    },
+    {
+      "title": "Quad9 宣布停止向法国用户提供 DNS 服务",
+      "url": "https://quad9.net/news/blog/quad9-service-deactivation-in-france/"
+    },
+    {
+      "title": "Quad9 宣布停止向法国用户提供 DNS 服务 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50625384"
+    },
+    {
+      "title": "用一只遥控器，让旧电视刚刚好够智能",
+      "url": "https://qsantos.fr/2026/11/19/making-a-dumb-tv-just-smart-enough/"
+    },
+    {
+      "title": "用一只遥控器，让旧电视刚刚好够智能 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50622934"
+    },
+    {
+      "title": "精神困扰跨越文化时，变的是表达，还是机制？",
+      "url": "https://aeon.co/essays/are-mental-illnesses-universal-or-are-they-culturally-specific"
+    }
+  ],
+  "public_reviewed": true
+}
