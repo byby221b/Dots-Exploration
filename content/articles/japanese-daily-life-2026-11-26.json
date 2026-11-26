@@ -1,0 +1,159 @@
+{
+  "id": "japanese-daily-life-2026-11-26",
+  "revision": 1,
+  "date": "2026-11-26",
+  "channel": "exploration",
+  "series": "日语生活碎片",
+  "title": "便利店结账，店员问要不要袋子怎么接？",
+  "summary": "用一段官方教学对话，练习在便利店听店员询问购物袋，并试着回一句话。",
+  "topics": [
+    "日语",
+    "便利店",
+    "听力"
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "拿着便当走到收银台。今天练听懂店员问购物袋，并在自己带了袋子时接一句。约5分钟。"
+    },
+    {
+      "type": "heading",
+      "text": "先听两遍"
+    },
+    {
+      "type": "paragraph",
+      "text": "[播放官方音轨 16-29（约46秒）](https://www.irodori.jpf.go.jp/assets/data/starter/audio/16/X_%5B16-29%5D_kaiwa.mp3)。这是 IRODORI 入门第16课的整段教学对话。直链打不开时，到[官方播放页](https://www.irodori.jpf.go.jp/starter/audio/lesson16.html)找 X_[16-29]_kaiwa.mp3。"
+    },
+    {
+      "type": "paragraph",
+      "text": "第一遍先辨认：店员先问顾客的选择，还是先报总价？第二遍找 fukuro 这个声音，听到时轻点一下手指。听到顾客接话后，猜顾客要不要购物袋。先不用往下找完整句子。"
+    },
+    {
+      "type": "paragraph",
+      "text": "已核对官方脚本、音轨编号和文件时长，未实际试听。这里练词义和声音与假名的对应。"
+    },
+    {
+      "type": "heading",
+      "text": "把听到的声音对上假名"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "常用写法",
+        "平假名读音",
+        "罗马音",
+        "中文意思"
+      ],
+      "rows": [
+        [
+          "袋",
+          "ふくろ",
+          "fukuro",
+          "袋子；这里指购物袋"
+        ],
+        [
+          "どう",
+          "どう",
+          "dō",
+          "怎么"
+        ],
+        [
+          "大丈夫",
+          "だいじょうぶ",
+          "daijōbu",
+          "没问题"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "小题：fukuro 的中间一拍，对应「く」还是「こ」？先选一个，再移开词卡重听，试着抓到这一词。罗马音上的 ō 提醒你把 o 延长一拍。"
+    },
+    {
+      "type": "paragraph",
+      "text": "想象你也带了购物袋。等店员问完，试着接一句；答案区有原音轨的短句，可以跟着说。"
+    },
+    {
+      "type": "details",
+      "summary": "听完再看：答案、说法和替换练习",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "按官方脚本，店员先问顾客的选择，后报总价；顾客没要购物袋。假名小题选「く」（ku）；「こ」读 ko。"
+        },
+        {
+          "type": "paragraph",
+          "text": "店员问（官方音轨）\n常用写法：袋は、どうしますか？\n平假名读音：ふくろは、どうしますか？\n罗马音：Fukuro wa, dō shimasu ka?\n中文：购物袋呢，您要吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "只记一个顺序：先说要谈的东西，再问怎么处理。"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "常用写法",
+            "平假名读音",
+            "罗马音",
+            "中文和作用"
+          ],
+          "rows": [
+            [
+              "袋",
+              "ふくろ",
+              "fukuro",
+              "袋子：先点出在说什么"
+            ],
+            [
+              "は",
+              "は",
+              "wa",
+              "接在袋子后面，提示“说到袋子”；这里读 wa"
+            ],
+            [
+              "どうしますか",
+              "どうしますか",
+              "dō shimasu ka",
+              "怎么处理？在句尾礼貌地问对方怎么选"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "站在收银台前，双方都知道店员在问你，句子里可以省去“您”。字面是问“袋子怎么处理”，此时问的是你需不需要袋子。"
+        },
+        {
+          "type": "paragraph",
+          "text": "顾客答（官方音轨）\n常用写法：だいじょうぶです。\n平假名读音：だいじょうぶです。\n罗马音：Daijōbu desu.\n中文：不用了，谢谢。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这里是对方提出给袋子后的婉拒；换个场景，同一句也可能表示“没问题”。最后重放一次，听到店员问袋子就暂停，假装你带了袋子，接上这一句。"
+        },
+        {
+          "type": "paragraph",
+          "text": "只把袋子换成筷子（原创，暂无配音）\n常用写法：お箸は、どうしますか？\n平假名读音：おはしは、どうしますか？\n罗马音：Ohashi wa, dō shimasu ka?\n中文：筷子呢，您要吗？"
+        },
+        {
+          "type": "paragraph",
+          "text": "[核对官方脚本第14页（编号16-29）](https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L16.pdf#page=14)。这里只引用练习需要的短问答。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "日本国际交流基金 IRODORI 入门第16课音频页",
+      "url": "https://www.irodori.jpf.go.jp/starter/audio/lesson16.html"
+    },
+    {
+      "title": "IRODORI 官方音轨 16-29",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/audio/16/X_%5B16-29%5D_kaiwa.mp3"
+    },
+    {
+      "title": "IRODORI 入门第16课：第14页脚本，编号16-29",
+      "url": "https://www.irodori.jpf.go.jp/assets/data/starter/pdf/X_L16.pdf#page=14"
+    }
+  ],
+  "public_reviewed": true
+}
