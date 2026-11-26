@@ -1,0 +1,64 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-26">2026-11-26</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">本期精选 12 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-10">🧠 AI/模型</a></li><li><a href="#section-26">🔥 热议话题</a></li><li><a href="#section-36">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/github/spec-kit" rel="noreferrer">github/spec-kit</a></h3>
+<p class="item-meta">⭐+120 · GitHub Python 日榜</p>
+<p>把需求写成可检查的规格，再拆成实施计划和任务，最后核对实现是否满足原规格。<br>它还提供独立的想法评估流程，可以先收集证据、决定继续或暂停，不用一开始就进入写代码的流程。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/malisper/pgrust" rel="noreferrer">malisper/pgrust</a></h3>
+<p class="item-meta">⭐+28 · GitHub Rust 日榜</p>
+<p>用 Rust 重写的 PostgreSQL 兼容数据库，面向分析查询设计了向量化执行引擎和即时编译。<br>查询调度器和统一内存预算是值得看的两个改动：缓冲池、列式缓存和运行中的查询共享预算；项目目前是 Beta，适合在测试数据上比较。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/google/perfetto" rel="noreferrer">google/perfetto</a></h3>
+<p class="item-meta">⭐+5 · GitHub C++ 日榜</p>
+<p>把线程调度、CPU 频率和应用埋点放到同一时间线上，可在浏览器本地查看，也可用 SQL 查询追踪数据。<br>排查一次请求为什么慢时，既能看函数执行了多久，也能把它与线程等待调度、其他进程活动等系统事件对照。</p>
+</article>
+<h2 id="section-10">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/llamaindex/OCRia-nano-1" rel="noreferrer">OCRia-nano-1：在 CPU 上识别扫描件和表格</a></h3>
+<p class="item-meta">Hugging Face 热门第 8</p>
+<p>LlamaIndex 把文字检测、识别和表格版面分析压到约 810 万参数，作为 LiteParse 的本地文档解析后端。<br>识别器按文本行切换语言脚本，版面模型再识别跨行或跨列单元格，适合试着把扫描报告转成结构化 Markdown 或带坐标的 JSON。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://huggingface.co/inclusionAI/Ling-3.2-air" rel="noreferrer">Ling-3.2-air：124B 总参数、5.5B 激活的多模态 MoE</a></h3>
+<p class="item-meta">Hugging Face 热门第 10</p>
+<p>这款图文模型交替使用两类注意力层：35 层 KDA 和 7 层带门控的 MLA，每个 token 从 512 个路由专家中选 8 个。<br>每个 token 激活 5.5B 参数，但部署仍需容纳总权重和长上下文；官方 256K 上下文示例使用四卡配置。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://pytorch.org/blog/vllm-singapore-meetup-faster-prefill-agent-written-kernels-and-the-road-to-vera-rubin/" rel="noreferrer">长上下文预填充，什么时候值得改用流水线并行？</a></h3>
+<p class="item-meta">2026-11-25·PyTorch / vLLM</p>
+<p>vLLM 团队按实测耗时平衡流水线各阶段，再用独立拷贝引擎搬运激活值，减少通信对计算的干扰。<br>两张 GB300 跑 MiniMax-M3.1-Flash 的长上下文预填充时，双阶段流水线的峰值吞吐最高为对照方案的 1.37 倍；首 token 延迟要求更严时，取舍会变。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://iclr-blogposts.github.io/2026/blog/2026/diffusion-architecture-evolution/" rel="noreferrer">从 U-Net 到 DiT：文字条件怎样进入图像生成模型？</a></h3>
+<p class="item-meta">深度精选·发布日期未核实·ICLR Blogposts 2026</p>
+<p>用架构图对照 SDXL 的多尺度 U-Net、PixArt 的图像块序列，以及 SD3 让文本与图像 token 双向交互的双流结构。<br>适合沿着“文字怎么进入去噪网络”梳理 2021–2025 年的演进；文中还用同一组提示词展示构图、文字渲染与空间关系上的差异。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/" rel="noreferrer">只听一面之词，助手还能判断对方的动机吗？</a></h3>
+<p class="item-meta">2026-11-25 · Google Research</p>
+<p>研究者在模拟互动中给一名角色预设动机，助手只看另一名角色转述的经过，再用预设动机核对推断。<br>实验中，转述者的措辞会左右判断，多问几轮也不总能纠正偏差。这里能核对的是模拟角色的动机，不能用来确认现实中他人的意图。</p>
+</article>
+<h2 id="section-26">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.marginalia.nu/log/a_141_marginalia_update/" rel="noreferrer">Marginalia：搜索索引快一点，能多排多少候选？</a></h3>
+<p class="item-meta">HN 218 分／82 条评论（抓取时累计）；原文 2026-10-26</p>
+<p>独立搜索引擎 Marginalia 正分组件试验把索引从 Java 移到 C++，先改缓冲池和部分倒排索引；理由是同样的查询预算里，索引越快，就越有机会为更多候选打分。<br>作者尚未决定是否完成迁移，也不预设明显提速；目前更明确的收获是底层内存操作写起来更顺手。<br><a href="https://news.ycombinator.com/item?id=50638220" rel="noreferrer">HN 讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.stylewarning.com/posts/faster-digit-extraction/" rel="noreferrer">跳到圆周率的某一位：怎样少做一些运算？</a></h3>
+<p class="item-meta">HN 74 分／5 条评论（抓取时累计）；原文 2026-11-24</p>
+<p>作者重新整理欧拉级数，把分母相同或相关的项合并计算，从而减少提取圆周率十六进制数字所需的除法和完整模幂运算。<br>这种算法不必先算出前面的所有数字；文中的耗时对比来自作者自己的向量化实现，随目标位数和线程数而异。<br><a href="https://news.ycombinator.com/item?id=50638075" rel="noreferrer">HN 讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/xoxorwr/pw-loudness-eq" rel="noreferrer">把 Windows 的响度均衡移植到 PipeWire</a></h3>
+<p class="item-meta">HN 312 分／173 条评论（抓取时累计）；项目页未标日期</p>
+<p>这个项目给应用的播放流加上自动增益，收窄安静和响亮片段之间的音量差；输出端再加一个限幅器，避免放大后削波。<br>它改变的是整体增益而非某些频段的音色，且目前不处理 JACK 客户端和超过八声道的流。<br><a href="https://news.ycombinator.com/item?id=50641171" rel="noreferrer">HN 讨论</a></p>
+</article>
+<h2 id="section-36">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.quantamagazine.org/novel-experiments-expand-the-hunt-for-ultralight-dark-matter-20261125/" rel="noreferrer">核钟、原子云和悬浮磁体，都能用来找暗物质？</a></h3>
+<p class="item-meta">Quanta · 2026-11-25 · Jay Bennett</p>
+<p>寻找超轻暗物质的实验开始观察不同信号：它若短暂扰动核钟的频率、原子干涉条纹或悬浮磁体的运动，就可能留下线索。<br>目前这些方法主要用来缩小可能的参数范围，零星异常仍需排除其他来源，尚不足以确认发现暗物质。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/github/spec-kit" rel="noreferrer">github/spec-kit</a></li><li><a href="https://github.com/malisper/pgrust" rel="noreferrer">malisper/pgrust</a></li><li><a href="https://github.com/google/perfetto" rel="noreferrer">google/perfetto</a></li><li><a href="https://huggingface.co/llamaindex/OCRia-nano-1" rel="noreferrer">OCRia-nano-1：在 CPU 上识别扫描件和表格</a></li><li><a href="https://huggingface.co/inclusionAI/Ling-3.2-air" rel="noreferrer">Ling-3.2-air：124B 总参数、5.5B 激活的多模态 MoE</a></li><li><a href="https://pytorch.org/blog/vllm-singapore-meetup-faster-prefill-agent-written-kernels-and-the-road-to-vera-rubin/" rel="noreferrer">长上下文预填充，什么时候值得改用流水线并行？</a></li><li><a href="https://iclr-blogposts.github.io/2026/blog/2026/diffusion-architecture-evolution/" rel="noreferrer">从 U-Net 到 DiT：文字条件怎样进入图像生成模型？</a></li><li><a href="https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/" rel="noreferrer">只听一面之词，助手还能判断对方的动机吗？</a></li><li><a href="https://www.marginalia.nu/log/a_141_marginalia_update/" rel="noreferrer">Marginalia：搜索索引快一点，能多排多少候选？</a></li><li><a href="https://news.ycombinator.com/item?id=50638220" rel="noreferrer">Marginalia：搜索索引快一点，能多排多少候选？ · HN 讨论</a></li><li><a href="https://www.stylewarning.com/posts/faster-digit-extraction/" rel="noreferrer">跳到圆周率的某一位：怎样少做一些运算？</a></li><li><a href="https://news.ycombinator.com/item?id=50638075" rel="noreferrer">跳到圆周率的某一位：怎样少做一些运算？ · HN 讨论</a></li><li><a href="https://github.com/xoxorwr/pw-loudness-eq" rel="noreferrer">把 Windows 的响度均衡移植到 PipeWire</a></li><li><a href="https://news.ycombinator.com/item?id=50641171" rel="noreferrer">把 Windows 的响度均衡移植到 PipeWire · HN 讨论</a></li><li><a href="https://www.quantamagazine.org/novel-experiments-expand-the-hunt-for-ultralight-dark-matter-20261125/" rel="noreferrer">核钟、原子云和悬浮磁体，都能用来找暗物质？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-26 · 101 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

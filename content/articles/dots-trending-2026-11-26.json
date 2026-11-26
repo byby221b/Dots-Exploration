@@ -1,0 +1,244 @@
+{
+  "id": "dots-trending-2026-11-26",
+  "revision": 1,
+  "date": "2026-11-26",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选 12 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[github/spec-kit](https://github.com/github/spec-kit)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+120 · GitHub Python 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "把需求写成可检查的规格，再拆成实施计划和任务，最后核对实现是否满足原规格。\n它还提供独立的想法评估流程，可以先收集证据、决定继续或暂停，不用一开始就进入写代码的流程。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[malisper/pgrust](https://github.com/malisper/pgrust)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+28 · GitHub Rust 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "用 Rust 重写的 PostgreSQL 兼容数据库，面向分析查询设计了向量化执行引擎和即时编译。\n查询调度器和统一内存预算是值得看的两个改动：缓冲池、列式缓存和运行中的查询共享预算；项目目前是 Beta，适合在测试数据上比较。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[google/perfetto](https://github.com/google/perfetto)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+5 · GitHub C++ 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "把线程调度、CPU 频率和应用埋点放到同一时间线上，可在浏览器本地查看，也可用 SQL 查询追踪数据。\n排查一次请求为什么慢时，既能看函数执行了多久，也能把它与线程等待调度、其他进程活动等系统事件对照。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[OCRia-nano-1：在 CPU 上识别扫描件和表格](https://huggingface.co/llamaindex/OCRia-nano-1)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hugging Face 热门第 8"
+    },
+    {
+      "type": "paragraph",
+      "text": "LlamaIndex 把文字检测、识别和表格版面分析压到约 810 万参数，作为 LiteParse 的本地文档解析后端。\n识别器按文本行切换语言脚本，版面模型再识别跨行或跨列单元格，适合试着把扫描报告转成结构化 Markdown 或带坐标的 JSON。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Ling-3.2-air：124B 总参数、5.5B 激活的多模态 MoE](https://huggingface.co/inclusionAI/Ling-3.2-air)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hugging Face 热门第 10"
+    },
+    {
+      "type": "paragraph",
+      "text": "这款图文模型交替使用两类注意力层：35 层 KDA 和 7 层带门控的 MLA，每个 token 从 512 个路由专家中选 8 个。\n每个 token 激活 5.5B 参数，但部署仍需容纳总权重和长上下文；官方 256K 上下文示例使用四卡配置。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[长上下文预填充，什么时候值得改用流水线并行？](https://pytorch.org/blog/vllm-singapore-meetup-faster-prefill-agent-written-kernels-and-the-road-to-vera-rubin/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-25·PyTorch / vLLM"
+    },
+    {
+      "type": "paragraph",
+      "text": "vLLM 团队按实测耗时平衡流水线各阶段，再用独立拷贝引擎搬运激活值，减少通信对计算的干扰。\n两张 GB300 跑 MiniMax-M3.1-Flash 的长上下文预填充时，双阶段流水线的峰值吞吐最高为对照方案的 1.37 倍；首 token 延迟要求更严时，取舍会变。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[从 U-Net 到 DiT：文字条件怎样进入图像生成模型？](https://iclr-blogposts.github.io/2026/blog/2026/diffusion-architecture-evolution/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·发布日期未核实·ICLR Blogposts 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "用架构图对照 SDXL 的多尺度 U-Net、PixArt 的图像块序列，以及 SD3 让文本与图像 token 双向交互的双流结构。\n适合沿着“文字怎么进入去噪网络”梳理 2021–2025 年的演进；文中还用同一组提示词展示构图、文字渲染与空间关系上的差异。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[只听一面之词，助手还能判断对方的动机吗？](https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "2026-11-25 · Google Research"
+    },
+    {
+      "type": "paragraph",
+      "text": "研究者在模拟互动中给一名角色预设动机，助手只看另一名角色转述的经过，再用预设动机核对推断。\n实验中，转述者的措辞会左右判断，多问几轮也不总能纠正偏差。这里能核对的是模拟角色的动机，不能用来确认现实中他人的意图。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Marginalia：搜索索引快一点，能多排多少候选？](https://www.marginalia.nu/log/a_141_marginalia_update/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 218 分／82 条评论（抓取时累计）；原文 2026-10-26"
+    },
+    {
+      "type": "paragraph",
+      "text": "独立搜索引擎 Marginalia 正分组件试验把索引从 Java 移到 C++，先改缓冲池和部分倒排索引；理由是同样的查询预算里，索引越快，就越有机会为更多候选打分。\n作者尚未决定是否完成迁移，也不预设明显提速；目前更明确的收获是底层内存操作写起来更顺手。\n[HN 讨论](https://news.ycombinator.com/item?id=50638220)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[跳到圆周率的某一位：怎样少做一些运算？](https://www.stylewarning.com/posts/faster-digit-extraction/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 74 分／5 条评论（抓取时累计）；原文 2026-11-24"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者重新整理欧拉级数，把分母相同或相关的项合并计算，从而减少提取圆周率十六进制数字所需的除法和完整模幂运算。\n这种算法不必先算出前面的所有数字；文中的耗时对比来自作者自己的向量化实现，随目标位数和线程数而异。\n[HN 讨论](https://news.ycombinator.com/item?id=50638075)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[把 Windows 的响度均衡移植到 PipeWire](https://github.com/xoxorwr/pw-loudness-eq)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 312 分／173 条评论（抓取时累计）；项目页未标日期"
+    },
+    {
+      "type": "paragraph",
+      "text": "这个项目给应用的播放流加上自动增益，收窄安静和响亮片段之间的音量差；输出端再加一个限幅器，避免放大后削波。\n它改变的是整体增益而非某些频段的音色，且目前不处理 JACK 客户端和超过八声道的流。\n[HN 讨论](https://news.ycombinator.com/item?id=50641171)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[核钟、原子云和悬浮磁体，都能用来找暗物质？](https://www.quantamagazine.org/novel-experiments-expand-the-hunt-for-ultralight-dark-matter-20261125/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quanta · 2026-11-25 · Jay Bennett"
+    },
+    {
+      "type": "paragraph",
+      "text": "寻找超轻暗物质的实验开始观察不同信号：它若短暂扰动核钟的频率、原子干涉条纹或悬浮磁体的运动，就可能留下线索。\n目前这些方法主要用来缩小可能的参数范围，零星异常仍需排除其他来源，尚不足以确认发现暗物质。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit"
+    },
+    {
+      "title": "malisper/pgrust",
+      "url": "https://github.com/malisper/pgrust"
+    },
+    {
+      "title": "google/perfetto",
+      "url": "https://github.com/google/perfetto"
+    },
+    {
+      "title": "OCRia-nano-1：在 CPU 上识别扫描件和表格",
+      "url": "https://huggingface.co/llamaindex/OCRia-nano-1"
+    },
+    {
+      "title": "Ling-3.2-air：124B 总参数、5.5B 激活的多模态 MoE",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.2-air"
+    },
+    {
+      "title": "长上下文预填充，什么时候值得改用流水线并行？",
+      "url": "https://pytorch.org/blog/vllm-singapore-meetup-faster-prefill-agent-written-kernels-and-the-road-to-vera-rubin/"
+    },
+    {
+      "title": "从 U-Net 到 DiT：文字条件怎样进入图像生成模型？",
+      "url": "https://iclr-blogposts.github.io/2026/blog/2026/diffusion-architecture-evolution/"
+    },
+    {
+      "title": "只听一面之词，助手还能判断对方的动机吗？",
+      "url": "https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/"
+    },
+    {
+      "title": "Marginalia：搜索索引快一点，能多排多少候选？",
+      "url": "https://www.marginalia.nu/log/a_141_marginalia_update/"
+    },
+    {
+      "title": "Marginalia：搜索索引快一点，能多排多少候选？ · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50638220"
+    },
+    {
+      "title": "跳到圆周率的某一位：怎样少做一些运算？",
+      "url": "https://www.stylewarning.com/posts/faster-digit-extraction/"
+    },
+    {
+      "title": "跳到圆周率的某一位：怎样少做一些运算？ · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50638075"
+    },
+    {
+      "title": "把 Windows 的响度均衡移植到 PipeWire",
+      "url": "https://github.com/xoxorwr/pw-loudness-eq"
+    },
+    {
+      "title": "把 Windows 的响度均衡移植到 PipeWire · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50641171"
+    },
+    {
+      "title": "核钟、原子云和悬浮磁体，都能用来找暗物质？",
+      "url": "https://www.quantamagazine.org/novel-experiments-expand-the-hunt-for-ultralight-dark-matter-20261125/"
+    }
+  ],
+  "public_reviewed": true
+}
