@@ -1,6 +1,21 @@
 {
   "articles": [
     {
+      "channel": "exploration",
+      "date": "2026-11-27",
+      "disclosures": 1,
+      "id": "math-shared-foundations-2026-11-27",
+      "images": [
+        "assets/math-2026-11-27-weighted-rate.png",
+        "assets/math-2026-11-27-midpoint.png",
+        "assets/math-2026-11-27-worked.png",
+        "assets/math-2026-11-27-exercise-answer.png"
+      ],
+      "revision": 1,
+      "series": "数学共性小课",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-11-27",
       "disclosures": 0,
@@ -1130,13 +1145,13 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 103,
+  "articles_count": 104,
   "channels": {
-    "exploration": 48,
+    "exploration": 49,
     "trending": 55
   },
   "end": "2026-11-27",
-  "images_count": 83,
+  "images_count": 87,
   "start": "2026-10-01",
   "trending_items": 601
 }
