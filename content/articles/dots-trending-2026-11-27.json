@@ -1,0 +1,212 @@
+{
+  "id": "dots-trending-2026-11-27",
+  "revision": 1,
+  "date": "2026-11-27",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选 10 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[incoai/splash](https://github.com/incoai/splash)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+52 · GitHub C++ 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "把支持的量化模型跑在 Apple Silicon 上，用 Metal 内核、DFlash 2 投机解码和前缀缓存提高本机推理效率。\n有本地 API 和自动内存规划，可用来做单机推理实验；官方目前要求 Apple M3 或更新机型与 macOS 26.4 或更新版本。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[apache/airflow](https://github.com/apache/airflow)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+24 · GitHub Python 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "把数据准备、训练、评估和部署写成带依赖的任务图，由调度器安排到多个工作进程执行，并在界面追踪进度和失败。\n适合有稳定骨架、反复运行的实验流程，大批量数据留在外部存储，任务之间只传位置、版本或指标等元数据。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[t8y2/dbx](https://github.com/t8y2/dbx)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+117 · GitHub Rust 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 PostgreSQL、SQLite、DuckDB 等数据库接入同一个跨平台界面，提供查询编辑、结构浏览与结果表格。\n处理大结果集时，虚拟滚动避免一次绘制所有行；需要修改数据时，也可以先预览将要提交的 SQL。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Ternary Bonsai 2.5 27B：低比特权重下的工具调用](https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hugging Face 热门第 6"
+    },
+    {
+      "type": "paragraph",
+      "text": "它在 Qwen3.8-27B 架构上使用三值权重，模型卡给出的 PTQ1_0 文件约为 5.93 GB、平均每权重 1.76 bit。\n这一版着重改善工具调用与编码，部分变体还附带多 token 预测头；权重文件大小不包含运行时缓存，端侧部署要另算。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Nemotron Labs Image：用视觉 token 自回归生成图像](https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hugging Face 热门第 10"
+    },
+    {
+      "type": "paragraph",
+      "text": "NVIDIA 把图像拆成离散视觉 token 再自回归生成，模型卡称图像生成器约 30B 总参数、3B 激活参数。\n本次公开的是栅格图像生成器和配套分词器，不是完整的可编辑网页或图表生成框架；权重适用 NVIDIA 非商业研究与评估许可。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[每个格子只看邻居，怎么拼出一张会自我修补的图？](https://distill.pub/2020/growing-ca/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2020-02-11·Distill"
+    },
+    {
+      "type": "paragraph",
+      "text": "让像素格共享同一套小网络，每次只根据附近格子的状态更新，从单点逐步画出完整图案。\n作者对比了从单点训练、重用中间状态、以及训练时随机擦除图案三种做法；网页上可亲手擦掉一块，看它怎样重新长回来。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Minipg：把 PostgreSQL 装进一个可执行文件](https://progrium.github.io/minipg/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 288 分／44 条评论（抓取时累计）；项目页未标发布日期"
+    },
+    {
+      "type": "paragraph",
+      "text": "Minipg 把 PostgreSQL 和运行环境打包，数据与配置保存在一个目录里；有命令需要时才启动服务，空闲时会自动停止。\n它让本地试验和 CI 少一步搭建工作，但作者明确提醒项目还早，部分环境性能低于原生 PostgreSQL，不宜保存无法重建的数据。\n[HN 讨论](https://news.ycombinator.com/item?id=50650892)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[一本 Unix 教材，为什么靠复印本流传近二十年？](https://fosscomics.com/posts/17.%20Lions%27%20Commentary%20on%20Unix/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 272 分／66 条评论（抓取时累计）；原文 2026-11-25"
+    },
+    {
+      "type": "paragraph",
+      "text": "漫画重述了 John Lions 为讲解 Unix 第六版内核写下注释的经过，以及后来的许可证限制怎样改变了它在课堂上的流通。\n从早期讲义到 1996 年正式出版，这段历史也解释了为什么读真实的内核代码曾是学习操作系统的一种难得机会。\n[HN 讨论](https://news.ycombinator.com/item?id=50651719)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[Nextcloud Office 有了能离线编辑的桌面版](https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 395 分／201 条评论（抓取时累计）；原文 2026-11-13"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nextcloud 推出的桌面套件可以在本地编辑文档、表格和演示文稿；连接到 Nextcloud Hub 后，也能和同事共同编辑线上文件。\n它可以使用电脑上安装的字体，但协作者缺少同一字体时会看到替代字体，跨设备排版仍值得检查。\n[HN 讨论](https://news.ycombinator.com/item?id=50654289)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[谁有权定义原住民身份？](https://aeon.co/essays/falsely-claiming-indigenous-identity-is-a-grave-form-of-theft)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-11-26 · Dina Gilio-Whitaker"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者从北美原住民研究出发，区分个人自我认同、祖源与部落共同体中的亲属关系，解释这些线索为什么不能互相替代。\n她也指出，正式登记并不是判断归属的唯一标准；文章的争论焦点，是当身份关系到奖学金等有限资源时，谁能作出这样的判断。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "incoai/splash",
+      "url": "https://github.com/incoai/splash"
+    },
+    {
+      "title": "apache/airflow",
+      "url": "https://github.com/apache/airflow"
+    },
+    {
+      "title": "t8y2/dbx",
+      "url": "https://github.com/t8y2/dbx"
+    },
+    {
+      "title": "Ternary Bonsai 2.5 27B：低比特权重下的工具调用",
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF"
+    },
+    {
+      "title": "Nemotron Labs Image：用视觉 token 自回归生成图像",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B"
+    },
+    {
+      "title": "每个格子只看邻居，怎么拼出一张会自我修补的图？",
+      "url": "https://distill.pub/2020/growing-ca/"
+    },
+    {
+      "title": "Minipg：把 PostgreSQL 装进一个可执行文件",
+      "url": "https://progrium.github.io/minipg/"
+    },
+    {
+      "title": "Minipg：把 PostgreSQL 装进一个可执行文件 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50650892"
+    },
+    {
+      "title": "一本 Unix 教材，为什么靠复印本流传近二十年？",
+      "url": "https://fosscomics.com/posts/17.%20Lions%27%20Commentary%20on%20Unix/"
+    },
+    {
+      "title": "一本 Unix 教材，为什么靠复印本流传近二十年？ · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50651719"
+    },
+    {
+      "title": "Nextcloud Office 有了能离线编辑的桌面版",
+      "url": "https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/"
+    },
+    {
+      "title": "Nextcloud Office 有了能离线编辑的桌面版 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50654289"
+    },
+    {
+      "title": "谁有权定义原住民身份？",
+      "url": "https://aeon.co/essays/falsely-claiming-indigenous-identity-is-a-grave-form-of-theft"
+    }
+  ],
+  "public_reviewed": true
+}
