@@ -1,6 +1,18 @@
 {
   "articles": [
     {
+      "channel": "exploration",
+      "date": "2026-11-28",
+      "disclosures": 2,
+      "id": "interview-challenge-2026-11-28",
+      "images": [
+        "assets/interview-2026-11-28-forest-and-extra-edges.png"
+      ],
+      "revision": 1,
+      "series": "每周面试挑战",
+      "trending_items": 0
+    },
+    {
       "channel": "trending",
       "date": "2026-11-28",
       "disclosures": 0,
@@ -1155,13 +1167,13 @@
       "trending_items": 15
     }
   ],
-  "articles_count": 105,
+  "articles_count": 106,
   "channels": {
-    "exploration": 49,
+    "exploration": 50,
     "trending": 56
   },
   "end": "2026-11-28",
-  "images_count": 87,
+  "images_count": 88,
   "start": "2026-10-01",
   "trending_items": 609
 }
