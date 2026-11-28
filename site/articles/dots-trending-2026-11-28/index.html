@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Dots Trending 与每周探索的完整阅读归档"><title>📡 每日 Trending 速览 · Dots Exploration</title><link rel="stylesheet" href="../../style.css"></head><body><a class="skip" href="#main">跳到内容</a><header class="site-header"><a class="brand" href="../../index.html"><span class="mark">D<span>•</span></span> Dots <small>Exploration</small></a><nav aria-label="主导航"><a href="../../trending/index.html">每日 Trending</a><a href="../../exploration/index.html">每周探索</a></nav></header><main id="main" class="reading trending"><a class="back" href="../../trending/index.html">← 每日 Trending</a><article><header class="article-header"><p class="eyebrow">每日 Trending / <time datetime="2026-11-28">2026-11-28</time> / 修订 1</p><h1>📡 每日 Trending 速览</h1><p class="lead">本期精选 8 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。</p></header><div class="reading-layout"><nav class="contents" aria-label="本文目录"><span>本文目录</span><ol><li><a href="#section-0">🔧 开源热榜</a></li><li><a href="#section-10">🧠 AI/模型</a></li><li><a href="#section-14">🔥 热议话题</a></li><li><a href="#section-24">🔬 科学/人文</a></li></ol></nav><div class="prose"><div class="article-content"><h2 id="section-0">🔧 开源热榜</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/vllm-project/vllm-ascend" rel="noreferrer">vllm-project/vllm-ascend</a></h3>
+<p class="item-meta">⭐+5 · GitHub Python 日榜</p>
+<p>通过硬件插件把华为昇腾 NPU 接入 vLLM，让后端适配与推理引擎主体分开维护。<br>如果要比较不同硬件上的部署路径，可以先查官方支持矩阵，再按模型架构和推理特性核对哪些能力已适配。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/gabime/spdlog" rel="noreferrer">gabime/spdlog</a></h3>
+<p class="item-meta">⭐+9 · GitHub C++ 日榜</p>
+<p>C++ 日志库提供可选的异步写入、日志轮转和运行时级别过滤，可按需要选用头文件或预编译形式。<br>排查低频故障时，环形缓冲区可以先留住最近的调试日志，等异常出现再输出，避免平时把所有细节都写到磁盘。</p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://github.com/louis-e/arnis" rel="noreferrer">louis-e/arnis</a></h3>
+<p class="item-meta">⭐+15 · GitHub Rust 日榜</p>
+<p>把 OpenStreetMap 与高程数据转成 Minecraft 等沙盒游戏可加载的世界，地图上圈出一块区域即可生成。<br>它提供了一个直观的地理数据工程案例：建筑、道路和海拔先作为矢量或栅格数据处理，再落到方块和地形。</p>
+</article>
+<h2 id="section-10">🧠 AI/模型</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://diffusion.csail.mit.edu/2026/index.html" rel="noreferrer">MIT 6.S184：从公式到动手搭一个潜空间扩散模型</a></h3>
+<p class="item-meta">深度精选·2026 年课程版·MIT 6.S184</p>
+<p>课程从流匹配和分数匹配讲到无分类器引导；第四讲把 VAE 压缩、图像分块与扩散 Transformer 的条件输入串起来。<br>想弄清文字如何影响去噪，可先看第四讲的注意力图，再用课程第三个实验练 VAE 和 DiT；课程页面将两者分开列出。</p>
+</article>
+<h2 id="section-14">🔥 热议话题</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://blainehansen.me/post/mainstream-verifiable-language/" rel="noreferrer">可验证编程语言，怎样才能走出研究实验室？</a></h3>
+<p class="item-meta">HN 308 分／299 条评论（抓取时累计）；原文 2026-06-21，更新 2026-11-27</p>
+<p>作者认为，让模型替人写证明只是第一步；工程师仍要判断待证明的性质是否对应真实需求，工具也必须能进入现有开发流程。<br>他以尚在构想中的 Magmide 为例，提出先支持更易上手的类型与效果检查，再逐步接入 Lean，而不是一开始就重造整套证明工具。<br><a href="https://news.ycombinator.com/item?id=50663089" rel="noreferrer">HN 讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://www.spritefusion.com/blog/making-a-fantasy-map-like-a-16th-century-atlas" rel="noreferrer">把游戏开发教程做成 16 世纪风格的 3D 地图</a></h3>
+<p class="item-meta">HN 94 分／12 条评论（抓取时累计）；原文 2026-11-25</p>
+<p>作者用真实岛屿的高程数据打底，再借鉴古地图的雕版线条和字体，把不同的游戏开发技巧安排在各个小镇。<br>有趣的是地形负责让地图可信，镇子的造型则负责提示内容，例如程序化步态对应的是一幢会爬的房子。<br><a href="https://news.ycombinator.com/item?id=50667062" rel="noreferrer">HN 讨论</a></p>
+</article>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://progrium.github.io/9ux/" rel="noreferrer">9/UX：用 Plan 9 的思路做一个经典 Mac 风格桌面</a></h3>
+<p class="item-meta">HN 64 分／11 条评论（抓取时累计）；项目页未标发布日期</p>
+<p>9/UX 为 9front 做了带全局菜单栏、图标和文件窗口的桌面，同时把应用的界面状态和操作通过 9P 暴露为文件。<br>因此同一个控件既能用鼠标点，也能通过文件接口操作；项目还在 v0.1，网页提供可操作的演示。<br><a href="https://news.ycombinator.com/item?id=50672008" rel="noreferrer">HN 讨论</a></p>
+</article>
+<h2 id="section-24">🔬 科学/人文</h2>
+<article class="trend-item">
+<h3 class="item-title"><a href="https://aeon.co/essays/all-our-models-of-how-the-mind-functions-are-missing-something" rel="noreferrer">思考有能量成本，心智模型该怎么写进去？</a></h3>
+<p class="item-meta">Aeon · 2026-11-27 · David Colaço、Philipp Haueis</p>
+<p>两位作者指出，许多心智模型描述大脑如何处理信息，却很少把供能、维持稳定和清除代谢废物纳入解释。<br>他们提出一个可检验的问题：当能量约束改变时，系统是否会改变处理信息的方式？这也为比较大脑与机器如何计算提供了一个角度。</p>
+</article></div><section class="sources"><h2>来源与延伸阅读</h2><ol><li><a href="https://github.com/vllm-project/vllm-ascend" rel="noreferrer">vllm-project/vllm-ascend</a></li><li><a href="https://github.com/gabime/spdlog" rel="noreferrer">gabime/spdlog</a></li><li><a href="https://github.com/louis-e/arnis" rel="noreferrer">louis-e/arnis</a></li><li><a href="https://diffusion.csail.mit.edu/2026/index.html" rel="noreferrer">MIT 6.S184：从公式到动手搭一个潜空间扩散模型</a></li><li><a href="https://blainehansen.me/post/mainstream-verifiable-language/" rel="noreferrer">可验证编程语言，怎样才能走出研究实验室？</a></li><li><a href="https://news.ycombinator.com/item?id=50663089" rel="noreferrer">可验证编程语言，怎样才能走出研究实验室？ · HN 讨论</a></li><li><a href="https://www.spritefusion.com/blog/making-a-fantasy-map-like-a-16th-century-atlas" rel="noreferrer">把游戏开发教程做成 16 世纪风格的 3D 地图</a></li><li><a href="https://news.ycombinator.com/item?id=50667062" rel="noreferrer">把游戏开发教程做成 16 世纪风格的 3D 地图 · HN 讨论</a></li><li><a href="https://progrium.github.io/9ux/" rel="noreferrer">9/UX：用 Plan 9 的思路做一个经典 Mac 风格桌面</a></li><li><a href="https://news.ycombinator.com/item?id=50672008" rel="noreferrer">9/UX：用 Plan 9 的思路做一个经典 Mac 风格桌面 · HN 讨论</a></li><li><a href="https://aeon.co/essays/all-our-models-of-how-the-mind-functions-are-missing-something" rel="noreferrer">思考有能量成本，心智模型该怎么写进去？</a></li></ol></section></div></div></article><a class="back" href="#main">回到文章顶部 ↑</a></main><footer>Dots Exploration <span>持续发现，慢慢读懂。</span><p>2026-10-01 — 2026-11-28 · 105 篇归档 · 北京时间（UTC+8）<br>内容为归档当日快照；不代表今天重新核实。仅收录已有公开文章。</p></footer></body></html>

@@ -1,0 +1,180 @@
+{
+  "id": "dots-trending-2026-11-28",
+  "revision": 1,
+  "date": "2026-11-28",
+  "channel": "trending",
+  "series": "每日 Trending",
+  "title": "📡 每日 Trending 速览",
+  "summary": "本期精选 8 条公开项目与技术资料，涵盖开源、AI、技术讨论及科学人文。",
+  "topics": [
+    "开源",
+    "AI与模型",
+    "技术讨论",
+    "科学与人文"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔧 开源热榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "[vllm-project/vllm-ascend](https://github.com/vllm-project/vllm-ascend)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+5 · GitHub Python 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "通过硬件插件把华为昇腾 NPU 接入 vLLM，让后端适配与推理引擎主体分开维护。\n如果要比较不同硬件上的部署路径，可以先查官方支持矩阵，再按模型架构和推理特性核对哪些能力已适配。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[gabime/spdlog](https://github.com/gabime/spdlog)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+9 · GitHub C++ 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "C++ 日志库提供可选的异步写入、日志轮转和运行时级别过滤，可按需要选用头文件或预编译形式。\n排查低频故障时，环形缓冲区可以先留住最近的调试日志，等异常出现再输出，避免平时把所有细节都写到磁盘。"
+    },
+    {
+      "type": "paragraph",
+      "text": "[louis-e/arnis](https://github.com/louis-e/arnis)"
+    },
+    {
+      "type": "paragraph",
+      "text": "⭐+15 · GitHub Rust 日榜"
+    },
+    {
+      "type": "paragraph",
+      "text": "把 OpenStreetMap 与高程数据转成 Minecraft 等沙盒游戏可加载的世界，地图上圈出一块区域即可生成。\n它提供了一个直观的地理数据工程案例：建筑、道路和海拔先作为矢量或栅格数据处理，再落到方块和地形。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🧠 AI/模型"
+    },
+    {
+      "type": "paragraph",
+      "text": "[MIT 6.S184：从公式到动手搭一个潜空间扩散模型](https://diffusion.csail.mit.edu/2026/index.html)"
+    },
+    {
+      "type": "paragraph",
+      "text": "深度精选·2026 年课程版·MIT 6.S184"
+    },
+    {
+      "type": "paragraph",
+      "text": "课程从流匹配和分数匹配讲到无分类器引导；第四讲把 VAE 压缩、图像分块与扩散 Transformer 的条件输入串起来。\n想弄清文字如何影响去噪，可先看第四讲的注意力图，再用课程第三个实验练 VAE 和 DiT；课程页面将两者分开列出。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔥 热议话题"
+    },
+    {
+      "type": "paragraph",
+      "text": "[可验证编程语言，怎样才能走出研究实验室？](https://blainehansen.me/post/mainstream-verifiable-language/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 308 分／299 条评论（抓取时累计）；原文 2026-06-21，更新 2026-11-27"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者认为，让模型替人写证明只是第一步；工程师仍要判断待证明的性质是否对应真实需求，工具也必须能进入现有开发流程。\n他以尚在构想中的 Magmide 为例，提出先支持更易上手的类型与效果检查，再逐步接入 Lean，而不是一开始就重造整套证明工具。\n[HN 讨论](https://news.ycombinator.com/item?id=50663089)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[把游戏开发教程做成 16 世纪风格的 3D 地图](https://www.spritefusion.com/blog/making-a-fantasy-map-like-a-16th-century-atlas)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 94 分／12 条评论（抓取时累计）；原文 2026-11-25"
+    },
+    {
+      "type": "paragraph",
+      "text": "作者用真实岛屿的高程数据打底，再借鉴古地图的雕版线条和字体，把不同的游戏开发技巧安排在各个小镇。\n有趣的是地形负责让地图可信，镇子的造型则负责提示内容，例如程序化步态对应的是一幢会爬的房子。\n[HN 讨论](https://news.ycombinator.com/item?id=50667062)"
+    },
+    {
+      "type": "paragraph",
+      "text": "[9/UX：用 Plan 9 的思路做一个经典 Mac 风格桌面](https://progrium.github.io/9ux/)"
+    },
+    {
+      "type": "paragraph",
+      "text": "HN 64 分／11 条评论（抓取时累计）；项目页未标发布日期"
+    },
+    {
+      "type": "paragraph",
+      "text": "9/UX 为 9front 做了带全局菜单栏、图标和文件窗口的桌面，同时把应用的界面状态和操作通过 9P 暴露为文件。\n因此同一个控件既能用鼠标点，也能通过文件接口操作；项目还在 v0.1，网页提供可操作的演示。\n[HN 讨论](https://news.ycombinator.com/item?id=50672008)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "🔬 科学/人文"
+    },
+    {
+      "type": "paragraph",
+      "text": "[思考有能量成本，心智模型该怎么写进去？](https://aeon.co/essays/all-our-models-of-how-the-mind-functions-are-missing-something)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aeon · 2026-11-27 · David Colaço、Philipp Haueis"
+    },
+    {
+      "type": "paragraph",
+      "text": "两位作者指出，许多心智模型描述大脑如何处理信息，却很少把供能、维持稳定和清除代谢废物纳入解释。\n他们提出一个可检验的问题：当能量约束改变时，系统是否会改变处理信息的方式？这也为比较大脑与机器如何计算提供了一个角度。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "vllm-project/vllm-ascend",
+      "url": "https://github.com/vllm-project/vllm-ascend"
+    },
+    {
+      "title": "gabime/spdlog",
+      "url": "https://github.com/gabime/spdlog"
+    },
+    {
+      "title": "louis-e/arnis",
+      "url": "https://github.com/louis-e/arnis"
+    },
+    {
+      "title": "MIT 6.S184：从公式到动手搭一个潜空间扩散模型",
+      "url": "https://diffusion.csail.mit.edu/2026/index.html"
+    },
+    {
+      "title": "可验证编程语言，怎样才能走出研究实验室？",
+      "url": "https://blainehansen.me/post/mainstream-verifiable-language/"
+    },
+    {
+      "title": "可验证编程语言，怎样才能走出研究实验室？ · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50663089"
+    },
+    {
+      "title": "把游戏开发教程做成 16 世纪风格的 3D 地图",
+      "url": "https://www.spritefusion.com/blog/making-a-fantasy-map-like-a-16th-century-atlas"
+    },
+    {
+      "title": "把游戏开发教程做成 16 世纪风格的 3D 地图 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50667062"
+    },
+    {
+      "title": "9/UX：用 Plan 9 的思路做一个经典 Mac 风格桌面",
+      "url": "https://progrium.github.io/9ux/"
+    },
+    {
+      "title": "9/UX：用 Plan 9 的思路做一个经典 Mac 风格桌面 · HN 讨论",
+      "url": "https://news.ycombinator.com/item?id=50672008"
+    },
+    {
+      "title": "思考有能量成本，心智模型该怎么写进去？",
+      "url": "https://aeon.co/essays/all-our-models-of-how-the-mind-functions-are-missing-something"
+    }
+  ],
+  "public_reviewed": true
+}
